@@ -119,7 +119,7 @@ This is community driven project so we'd love to have your contributions.
 
 You can extract your own templates using:
 
-`npx directus-template-cli@latest extract`.
+`npx directus-template-cli@latest extract`
 
 Here's how you can contribute:
 - [Make a pull request](https://github.com/directus-community/directus-templates/pulls) to add your own template.
