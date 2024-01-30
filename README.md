@@ -117,7 +117,9 @@ few minutes for the template script to run if you’re using a remotely hosted D
 
 This is community driven project so we'd love to have your contributions.
 
-You can extract your own templates using `npx directus-template-cli@latest extract`.
+You can extract your own templates using:
+
+`npx directus-template-cli@latest extract`.
 
 Here's how you can contribute:
 - [Make a pull request](https://github.com/directus-community/directus-templates/pulls) to add your own template.
