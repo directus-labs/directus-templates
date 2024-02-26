@@ -1,0 +1,111 @@
+[
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "operation": "e2189b0d-54b6-46d7-b979-25021c1f7840",
+    "id": "0f8ea882-219d-4823-bb80-bc725d280c3a",
+    "date_created": "2024-02-26T13:03:37.328Z",
+    "accountability": "all",
+    "trigger": "manual",
+    "status": "active",
+    "color": "#18222F",
+    "icon": "build",
+    "name": "[Website] Deploy Site",
+    "options": {
+      "collections": [
+        "globals"
+      ]
+    },
+    "description": "Start a new build for the website.",
+    "operations": null
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "operation": "bb1b1e3f-032e-48b7-b260-1cf3af4a116c",
+    "id": "69e87d0b-df14-4779-bdc8-abc05f2f1e97",
+    "date_created": "2024-02-26T13:03:37.631Z",
+    "accountability": "all",
+    "trigger": "operation",
+    "status": "active",
+    "color": "#A2B5CD",
+    "icon": "globe_uk",
+    "name": "[Util] Get Globals",
+    "options": {
+      "return": "$last"
+    },
+    "description": "This is a utility flow to use in other flows when you need data from the Globals collection.",
+    "operations": null
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "operation": "a7a66ae8-47ad-4d7a-97d3-e27f8c52241b",
+    "id": "ac372072-30ff-4806-91cc-a6ade72e6636",
+    "date_created": "2024-02-26T13:03:38.022Z",
+    "accountability": "all",
+    "trigger": "event",
+    "status": "active",
+    "color": "#18222F",
+    "icon": "saved_search",
+    "name": "[Website] Create SEO Item",
+    "options": {
+      "type": "action",
+      "scope": [
+        "items.create"
+      ],
+      "collections": [
+        "pages",
+        "posts",
+        "categories"
+      ]
+    },
+    "description": "Creates a matching item in the `seo` collection whenever an item in a trigger collection is created.",
+    "operations": null
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "operation": "1d167b20-13af-4f0b-afe1-a4c4d8971654",
+    "id": "b94189fe-0d20-4611-88a1-dd7b5d419b35",
+    "date_created": "2024-02-26T13:03:38.119Z",
+    "accountability": "all",
+    "trigger": "event",
+    "status": "active",
+    "color": "#18222F",
+    "icon": "link",
+    "name": "[Website] Slugify",
+    "options": {
+      "type": "action",
+      "scope": [
+        "items.create"
+      ],
+      "collections": [
+        "pages",
+        "posts",
+        "categories"
+      ]
+    },
+    "description": "Generate slugs for 'pages', 'posts', and other content collections. ",
+    "operations": null
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "operation": "aa70c7bb-cb61-417f-9110-468d79b4849b",
+    "id": "c29208b0-4187-4af0-83a3-1bea7e30e12c",
+    "date_created": "2024-02-26T13:03:38.227Z",
+    "accountability": "all",
+    "trigger": "event",
+    "status": "active",
+    "color": "#18222F",
+    "icon": "mark_email_read",
+    "name": "[Website] Post Approval",
+    "options": {
+      "type": "action",
+      "scope": [
+        "items.update"
+      ],
+      "collections": [
+        "posts"
+      ]
+    },
+    "description": "Send email when posts are ready for review.",
+    "operations": null
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "date_updated": "2024-02-26T13:54:09.917Z",
+    "date_created": "2023-02-26T22:52:32.034Z",
+    "title": "Footer Navigation",
+    "status": "published",
+    "id": "footer",
+    "items": [
+      "dc0870f8-e316-48b0-b34d-ca5c4394344c",
+      "e096f25c-a549-4fe5-a284-17b0a347037a",
+      "c732b100-1f5a-4ce1-8fde-b0072d09623f"
+    ]
+  },
+  {
+    "user_updated": null,
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "date_updated": null,
+    "date_created": "2024-02-26T14:00:54.689Z",
+    "title": "Main Navigation",
+    "status": "published",
+    "id": "main",
+    "items": [
+      "192a490a-bbb9-4794-b82f-619a01463723",
+      "0ca39155-c212-4b6e-8156-5a4322731c07"
+    ]
+  }
+]

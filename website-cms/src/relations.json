@@ -1,0 +1,1673 @@
+[
+  {
+    "collection": "block_columns_rows",
+    "field": "button_group",
+    "related_collection": "block_button_group",
+    "schema": {
+      "constraint_name": "block_columns_rows_button_group_foreign",
+      "table": "block_columns_rows",
+      "column": "button_group",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "block_button_group",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "block_button_group",
+      "many_field": "button_group",
+      "many_collection": "block_columns_rows",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_columns_rows",
+    "field": "image",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "block_columns_rows_image_foreign",
+      "table": "block_columns_rows",
+      "column": "image",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "image",
+      "many_collection": "block_columns_rows",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_columns_rows",
+    "field": "block_columns",
+    "related_collection": "block_columns",
+    "schema": {
+      "constraint_name": "block_columns_rows_block_columns_foreign",
+      "table": "block_columns_rows",
+      "column": "block_columns",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "block_columns",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": "sort",
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": "rows",
+      "one_collection": "block_columns",
+      "many_field": "block_columns",
+      "many_collection": "block_columns_rows",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_columns_rows",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "block_columns_rows_user_updated_foreign",
+      "table": "block_columns_rows",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "block_columns_rows",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_columns_rows",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "block_columns_rows_user_created_foreign",
+      "table": "block_columns_rows",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "block_columns_rows",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_cta",
+    "field": "button_group",
+    "related_collection": "block_button_group",
+    "schema": {
+      "constraint_name": "block_cta_button_group_foreign",
+      "table": "block_cta",
+      "column": "button_group",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "block_button_group",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "block_button_group",
+      "many_field": "button_group",
+      "many_collection": "block_cta",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_button_group",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "block_button_group_user_updated_foreign",
+      "table": "block_button_group",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "block_button_group",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_button_group",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "block_button_group_user_created_foreign",
+      "table": "block_button_group",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "block_button_group",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_form",
+    "field": "form",
+    "related_collection": "forms",
+    "schema": {
+      "constraint_name": "block_form_form_foreign",
+      "table": "block_form",
+      "column": "form",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "forms",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "forms",
+      "many_field": "form",
+      "many_collection": "block_form",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_button",
+    "field": "button_group",
+    "related_collection": "block_button_group",
+    "schema": {
+      "constraint_name": "block_button_button_group_foreign",
+      "table": "block_button",
+      "column": "button_group",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "block_button_group",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": "sort",
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": "buttons",
+      "one_collection": "block_button_group",
+      "many_field": "button_group",
+      "many_collection": "block_button",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_button",
+    "field": "post",
+    "related_collection": "posts",
+    "schema": {
+      "constraint_name": "block_button_post_foreign",
+      "table": "block_button",
+      "column": "post",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "posts",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "posts",
+      "many_field": "post",
+      "many_collection": "block_button",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_button",
+    "field": "page",
+    "related_collection": "pages",
+    "schema": {
+      "constraint_name": "block_button_page_foreign",
+      "table": "block_button",
+      "column": "page",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "pages",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "pages",
+      "many_field": "page",
+      "many_collection": "block_button",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_button",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "block_button_user_updated_foreign",
+      "table": "block_button",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "block_button",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_button",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "block_button_user_created_foreign",
+      "table": "block_button",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "block_button",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_logocloud_logos",
+    "field": "block_logocloud_id",
+    "related_collection": "block_logocloud",
+    "schema": {
+      "constraint_name": "block_logocloud_logos_block_logocloud_id_foreign",
+      "table": "block_logocloud_logos",
+      "column": "block_logocloud_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "block_logocloud",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": "sort",
+      "junction_field": "directus_files_id",
+      "one_collection_field": null,
+      "one_field": "logos",
+      "one_collection": "block_logocloud",
+      "many_field": "block_logocloud_id",
+      "many_collection": "block_logocloud_logos",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_logocloud_logos",
+    "field": "directus_files_id",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "block_logocloud_logos_directus_files_id_foreign",
+      "table": "block_logocloud_logos",
+      "column": "directus_files_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": "block_logocloud_id",
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "directus_files_id",
+      "many_collection": "block_logocloud_logos",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_step_items",
+    "field": "button_group",
+    "related_collection": "block_button_group",
+    "schema": {
+      "constraint_name": "block_step_items_button_group_foreign",
+      "table": "block_step_items",
+      "column": "button_group",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "block_button_group",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "block_button_group",
+      "many_field": "button_group",
+      "many_collection": "block_step_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_step_items",
+    "field": "block_steps",
+    "related_collection": "block_steps",
+    "schema": {
+      "constraint_name": "block_step_items_block_steps_foreign",
+      "table": "block_step_items",
+      "column": "block_steps",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "block_steps",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": "sort",
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": "steps",
+      "one_collection": "block_steps",
+      "many_field": "block_steps",
+      "many_collection": "block_step_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_step_items",
+    "field": "image",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "block_step_items_image_foreign",
+      "table": "block_step_items",
+      "column": "image",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "image",
+      "many_collection": "block_step_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_testimonial_slider_items",
+    "field": "block_testimonial_slider_id",
+    "related_collection": "block_testimonials",
+    "schema": {
+      "constraint_name": "block_testimonial_slider_items_block_testi__4af36ccf_foreign",
+      "table": "block_testimonial_slider_items",
+      "column": "block_testimonial_slider_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "block_testimonials",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": "sort",
+      "junction_field": "testimonials_id",
+      "one_collection_field": null,
+      "one_field": "testimonials",
+      "one_collection": "block_testimonials",
+      "many_field": "block_testimonial_slider_id",
+      "many_collection": "block_testimonial_slider_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_testimonial_slider_items",
+    "field": "testimonials_id",
+    "related_collection": "testimonials",
+    "schema": {
+      "constraint_name": "block_testimonial_slider_items_testimonials_id_foreign",
+      "table": "block_testimonial_slider_items",
+      "column": "testimonials_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "testimonials",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": "block_testimonial_slider_id",
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "testimonials",
+      "many_field": "testimonials_id",
+      "many_collection": "block_testimonial_slider_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_testimonial_slider_items",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "block_testimonial_slider_items_user_updated_foreign",
+      "table": "block_testimonial_slider_items",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "block_testimonial_slider_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_testimonial_slider_items",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "block_testimonial_slider_items_user_created_foreign",
+      "table": "block_testimonial_slider_items",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "block_testimonial_slider_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_gallery_files",
+    "field": "block_gallery_id",
+    "related_collection": "block_gallery",
+    "schema": {
+      "constraint_name": "block_gallery_files_block_gallery_id_foreign",
+      "table": "block_gallery_files",
+      "column": "block_gallery_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "block_gallery",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": "sort",
+      "junction_field": "directus_files_id",
+      "one_collection_field": null,
+      "one_field": "gallery_items",
+      "one_collection": "block_gallery",
+      "many_field": "block_gallery_id",
+      "many_collection": "block_gallery_files",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_gallery_files",
+    "field": "directus_files_id",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "block_gallery_files_directus_files_id_foreign",
+      "table": "block_gallery_files",
+      "column": "directus_files_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": "block_gallery_id",
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "directus_files_id",
+      "many_collection": "block_gallery_files",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_gallery_files",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "block_gallery_files_user_updated_foreign",
+      "table": "block_gallery_files",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "block_gallery_files",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_gallery_files",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "block_gallery_files_user_created_foreign",
+      "table": "block_gallery_files",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "block_gallery_files",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "categories",
+    "field": "seo",
+    "related_collection": "seo",
+    "schema": {
+      "constraint_name": "categories_seo_foreign",
+      "table": "categories",
+      "column": "seo",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "seo",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "seo",
+      "many_field": "seo",
+      "many_collection": "categories",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "globals",
+    "field": "og_image",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "globals_og_image_foreign",
+      "table": "globals",
+      "column": "og_image",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "og_image",
+      "many_collection": "globals",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_video",
+    "field": "video_file",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "block_video_video_file_foreign",
+      "table": "block_video",
+      "column": "video_file",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "video_file",
+      "many_collection": "block_video",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "inbox",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "inbox_user_updated_foreign",
+      "table": "inbox",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "inbox",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "inbox",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "inbox_user_created_foreign",
+      "table": "inbox",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "inbox",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "inbox",
+    "field": "form",
+    "related_collection": "forms",
+    "schema": {
+      "constraint_name": "inbox_form_foreign",
+      "table": "inbox",
+      "column": "form",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "forms",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "forms",
+      "many_field": "form",
+      "many_collection": "inbox",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "forms",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "forms_user_updated_foreign",
+      "table": "forms",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "forms",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "forms",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "forms_user_created_foreign",
+      "table": "forms",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "forms",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "navigation_items",
+    "field": "parent",
+    "related_collection": "navigation_items",
+    "schema": {
+      "constraint_name": "navigation_items_parent_foreign",
+      "table": "navigation_items",
+      "column": "parent",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "navigation_items",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": "sort",
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": "children",
+      "one_collection": "navigation_items",
+      "many_field": "parent",
+      "many_collection": "navigation_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "navigation_items",
+    "field": "page",
+    "related_collection": "pages",
+    "schema": {
+      "constraint_name": "navigation_items_page_foreign",
+      "table": "navigation_items",
+      "column": "page",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "pages",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "pages",
+      "many_field": "page",
+      "many_collection": "navigation_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "navigation_items",
+    "field": "navigation",
+    "related_collection": "navigation",
+    "schema": {
+      "constraint_name": "navigation_items_navigation_foreign",
+      "table": "navigation_items",
+      "column": "navigation",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "navigation",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": "sort",
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": "items",
+      "one_collection": "navigation",
+      "many_field": "navigation",
+      "many_collection": "navigation_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "navigation",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "navigation_user_updated_foreign",
+      "table": "navigation",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "navigation",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "navigation",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "navigation_user_created_foreign",
+      "table": "navigation",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "navigation",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "page_blocks",
+    "field": "pages_id",
+    "related_collection": "pages",
+    "schema": {
+      "constraint_name": "page_blocks_pages_id_foreign",
+      "table": "page_blocks",
+      "column": "pages_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "pages",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": "sort",
+      "junction_field": "item",
+      "one_collection_field": null,
+      "one_field": "blocks",
+      "one_collection": "pages",
+      "many_field": "pages_id",
+      "many_collection": "page_blocks",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "page_blocks",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "page_blocks_user_created_foreign",
+      "table": "page_blocks",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "page_blocks",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "page_blocks",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "page_blocks_user_updated_foreign",
+      "table": "page_blocks",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "page_blocks",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "redirects",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "redirects_user_updated_foreign",
+      "table": "redirects",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "redirects",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "redirects",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "redirects_user_created_foreign",
+      "table": "redirects",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "redirects",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "pages",
+    "field": "seo",
+    "related_collection": "seo",
+    "schema": {
+      "constraint_name": "pages_seo_foreign",
+      "table": "pages",
+      "column": "seo",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "seo",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "seo",
+      "many_field": "seo",
+      "many_collection": "pages",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "posts",
+    "field": "author",
+    "related_collection": "team",
+    "schema": {
+      "constraint_name": "posts_author_foreign",
+      "table": "posts",
+      "column": "author",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "team",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": "posts",
+      "one_collection": "team",
+      "many_field": "author",
+      "many_collection": "posts",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "posts",
+    "field": "seo",
+    "related_collection": "seo",
+    "schema": {
+      "constraint_name": "posts_seo_foreign",
+      "table": "posts",
+      "column": "seo",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "seo",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "seo",
+      "many_field": "seo",
+      "many_collection": "posts",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "posts",
+    "field": "image",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "posts_image_foreign",
+      "table": "posts",
+      "column": "image",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "image",
+      "many_collection": "posts",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "posts",
+    "field": "category",
+    "related_collection": "categories",
+    "schema": {
+      "constraint_name": "posts_category_foreign",
+      "table": "posts",
+      "column": "category",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "categories",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "categories",
+      "many_field": "category",
+      "many_collection": "posts",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "post_gallery_items",
+    "field": "posts_id",
+    "related_collection": "posts",
+    "schema": {
+      "constraint_name": "post_gallery_items_posts_id_foreign",
+      "table": "post_gallery_items",
+      "column": "posts_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "posts",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": "sort",
+      "junction_field": "directus_files_id",
+      "one_collection_field": null,
+      "one_field": "gallery",
+      "one_collection": "posts",
+      "many_field": "posts_id",
+      "many_collection": "post_gallery_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "post_gallery_items",
+    "field": "directus_files_id",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "post_gallery_items_directus_files_id_foreign",
+      "table": "post_gallery_items",
+      "column": "directus_files_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": "posts_id",
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "directus_files_id",
+      "many_collection": "post_gallery_items",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_hero",
+    "field": "button_group",
+    "related_collection": "block_button_group",
+    "schema": {
+      "constraint_name": "block_hero_button_group_foreign",
+      "table": "block_hero",
+      "column": "button_group",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "block_button_group",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "block_button_group",
+      "many_field": "button_group",
+      "many_collection": "block_hero",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "block_hero",
+    "field": "image",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "block_hero_image_foreign",
+      "table": "block_hero",
+      "column": "image",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "image",
+      "many_collection": "block_hero",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "pages_blog",
+    "field": "seo",
+    "related_collection": "seo",
+    "schema": {
+      "constraint_name": "pages_blog_seo_foreign",
+      "table": "pages_blog",
+      "column": "seo",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "seo",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "seo",
+      "many_field": "seo",
+      "many_collection": "pages_blog",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "pages_blog",
+    "field": "featured_post",
+    "related_collection": "posts",
+    "schema": {
+      "constraint_name": "pages_blog_featured_post_foreign",
+      "table": "pages_blog",
+      "column": "featured_post",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "posts",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "posts",
+      "many_field": "featured_post",
+      "many_collection": "pages_blog",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "team",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "team_user_updated_foreign",
+      "table": "team",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "team",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "team",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "team_user_created_foreign",
+      "table": "team",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "team",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "team",
+    "field": "image",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "team_image_foreign",
+      "table": "team",
+      "column": "image",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "image",
+      "many_collection": "team",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "testimonials",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "testimonials_user_updated_foreign",
+      "table": "testimonials",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_updated",
+      "many_collection": "testimonials",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "testimonials",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "testimonials_user_created_foreign",
+      "table": "testimonials",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_users",
+      "many_field": "user_created",
+      "many_collection": "testimonials",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "testimonials",
+    "field": "image",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "testimonials_image_foreign",
+      "table": "testimonials",
+      "column": "image",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "image",
+      "many_collection": "testimonials",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "testimonials",
+    "field": "company_logo",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "testimonials_company_logo_foreign",
+      "table": "testimonials",
+      "column": "company_logo",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": null,
+      "one_collection_field": null,
+      "one_field": null,
+      "one_collection": "directus_files",
+      "many_field": "company_logo",
+      "many_collection": "testimonials",
+      "one_allowed_collections": null
+    }
+  },
+  {
+    "collection": "page_blocks",
+    "field": "item",
+    "related_collection": null,
+    "schema": null,
+    "meta": {
+      "one_deselect_action": "nullify",
+      "sort_field": null,
+      "junction_field": "pages_id",
+      "one_collection_field": "collection",
+      "one_field": null,
+      "one_collection": null,
+      "many_field": "item",
+      "many_collection": "page_blocks",
+      "one_allowed_collections": [
+        "block_columns",
+        "block_cta",
+        "block_divider",
+        "block_faqs",
+        "block_form",
+        "block_gallery",
+        "block_hero",
+        "block_html",
+        "block_logocloud",
+        "block_quote",
+        "block_richtext",
+        "block_steps",
+        "block_team",
+        "block_testimonials",
+        "block_video"
+      ]
+    }
+  }
+]

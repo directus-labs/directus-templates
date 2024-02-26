@@ -1,0 +1,383 @@
+[
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "04462b23-0676-4c1c-8a93-234e2ebb9500",
+    "date_created": "2024-02-26T13:16:25.825Z",
+    "type": "label",
+    "color": null,
+    "icon": null,
+    "name": null,
+    "options": {
+      "text": "Content Workflow",
+      "color": "#18222F"
+    },
+    "note": null,
+    "height": 6,
+    "width": 30,
+    "position_y": 3,
+    "position_x": 1,
+    "show_header": false
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "10cb3d90-0ef8-4d4a-aeee-1a1fdf4cd5ab",
+    "date_created": "2024-02-26T13:16:25.904Z",
+    "type": "variable",
+    "color": "#A2B5CD",
+    "icon": "date_range",
+    "name": "Date From",
+    "options": {
+      "field": "date_from",
+      "type": "dateTime",
+      "inter": "datetime",
+      "defaultValue": "2023-01-01T12:00:00",
+      "options": {
+        "use24": false
+      }
+    },
+    "note": null,
+    "height": 6,
+    "width": 15,
+    "position_y": 9,
+    "position_x": 1,
+    "show_header": true
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "45f96b16-bcdb-41d7-afda-730ebced1354",
+    "date_created": "2024-02-26T13:16:25.848Z",
+    "type": "list",
+    "color": "#FFA439",
+    "icon": "preview",
+    "name": "Posts In Review",
+    "options": {
+      "collection": "posts",
+      "displayTemplate": "{{title}} - {{author.image}} {{author.name}}",
+      "filter": {
+        "_and": [
+          {
+            "status": {
+              "_eq": "in_review"
+            }
+          }
+        ]
+      },
+      "limit": 10,
+      "linkToItem": true
+    },
+    "note": null,
+    "height": 9,
+    "width": 30,
+    "position_y": 30,
+    "position_x": 1,
+    "show_header": true
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "66cf9603-667b-4bef-bf7f-5c9b8aa32ff3",
+    "date_created": "2024-02-26T13:16:25.856Z",
+    "type": "variable",
+    "color": "#A2B5CD",
+    "icon": "date_range",
+    "name": "Date To",
+    "options": {
+      "field": "date_to",
+      "type": "dateTime",
+      "inter": "datetime",
+      "defaultValue": "{{$NOW}}",
+      "options": {
+        "use24": false
+      }
+    },
+    "note": null,
+    "height": 6,
+    "width": 15,
+    "position_y": 9,
+    "position_x": 16,
+    "show_header": true
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "7b54950f-0f5e-4661-9657-5712e5b7d403",
+    "date_created": "2024-02-26T13:16:25.873Z",
+    "type": "list",
+    "color": "#E35169",
+    "icon": "warning",
+    "name": "Posts Missing Thumbnail",
+    "options": {
+      "collection": "posts",
+      "linkToItem": true,
+      "filter": {
+        "_and": [
+          {
+            "image": {
+              "id": {
+                "_null": true
+              }
+            }
+          }
+        ]
+      },
+      "sortField": null,
+      "displayTemplate": "{{title}}",
+      "limit": -1
+    },
+    "note": "These posts are missing a thumbnail image.",
+    "height": 18,
+    "width": 15,
+    "position_y": 65,
+    "position_x": 16,
+    "show_header": true
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "85404f9c-9727-49ff-9dfe-6fcce2696445",
+    "date_created": "2024-02-26T13:16:25.919Z",
+    "type": "metric",
+    "color": "#2ECDA7",
+    "icon": null,
+    "name": "Published",
+    "options": {
+      "collection": "posts",
+      "field": "id",
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "status": {
+              "_eq": "published"
+            }
+          }
+        ]
+      },
+      "conditionalFormatting": [
+        {
+          "operator": ">=",
+          "value": 0,
+          "color": "#2ECDA7"
+        }
+      ]
+    },
+    "note": null,
+    "height": 6,
+    "width": 10,
+    "position_y": 24,
+    "position_x": 21,
+    "show_header": true
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "8d1f4ee6-7f6f-44d9-bc6c-ebaca95eb571",
+    "date_created": "2024-02-26T13:16:25.896Z",
+    "type": "list",
+    "color": "#E35169",
+    "icon": "warning",
+    "name": "Posts Missing SEO Data",
+    "options": {
+      "collection": "posts",
+      "linkToItem": true,
+      "filter": {
+        "_and": [
+          {
+            "_or": [
+              {
+                "seo": {
+                  "title": {
+                    "_empty": true
+                  }
+                }
+              },
+              {
+                "seo": {
+                  "meta_description": {
+                    "_empty": true
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "sortField": null,
+      "displayTemplate": "{{title}}",
+      "limit": -1
+    },
+    "note": "These posts are missing SEO Title or Meta Description",
+    "height": 18,
+    "width": 15,
+    "position_y": 47,
+    "position_x": 16,
+    "show_header": true
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "8da0710f-1a2e-48a7-aa4f-17133fbe99b3",
+    "date_created": "2024-02-26T13:16:25.865Z",
+    "type": "metric",
+    "color": "#FFC23B",
+    "icon": null,
+    "name": "In Review",
+    "options": {
+      "collection": "posts",
+      "field": "id",
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "status": {
+              "_eq": "in_review"
+            }
+          }
+        ]
+      },
+      "conditionalFormatting": [
+        {
+          "operator": ">=",
+          "value": 0,
+          "color": "#FFC23B"
+        }
+      ]
+    },
+    "note": null,
+    "height": 6,
+    "width": 10,
+    "position_y": 24,
+    "position_x": 11,
+    "show_header": true
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "a9e70bf3-48dc-4a47-8f9a-833dfbd5418a",
+    "date_created": "2024-02-26T13:16:25.912Z",
+    "type": "metric",
+    "color": "#A2B5CD",
+    "icon": null,
+    "name": "Draft",
+    "options": {
+      "collection": "posts",
+      "field": "id",
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "status": {
+              "_eq": "draft"
+            }
+          }
+        ]
+      },
+      "conditionalFormatting": [
+        {
+          "operator": ">=",
+          "value": 0,
+          "color": "#A2B5CD"
+        }
+      ]
+    },
+    "note": null,
+    "height": 6,
+    "width": 10,
+    "position_y": 24,
+    "position_x": 1,
+    "show_header": true
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "b526279b-bd56-421a-a9a4-ef238a680b6f",
+    "date_created": "2024-02-26T13:16:25.880Z",
+    "type": "time-series",
+    "color": "#FF99DD",
+    "icon": null,
+    "name": "Published Over Time",
+    "options": {
+      "collection": "posts",
+      "function": "count",
+      "dateField": "date_published",
+      "range": "auto",
+      "precision": "day",
+      "valueField": "id",
+      "color": "#FF99DD"
+    },
+    "note": null,
+    "height": 9,
+    "width": 30,
+    "position_y": 15,
+    "position_x": 1,
+    "show_header": true
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "ecc253c5-586f-42a9-85ca-54b1e677e572",
+    "date_created": "2024-02-26T13:16:25.839Z",
+    "type": "label",
+    "color": null,
+    "icon": null,
+    "name": "",
+    "options": {
+      "text": "Alerts",
+      "color": "#E35169"
+    },
+    "note": null,
+    "height": 6,
+    "width": 30,
+    "position_y": 41,
+    "position_x": 1,
+    "show_header": false
+  },
+  {
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "dashboard": "81f2b056-f75b-4a56-bceb-3702fce025f0",
+    "id": "f11d52b9-3f87-4112-a73f-9ba483aec275",
+    "date_created": "2024-02-26T13:16:25.888Z",
+    "type": "list",
+    "color": "#E35169",
+    "icon": "warning",
+    "name": "Pages Missing SEO Data",
+    "options": {
+      "collection": "pages",
+      "linkToItem": true,
+      "filter": {
+        "_and": [
+          {
+            "_or": [
+              {
+                "seo": {
+                  "title": {
+                    "_empty": true
+                  }
+                }
+              },
+              {
+                "seo": {
+                  "meta_description": {
+                    "_empty": true
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "sortField": "title",
+      "displayTemplate": "{{title}}",
+      "limit": -1
+    },
+    "note": "These pages are missing SEO Title or Meta Description",
+    "height": 18,
+    "width": 15,
+    "position_y": 47,
+    "position_x": 1,
+    "show_header": true
+  }
+]
