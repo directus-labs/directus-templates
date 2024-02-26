@@ -1,0 +1,80 @@
+[
+  {
+    "id": "66df1a72-13ca-40c1-b8db-5dd9b0f01fc8",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "date_created": "2024-02-26T15:56:59.276Z",
+    "user_updated": null,
+    "date_updated": null,
+    "help_articles_id": "8a833dda-ecba-43ab-ae5f-66ba143750a5",
+    "languages_code": "fr-FR",
+    "summary": "Apprenez à personnaliser [Logiciel] pour votre propre flux de travail spécifique",
+    "content": "Personnalisez [Nom du logiciel] pour répondre à vos besoins spécifiques en matière de flux de travail. Suivez ces étapes pour adapter le logiciel à vos exigences :\n\n1. Identifier vos besoins : Déterminez ce dont vous avez besoin du logiciel. Cela pourrait impliquer la gestion de projet, les rapports, les analyses, etc.\n2. Explorer les options de personnalisation : Visitez le menu Paramètres pour explorer les options de personnalisation telles que les modèles de projet, les paramètres de notification et les rôles d'utilisateur.\n3. Mettre en œuvre les changements : Effectuez les changements nécessaires pour aligner le logiciel sur votre flux de travail. Cela pourrait inclure la création de modèles personnalisés ou l'ajustement des autorisations utilisateur.\n4. Former votre équipe : Assurez-vous que votre équipe maîtrise les nouvelles personnalisations et comprend comment les utiliser efficacement.\n5. Surveiller et ajuster : Pendant que vous utilisez le logiciel, continuez à surveiller son efficacité et à apporter des ajustements si nécessaire pour optimiser votre flux de travail.",
+    "title": "Personnaliser votre flux de travail",
+    "slug": "personnaliser-votre-flux-de-travail"
+  },
+  {
+    "id": "6b7ff19b-ac0e-4e0e-82f8-4de773415bb3",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "date_created": "2024-02-26T15:40:38.770Z",
+    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "date_updated": "2024-02-26T16:07:24.020Z",
+    "help_articles_id": "f4a66e30-4a96-4aa5-9d32-2ed36fb98154",
+    "languages_code": "en-US",
+    "summary": "How to navigate and get around the dashboard.",
+    "content": "<p>Learn how to navigate the [Software Name] dashboard to make the most out of our software. 1. Dashboard Overview: When you log in, you'll see the main dashboard. This is your control panel, where you can access all features. 2. Menu Bar: On the left side, you'll find the menu bar, which includes links to different sections like Projects, Settings, and Support. 3. Quick Access Toolbar: At the top, the quick access toolbar lets you search, view notifications, and access your account settings quickly. 4. Understanding Widgets: Your dashboard may include various widgets, such as recent activity or performance metrics. Hover over them for more details.</p>",
+    "title": "Navigating the Dashboard",
+    "slug": "navigating-the-dashboard"
+  },
+  {
+    "id": "71b72d5f-fc2d-45c3-ad2d-42f5d127918a",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "date_created": "2024-02-26T15:39:32.543Z",
+    "user_updated": null,
+    "date_updated": null,
+    "help_articles_id": "8498db54-6603-4666-990c-dad6c2b3dc9b",
+    "languages_code": "en-US",
+    "summary": "Integrations are super powerful ways to extend [Software].",
+    "content": "Enhance your [Software Name] experience by integrating with third-party services. Here's how:\n\nAccess Integration Settings: From the dashboard, go to Settings > Integrations.\nChoose a Service: Select from the list of available third-party services you wish to integrate with.\nFollow Setup Instructions: Each service has unique setup instructions. Follow them carefully to ensure a successful integration.\nTest the Integration: Once set up, test the integration to confirm everything is working as expected.\nUtilize Integrated Features: Start using the integrated features to streamline your workflows and improve productivity.",
+    "title": "Integrating with Third-Party Services",
+    "slug": "integrating-third-parties"
+  },
+  {
+    "id": "8ad6ca07-1880-4b26-b807-aaba47fb27f5",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "date_created": "2024-02-26T15:40:07.571Z",
+    "user_updated": null,
+    "date_updated": null,
+    "help_articles_id": "b34210d5-bc42-4b1b-b1f6-7841984ae8d1",
+    "languages_code": "fr-FR",
+    "summary": null,
+    "content": null,
+    "title": null,
+    "slug": null
+  },
+  {
+    "id": "b5ff7712-3d63-445d-a751-e976c67b8a10",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "date_created": "2024-02-26T15:38:59.721Z",
+    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "date_updated": "2024-02-26T15:56:59.284Z",
+    "help_articles_id": "8a833dda-ecba-43ab-ae5f-66ba143750a5",
+    "languages_code": "en-US",
+    "summary": "Learn how to customize [Software] for your own specific workflow",
+    "content": "Customize [Software Name] to fit your unique workflow needs. Follow these steps to tailor the software to your requirements:\n\n1. Identify Your Needs: Determine what you need from the software. This could involve project management, reporting, analytics, etc.\n2. Explore Customization Options: Visit the Settings menu to explore customization options such as project templates, notification settings, and user roles.\n3. Implement Changes: Make the necessary changes to align the software with your workflow. This might include creating custom templates or adjusting user permissions.\n4. Train Your Team: Ensure your team is up to speed on the new customizations and understands how to use them effectively.\n5. Monitor and Adjust: As you use the software, continue to monitor its effectiveness and make adjustments as needed to optimize your workflow.",
+    "title": "Customizing Your Workflow",
+    "slug": "customizing-your-workflow"
+  },
+  {
+    "id": "d625dcac-33ca-4dfe-9d9a-0462739fc8dd",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "date_created": "2024-02-26T15:40:07.564Z",
+    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "date_updated": "2024-02-26T16:56:38.436Z",
+    "help_articles_id": "b34210d5-bc42-4b1b-b1f6-7841984ae8d1",
+    "languages_code": "en-US",
+    "summary": "How to create your account.",
+    "content": "Welcome to [Software Name]! Getting started is simple and only takes a few minutes. This guide will walk you through the account creation process, step by step.\n\n1. Visit the Sign-Up Page: Go to our website and click on the \"Sign Up\" button.\n2. Enter Your Details: Fill in your personal information, including your name, email address, and password.\n3. Verify Your Email: Check your email inbox for a verification link and click on it to confirm your account.\n4. Complete Your Profile: Log in to your new account and complete your profile. The more information you provide, the better we can serve you.\n5. Get Started: You're all set! Explore the features and resources available to you.",
+    "title": "Creating Your Account",
+    "slug": "creating-your-account "
+  }
+]

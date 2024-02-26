@@ -1,0 +1,228 @@
+[
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_presets",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1
+      }
+    },
+    "layout_options": null,
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark_border",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_files",
+    "search": null,
+    "layout": "cards",
+    "layout_query": {
+      "cards": {
+        "sort": [
+          "-uploaded_on"
+        ],
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "cards": {
+        "icon": "insert_drive_file",
+        "title": "{{ title }}",
+        "subtitle": "{{ type }} • {{ filesize }}",
+        "size": 4,
+        "imageFit": "crop"
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark_border",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_files",
+    "search": null,
+    "layout": "cards",
+    "layout_query": {
+      "cards": {
+        "sort": [
+          "-uploaded_on"
+        ],
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "cards": {
+        "icon": "insert_drive_file",
+        "title": "{{ title }}",
+        "subtitle": "{{ type }} • {{ filesize }}",
+        "size": 4,
+        "imageFit": "crop"
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark_border",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_files",
+    "search": null,
+    "layout": "cards",
+    "layout_query": {
+      "cards": {
+        "sort": [
+          "-uploaded_on"
+        ],
+        "page": 1,
+        "limit": 25
+      }
+    },
+    "layout_options": {
+      "cards": {
+        "icon": "insert_drive_file",
+        "title": "{{ title }}",
+        "subtitle": "{{ type }} • {{ filesize }}",
+        "size": 4,
+        "imageFit": "crop"
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark_border",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "help_articles",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "limit": 25,
+        "page": 1
+      }
+    },
+    "layout_options": null,
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "help_articles",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "limit": 25,
+        "page": 1,
+        "fields": [
+          "status",
+          "title",
+          "help_collection"
+        ],
+        "sort": [
+          "sort"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "status": 32
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "help_collections",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "limit": 25,
+        "fields": [
+          "icon",
+          "title",
+          "description"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "icon": 49.12109375
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "help_feedback",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "limit": 25
+      }
+    },
+    "layout_options": null,
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_presets",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "limit": 25
+      }
+    },
+    "layout_options": null,
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark_border",
+    "color": null
+  }
+]

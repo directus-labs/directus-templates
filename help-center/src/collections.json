@@ -1,0 +1,273 @@
+[
+  {
+    "collection": "help",
+    "meta": {
+      "collection": "help",
+      "icon": "support",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Help Center"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#8196B0",
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": null,
+      "collapse": "closed",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "help_articles",
+    "meta": {
+      "collection": "help_articles",
+      "icon": "wifi_tethering",
+      "note": null,
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": "#8196B0",
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "help",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": true
+    },
+    "schema": {
+      "schema": "public",
+      "name": "help_articles",
+      "comment": null
+    }
+  },
+  {
+    "collection": "help_articles_translations",
+    "meta": {
+      "collection": "help_articles_translations",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "help_articles",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "help_articles_translations",
+      "comment": null
+    }
+  },
+  {
+    "collection": "help_collections",
+    "meta": {
+      "collection": "help_collections",
+      "icon": "collections_bookmark",
+      "note": null,
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": "#8196B0",
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "help",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "help_collections",
+      "comment": null
+    }
+  },
+  {
+    "collection": "help_collections_translations",
+    "meta": {
+      "collection": "help_collections_translations",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "help_collections",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "help_collections_translations",
+      "comment": null
+    }
+  },
+  {
+    "collection": "help_feedback",
+    "meta": {
+      "collection": "help_feedback",
+      "icon": "insert_chart",
+      "note": null,
+      "display_template": "{{title}} - {{rating}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#8196B0",
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "help",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "help_feedback",
+      "comment": null
+    }
+  },
+  {
+    "collection": "help_settings",
+    "meta": {
+      "collection": "help_settings",
+      "icon": "settings_alert",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": true,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#A2B5CD",
+      "item_duplication_fields": null,
+      "sort": 4,
+      "group": "help",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "help_settings",
+      "comment": null
+    }
+  },
+  {
+    "collection": "help_settings_translations",
+    "meta": {
+      "collection": "help_settings_translations",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "help_settings",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "help_settings_translations",
+      "comment": null
+    }
+  },
+  {
+    "collection": "languages",
+    "meta": {
+      "collection": "languages",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "languages",
+      "comment": null
+    }
+  }
+]

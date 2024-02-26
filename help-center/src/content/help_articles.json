@@ -1,0 +1,64 @@
+[
+  {
+    "date_created": "2024-02-26T15:12:43.458Z",
+    "date_updated": "2024-02-26T15:39:32.540Z",
+    "help_collection": "3c790c7e-9931-4fea-946a-42113f9e6ad1",
+    "id": "8498db54-6603-4666-990c-dad6c2b3dc9b",
+    "owner": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "sort": null,
+    "status": "published",
+    "title": "Integrating with Third-Party Services",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "translations": [
+      "71b72d5f-fc2d-45c3-ad2d-42f5d127918a"
+    ]
+  },
+  {
+    "date_created": "2024-02-26T15:12:16.399Z",
+    "date_updated": "2024-02-26T16:07:24.014Z",
+    "help_collection": "8d7cb6e3-bae7-48f6-9af3-4b510167289c",
+    "id": "f4a66e30-4a96-4aa5-9d32-2ed36fb98154",
+    "owner": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "sort": null,
+    "status": "draft",
+    "title": "Navigating the Dashboard",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "translations": [
+      "6b7ff19b-ac0e-4e0e-82f8-4de773415bb3"
+    ]
+  },
+  {
+    "date_created": "2024-02-26T15:11:40.223Z",
+    "date_updated": "2024-02-26T16:56:38.429Z",
+    "help_collection": "8d7cb6e3-bae7-48f6-9af3-4b510167289c",
+    "id": "b34210d5-bc42-4b1b-b1f6-7841984ae8d1",
+    "owner": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "sort": null,
+    "status": "published",
+    "title": "Creating Your Account",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "translations": [
+      "8ad6ca07-1880-4b26-b807-aaba47fb27f5",
+      "d625dcac-33ca-4dfe-9d9a-0462739fc8dd"
+    ]
+  },
+  {
+    "date_created": "2024-02-26T15:13:53.941Z",
+    "date_updated": "2024-02-26T15:56:59.270Z",
+    "help_collection": "3c790c7e-9931-4fea-946a-42113f9e6ad1",
+    "id": "8a833dda-ecba-43ab-ae5f-66ba143750a5",
+    "owner": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "sort": null,
+    "status": "review",
+    "title": "Customizing Your Workflow",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "translations": [
+      "66df1a72-13ca-40c1-b8db-5dd9b0f01fc8",
+      "b5ff7712-3d63-445d-a751-e976c67b8a10"
+    ]
+  }
+]

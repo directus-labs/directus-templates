@@ -1,0 +1,319 @@
+[
+  {
+    "id": "33d54856-e7a5-4346-bb50-448535fee9b9",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
+    "name": "Submissions With Comments",
+    "icon": "comment",
+    "color": "#18222F",
+    "show_header": true,
+    "note": null,
+    "type": "list",
+    "position_x": 32,
+    "position_y": 14,
+    "width": 25,
+    "height": 26,
+    "options": {
+      "collection": "help_feedback",
+      "sortField": "date_created",
+      "limit": 10,
+      "displayTemplate": "{{title}} - {{comments}}",
+      "linkToItem": true,
+      "filter": {
+        "_and": [
+          {
+            "_and": [
+              {
+                "date_created": {
+                  "_gte": "{{date_from}}"
+                }
+              },
+              {
+                "date_created": {
+                  "_lte": "{{date_to}}"
+                }
+              },
+              {
+                "comments": {
+                  "_nnull": true
+                }
+              },
+              {
+                "comments": {
+                  "_icontains": "{{search}}"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "date_created": "2024-02-26T13:02:50.049Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "39c82b64-df2a-4d83-a2b8-a41575e87af3",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
+    "name": "Date From",
+    "icon": "date_range",
+    "color": "#18222F",
+    "show_header": true,
+    "note": null,
+    "type": "variable",
+    "position_x": 1,
+    "position_y": 7,
+    "width": 15,
+    "height": 6,
+    "options": {
+      "field": "date_from",
+      "type": "dateTime",
+      "inter": "datetime",
+      "defaultValue": "2023-01-01T12:00:00",
+      "options": {
+        "use24": false
+      }
+    },
+    "date_created": "2024-02-26T13:02:50.168Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "3ca99f50-b186-4213-be9c-8773904cfd5e",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
+    "name": "Feedback",
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 1,
+    "width": 30,
+    "height": 6,
+    "options": {
+      "text": "Help Center Feedback",
+      "color": "#8196B0",
+      "fontWeight": 500
+    },
+    "date_created": "2024-02-26T13:02:50.265Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "775d0469-a878-4814-b5c3-2558dbab1b1a",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
+    "name": "Date To",
+    "icon": "date_range",
+    "color": "#18222F",
+    "show_header": true,
+    "note": null,
+    "type": "variable",
+    "position_x": 16,
+    "position_y": 7,
+    "width": 15,
+    "height": 6,
+    "options": {
+      "field": "date_to",
+      "type": "dateTime",
+      "inter": "datetime",
+      "defaultValue": "{{$NOW}}",
+      "options": {
+        "use24": false
+      }
+    },
+    "date_created": "2024-02-26T13:02:50.760Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "77a5d341-747b-4210-baf8-10a61bf6a10a",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
+    "name": "Search",
+    "icon": "screen_search_desktop",
+    "color": "#18222F",
+    "show_header": true,
+    "note": "Search response comments for a string of text.",
+    "type": "variable",
+    "position_x": 32,
+    "position_y": 7,
+    "width": 25,
+    "height": 6,
+    "options": {
+      "field": "search",
+      "type": "string",
+      "inter": "input",
+      "options": {
+        "placeholder": "Search comments here",
+        "iconLeft": null
+      },
+      "defaultValue": " "
+    },
+    "date_created": "2024-02-26T13:02:50.862Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "8194088d-4321-4cce-94e3-ac77d8f02ef6",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
+    "name": "Total Submissions Over Time",
+    "icon": "show_chart",
+    "color": "#6644FF",
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 1,
+    "position_y": 20,
+    "width": 30,
+    "height": 10,
+    "options": {
+      "collection": "help_feedback",
+      "valueField": "id",
+      "color": "#18222F",
+      "function": "count",
+      "precision": "day",
+      "range": "auto",
+      "dateField": "date_created",
+      "filter": {
+        "_and": [
+          {
+            "_and": [
+              {
+                "date_created": {
+                  "_gte": "{{date_from}}"
+                }
+              },
+              {
+                "date_created": {
+                  "_lte": "{{date_to}}"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "date_created": "2024-02-26T13:02:50.970Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "9bf6a9fe-3dc2-460c-863b-3533876c569d",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
+    "name": "Total Submissions",
+    "icon": "numbers",
+    "color": "#A2B5CD",
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 1,
+    "position_y": 14,
+    "width": 15,
+    "height": 6,
+    "options": {
+      "collection": "help_feedback",
+      "sortField": null,
+      "field": "id",
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "_and": [
+              {
+                "date_created": {
+                  "_gte": "{{date_from}}"
+                }
+              },
+              {
+                "date_created": {
+                  "_lte": "{{date_to}}"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "date_created": "2024-02-26T13:02:51.258Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "b45fdb03-f5c4-414f-aeec-9f33f3e0340b",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
+    "name": "Average Rating Over Time",
+    "icon": "area_chart",
+    "color": "#2ECDA7",
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 1,
+    "position_y": 30,
+    "width": 30,
+    "height": 10,
+    "options": {
+      "collection": "help_feedback",
+      "valueField": "rating",
+      "color": "#18222F",
+      "function": "avg",
+      "precision": "day",
+      "range": "auto",
+      "dateField": "date_created",
+      "decimals": 2,
+      "filter": {
+        "_and": [
+          {
+            "_and": [
+              {
+                "date_created": {
+                  "_gte": "{{date_from}}"
+                }
+              },
+              {
+                "date_created": {
+                  "_lte": "{{date_to}}"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "date_created": "2024-02-26T13:02:51.483Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "be40aae0-728b-4171-8c1e-34ca955f89eb",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
+    "name": "Average Rating",
+    "icon": "star",
+    "color": "#18222F",
+    "show_header": true,
+    "note": "Average rating across all articles. Rating is from 1 - 4. 1 being the lowest score. 4 being the highest.",
+    "type": "metric",
+    "position_x": 16,
+    "position_y": 14,
+    "width": 15,
+    "height": 6,
+    "options": {
+      "collection": "help_feedback",
+      "sortField": null,
+      "field": "rating",
+      "function": "avg",
+      "filter": {
+        "_and": [
+          {
+            "_and": [
+              {
+                "date_created": {
+                  "_gte": "{{date_from}}"
+                }
+              },
+              {
+                "date_created": {
+                  "_lte": "{{date_to}}"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "minimumFractionDigits": 2,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-02-26T13:02:51.757Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  }
+]

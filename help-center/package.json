@@ -1,0 +1,11 @@
+{
+  "author": "Bryant Gillespie",
+  "description": "",
+  "directusTemplate": true,
+  "files": [
+    "src"
+  ],
+  "name": "directus-template-help-center",
+  "templateName": "Help Center",
+  "version": "1.0.0"
+}

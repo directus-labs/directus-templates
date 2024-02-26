@@ -1,0 +1,392 @@
+[
+  {
+    "collection": "help_settings_translations",
+    "field": "help_settings_id",
+    "related_collection": "help_settings",
+    "schema": {
+      "constraint_name": "help_settings_translations_help_settings_id_foreign",
+      "table": "help_settings_translations",
+      "column": "help_settings_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "help_settings",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "help_settings_translations",
+      "many_field": "help_settings_id",
+      "one_collection": "help_settings",
+      "one_field": "translations",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "languages_code",
+      "sort_field": null,
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "help_articles",
+    "field": "owner",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "help_articles_owner_foreign",
+      "table": "help_articles",
+      "column": "owner",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "help_articles",
+      "many_field": "owner",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_articles",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "help_articles_user_created_foreign",
+      "table": "help_articles",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "help_articles",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_articles",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "help_articles_user_updated_foreign",
+      "table": "help_articles",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "help_articles",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_articles_translations",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "help_articles_translations_user_created_foreign",
+      "table": "help_articles_translations",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "help_articles_translations",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_articles_translations",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "help_articles_translations_user_updated_foreign",
+      "table": "help_articles_translations",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "help_articles_translations",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_feedback",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "help_feedback_user_created_foreign",
+      "table": "help_feedback",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "help_feedback",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_feedback",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "help_feedback_user_updated_foreign",
+      "table": "help_feedback",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "help_feedback",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_settings_translations",
+    "field": "languages_code",
+    "related_collection": "languages",
+    "schema": {
+      "constraint_name": "help_settings_translations_languages_code_foreign",
+      "table": "help_settings_translations",
+      "column": "languages_code",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "languages",
+      "foreign_key_column": "code",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "help_settings_translations",
+      "many_field": "languages_code",
+      "one_collection": "languages",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "help_settings_id",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_articles_translations",
+    "field": "languages_code",
+    "related_collection": "languages",
+    "schema": {
+      "constraint_name": "help_articles_translations_languages_code_foreign",
+      "table": "help_articles_translations",
+      "column": "languages_code",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "languages",
+      "foreign_key_column": "code",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "help_articles_translations",
+      "many_field": "languages_code",
+      "one_collection": "languages",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "help_articles_id",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_settings",
+    "field": "default_language",
+    "related_collection": "languages",
+    "schema": {
+      "constraint_name": "help_settings_default_language_foreign",
+      "table": "help_settings",
+      "column": "default_language",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "languages",
+      "foreign_key_column": "code",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "help_settings",
+      "many_field": "default_language",
+      "one_collection": "languages",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_collections_translations",
+    "field": "languages_code",
+    "related_collection": "languages",
+    "schema": {
+      "constraint_name": "help_collections_translations_languages_code_foreign",
+      "table": "help_collections_translations",
+      "column": "languages_code",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "languages",
+      "foreign_key_column": "code",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "help_collections_translations",
+      "many_field": "languages_code",
+      "one_collection": "languages",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "help_collections_id",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_articles",
+    "field": "help_collection",
+    "related_collection": "help_collections",
+    "schema": {
+      "constraint_name": "help_articles_help_collection_foreign",
+      "table": "help_articles",
+      "column": "help_collection",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "help_collections",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "help_articles",
+      "many_field": "help_collection",
+      "one_collection": "help_collections",
+      "one_field": "articles",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": "sort",
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_collections_translations",
+    "field": "help_collections_id",
+    "related_collection": "help_collections",
+    "schema": {
+      "constraint_name": "help_collections_translations_help_collections_id_foreign",
+      "table": "help_collections_translations",
+      "column": "help_collections_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "help_collections",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "help_collections_translations",
+      "many_field": "help_collections_id",
+      "one_collection": "help_collections",
+      "one_field": "translations",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "languages_code",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "help_articles_translations",
+    "field": "help_articles_id",
+    "related_collection": "help_articles",
+    "schema": {
+      "constraint_name": "help_articles_translations_help_articles_id_foreign",
+      "table": "help_articles_translations",
+      "column": "help_articles_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "help_articles",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "help_articles_translations",
+      "many_field": "help_articles_id",
+      "one_collection": "help_articles",
+      "one_field": "translations",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "languages_code",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  }
+]
