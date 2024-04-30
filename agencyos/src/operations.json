@@ -254,7 +254,7 @@
     "key": "update_next_invoice_number",
     "name": "Update Next Invoice Number",
     "options": {
-      "collection": "os_invoice_config",
+      "collection": "os_settings",
       "permissions": "$full",
       "payload": {
         "next_invoice_number": "{{increment_invoice_number}}"
@@ -533,7 +533,7 @@
     "name": "Get Invoice Settings",
     "options": {
       "permissions": "$full",
-      "collection": "os_invoice_config"
+      "collection": "os_settings"
     },
     "position_x": 19,
     "position_y": 1
