@@ -2,11 +2,13 @@ import { useDirectus } from '@/lib/directus';
 import PageBuilder from '@/components/PageBuilder';
 import { PageBlock } from '@/types/directus-schema';
 
-export default async function HomePage() {
+export default async function PermalinkPage({ params }: { params: { permalink: string } }) {
+	const { permalink } = params;
+
 	const { directus, readItems } = useDirectus();
 
 	const pageFilter = {
-		permalink: { _eq: '/' },
+		permalink: { _eq: `/${permalink}`.replace(/\/$/, '') },
 	};
 
 	const pageData = await directus.request(

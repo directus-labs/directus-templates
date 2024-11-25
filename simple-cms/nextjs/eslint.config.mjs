@@ -17,6 +17,11 @@ export default [
     languageOptions: {
       ecmaVersion: "latest",
       globals: { ...globals.browser, ...globals.node },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
   },
   {
@@ -26,14 +31,14 @@ export default [
       },
     },
   },
-  pluginJs.configs.recommended, // ? https://github.com/eslint/eslint
-  importPlugin.flatConfigs.recommended, // ? https://github.com/import-js/eslint-plugin-import
-  ...tseslint.configs.recommended, // ? https://github.com/typescript-eslint/typescript-eslint
-  pluginPromise.configs["flat/recommended"], // ? https://github.com/eslint-community/eslint-plugin-promise
-  pluginReact.configs.flat.recommended, // ? https://github.com/jsx-eslint/eslint-plugin-react
-  pluginReact.configs.flat["jsx-runtime"], // ? https://github.com/jsx-eslint/eslint-plugin-react
-  eslintConfigPrettier, // ? https://github.com/prettier/eslint-config-prettier
-  ...tailwind.configs["flat/recommended"], // ? https://github.com/francoismassart/eslint-plugin-tailwindcss
+  pluginJs.configs.recommended, // Core ESLint recommendations
+  importPlugin.flatConfigs.recommended, // Import plugin recommendations
+  ...tseslint.configs.recommended, // TypeScript ESLint recommendations
+  pluginPromise.configs["flat/recommended"], // Promise plugin recommendations
+  pluginReact.configs.flat.recommended, // React plugin recommendations
+  pluginReact.configs.flat["jsx-runtime"], // Use React's new JSX runtime
+  eslintConfigPrettier, // Prettier integration
+  ...tailwind.configs["flat/recommended"], // TailwindCSS plugin recommendations
   {
     rules: {
       "no-unused-vars": "off",

@@ -20,3 +20,19 @@ This is a **Next.js-based Simple CMS Template** that is fully integrated with [D
 - **Node.js** (16.x or newer)
 - **npm** or **pnpm**
 - Access to a **Directus** instance (self-hosted or cloud-hosted)
+
+### Generate Directus Types
+
+This repository includes a [utility](https://www.npmjs.com/package/directus-sdk-typegen) to generate TypeScript types for your Directus schema.
+
+#### Usage
+
+1. Ensure your `.env` file is configured with:
+   ```env
+   DIRECTUS_URL=your-token-here
+   DIRECTUS_TOKEN=your-token-here
+   ```
+2. Run with the following command
+   ```bash
+   npm run generate:types
+   ```

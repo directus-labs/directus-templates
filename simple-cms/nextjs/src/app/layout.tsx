@@ -1,26 +1,63 @@
-import type { ReactNode } from "react";
+import '@/styles/globals.css';
+import type { ReactNode } from 'react';
+import type { Metadata } from 'next';
+import { ThemeProvider } from 'next-themes';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { Poppins, Inter } from 'next/font/google';
+import { useDirectus } from '@/lib/directus';
 
-import type { Metadata } from "next";
+const poppins = Poppins({
+	subsets: ['latin'],
+	weight: ['400', '500', '600', '700'],
+	variable: '--font-poppins',
+});
 
-import { ThemeProvider } from "next-themes";
+const inter = Inter({
+	subsets: ['latin'],
+	weight: ['400', '500', '600'],
+	variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
-  title: "Starters",
-  description: "Starter Template for Simple CMS",
+	title: 'Simple CMS',
+	description: 'A starter CMS template powered by Next.js and Directus.',
+	icons: {
+		icon: '/favicon.ico',
+	},
 };
 
-const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
-  return (
-    // ? https://github.com/pacocoursey/next-themes?tab=readme-ov-file#with-app
-    // ? https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors
-    <html suppressHydrationWarning lang="en">
-      <body className={`bg-background text-foreground antialiased`}>
-        <ThemeProvider attribute="class">
-          <main>{children}</main>
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+async function fetchAccentColor() {
+	const { directus, readSingleton } = useDirectus();
+
+	try {
+		const globals = await directus.request(readSingleton('globals', { fields: ['accent_color'] }));
+
+		return globals.accent_color || '#6644FF';
+	} catch (error) {
+		console.error('Error fetching accent color:', error);
+
+		return '#6644FF';
+	}
+}
+
+const Layout = async ({ children }: { children: ReactNode }) => {
+	const accentColor = await fetchAccentColor();
+
+	return (
+		<html suppressHydrationWarning lang="en" className={`${poppins.variable} ${inter.variable}`}>
+			<head>
+				<style>{`:root { --accent-color: ${accentColor}; }`}</style>
+			</head>
+			<body className="bg-background text-foreground antialiased">
+				<ThemeProvider attribute="class">
+					<Header />
+					<main className="min-h-screen">{children}</main>
+					<Footer />
+				</ThemeProvider>
+			</body>
+		</html>
+	);
 };
 
 export default Layout;
