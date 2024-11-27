@@ -2,15 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-	font-family: var(--font-inter);
+:root {
+	--background-color: #ffffff; /* Light background */
+	--foreground-color: #000000; /* Light text */
+	--accent-color: #6644ff; /* Accent color */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: var(--font-poppins);
+.dark {
+	--background-color: #172940; /* Default dark background */
+	--foreground-color: #ffffff; /* Default dark text */
+}
+@layer base {
+	html {
+		@apply bg-[var(--background-color)] text-[var(--foreground-color)];
+	}
+}
+
+@layer utilities {
+	a {
+		@apply hover:text-accent transition-colors no-underline;
+	}
 }

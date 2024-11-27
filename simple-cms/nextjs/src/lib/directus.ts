@@ -1,4 +1,10 @@
-import { createDirectus, readItems, rest, readSingleton } from '.pnpm/@directus+sdk@18.0.0/node_modules/@directus/sdk';
+import {
+	createDirectus,
+	readItems,
+	readItem,
+	rest,
+	readSingleton,
+} from '.pnpm/@directus+sdk@18.0.0/node_modules/@directus/sdk';
 import type { RestClient } from '.pnpm/@directus+sdk@18.0.0/node_modules/@directus/sdk';
 import Queue from 'p-queue';
 import type { Schema } from '@/types/directus-schema';
@@ -31,6 +37,7 @@ export function useDirectus() {
 	return {
 		directus: directus as RestClient<Schema>,
 		readItems,
+		readItem,
 		readSingleton,
 	};
 }

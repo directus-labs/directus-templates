@@ -27,7 +27,7 @@ export default async function PermalinkPage({ params }: { params: { permalink: s
 	const page = pageData[0];
 
 	if (!page || !Array.isArray(page.blocks)) {
-		return <div>404 - Page Not Found</div>;
+		return <div className="text-center text-xl">404 - Page Not Found</div>;
 	}
 
 	const blocks: PageBlock[] = page.blocks.filter((block): block is PageBlock => typeof block !== 'string' && !!block);

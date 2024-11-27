@@ -1,15 +1,17 @@
 import React from 'react';
-import { PageBlock } from '@/types/directus-schema';
+import clsx from 'clsx';
 
 interface PageSectionProps {
-	background: PageBlock['background'];
 	children: React.ReactNode;
+	className?: string;
 }
 
-const PageSection: React.FC<PageSectionProps> = ({ background, children }) => {
-	const bgClass = background === 'dark' ? 'bg-dark' : 'bg-light';
+const PageSection: React.FC<PageSectionProps> = ({
+	children,
 
-	return <div className={`page-section ${bgClass}`}>{children}</div>;
+	className = '',
+}) => {
+	return <div className={clsx('py-8', className)}>{children}</div>;
 };
 
 export default PageSection;

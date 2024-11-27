@@ -1,42 +1,94 @@
-import Link from 'next/link';
+import React from 'react';
+import { useDirectus } from '@/lib/directus';
+import BaseContainer from '@/components/BaseContainer';
+import { Button } from '@/components/ui/button';
 import {
 	DropdownMenu,
-	DropdownMenuTrigger,
 	DropdownMenuContent,
 	DropdownMenuItem,
+	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
+import ThemeToggle from './ThemeToggle';
 
-export default function Header() {
+const Header = async () => {
+	const { directus, readItem } = useDirectus();
+
+	const [menu] = await Promise.all([
+		directus.request(
+			readItem('navigation', 'main', {
+				fields: [
+					{
+						items: [
+							'id',
+							'title',
+							{
+								page: ['permalink'],
+								children: ['id', 'title', 'url', { page: ['permalink'] }],
+							},
+						],
+					},
+				],
+				deep: { items: { _sort: ['sort'] } },
+			}),
+		),
+	]);
+
 	return (
-		<header className="bg-gray mb-6">
-			<div className="container mx-auto py-4 flex justify-between items-center">
-				<Link href="/">
-					<Image src="/images/logo.svg" alt="Logo" width={90} height={45} className="cursor-pointer" />
-				</Link>
+		<BaseContainer className="top-0 z-50 mb-4">
+			<header className="flex items-center justify-between py-4">
+				<a href="/" className="text-lg font-bold">
+					<img src="/images/logo.svg" alt="Logo" className="h-8" />
+				</a>
+				<ThemeToggle />
+				<nav className="hidden md:flex items-center space-x-8">
+					{menu?.items?.map((section: any) => (
+						<div key={section.id}>
+							{section.children && section.children.length > 0 ? (
+								<DropdownMenu>
+									<DropdownMenuTrigger asChild>
+										<Button variant="link" className="px-2 text-sm font-medium">
+											{section.title}
+										</Button>
+									</DropdownMenuTrigger>
+									<DropdownMenuContent align="start" className="bg-background">
+										{section.children.map((child: any) => (
+											<DropdownMenuItem key={child.id} asChild>
+												<a href={child.page?.permalink || child.url || '#'} className="w-full text-left">
+													{child.title}
+												</a>
+											</DropdownMenuItem>
+										))}
+									</DropdownMenuContent>
+								</DropdownMenu>
+							) : (
+								<a href={section.page?.permalink || section.url || '#'} className="text-sm font-medium hover:underline">
+									{section.title}
+								</a>
+							)}
+						</div>
+					))}
+				</nav>
 
-				<nav className="flex space-x-4">
+				{/* Mobile Menu Button */}
+				<div className="md:hidden">
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
-							<Button variant="ghost" className="hover:underline">
-								About
+							<Button variant="link" size="icon" aria-label="Open menu">
+								☰
 							</Button>
 						</DropdownMenuTrigger>
-						<DropdownMenuContent>
-							<DropdownMenuItem>
-								<Link href="/privacy-policy" className="w-full">
-									Privacy Policy
-								</Link>
-							</DropdownMenuItem>
+						<DropdownMenuContent align="end">
+							{menu?.items?.map((section: any) => (
+								<DropdownMenuItem key={section.id} asChild>
+									<a href={section.page?.permalink || section.url || '#'}>{section.title}</a>
+								</DropdownMenuItem>
+							))}
 						</DropdownMenuContent>
 					</DropdownMenu>
-
-					<Link href="/contact" className="hover:underline">
-						<Button variant="ghost">Contact Us</Button>
-					</Link>
-				</nav>
-			</div>
-		</header>
+				</div>
+			</header>
+		</BaseContainer>
 	);
-}
+};
+
+export default Header;

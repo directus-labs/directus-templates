@@ -9,7 +9,6 @@ interface PageBuilderProps {
 }
 
 interface PageBuilderSection {
-	background: PageBlock['background'];
 	blocks: PageBlock[];
 }
 
@@ -17,9 +16,9 @@ const PageBuilder: React.FC<PageBuilderProps> = ({ sections }) => {
 	return (
 		<>
 			{sections.map((section, i) => (
-				<PageSection key={i} background={section.background}>
+				<PageSection key={i}>
 					{section.blocks.map((block) => (
-						<BaseContainer key={block.id}>
+						<BaseContainer key={block.id} className="py-4">
 							<BaseBlock type={block.collection || ''} uuid={String(block.item || '')} />
 						</BaseContainer>
 					))}

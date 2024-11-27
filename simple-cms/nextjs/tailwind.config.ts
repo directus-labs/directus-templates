@@ -2,46 +2,36 @@ import type { Config } from 'tailwindcss';
 import tailwindcssAnimate from 'tailwindcss-animate';
 
 const config: Config = {
-	darkMode: ['class'],
+	darkMode: 'class',
 	content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
 			fontFamily: {
-				heading: ['var(--font-poppins)', 'sans-serif'],
-				body: ['var(--font-inter)', 'sans-serif'],
+				sans: ['Poppins', 'sans-serif'],
+				heading: ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)',
 			},
-
 			colors: {
-				background: {
-					DEFAULT: '#FFFFFF',
-					dark: '#172940',
-					light: '#FFFFFF',
+				colors: {
+					background: 'var(--background-color)',
+					foreground: 'var(--foreground-color)',
 				},
-				gray: '#F5F8FB',
 				accent: 'var(--accent-color)',
+				gray: '#F5F8FB',
+				black: '#000000',
 			},
-
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0',
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)',
-					},
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)',
-					},
-					to: {
-						height: '0',
-					},
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' },
 				},
 			},
 			animation: {
@@ -52,4 +42,5 @@ const config: Config = {
 	},
 	plugins: [tailwindcssAnimate],
 };
+
 export default config;
