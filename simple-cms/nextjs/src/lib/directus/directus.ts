@@ -13,7 +13,7 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const queue = new Queue({ intervalCap: 10, interval: 500, carryoverConcurrencyCount: true });
 
-const directusUrl = process.env.DIRECTUS_URL as string;
+const directusUrl = process.env.NEXT_PUBLIC_DIRECTUS_URL as string;
 
 const fetchRetry = async (count: number, ...args: Parameters<typeof fetch>) => {
 	const response = await fetch(...args);

@@ -4,9 +4,10 @@ import clsx from 'clsx';
 export interface BaseTextProps {
 	align?: 'start' | 'center' | 'end';
 	content: string;
+	className?: string;
 }
 
-const BaseText: React.FC<BaseTextProps> = ({ content, align = 'start' }) => {
+const BaseText: React.FC<BaseTextProps> = ({ content, align = 'start', className }) => {
 	return (
 		<div
 			className={clsx(
@@ -14,6 +15,7 @@ const BaseText: React.FC<BaseTextProps> = ({ content, align = 'start' }) => {
 				align === 'start' && 'text-left',
 				align === 'center' && 'text-center',
 				align === 'end' && 'text-right',
+				className,
 			)}
 			dangerouslySetInnerHTML={{ __html: content }}
 		/>

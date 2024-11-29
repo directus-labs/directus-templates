@@ -1,6 +1,6 @@
 import React from 'react';
-import { useDirectus } from '@/lib/directus';
-import BaseText from './BaseText';
+import { useDirectus } from '@/lib/directus/directus';
+import BaseText from '../../components/Text';
 
 interface BlockRichTextProps {
 	uuid: string;

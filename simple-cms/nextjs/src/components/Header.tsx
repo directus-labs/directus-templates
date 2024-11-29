@@ -1,6 +1,6 @@
 import React from 'react';
-import { useDirectus } from '@/lib/directus';
-import BaseContainer from '@/components/BaseContainer';
+import { useDirectus } from '@/lib/directus/directus';
+import BaseContainer from '@/components/Container';
 import { Button } from '@/components/ui/button';
 import {
 	DropdownMenu,
@@ -8,7 +8,7 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './ui/ThemeToggle';
 
 const Header = async () => {
 	const { directus, readItem } = useDirectus();

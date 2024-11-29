@@ -1,6 +1,6 @@
 import React from 'react';
-import { useDirectus } from '@/lib/directus';
-import BaseContainer from '@/components/BaseContainer';
+import { useDirectus } from '@/lib/directus/directus';
+import BaseContainer from '@/components/Container';
 
 const Footer = async () => {
 	const { directus, readItem, readSingleton } = useDirectus();

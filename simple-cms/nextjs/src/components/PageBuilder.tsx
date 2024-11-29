@@ -1,7 +1,7 @@
 import React from 'react';
 import PageSection from './PageSection';
-import BaseContainer from './BaseContainer';
-import BaseBlock from './BaseBlock';
+import BaseContainer from './Container';
+import BaseBlock from '../app/blocks/BaseBlock';
 import { PageBlock } from '@/types/directus-schema';
 
 interface PageBuilderProps {

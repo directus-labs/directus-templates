@@ -1,6 +1,9 @@
 # Next.js Simple CMS Template with Directus Integration
 
-This is a **Next.js-based Simple CMS Template** that is fully integrated with [Directus](https://directus.io/), offering a headless CMS solution for managing and delivering content seamlessly. The template leverages modern technologies like the **Next.js App Router**, **Tailwind CSS**, and **Shadcn components**, providing a complete and scalable starting point for building CMS-powered web applications.
+This is a **Next.js-based Simple CMS Template** that is fully integrated with [Directus](https://directus.io/), offering
+a headless CMS solution for managing and delivering content seamlessly. The template leverages modern technologies like
+the **Next.js App Router**, **Tailwind CSS**, and **Shadcn components**, providing a complete and scalable starting
+point for building CMS-powered web applications.
 
 ## **Features**
 
@@ -23,13 +26,14 @@ This is a **Next.js-based Simple CMS Template** that is fully integrated with [D
 
 ### Generate Directus Types
 
-This repository includes a [utility](https://www.npmjs.com/package/directus-sdk-typegen) to generate TypeScript types for your Directus schema.
+This repository includes a [utility](https://www.npmjs.com/package/directus-sdk-typegen) to generate TypeScript types
+for your Directus schema.
 
 #### Usage
 
 1. Ensure your `.env` file is configured with:
    ```env
-   DIRECTUS_URL=your-token-here
+   NEXT_PUBLIC_DIRECTUS_URL=your-token-here
    DIRECTUS_TOKEN=your-token-here
    ```
 2. Run with the following command

@@ -1,4 +1,4 @@
-import { useDirectus } from '@/lib/directus';
+import { useDirectus } from '@/lib/directus/directus';
 import PageBuilder from '@/components/PageBuilder';
 import { PageBlock } from '@/types/directus-schema';
 
