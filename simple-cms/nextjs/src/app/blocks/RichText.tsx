@@ -1,6 +1,7 @@
-import React from 'react';
 import { useDirectus } from '@/lib/directus/directus';
-import BaseText from '../../components/Text';
+import BaseText from '@/components/Text';
+import Header from '@/components/Header';
+import type { BlockRichtext as DirectusBlockRichText } from '@/types/directus-schema';
 
 interface BlockRichTextProps {
 	uuid: string;
@@ -9,35 +10,22 @@ interface BlockRichTextProps {
 const BlockRichText = async ({ uuid }: BlockRichTextProps) => {
 	const { directus, readItem } = useDirectus();
 
-	const block = await directus.request(
+	const block = await directus.request<DirectusBlockRichText>(
 		readItem('block_richtext', uuid, {
 			fields: ['title', 'headline', 'content', 'alignment'],
 		}),
 	);
 
-	const normalizedAlign = block.alignment === 'left' ? 'start' : block.alignment === 'center' ? 'center' : 'start';
+	if (!block) return null;
 
 	return (
-		<div className="rich-text-container space-y-4">
-			{block.title && (
-				<h1
-					className={`text-2xl text-accent font-heading ${
-						normalizedAlign === 'start' ? 'text-left' : normalizedAlign === 'center' ? 'text-center' : ''
-					}`}
-				>
-					{block.title}
-				</h1>
-			)}
-			{block.headline && (
-				<h2
-					className={`text-3xl text-foreground font-heading ${
-						normalizedAlign === 'start' ? 'text-left' : normalizedAlign === 'center' ? 'text-center' : ''
-					}`}
-				>
-					{block.headline}
-				</h2>
-			)}
-			<BaseText content={block.content || ''} align={normalizedAlign} />
+		<div className={`rich-text-container space-y-4 ${block.alignment ? `text-${block.alignment}` : 'text-left'}`}>
+			<Header
+				title={block.title}
+				headline={block.headline}
+				className={block.alignment ? `text-${block.alignment}` : ''}
+			/>
+			<BaseText content={block.content || ''} align={block.alignment || 'left'} />
 		</div>
 	);
 };

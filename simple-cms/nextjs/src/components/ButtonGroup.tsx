@@ -1,23 +1,13 @@
-import React from 'react';
 import clsx from 'clsx';
 import BaseButton, { BaseButtonProps } from './Button';
 
-export interface ButtonGroupProps {
+export interface BaseButtonGroupProps {
 	buttons: Array<BaseButtonProps>;
-	align?: 'left' | 'center' | 'right';
 	className?: string;
 }
 
-const ButtonGroup: React.FC<ButtonGroupProps> = ({ buttons, align = 'center', className }) => {
-	const containerStyles = clsx(
-		'flex gap-4',
-		{
-			'justify-start': align === 'left',
-			'justify-center': align === 'center',
-			'justify-end': align === 'right',
-		},
-		className,
-	);
+const BaseButtonGroup = ({ buttons, className }: BaseButtonGroupProps) => {
+	const containerStyles = clsx('flex gap-4', className);
 
 	return (
 		<div className={containerStyles}>
@@ -28,4 +18,4 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ buttons, align = 'center', cl
 	);
 };
 
-export default ButtonGroup;
+export default BaseButtonGroup;

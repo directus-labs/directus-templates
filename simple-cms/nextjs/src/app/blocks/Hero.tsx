@@ -1,7 +1,7 @@
-import React from 'react';
 import { useDirectus } from '@/lib/directus/directus';
-import BaseText from '../../components/Text';
+import BaseText from '@/components/Text';
 import BlockButtonGroup from './ButtonGroup';
+import Header from '@/components/Header';
 
 interface BlockHeroProps {
 	uuid: string;
@@ -16,35 +16,36 @@ const BlockHero = async ({ uuid }: BlockHeroProps) => {
 		}),
 	);
 
-	const alignment = block.alignment ?? 'start';
-	const normalizedAlign = alignment === 'left' ? 'start' : alignment === 'center' ? 'center' : 'start';
+	if (!block) return null;
 
-	const backgroundImageUrl = block.image
-		? encodeURI(`${process.env.NEXT_PUBLIC_DIRECTUS_URL}/assets/${block.image}`)
-		: null;
+	const { alignment, title, headline, description, image, button_group } = block;
+
+	const backgroundImageUrl = image ? `${process.env.NEXT_PUBLIC_DIRECTUS_URL}/assets/${image}` : null;
 
 	return (
 		<section
-			className="relative flex flex-col items-center justify-center w-full min-h-[60vh] p-6 md:p-10"
+			className={`relative flex flex-col items-center justify-center w-screen min-h-[60vh]`}
 			style={{
-				backgroundImage: backgroundImageUrl ? `url('${backgroundImageUrl}')` : undefined,
+				backgroundImage: backgroundImageUrl
+					? `linear-gradient(
+                var(--gradient-overlay),
+                var(--gradient-overlay)
+              ), url('${backgroundImageUrl}')`
+					: undefined,
 				backgroundSize: 'cover',
 				backgroundPosition: 'center',
 			}}
 		>
-			<div
-				className={`max-w-4xl ${
-					normalizedAlign === 'start' ? 'text-left' : normalizedAlign === 'center' ? 'text-center' : ''
-				}`}
-			>
-				{block.title && <h1 className="text-4xl font-heading text-accent mb-4">{block.title}</h1>}
-				{block.headline && <h2 className="text-3xl font-heading text-foreground mb-6">{block.headline}</h2>}
-				{block.description && (
-					<BaseText content={block.description} align={normalizedAlign} className="text-lg text-foreground/80 mb-8" />
+			<div className={`max-w-4xl ${alignment ? `text-${alignment}` : 'text-left'}`}>
+				<Header title={title ?? null} headline={headline ?? null} />
+
+				{description && (
+					<BaseText content={description} align={alignment ?? 'left'} className="text-lg text-foreground mb-8" />
 				)}
-				{block.button_group?.id && (
-					<div className={`mt-6 ${normalizedAlign === 'center' ? 'flex justify-center' : ''}`}>
-						<BlockButtonGroup uuid={block.button_group.id} />
+
+				{button_group?.id && (
+					<div className={`mt-6 ${alignment === 'center' ? 'flex justify-center' : ''}`}>
+						<BlockButtonGroup uuid={button_group.id} />
 					</div>
 				)}
 			</div>

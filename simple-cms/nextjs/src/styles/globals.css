@@ -4,13 +4,16 @@
 
 :root {
 	--background-color: #ffffff; /* Light background */
-	--foreground-color: #000000; /* Light text */
+	--foreground-color: #42566e; /* Light text */
 	--accent-color: #6644ff; /* Accent color */
+	--accent-color-soft: color-mix(in srgb, var(--accent-color), white 20%);
+	--gradient-overlay: rgba(255, 255, 255, 0.3);
 }
 
 .dark {
 	--background-color: #172940; /* Default dark background */
 	--foreground-color: #ffffff; /* Default dark text */
+	--gradient-overlay: rgba(66, 86, 110, 0.4);
 }
 @layer base {
 	html {

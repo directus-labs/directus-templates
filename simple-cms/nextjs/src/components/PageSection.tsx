@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 
 interface PageSectionProps {
@@ -6,11 +5,7 @@ interface PageSectionProps {
 	className?: string;
 }
 
-const PageSection: React.FC<PageSectionProps> = ({
-	children,
-
-	className = '',
-}) => {
+const PageSection = ({ children, className = '' }: PageSectionProps) => {
 	return <div className={clsx('py-8', className)}>{children}</div>;
 };
 

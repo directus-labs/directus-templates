@@ -58,7 +58,7 @@ const SWITCH_DATA: SwitchOption[] = [
 	},
 ];
 
-const ThemeSwitch: React.FC = () => {
+const ThemeSwitch = () => {
 	const { theme, setTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 

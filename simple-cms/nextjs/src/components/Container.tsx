@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 
 interface BaseContainerProps {
@@ -6,7 +5,7 @@ interface BaseContainerProps {
 	className?: string;
 }
 
-const BaseContainer: React.FC<BaseContainerProps> = ({ children, className = '' }) => {
+const BaseContainer = ({ children, className = '' }: BaseContainerProps) => {
 	return (
 		<div className={clsx('base-container px-4 md:px-8 lg:px-16 bg-background text-foreground', className)}>
 			{children}
