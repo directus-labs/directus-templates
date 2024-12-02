@@ -1,6 +1,7 @@
 import { useDirectus } from '@/lib/directus/directus';
 import BaseText from '@/components/Text';
-import Header from '@/components/Header';
+import Title from '@/components/Title';
+import Headline from '@/components/Headline';
 import type { BlockRichtext as DirectusBlockRichText } from '@/types/directus-schema';
 
 interface BlockRichTextProps {
@@ -20,11 +21,8 @@ const BlockRichText = async ({ uuid }: BlockRichTextProps) => {
 
 	return (
 		<div className={`rich-text-container space-y-4 ${block.alignment ? `text-${block.alignment}` : 'text-left'}`}>
-			<Header
-				title={block.title}
-				headline={block.headline}
-				className={block.alignment ? `text-${block.alignment}` : ''}
-			/>
+			<Title title={block.title} className={block.alignment ? `text-${block.alignment}` : ''} />
+			<Headline headline={block.headline} className={block.alignment ? `text-${block.alignment}` : ''} />
 			<BaseText content={block.content || ''} align={block.alignment || 'left'} />
 		</div>
 	);

@@ -1,7 +1,8 @@
 import { useDirectus } from '@/lib/directus/directus';
 import BaseText from '@/components/Text';
 import BlockButtonGroup from './ButtonGroup';
-import Header from '@/components/Header';
+import Title from '@/components/Title';
+import Headline from '@/components/Headline';
 
 interface BlockHeroProps {
 	uuid: string;
@@ -28,16 +29,17 @@ const BlockHero = async ({ uuid }: BlockHeroProps) => {
 			style={{
 				backgroundImage: backgroundImageUrl
 					? `linear-gradient(
-                var(--gradient-overlay),
-                var(--gradient-overlay)
-              ), url('${backgroundImageUrl}')`
+              var(--gradient-overlay),
+              var(--gradient-overlay)
+            ), url('${backgroundImageUrl}')`
 					: undefined,
 				backgroundSize: 'cover',
 				backgroundPosition: 'center',
 			}}
 		>
 			<div className={`max-w-4xl ${alignment ? `text-${alignment}` : 'text-left'}`}>
-				<Header title={title ?? null} headline={headline ?? null} />
+				<Title title={title} />
+				<Headline headline={headline} />
 
 				{description && (
 					<BaseText content={description} align={alignment ?? 'left'} className="text-lg text-foreground mb-8" />
