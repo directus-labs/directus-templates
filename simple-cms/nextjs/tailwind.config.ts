@@ -48,10 +48,24 @@ const config: Config = {
 			colors: {
 				background: 'var(--background-color)',
 				foreground: 'var(--foreground-color)',
+				primary: 'var(--accent-color-light)',
+				secondary: 'var(--accent-color-dark)',
 				accent: 'var(--accent-color)',
 				soft: 'var(--accent-color-soft)',
-				gray: '#F5F8FB',
+
 				black: '#000000',
+				gray: {
+					DEFAULT: '#F5F8FB',
+					100: '#f5f5f5',
+					200: '#e5e5e5',
+					300: '#d4d4d4',
+					400: '#a3a3a3',
+					500: '#737373',
+					600: '#525252',
+					700: '#404040',
+					800: '#262626',
+					900: '#171717',
+				},
 			},
 			typography: {
 				DEFAULT: {

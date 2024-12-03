@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import BlockRichText from './RichText';
 import BlockHero from './Hero';
 import BlockGallery from './Gallery';
+import BlockPricing from './Pricing';
 
 interface BaseBlockProps {
 	type: string;
@@ -13,7 +14,7 @@ const BaseBlock = ({ type, uuid }: BaseBlockProps) => {
 		block_richtext: BlockRichText,
 		block_hero: BlockHero,
 		block_gallery: BlockGallery,
-		block_pricing: () => <div>Pricing Block Temp Placeholder</div>,
+		block_pricing: BlockPricing,
 		block_form: () => <div>Form Block Temp Placeholder</div>,
 	};
 

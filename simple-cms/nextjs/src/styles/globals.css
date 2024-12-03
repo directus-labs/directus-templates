@@ -6,7 +6,9 @@
 	--background-color: #ffffff; /* Light background */
 	--foreground-color: #42566e; /* Light text */
 	--accent-color: #6644ff; /* Accent color */
+	--accent-color-dark: color-mix(in srgb, var(--accent-color), black 40%);
 	--accent-color-soft: color-mix(in srgb, var(--accent-color), white 20%);
+	--accent-color-light: color-mix(in srgb, var(--accent-color), white 90%);
 	--gradient-overlay: rgba(255, 255, 255, 0.3);
 }
 
