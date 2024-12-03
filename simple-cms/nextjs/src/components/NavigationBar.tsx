@@ -1,13 +1,21 @@
 import React from 'react';
 import { useDirectus } from '@/lib/directus/directus';
 import BaseContainer from '@/components/Container';
-import { Button } from '@/components/ui/button';
+import {
+	NavigationMenu,
+	NavigationMenuList,
+	NavigationMenuItem,
+	NavigationMenuTrigger,
+	NavigationMenuContent,
+	NavigationMenuLink,
+} from '@/components/ui/navigation-menu';
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { Button } from '@/components/ui/button';
 import ThemeToggle from './ui/ThemeToggle';
 
 const NavigationBar = async () => {
@@ -40,33 +48,44 @@ const NavigationBar = async () => {
 					<img src="/images/logo.svg" alt="Logo" className="h-8" />
 				</a>
 				<ThemeToggle />
-				<nav className="hidden md:flex items-center space-x-8">
-					{menu?.items?.map((section: any) => (
-						<div key={section.id}>
-							{section.children && section.children.length > 0 ? (
-								<DropdownMenu>
-									<DropdownMenuTrigger asChild>
-										<Button variant="link" className="px-2 text-sm font-medium">
+				{/* Desktop Menu */}
+				<nav className="hidden md:block">
+					<NavigationMenu>
+						<NavigationMenuList>
+							{menu?.items?.map((section: any) => (
+								<NavigationMenuItem key={section.id}>
+									{section.children && section.children.length > 0 ? (
+										<>
+											<NavigationMenuTrigger>
+												<span className="px-2 text-sm font-medium cursor-pointer">{section.title}</span>
+											</NavigationMenuTrigger>
+											<NavigationMenuContent className="min-w-[150px]">
+												<ul className="p-4 bg-background shadow-md rounded-md">
+													{section.children.map((child: any) => (
+														<li key={child.id}>
+															<NavigationMenuLink
+																href={child.page?.permalink || child.url || '#'}
+																className="text-sm font-medium"
+															>
+																{child.title}
+															</NavigationMenuLink>
+														</li>
+													))}
+												</ul>
+											</NavigationMenuContent>
+										</>
+									) : (
+										<NavigationMenuLink
+											href={section.page?.permalink || section.url || '#'}
+											className="text-sm font-medium"
+										>
 											{section.title}
-										</Button>
-									</DropdownMenuTrigger>
-									<DropdownMenuContent align="start" className="bg-background">
-										{section.children.map((child: any) => (
-											<DropdownMenuItem key={child.id} asChild>
-												<a href={child.page?.permalink || child.url || '#'} className="w-full text-left">
-													{child.title}
-												</a>
-											</DropdownMenuItem>
-										))}
-									</DropdownMenuContent>
-								</DropdownMenu>
-							) : (
-								<a href={section.page?.permalink || section.url || '#'} className="text-sm font-medium hover:underline">
-									{section.title}
-								</a>
-							)}
-						</div>
-					))}
+										</NavigationMenuLink>
+									)}
+								</NavigationMenuItem>
+							))}
+						</NavigationMenuList>
+					</NavigationMenu>
 				</nav>
 
 				{/* Mobile Menu Button */}
