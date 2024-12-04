@@ -6,9 +6,7 @@ interface TitleProps {
 const BaseTitle = ({ title, className = '' }: TitleProps) => {
 	if (!title) return null;
 
-	return (
-		<h2 className={`text-accent text-xl font-normal uppercase leading-[33.6px] font-heading ${className}`}>{title}</h2>
-	);
+	return <h2 className={`text-title font-heading text-accent font-normal uppercase ${className}`}>{title}</h2>;
 };
 
 export default BaseTitle;
