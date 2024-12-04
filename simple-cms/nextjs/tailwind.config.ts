@@ -10,40 +10,19 @@ const config: Config = {
 			fontFamily: {
 				heading: ['Poppins', 'sans-serif'],
 				sans: ['Inter', 'sans-serif'],
-				code: ['Fira Code', 'monospace'],
-				signature: ['Signature', 'cursive'],
+				code: ['Fira Mono', 'monospace'],
 			},
 			fontSize: {
-				xs: ['0.75rem', '1rem'], // 12px / 16px line height
-				sm: ['0.875rem', '1.25rem'], // 14px / 20px line height
-				base: ['1rem', '1.5rem'], // 16px / 24px line height
-				lg: ['1.125rem', '1.75rem'], // 18px / 28px line height
-				xl: ['1.25rem', '1.75rem'], // 20px / 28px line height
-				'2xl': ['1.875rem', '2.25rem'], // 30px / 36px line height
-				'3xl': ['2.25rem', '2.5rem'], // 36px / 40px line height
-				'4xl': ['3rem', '1'], // 48px / line height 1
-				'5xl': ['3.5rem', '4rem'], // 56px / 64px line height
-			},
-			borderRadius: {
-				none: '0',
-				sm: '0.125rem', // 2px
-				DEFAULT: '0.25rem', // 4px
-				md: '0.375rem', // 6px
-				lg: '0.5rem', // 8px
-				xl: '0.75rem', // 12px
-				'2xl': '1rem', // 16px
-				'3xl': '1.5rem', // 24px
-				full: '9999px',
-			},
-			spacing: {
-				0: '0',
-				0.5: '0.125rem', // 2px
-				1: '0.25rem', // 4px
-				2: '0.5rem', // 8px
-				3: '0.75rem', // 12px
-				4: '1rem', // 16px
-				5: '1.25rem', // 20px
-				6: '1.5rem', // 24px
+				title: ['24px', '33.6px'], // Title
+				headline: ['56px', '78.4px'], // Headline
+				h1: ['56px', '78.4px'], // Heading 1
+				h2: ['36px', '50.4px'], // Heading 2
+				h3: ['24px', '33.6px'], // Heading 3
+				description: ['16px', '22.4px'], // Description
+				regular: ['16px', '24px'], // Regular text
+				bold: ['16px', '22.4px'], // Bolded text
+				nav: ['16px', '22.4px'], // Navbar link
+				code: ['14px', '16.8px'], // Code snippet
 			},
 			colors: {
 				background: 'var(--background-color)',
@@ -52,19 +31,9 @@ const config: Config = {
 				secondary: 'var(--accent-color-dark)',
 				accent: 'var(--accent-color)',
 				soft: 'var(--accent-color-soft)',
-
-				black: '#000000',
 				gray: {
 					DEFAULT: '#F5F8FB',
-					100: '#f5f5f5',
-					200: '#e5e5e5',
-					300: '#d4d4d4',
-					400: '#a3a3a3',
-					500: '#737373',
-					600: '#525252',
-					700: '#404040',
-					800: '#262626',
-					900: '#171717',
+					muted: '#A5B0BD',
 				},
 			},
 			typography: {
@@ -78,51 +47,77 @@ const config: Config = {
 								textDecoration: 'underline',
 							},
 						},
-						blockquote: {
-							fontStyle: 'italic',
-							color: 'var(--foreground-color)',
-							borderLeft: '4px solid var(--gray)',
-							paddingLeft: '1rem',
+						h1: {
+							fontFamily: 'Poppins',
+							fontSize: '56px',
+							fontWeight: '400',
+							lineHeight: '78.4px',
+						},
+						h2: {
+							fontFamily: 'Poppins',
+							fontSize: '36px',
+							fontWeight: '400',
+							lineHeight: '50.4px',
+						},
+						h3: {
+							fontFamily: 'Poppins',
+							fontSize: '24px',
+							fontWeight: '400',
+							lineHeight: '33.6px',
+						},
+						p: {
+							fontFamily: 'Inter',
+							fontSize: '16px',
+							fontWeight: '400',
+							lineHeight: '24px',
 						},
 						code: {
-							backgroundColor: 'var(--gray)',
+							fontFamily: 'Fira Mono',
+							fontSize: '14px',
+							fontWeight: '500',
+							lineHeight: '16.8px',
+							backgroundColor: 'var(--gray-100)',
 							padding: '0.25rem 0.5rem',
 							borderRadius: '4px',
 						},
+						blockquote: {
+							fontStyle: 'italic',
+							borderLeft: '4px solid var(--accent-color)',
+							paddingLeft: '1rem',
+						},
 						ul: {
-							textAlign: 'left',
-							marginLeft: '1.25rem',
+							fontFamily: 'Inter',
+							fontSize: '16px',
+							fontWeight: '400',
+							lineHeight: '24px',
 							listStyleType: 'disc',
-						},
-						'ol > li::marker': {
-							color: '#4B5563',
-						},
-						'ul > li::marker': {
-							color: '#4B5563',
-							fontSize: '1.25em',
+							paddingLeft: '1.25rem',
 						},
 						ol: {
-							textAlign: 'left',
-							marginLeft: '1.25rem',
+							fontFamily: 'Inter',
+							fontSize: '16px',
+							fontWeight: '400',
+							lineHeight: '24px',
+							listStyleType: 'decimal',
+							paddingLeft: '1.25rem',
 						},
 					},
 				},
 				dark: {
 					css: {
 						color: 'var(--foreground-color)',
+						a: {
+							color: 'var(--accent-color)',
+							textDecoration: 'none',
+							'&:hover': {
+								textDecoration: 'underline',
+							},
+						},
 						blockquote: {
-							color: 'var(--foreground-color)',
-							borderLeft: '4px solid var(--gray)',
+							borderLeftColor: 'var(--gray-700)',
 						},
 						code: {
 							backgroundColor: '#1f2937',
-						},
-						'ul > li::marker': {
-							color: '#D1D5DB',
-							fontSize: '1.25em',
-						},
-						'ol > li::marker': {
-							color: '#D1D5DB',
 						},
 					},
 				},

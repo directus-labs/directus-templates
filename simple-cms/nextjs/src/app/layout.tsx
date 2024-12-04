@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import '@/styles/fonts.css';
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
