@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDirectus } from '@/lib/directus/directus';
 import BaseContainer from '@/components/Container';
 
@@ -34,7 +33,7 @@ const Footer = async () => {
 						<a href="/" className="text-lg font-bold">
 							<img src="/images/logo.svg" alt="Logo" />
 						</a>
-						<p className="text-sm mt-2">{globals.description}</p>
+						<p className="text-description mt-2">{globals.description}</p>
 					</div>
 
 					<div className="flex flex-col items-start md:items-end flex-1">
@@ -42,7 +41,10 @@ const Footer = async () => {
 							<ul className="space-y-4">
 								{navPrimary.items?.map((group: any) => (
 									<li key={group.id}>
-										<a href={group.page?.permalink || group.url || '#'} className="hover:underline">
+										<a
+											href={group.page?.permalink || group.url || '#'}
+											className="text-nav font-medium hover:underline"
+										>
 											{group.title}
 										</a>
 									</li>

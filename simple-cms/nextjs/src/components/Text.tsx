@@ -10,7 +10,7 @@ const BaseText = ({ content, align = 'left', className }: BaseTextProps) => {
 	return (
 		<div
 			className={clsx(
-				'prose dark:prose-invert max-w-none',
+				'prose dark:prose-invert max-w-none text-regular font-sans',
 				align === 'left' && 'text-left',
 				align === 'center' && 'text-center',
 				align === 'right' && 'text-right',
