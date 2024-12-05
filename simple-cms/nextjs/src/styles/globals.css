@@ -9,14 +9,13 @@
 	--accent-color-dark: color-mix(in srgb, var(--accent-color), black 40%);
 	--accent-color-soft: color-mix(in srgb, var(--accent-color), white 20%);
 	--accent-color-light: color-mix(in srgb, var(--accent-color), white 90%);
-	--gradient-overlay: rgba(255, 255, 255, 0.3);
 }
 
 .dark {
 	--background-color: #172940; /* Default dark background */
 	--foreground-color: #ffffff; /* Default dark text */
-	--gradient-overlay: rgba(66, 86, 110, 0.4);
 }
+
 @layer base {
 	html {
 		@apply bg-[var(--background-color)] text-[var(--foreground-color)];
