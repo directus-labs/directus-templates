@@ -6,6 +6,15 @@ interface BlockButtonProps {
 	uuid: string;
 }
 
+// Map Directus variants to ShadCN-compatible variants
+const variantMapping: Record<string, string> = {
+	solid: 'default',
+	outline: 'outline',
+	soft: 'secondary',
+	ghost: 'ghost',
+	link: 'link',
+};
+
 const BlockButton = async ({ uuid }: BlockButtonProps) => {
 	const { directus, readItem } = useDirectus();
 
@@ -17,6 +26,7 @@ const BlockButton = async ({ uuid }: BlockButtonProps) => {
 
 	if (!button) return null;
 
+	// Determine the button destination
 	const destination = (() => {
 		if (button.type === 'url') {
 			return button.url || undefined;
@@ -37,7 +47,9 @@ const BlockButton = async ({ uuid }: BlockButtonProps) => {
 		console.warn(`BlockButton with uuid "${uuid}" has type "${button.type}" but no valid destination was found.`);
 	}
 
-	return <BaseButton label={button.label || 'Untitled Button'} variant={button.variant} url={destination} />;
+	const variant = button.variant ? variantMapping[button.variant] : 'default';
+
+	return <BaseButton label={button.label} variant={variant as any} url={destination} />;
 };
 
 export default BlockButton;

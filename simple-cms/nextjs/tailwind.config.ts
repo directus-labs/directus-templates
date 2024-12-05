@@ -31,9 +31,13 @@ const config: Config = {
 				secondary: 'var(--accent-color-dark)',
 				accent: 'var(--accent-color)',
 				soft: 'var(--accent-color-soft)',
+				blue: {
+					DEFAULT: '#172940',
+				},
 				gray: {
 					DEFAULT: '#F5F8FB',
 					muted: '#A5B0BD',
+					dark: '#42566E',
 				},
 			},
 			typography: {
