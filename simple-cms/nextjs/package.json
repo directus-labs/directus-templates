@@ -15,6 +15,7 @@
 	},
 	"dependencies": {
 		"@directus/sdk": "^18.0.0",
+		"@radix-ui/react-collapsible": "^1.1.1",
 		"@radix-ui/react-dropdown-menu": "^2.1.2",
 		"@radix-ui/react-navigation-menu": "^1.2.1",
 		"@radix-ui/react-separator": "^1.1.0",
