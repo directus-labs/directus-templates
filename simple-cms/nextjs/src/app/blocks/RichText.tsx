@@ -19,11 +19,14 @@ const BlockRichText = async ({ uuid }: BlockRichTextProps) => {
 
 	if (!block) return null;
 
+	const alignment = block.alignment || 'left';
+	const alignmentClasses = alignment === 'left' ? 'text-left' : `text-${alignment}`;
+
 	return (
-		<div className={`rich-text-container space-y-4 ${block.alignment ? `text-${block.alignment}` : 'text-left'}`}>
-			<Title title={block.title} className={block.alignment ? `text-${block.alignment}` : ''} />
-			<Headline headline={block.headline} className={block.alignment ? `text-${block.alignment}` : ''} />
-			<BaseText content={block.content || ''} align={block.alignment || 'left'} />
+		<div className={`rich-text-container space-y-4 mx-auto max-w-prose ${alignmentClasses}`}>
+			<Title title={block.title} />
+			<Headline headline={block.headline} />
+			<BaseText content={block.content || ''} align={alignment} />
 		</div>
 	);
 };

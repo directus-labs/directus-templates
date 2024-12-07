@@ -88,6 +88,7 @@ const config: Config = {
 							fontStyle: 'italic',
 							borderLeft: '4px solid var(--accent-color)',
 							paddingLeft: '1rem',
+							textAlign: 'left',
 						},
 						ul: {
 							fontFamily: 'Inter',
@@ -96,6 +97,7 @@ const config: Config = {
 							lineHeight: '24px',
 							listStyleType: 'disc',
 							paddingLeft: '1.25rem',
+							listStylePosition: 'inside',
 						},
 						ol: {
 							fontFamily: 'Inter',
@@ -104,6 +106,11 @@ const config: Config = {
 							lineHeight: '24px',
 							listStyleType: 'decimal',
 							paddingLeft: '1.25rem',
+							listStylePosition: 'inside',
+						},
+						li: {
+							marginBottom: '0.5rem',
+							paddingLeft: '0',
 						},
 					},
 				},
