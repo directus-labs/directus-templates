@@ -4,6 +4,7 @@ import {
 	readItem,
 	rest,
 	readSingleton,
+	readUser,
 } from '.pnpm/@directus+sdk@18.0.0/node_modules/@directus/sdk';
 import type { RestClient } from '.pnpm/@directus+sdk@18.0.0/node_modules/@directus/sdk';
 import Queue from 'p-queue';
@@ -39,5 +40,6 @@ export function useDirectus() {
 		readItems,
 		readItem,
 		readSingleton,
+		readUser,
 	};
 }

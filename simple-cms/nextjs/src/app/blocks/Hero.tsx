@@ -50,8 +50,15 @@ const BlockHero = async ({ uuid }: BlockHeroProps) => {
 			</div>
 
 			{image && (
-				<div className={`w-full ${alignment === 'center' ? 'md:max-w-2xl mx-auto' : 'md:w-1/2'} relative`}>
-					<DirectusImage uuid={image as string} alt={title || 'Hero Image'} className="rounded-lg" />
+				<div className={`w-full h-[562px] ${alignment === 'center' ? 'md:max-w-2xl mx-auto' : 'md:w-1/2'} relative`}>
+					<DirectusImage
+						uuid={image as string}
+						alt={title || 'Hero Image'}
+						className="rounded-lg"
+						fill
+						priority
+						sizes="(max-width: 768px) 100vw, 50vw"
+					/>
 				</div>
 			)}
 		</section>

@@ -56,18 +56,21 @@ const config: Config = {
 							fontSize: '56px',
 							fontWeight: '400',
 							lineHeight: '78.4px',
+							marginTop: '1rem',
 						},
 						h2: {
 							fontFamily: 'Poppins',
 							fontSize: '36px',
 							fontWeight: '400',
 							lineHeight: '50.4px',
+							marginTop: '1rem',
 						},
 						h3: {
 							fontFamily: 'Poppins',
 							fontSize: '24px',
 							fontWeight: '400',
 							lineHeight: '33.6px',
+							marginTop: '0',
 						},
 						p: {
 							fontFamily: 'Inter',
