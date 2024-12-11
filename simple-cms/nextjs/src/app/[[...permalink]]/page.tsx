@@ -1,65 +1,49 @@
-import { useDirectus } from '@/lib/directus/directus';
+import { fetchPageData } from '@/lib/directus/fetchers';
 import PageBuilder from '@/components/PageBuilder';
-import { PageBlock } from '@/types/directus-schema';
 import Head from 'next/head';
+import { PageBlock } from '@/types/directus-schema';
 
 export default async function Page({ params }: { params: Promise<{ permalink?: string[] }> }) {
 	const { permalink } = await params;
 
+	// Resolve permalink into a full path
 	const permalinkSegments = permalink || [];
 	const resolvedPermalink = `/${permalinkSegments.join('/')}`.replace(/\/$/, '') || '/';
 
-	const { directus, readItems } = useDirectus();
+	let page;
+	try {
+		page = await fetchPageData(resolvedPermalink);
+	} catch (error) {
+		console.error('Error loading page:', error);
+	}
 
-	const pageData = await directus.request(
-		readItems('pages', {
-			filter: { permalink: { _eq: resolvedPermalink } },
-			limit: 1,
-			fields: ['title', 'description', { blocks: ['id', 'background', 'collection', 'item', 'sort'] }],
-			deep: {
-				blocks: {
-					_sort: ['sort'],
-				},
-			},
-		}),
-	);
-
-	const page = pageData[0];
-
-	if (!page || !Array.isArray(page.blocks)) {
+	if (!page || !page.blocks) {
 		return <div className="text-center text-xl mt-[20%]">404 - Page Not Found</div>;
 	}
 
-	const blocks: PageBlock[] = page.blocks.filter((block): block is PageBlock => typeof block !== 'string' && !!block);
+	// Ensure blocks are valid PageBlock[]
+	const blocks: PageBlock[] = page.blocks.filter(
+		(block: any): block is PageBlock => typeof block === 'object' && block.collection,
+	);
 
-	const sections = [
-		{
-			background: blocks[0]?.background || 'light',
-			blocks,
-		},
-	];
-
+	// SEO Metadata
 	const title = page.title;
 	const metaDescription = page.description;
 	const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${resolvedPermalink}`;
 
 	return (
 		<>
-			{/* SEO Metadata */}
 			<Head>
 				<title>{title}</title>
 				{metaDescription && <meta name="description" content={metaDescription} />}
 				<link rel="canonical" href={canonicalUrl} />
-
-				{/* Basic Open Graph Metadata */}
 				<meta property="og:title" content={title} />
 				{metaDescription && <meta property="og:description" content={metaDescription} />}
 				<meta property="og:url" content={canonicalUrl} />
 				<meta property="og:type" content="website" />
 			</Head>
 
-			{/* Page Content */}
-			<PageBuilder sections={sections} />
+			<PageBuilder sections={blocks} />
 		</>
 	);
 }

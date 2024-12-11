@@ -1,32 +1,35 @@
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button as ShadcnButton, buttonVariants } from '@/components/ui/button';
 import { LucideIcon, ArrowRight, Plus } from 'lucide-react';
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 
-export interface BaseButtonProps {
+export interface ButtonProps {
 	label?: string | null;
-	variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
+	variant?: string | null;
 	url?: string | null;
 	size?: 'default' | 'sm' | 'lg' | 'icon';
 	icon?: 'arrow' | 'plus';
-	customIcon?: LucideIcon; // New prop for custom Lucide icons
+	customIcon?: LucideIcon;
 	iconPosition?: 'left' | 'right';
+	type?: string;
+	pagePermalink?: string | null;
+	postSlug?: string | null;
 	className?: string;
-	onClick?: () => void; // Add onClick prop for custom functionality
-	disabled?: boolean; // Optionally handle disabled state
+	onClick?: () => void;
+	disabled?: boolean;
 }
 
-const BaseButton = ({
+const Button = ({
 	label,
-	variant = 'default',
+	variant,
 	url,
 	size = 'default',
 	icon,
 	customIcon,
 	iconPosition = 'left',
 	className,
-	onClick, // Pass onClick prop
-	disabled = false, // Handle disabled state
-}: BaseButtonProps) => {
+	onClick,
+	disabled = false,
+}: ButtonProps) => {
 	const icons: Record<string, LucideIcon> = {
 		arrow: ArrowRight,
 		plus: Plus,
@@ -42,10 +45,10 @@ const BaseButton = ({
 		</span>
 	);
 
-	const buttonClasses = clsx(
-		buttonVariants({ variant, size }),
+	const buttonClasses = cn(
+		buttonVariants({ variant: variant as any, size }),
 		className,
-		disabled && 'cursor-not-allowed opacity-50', // Add styles for disabled state
+		disabled && 'opacity-50 cursor-not-allowed',
 	);
 
 	return url ? (
@@ -53,10 +56,10 @@ const BaseButton = ({
 			{content}
 		</a>
 	) : (
-		<Button variant={variant} size={size} className={buttonClasses} onClick={onClick} disabled={disabled}>
+		<ShadcnButton variant={variant as any} size={size} className={buttonClasses} onClick={onClick} disabled={disabled}>
 			{content}
-		</Button>
+		</ShadcnButton>
 	);
 };
 
-export default BaseButton;
+export default Button;

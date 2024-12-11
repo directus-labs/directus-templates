@@ -1,48 +1,20 @@
-import { useDirectus } from '@/lib/directus/directus';
+import { fetchPostBySlug, fetchRelatedPosts, fetchAuthorById } from '@/lib/directus/fetchers';
 import DirectusImage from '@/components/DirectusImage';
 import BaseText from '@/components/Text';
 import { Separator } from '@/components/ui/separator';
-import Head from 'next/head';
 import ShareDialog from '@/components/ShareDialog';
-import { DirectusUser, Post } from '@/types/directus-schema';
+import Head from 'next/head';
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
 	const { slug } = await params;
-
-	const { directus, readItems, readUser } = useDirectus();
-
-	const post = await directus
-		.request(
-			readItems('posts', {
-				filter: { slug: { _eq: slug } },
-				limit: 1,
-				fields: ['id', 'title', 'content', 'image', 'description', 'author'],
-				deep: {
-					author: {
-						fields: ['id'],
-					},
-				},
-			}),
-		)
-		.then((data) => data?.[0] as Post | null);
+	const post = await fetchPostBySlug(slug);
 
 	if (!post) {
 		return <div className="text-center text-xl mt-[20%]">404 - Post Not Found</div>;
 	}
 
-	const relatedPosts = await directus.request(
-		readItems('posts', {
-			filter: { status: { _eq: 'published' }, id: { _neq: post.id } },
-			fields: ['id', 'title', 'image', 'slug'],
-			limit: 2,
-		}),
-	);
-
-	const author = await directus.request<DirectusUser>(
-		readUser(post.author as string, {
-			fields: ['first_name', 'last_name', 'avatar'],
-		}),
-	);
+	const relatedPosts = await fetchRelatedPosts(post.id);
+	const author = post.author ? await fetchAuthorById(post.author as string) : null;
 
 	const authorName = [author?.first_name, author?.last_name].filter(Boolean).join(' ');
 	const postUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/blog/${slug}`;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { useDirectus } from '@/lib/directus/directus';
-import BaseContainer from '@/components/Container';
+import { fetchNavigationData } from '@/lib/directus/fetchers';
+import Image from 'next/image';
 import {
 	NavigationMenu,
 	NavigationMenuList,
@@ -16,38 +16,26 @@ import { ChevronDown } from 'lucide-react';
 import ThemeSwitch from './ui/ThemeToggle';
 
 const NavigationBar = async () => {
-	const { directus, readItem } = useDirectus();
+	let menu;
+	try {
+		menu = await fetchNavigationData('main');
+	} catch (error) {
+		console.error('Error loading navigation data:', error);
 
-	const [menu] = await Promise.all([
-		directus.request(
-			readItem('navigation', 'main', {
-				fields: [
-					{
-						items: [
-							'id',
-							'title',
-							{
-								page: ['permalink'],
-								children: ['id', 'title', 'url', { page: ['permalink'] }],
-							},
-						],
-					},
-				],
-				deep: { items: { _sort: ['sort'] } },
-			}),
-		),
-	]);
+		return null;
+	}
 
 	return (
-		<BaseContainer className="top-0 z-50 w-full mb-4">
-			<header className="flex items-center justify-between py-4">
+		<header className="sticky top-0 z-50 w-full pt-4 bg-background text-foreground">
+			<div className="flex items-center justify-between p-4 sm:px-6 lg:px-8">
 				<a href="/" className="text-lg font-bold">
-					<img src="/images/logo.svg" alt="Logo" className="h-8" />
+					<Image src="/images/logo.svg" alt="Logo" width={150} height={100} />
 				</a>
 
-				<nav className="hidden md:flex gap-8">
+				{/* Desktop Navigation */}
+				<nav className="hidden md:flex items-center gap-4">
 					<NavigationMenu>
-						<NavigationMenuList className="flex gap-8">
+						<NavigationMenuList className="flex gap-4">
 							{menu?.items?.map((section: any) => (
 								<NavigationMenuItem key={section.id}>
 									{section.children && section.children.length > 0 ? (
@@ -82,10 +70,11 @@ const NavigationBar = async () => {
 							))}
 						</NavigationMenuList>
 					</NavigationMenu>
+					<ThemeSwitch />
 				</nav>
 
-				{/* Mobile Menu Button */}
-				<div className="md:hidden">
+				{/* Mobile Navigation */}
+				<div className="md:hidden flex items-center gap-2">
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
 							<Button
@@ -128,10 +117,11 @@ const NavigationBar = async () => {
 							</div>
 						</DropdownMenuContent>
 					</DropdownMenu>
+					{/* Theme Toggle */}
+					<ThemeSwitch />
 				</div>
-			</header>
-			<ThemeSwitch className="relative top-1 left-4" />
-		</BaseContainer>
+			</div>
+		</header>
 	);
 };
 

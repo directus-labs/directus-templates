@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			<body className="antialiased font-sans">
 				<ThemeProvider>
 					<NavigationBar />
-					<main className="min-h-screen">{children}</main>
+					<main className="min-h-screen px-2 md:px-8 lg:px-16">{children}</main>
 					<Footer />
 				</ThemeProvider>
 			</body>

@@ -24,6 +24,11 @@ const config: Config = {
 				nav: ['16px', '22.4px'], // Navbar link
 				code: ['14px', '16.8px'], // Code snippet
 			},
+			alignments: {
+				left: 'text-left',
+				center: 'text-center',
+				right: 'text-right',
+			},
 			colors: {
 				background: 'var(--background-color)',
 				foreground: 'var(--foreground-color)',

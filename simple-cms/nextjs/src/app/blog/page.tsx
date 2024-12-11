@@ -1,18 +1,10 @@
-import { useDirectus } from '@/lib/directus/directus';
+import { fetchPublishedPosts } from '@/lib/directus/fetchers';
 import Title from '@/components/Title';
 import Headline from '@/components/Headline';
 import DirectusImage from '@/components/DirectusImage';
 
 const BlogPage = async () => {
-	const { directus, readItems } = useDirectus();
-
-	const posts = await directus.request(
-		readItems('posts', {
-			fields: ['id', 'title', 'description', 'slug', 'image', 'status'],
-			filter: { status: { _eq: 'published' } },
-			sort: ['-published_at'],
-		}),
-	);
+	const posts = await fetchPublishedPosts();
 
 	return (
 		<div className="px-6 md:px-12 lg:px-36 py-12">
@@ -33,10 +25,8 @@ const BlogPage = async () => {
 						</div>
 
 						<div className="p-4">
-							<h3 className="text-lg font-bold text-gray-800 group-hover:text-accent transition-colors duration-300">
-								{post.title}
-							</h3>
-							<p className="text-sm text-gray-600 mt-2">{post.description}</p>
+							<h3 className="text-lg font-bold group-hover:text-accent transition-colors duration-300">{post.title}</h3>
+							<p className="text-sm text-foreground mt-2">{post.description}</p>
 						</div>
 					</a>
 				))}

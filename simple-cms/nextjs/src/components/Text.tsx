@@ -1,24 +1,12 @@
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 
-export interface BaseTextProps {
-	align?: 'left' | 'center' | 'right';
+export interface TextProps {
 	content: string;
 	className?: string;
 }
 
-const BaseText = ({ content, align = 'left', className }: BaseTextProps) => {
-	return (
-		<div
-			className={clsx(
-				'prose dark:prose-invert max-w-prose mx-auto text-regular font-san',
-				align === 'left' && 'text-left',
-				align === 'center' && 'text-center',
-				align === 'right' && 'text-right',
-				className,
-			)}
-			dangerouslySetInnerHTML={{ __html: content }}
-		/>
-	);
+const Text = ({ content, className }: TextProps) => {
+	return <div className={cn('prose dark:prose-invert', className)} dangerouslySetInnerHTML={{ __html: content }} />;
 };
 
-export default BaseText;
+export default Text;
