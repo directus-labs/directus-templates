@@ -1,5 +1,6 @@
 import { Button as ShadcnButton, buttonVariants } from '@/components/ui/button';
 import { LucideIcon, ArrowRight, Plus } from 'lucide-react';
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 export interface ButtonProps {
@@ -51,11 +52,19 @@ const Button = ({
 		disabled && 'opacity-50 cursor-not-allowed',
 	);
 
-	return url ? (
-		<a href={url} className={buttonClasses} onClick={onClick}>
-			{content}
-		</a>
-	) : (
+	if (url) {
+		return url.startsWith('/') ? (
+			<Link href={url} className={buttonClasses}>
+				{content}
+			</Link>
+		) : (
+			<a href={url} className={buttonClasses} onClick={onClick} target="_blank" rel="noopener noreferrer">
+				{content}
+			</a>
+		);
+	}
+
+	return (
 		<ShadcnButton variant={variant as any} size={size} className={buttonClasses} onClick={onClick} disabled={disabled}>
 			{content}
 		</ShadcnButton>

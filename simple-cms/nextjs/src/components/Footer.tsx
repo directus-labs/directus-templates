@@ -1,5 +1,6 @@
 import { fetchFooterData } from '@/lib/directus/fetchers';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = async () => {
 	let footerData;
@@ -18,9 +19,16 @@ const Footer = async () => {
 			<div className=" px-16 lg:px-32 text-foreground dark:text-black">
 				<div className="flex flex-col md:flex-row justify-between items-start gap-8 pt-8">
 					<div className="flex-1">
-						<a href="/" className="text-lg font-bold">
-							<Image src="/images/logo.svg" alt="Logo" width={150} height={100} />
-						</a>
+						<Link href="/" className="text-lg font-bold">
+							<Image
+								src="/images/logo.svg"
+								alt="Logo"
+								width="150"
+								height="100"
+								className="w-[90px] h-[45px]"
+								priority
+							/>
+						</Link>
 						{globals?.description && <p className="text-description mt-2">{globals.description}</p>}
 					</div>
 
@@ -29,12 +37,19 @@ const Footer = async () => {
 							<ul className="space-y-4">
 								{navPrimary?.items?.map((group: any) => (
 									<li key={group.id}>
-										<a
-											href={group.page?.permalink || group.url || '#'}
-											className="text-nav font-medium hover:underline"
-										>
-											{group.title}
-										</a>
+										{group.page?.permalink ? (
+											<Link
+												key={group.page.id}
+												href={group.page.permalink}
+												className="text-nav font-medium hover:underline"
+											>
+												{group.title}
+											</Link>
+										) : (
+											<a key={group.page.id} href={group.url || '#'} className="text-nav font-medium hover:underline">
+												{group.title}
+											</a>
+										)}
 									</li>
 								))}
 							</ul>

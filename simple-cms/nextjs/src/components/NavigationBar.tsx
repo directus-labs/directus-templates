@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchNavigationData } from '@/lib/directus/fetchers';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
 	NavigationMenu,
 	NavigationMenuList,
@@ -28,9 +29,9 @@ const NavigationBar = async () => {
 	return (
 		<header className="sticky top-0 z-50 w-full pt-4 bg-background text-foreground">
 			<div className="flex items-center justify-between p-4 sm:px-6 lg:px-8">
-				<a href="/" className="text-lg font-bold">
-					<Image src="/images/logo.svg" alt="Logo" width={150} height={100} />
-				</a>
+				<Link href="/" className="text-lg font-bold">
+					<Image src="/images/logo.svg" alt="Logo" width="150" height="100" className="w-[90px] h-[45px]" priority />
+				</Link>
 
 				{/* Desktop Navigation */}
 				<nav className="hidden md:flex items-center gap-4">
@@ -102,13 +103,22 @@ const NavigationBar = async () => {
 										{section.children && section.children.length > 0 && (
 											<CollapsibleContent className="ml-4 mt-2 flex flex-col gap-2">
 												{section.children.map((child: any) => (
-													<a
-														key={child.id}
-														href={child.page?.permalink || child.url || '#'}
-														className="text-nav font-medium"
-													>
-														{child.title}
-													</a>
+													<div key={child.id || `${section.id}-${child.title}`}>
+														{child.page?.permalink ? (
+															<Link href={child.page.permalink} className="text-nav font-medium">
+																{child.title}
+															</Link>
+														) : (
+															<a
+																href={child.url || '#'}
+																className="text-nav font-medium"
+																target="_blank"
+																rel="noopener noreferrer"
+															>
+																{child.title}
+															</a>
+														)}
+													</div>
 												))}
 											</CollapsibleContent>
 										)}
@@ -117,7 +127,6 @@ const NavigationBar = async () => {
 							</div>
 						</DropdownMenuContent>
 					</DropdownMenu>
-					{/* Theme Toggle */}
 					<ThemeSwitch />
 				</div>
 			</div>

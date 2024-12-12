@@ -4,6 +4,7 @@ import BaseText from '@/components/Text';
 import { Separator } from '@/components/ui/separator';
 import ShareDialog from '@/components/ShareDialog';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
 	const { slug } = await params;
@@ -78,7 +79,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 							<h3 className="font-bold text-gray-muted mb-4">Related blogs</h3>
 							<div className="space-y-4">
 								{relatedPosts.map((relatedPost) => (
-									<a
+									<Link
 										key={relatedPost.id}
 										href={`/blog/${relatedPost.slug}`}
 										className="flex items-center space-x-4 hover:text-accent"
@@ -94,7 +95,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 											</div>
 										)}
 										<span>{relatedPost.title}</span>
-									</a>
+									</Link>
 								))}
 							</div>
 						</div>

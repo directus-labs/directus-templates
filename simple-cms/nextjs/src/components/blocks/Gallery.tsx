@@ -4,7 +4,7 @@ import { useState } from 'react';
 import DirectusImage from '@/components/DirectusImage';
 import Title from '@/components/Title';
 import Headline from '@/components/Headline';
-import { Dialog, DialogContent, DialogOverlay, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogOverlay, DialogTitle } from '@/components/ui/dialog';
 import { ArrowLeft, ArrowRight, ZoomIn, X } from 'lucide-react';
 
 interface BlockGalleryProps {
@@ -51,16 +51,16 @@ const BlockGallery = ({ data }: BlockGalleryProps) => {
 					{sortedItems.map((item, index) => (
 						<div
 							key={item.id}
-							className="relative overflow-hidden rounded-lg group hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+							className="relative overflow-hidden rounded-lg group hover:shadow-lg transition-shadow duration-300 cursor-pointer h-[300px]"
 							onClick={() => handleOpenLightbox(index)}
 							aria-label={`Gallery item ${item.id}`}
 						>
 							<DirectusImage
 								uuid={item.directus_file}
 								alt={`Gallery item ${item.id}`}
-								width={300}
-								height={300}
-								className="w-full h-[300px] object-cover rounded-lg"
+								fill
+								sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+								className="w-full h-auto object-cover rounded-lg"
 							/>
 							<div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 flex justify-center items-center transition-opacity duration-300">
 								<ZoomIn className="size-10 text-gray-800" />
@@ -74,23 +74,21 @@ const BlockGallery = ({ data }: BlockGalleryProps) => {
 			{isLightboxOpen && isValidIndex && (
 				<Dialog open={isLightboxOpen} onOpenChange={setLightboxOpen}>
 					<DialogOverlay className="fixed inset-0 bg-black bg-opacity-30 z-50" />
-					<DialogContent className="flex items-center justify-center p-2" style={{ maxHeight: '90vh' }}>
+					<DialogContent
+						className="flex bg-transparent border-none items-center justify-center p-2"
+						style={{ maxHeight: '90vh' }}
+					>
 						<DialogTitle className="sr-only">Gallery Image</DialogTitle>
-
-						<button
-							className="absolute top-4 right-4 text-white bg-black bg-opacity-70 rounded-full p-3 hover:bg-opacity-90"
-							onClick={() => setLightboxOpen(false)}
-							aria-label="Close"
-						>
-							<X className="size-6 text-white" />
-						</button>
+						<DialogDescription className="sr-only">
+							Viewing image {currentIndex + 1} of {sortedItems.length}.
+						</DialogDescription>
 
 						<div className="relative max-w-4xl w-full">
 							<DirectusImage
 								uuid={sortedItems[currentIndex].directus_file}
 								alt={`Gallery item ${sortedItems[currentIndex].id}`}
-								width={1200}
-								height={800}
+								width="1200"
+								height="800"
 								className="w-full h-auto max-h-full object-contain"
 							/>
 						</div>
