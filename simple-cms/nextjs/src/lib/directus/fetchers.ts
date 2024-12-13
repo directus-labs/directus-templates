@@ -145,7 +145,7 @@ export const fetchFooterData = async () => {
 					],
 				}),
 			),
-			directus.request(readSingleton('globals', { fields: ['description'] })),
+			directus.request(readSingleton('globals', { fields: ['description', 'logo', 'social_links'] })),
 		]);
 
 		return { navPrimary, globals };
@@ -159,28 +159,31 @@ export const fetchFooterData = async () => {
  * Fetches header navigation.
  */
 export const fetchNavigationData = async (key: string) => {
-	const { directus, readItem } = useDirectus();
+	const { directus, readItem, readSingleton } = useDirectus();
 
 	try {
-		const navigation = await directus.request(
-			readItem('navigation', key, {
-				fields: [
-					{
-						items: [
-							'id',
-							'title',
-							{
-								page: ['permalink'],
-								children: ['id', 'title', 'url', { page: ['permalink'] }],
-							},
-						],
-					},
-				],
-				deep: { items: { _sort: ['sort'] } },
-			}),
-		);
+		const [navigation, globals] = await Promise.all([
+			directus.request(
+				readItem('navigation', key, {
+					fields: [
+						{
+							items: [
+								'id',
+								'title',
+								{
+									page: ['permalink'],
+									children: ['id', 'title', 'url', { page: ['permalink'] }],
+								},
+							],
+						},
+					],
+					deep: { items: { _sort: ['sort'] } },
+				}),
+			),
+			directus.request(readSingleton('globals', { fields: ['logo'] })),
+		]);
 
-		return navigation;
+		return { navigation, globals };
 	} catch (error) {
 		console.error(`Error fetching navigation data for key "${key}":`, error);
 		throw new Error('Failed to fetch navigation data');

@@ -28,8 +28,8 @@ const ShareDialog = ({ postUrl }: { postUrl: string }) => {
 		<Dialog>
 			<DialogTrigger asChild>
 				<Button variant="ghost" className="flex items-center space-x-2">
-					<Share className="size-4" />
-					<span>Share Blog</span>
+					<Share className="size-4 dark:text-black" />
+					<span className="dark:text-black">Share Blog</span>
 				</Button>
 			</DialogTrigger>
 			<DialogContent className="sm:max-w-md">

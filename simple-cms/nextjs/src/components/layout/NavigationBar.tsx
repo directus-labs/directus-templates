@@ -1,4 +1,3 @@
-import React from 'react';
 import { fetchNavigationData } from '@/lib/directus/fetchers';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -25,32 +24,42 @@ const NavigationBar = async () => {
 
 		return null;
 	}
+	const { navigation, globals } = menu;
 
 	return (
-		<header className="sticky top-0 z-50 w-full pt-4 bg-background text-foreground">
+		<header className="sticky top-0 z-50 w-full bg-background text-foreground">
 			<div className="flex items-center justify-between p-4 sm:px-6 lg:px-8">
-				<Link href="/" className="text-lg font-bold">
-					<Image src="/images/logo.svg" alt="Logo" width="150" height="100" className="w-[90px] h-[45px]" priority />
+				<Link href="/">
+					{globals?.logo ? (
+						<Image
+							src={`${process.env.NEXT_PUBLIC_DIRECTUS_URL}/assets/${globals.logo}`}
+							alt="Logo"
+							width={150}
+							height={100}
+							className="w-[120px] h-auto"
+							priority
+						/>
+					) : (
+						<Image src="/images/logo.svg" alt="Logo" width="150" height="100" className="w-[90px] h-[45px]" priority />
+					)}
 				</Link>
-
-				{/* Desktop Navigation */}
-				<nav className="hidden md:flex items-center gap-4">
+				<nav className="hidden md:flex items-center gap-6">
 					<NavigationMenu>
-						<NavigationMenuList className="flex gap-4">
-							{menu?.items?.map((section: any) => (
+						<NavigationMenuList className="flex gap-6">
+							{navigation?.items?.map((section: any) => (
 								<NavigationMenuItem key={section.id}>
 									{section.children && section.children.length > 0 ? (
 										<>
 											<NavigationMenuTrigger className="focus:outline-none">
-												<span className="text-nav font-medium">{section.title}</span>
+												<span className="font-heading text-nav">{section.title}</span>
 											</NavigationMenuTrigger>
 											<NavigationMenuContent className="absolute mt-2 min-w-[150px] rounded-md bg-background p-4 shadow-md">
-												<ul className="flex flex-col gap-4 pb-4">
+												<ul className="flex flex-col gap-2 pb-4">
 													{section.children.map((child: any) => (
 														<li key={child.id}>
 															<NavigationMenuLink
 																href={child.page?.permalink || child.url || '#'}
-																className="text-nav font-medium"
+																className="font-heading text-nav"
 															>
 																{child.title}
 															</NavigationMenuLink>
@@ -62,7 +71,7 @@ const NavigationBar = async () => {
 									) : (
 										<NavigationMenuLink
 											href={section.page?.permalink || section.url || '#'}
-											className="text-nav font-medium"
+											className="font-heading text-nav"
 										>
 											{section.title}
 										</NavigationMenuLink>
@@ -73,9 +82,8 @@ const NavigationBar = async () => {
 					</NavigationMenu>
 					<ThemeSwitch />
 				</nav>
-
 				{/* Mobile Navigation */}
-				<div className="md:hidden flex items-center gap-2">
+				<div className="flex md:hidden items-center gap-2">
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
 							<Button
@@ -92,9 +100,9 @@ const NavigationBar = async () => {
 							className=" top-full w-screen bg-gray p-6 shadow-md max-w-full overflow-hidden"
 						>
 							<div className="flex flex-col gap-4">
-								{menu?.items?.map((section: any) => (
+								{navigation?.items?.map((section: any) => (
 									<Collapsible key={section.id}>
-										<CollapsibleTrigger className="text-nav font-medium hover:text-accent w-full text-left flex items-center focus:outline-none">
+										<CollapsibleTrigger className="font-heading text-nav hover:text-accent w-full text-left flex items-center focus:outline-none">
 											<span>{section.title}</span>
 											{section.children && section.children.length > 0 && (
 												<ChevronDown className="size-4 ml-1 hover:rotate-180 active:rotate-180 focus:rotate-180" />
@@ -103,22 +111,13 @@ const NavigationBar = async () => {
 										{section.children && section.children.length > 0 && (
 											<CollapsibleContent className="ml-4 mt-2 flex flex-col gap-2">
 												{section.children.map((child: any) => (
-													<div key={child.id || `${section.id}-${child.title}`}>
-														{child.page?.permalink ? (
-															<Link href={child.page.permalink} className="text-nav font-medium">
-																{child.title}
-															</Link>
-														) : (
-															<a
-																href={child.url || '#'}
-																className="text-nav font-medium"
-																target="_blank"
-																rel="noopener noreferrer"
-															>
-																{child.title}
-															</a>
-														)}
-													</div>
+													<Link
+														key={child.id || `${section.id}-${child.title}`}
+														href={child.page?.permalink || child.url || '#'}
+														className="font-heading text-nav"
+													>
+														{child.title}
+													</Link>
 												))}
 											</CollapsibleContent>
 										)}
