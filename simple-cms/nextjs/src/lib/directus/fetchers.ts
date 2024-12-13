@@ -1,7 +1,8 @@
+import { BlockPost, PageBlock, Post } from '@/types/directus-schema';
 import { useDirectus } from './directus';
 
 /**
- * Fetches page data by permalink, including all nested blocks.
+ * Fetches page data by permalink, including all nested blocks and dynamically fetching blog posts if required.
  */
 export const fetchPageData = async (permalink: string) => {
 	const { directus, readItems } = useDirectus();
@@ -74,6 +75,7 @@ export const fetchPageData = async (permalink: string) => {
 											],
 										},
 									],
+									block_posts: ['title', 'headline', 'collection'],
 								},
 							},
 						],
@@ -89,7 +91,29 @@ export const fetchPageData = async (permalink: string) => {
 			throw new Error('Page not found');
 		}
 
-		return pageData[0];
+		const page = pageData[0];
+
+		if (Array.isArray(page.blocks)) {
+			for (const block of page.blocks as PageBlock[]) {
+				if (
+					block.collection === 'block_posts' &&
+					typeof block.item === 'object' &&
+					(block.item as BlockPost).collection === 'posts'
+				) {
+					const posts = await directus.request<Post[]>(
+						readItems('posts', {
+							fields: ['id', 'title', 'description', 'slug', 'image', 'status', 'published_at'],
+							filter: { status: { _eq: 'published' } },
+							sort: ['-published_at'],
+						}),
+					);
+
+					(block.item as BlockPost & { posts: Post[] }).posts = posts;
+				}
+			}
+		}
+
+		return page;
 	} catch (error) {
 		console.error('Error fetching page data:', error);
 		throw new Error('Failed to fetch page data');
@@ -160,28 +184,6 @@ export const fetchNavigationData = async (key: string) => {
 	} catch (error) {
 		console.error(`Error fetching navigation data for key "${key}":`, error);
 		throw new Error('Failed to fetch navigation data');
-	}
-};
-
-/**
- * Fetches published blog posts.
- */
-export const fetchPublishedPosts = async () => {
-	const { directus, readItems } = useDirectus();
-
-	try {
-		const posts = await directus.request(
-			readItems('posts', {
-				fields: ['id', 'title', 'description', 'slug', 'image', 'status'],
-				filter: { status: { _eq: 'published' } },
-				sort: ['-published_at'],
-			}),
-		);
-
-		return posts;
-	} catch (error) {
-		console.error('Error fetching published posts:', error);
-		throw new Error('Failed to fetch published posts');
 	}
 };
 

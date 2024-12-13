@@ -47,7 +47,7 @@ const BlockGallery = ({ data }: BlockGalleryProps) => {
 			{headline && <Headline headline={headline} />}
 
 			{sortedItems.length > 0 && (
-				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+				<div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 					{sortedItems.map((item, index) => (
 						<div
 							key={item.id}

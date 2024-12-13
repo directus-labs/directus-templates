@@ -39,7 +39,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 				{post.image && (
 					<div className="mb-8">
 						<div className="relative w-full h-[400px] overflow-hidden rounded-lg">
-							<DirectusImage uuid={post.image as string} alt={post.title} className="object-cover" fill />
+							<DirectusImage
+								uuid={post.image as string}
+								alt={post.title}
+								className="object-cover"
+								fill
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
+							/>
 						</div>
 					</div>
 				)}
@@ -59,7 +65,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 									<DirectusImage
 										uuid={author.avatar as string}
 										alt={authorName}
-										className="rounded-full object-cover"
+										className="rounded-full object-cover size-[48px]"
 										width={48}
 										height={48}
 									/>
@@ -91,6 +97,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 													alt={relatedPost.title}
 													className="object-cover"
 													fill
+													sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 150px"
 												/>
 											</div>
 										)}
