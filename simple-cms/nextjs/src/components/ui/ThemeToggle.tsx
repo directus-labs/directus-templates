@@ -7,7 +7,7 @@ interface ThemeSwitchProps {
 	className?: string;
 }
 
-const ThemeSwitch = ({ className }: ThemeSwitchProps) => {
+const ThemeToggle = ({ className }: ThemeSwitchProps) => {
 	const { theme, setTheme, resolvedTheme } = useTheme();
 
 	const isDark = theme === 'dark' || resolvedTheme === 'dark';
@@ -52,4 +52,4 @@ const ThemeSwitch = ({ className }: ThemeSwitchProps) => {
 	);
 };
 
-export default ThemeSwitch;
+export default ThemeToggle;

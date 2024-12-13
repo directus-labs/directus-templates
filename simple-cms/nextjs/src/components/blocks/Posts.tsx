@@ -1,9 +1,9 @@
-import Title from '@/components/Title';
-import Headline from '@/components/Headline';
-import DirectusImage from '@/components/DirectusImage';
+import Title from '@/components/ui/Title';
+import Headline from '@/components/ui/Headline';
+import DirectusImage from '@/components/shared/DirectusImage';
 import Link from 'next/link';
 
-interface BlockPostsProps {
+interface PostsProps {
 	data: {
 		title?: string;
 		headline?: string;
@@ -17,7 +17,7 @@ interface BlockPostsProps {
 	};
 }
 
-const BlockPosts = ({ data }: BlockPostsProps) => {
+const Posts = ({ data }: PostsProps) => {
 	const { title, headline, posts } = data;
 
 	if (!posts || posts.length === 0) {
@@ -55,4 +55,4 @@ const BlockPosts = ({ data }: BlockPostsProps) => {
 	);
 };
 
-export default BlockPosts;
+export default Posts;

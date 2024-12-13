@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import DirectusImage from '@/components/DirectusImage';
-import Title from '@/components/Title';
-import Headline from '@/components/Headline';
+import DirectusImage from '@/components/shared/DirectusImage';
+import Title from '@/components/ui/Title';
+import Headline from '@/components/ui/Headline';
 import { Dialog, DialogContent, DialogDescription, DialogOverlay, DialogTitle } from '@/components/ui/dialog';
 import { ArrowLeft, ArrowRight, ZoomIn, X } from 'lucide-react';
 
-interface BlockGalleryProps {
+interface GalleryProps {
 	data: {
 		title?: string;
 		headline?: string;
@@ -19,7 +19,7 @@ interface BlockGalleryProps {
 	};
 }
 
-const BlockGallery = ({ data }: BlockGalleryProps) => {
+const Gallery = ({ data }: GalleryProps) => {
 	const { title, headline, items = [] } = data;
 	const [isLightboxOpen, setLightboxOpen] = useState(false);
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -114,4 +114,4 @@ const BlockGallery = ({ data }: BlockGalleryProps) => {
 	);
 };
 
-export default BlockGallery;
+export default Gallery;

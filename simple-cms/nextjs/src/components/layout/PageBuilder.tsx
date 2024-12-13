@@ -1,5 +1,5 @@
 import { PageBlock } from '@/types/directus-schema';
-import BaseBlock from '@/components/BaseBlock';
+import BaseBlock from '@/components/blocks/BaseBlock';
 
 interface PageBuilderProps {
 	sections: PageBlock[];

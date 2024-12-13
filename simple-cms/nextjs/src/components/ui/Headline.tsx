@@ -4,7 +4,7 @@ interface HeadlineProps {
 	as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
 }
 
-const BaseHeadline = ({ headline, className = '', as: Component = 'p' }: HeadlineProps) => {
+const Headline = ({ headline, className = '', as: Component = 'p' }: HeadlineProps) => {
 	if (!headline) return null;
 
 	return (
@@ -17,4 +17,4 @@ const BaseHeadline = ({ headline, className = '', as: Component = 'p' }: Headlin
 	);
 };
 
-export default BaseHeadline;
+export default Headline;

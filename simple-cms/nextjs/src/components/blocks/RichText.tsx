@@ -3,11 +3,11 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import Title from '@/components/Title';
-import Headline from '@/components/Headline';
-import Text from '@/components/Text';
+import Title from '@/components/ui/Title';
+import Headline from '@/components/ui/Headline';
+import Text from '@/components/ui/Text';
 
-interface RichTextBlockProps {
+interface RichTextProps {
 	data: {
 		title?: string;
 		headline?: string;
@@ -17,7 +17,7 @@ interface RichTextBlockProps {
 	className?: string;
 }
 
-const RichTextBlock = ({ data, className }: RichTextBlockProps) => {
+const RichText = ({ data, className }: RichTextProps) => {
 	const { title, headline, content, alignment = 'left' } = data;
 	const router = useRouter();
 
@@ -65,4 +65,4 @@ const RichTextBlock = ({ data, className }: RichTextBlockProps) => {
 	);
 };
 
-export default RichTextBlock;
+export default RichText;

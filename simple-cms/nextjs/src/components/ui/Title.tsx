@@ -4,7 +4,7 @@ interface TitleProps {
 	as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
 }
 
-const BaseTitle = ({ title, className = '', as: Component = 'h2' }: TitleProps) => {
+const Title = ({ title, className = '', as: Component = 'h2' }: TitleProps) => {
 	if (!title) return null;
 
 	return (
@@ -17,4 +17,4 @@ const BaseTitle = ({ title, className = '', as: Component = 'h2' }: TitleProps) 
 	);
 };
 
-export default BaseTitle;
+export default Title;

@@ -40,3 +40,58 @@ for your Directus schema.
    ```bash
    npm run generate:types
    ```
+
+### Folder Structure
+
+```
+src/
+├── app/                              # Next.js App Router pages and layouts
+│   ├── blog/                         # Blog-related routes
+│   │   ├── [slug]/                   # Dynamic blog post route
+│   │   │   └── page.tsx
+│   ├── [permalink]/                  # Dynamic page route
+│   │   └── page.tsx
+│   ├── layout.tsx                    # Shared layout for all routes
+├── components/
+│   ├── blocks/                       # Reusable page components relating to Directus blocks
+│   │   ├── Button.tsx
+│   │   ├── ButtonGroup.tsx
+│   │   ├── Gallery.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Posts.tsx
+│   │   ├── PricingCard.tsx
+│   │   └── RichText.tsx
+│   ├── layout/                       # Layout-related components
+│   │   ├── Footer.tsx
+│   │   ├── NavigationBar.tsx
+│   │   └── PageBuilder.tsx           # Assembles blocks into pages
+│   ├── shared/                       # Project-specific reusable utilities
+│   │   ├── DirectusImage.tsx         # Renders images from Directus
+│   ├── ui/                           # UI primitives and reusable ShadCN components
+│   │   ├── badge.tsx                 # shadcn
+│   │   ├── button.tsx                # shadcn
+│   │   ├── collapsible.tsx           # shadcn
+│   │   ├── dialog.tsx                # shadcn
+│   │   ├── dropdown-menu.tsx          # shadcn
+│   │   ├── input.tsx                 # shadcn
+│   │   ├── label.tsx                 # shadcn
+│   │   ├── navigation-menu.tsx        # shadcn
+│   │   ├── separator.tsx             # shadcn
+│   │   ├── ThemeProvider.tsx         # Light/dark mode provider
+│   │   ├── ThemeToggle.tsx           # Toggle light/dark mode
+│   │   ├── Headline.tsx
+│   │   ├── ShareDialog.tsx
+│   │   ├── Text.tsx
+│   │   └── Title.tsx
+├── lib/                              # Utilities and global logic
+│   ├── directus/                     # Directus-related utilities
+│   │   ├── directus.ts               # Directus client setup
+│   │   ├── fetchers.ts               # Directus data fetching
+│   │   └── generateDirectusTypes.ts  # Generates Directus types
+│   ├── styles/                       # Global and shared styles
+│   │   ├── fonts.css
+│   │   └── globals.css
+│   ├── utils.ts
+├── types/                            # TypeScript types
+│   └── directus-schema.ts            # Directus-generated types
+```

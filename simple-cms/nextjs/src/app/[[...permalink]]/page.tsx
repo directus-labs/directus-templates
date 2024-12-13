@@ -1,5 +1,5 @@
 import { fetchPageData } from '@/lib/directus/fetchers';
-import PageBuilder from '@/components/PageBuilder';
+import PageBuilder from '@/components/layout/PageBuilder';
 import Head from 'next/head';
 import { PageBlock } from '@/types/directus-schema';
 

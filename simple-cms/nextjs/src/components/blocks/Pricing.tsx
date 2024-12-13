@@ -1,8 +1,8 @@
-import Title from '@/components/Title';
-import Headline from '@/components/Headline';
+import Title from '@/components/ui/Title';
+import Headline from '@/components/ui/Headline';
 import PricingCard from '@/components/blocks/PricingCard';
 
-interface BlockPricingProps {
+interface PricingProps {
 	data: {
 		title?: string;
 		headline?: string;
@@ -23,7 +23,7 @@ interface BlockPricingProps {
 	};
 }
 
-const BlockPricing = ({ data }: BlockPricingProps) => {
+const Pricing = ({ data }: PricingProps) => {
 	const { title, headline, pricing_cards } = data;
 
 	if (!pricing_cards || !Array.isArray(pricing_cards)) {
@@ -54,4 +54,4 @@ const BlockPricing = ({ data }: BlockPricingProps) => {
 	);
 };
 
-export default BlockPricing;
+export default Pricing;

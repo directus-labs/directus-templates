@@ -14,7 +14,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/compon
 import { Button } from '@/components/ui/button';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 import { ChevronDown } from 'lucide-react';
-import ThemeSwitch from './ui/ThemeToggle';
+import ThemeSwitch from '../ui/ThemeToggle';
 
 const NavigationBar = async () => {
 	let menu;

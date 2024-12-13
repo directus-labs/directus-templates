@@ -2,9 +2,9 @@ import '@/styles/globals.css';
 import '@/styles/fonts.css';
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import Footer from '@/components/Footer';
+import Footer from '@/components/layout/Footer';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
-import NavigationBar from '@/components/NavigationBar';
+import NavigationBar from '@/components/layout/NavigationBar';
 
 export const metadata: Metadata = {
 	title: 'Simple CMS',

@@ -1,8 +1,8 @@
 import { fetchPostBySlug, fetchRelatedPosts, fetchAuthorById } from '@/lib/directus/fetchers';
-import DirectusImage from '@/components/DirectusImage';
-import BaseText from '@/components/Text';
+import DirectusImage from '@/components/shared/DirectusImage';
+import BaseText from '@/components/ui/Text';
 import { Separator } from '@/components/ui/separator';
-import ShareDialog from '@/components/ShareDialog';
+import ShareDialog from '@/components/ui/ShareDialog';
 import Head from 'next/head';
 import Link from 'next/link';
 

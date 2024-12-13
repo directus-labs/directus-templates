@@ -1,11 +1,11 @@
-import Title from '@/components/Title';
-import Headline from '@/components/Headline';
-import BaseText from '@/components/Text';
-import DirectusImage from '@/components/DirectusImage';
+import Title from '@/components/ui/Title';
+import Headline from '@/components/ui/Headline';
+import BaseText from '@/components/ui/Text';
+import DirectusImage from '@/components/shared/DirectusImage';
 import ButtonGroup from '@/components/blocks/ButtonGroup';
 import { cn } from '@/lib/utils';
 
-interface BlockHeroProps {
+interface HeroProps {
 	data: {
 		title: string;
 		headline: string;
@@ -26,7 +26,7 @@ interface BlockHeroProps {
 	};
 }
 
-const BlockHero = ({ data }: BlockHeroProps) => {
+const Hero = ({ data }: HeroProps) => {
 	const { alignment, title, headline, description, image, button_group } = data;
 
 	return (
@@ -69,4 +69,4 @@ const BlockHero = ({ data }: BlockHeroProps) => {
 	);
 };
 
-export default BlockHero;
+export default Hero;
