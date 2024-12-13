@@ -1,5 +1,6 @@
 import { fetchFooterData } from '@/lib/directus/fetchers';
 import Link from 'next/link';
+import ThemeToggle from '../ui/ThemeToggle';
 
 const Footer = async () => {
 	let footerData;
@@ -71,6 +72,7 @@ const Footer = async () => {
 										)}
 									</li>
 								))}
+								<ThemeToggle className="dark:text-white" />
 							</ul>
 						</nav>
 					</div>

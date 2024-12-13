@@ -3,11 +3,11 @@
 import { useTheme } from 'next-themes';
 import clsx from 'clsx';
 
-interface ThemeSwitchProps {
+interface ThemeToggleProps {
 	className?: string;
 }
 
-const ThemeToggle = ({ className }: ThemeSwitchProps) => {
+const ThemeToggle = ({ className }: ThemeToggleProps) => {
 	const { theme, setTheme, resolvedTheme } = useTheme();
 
 	const isDark = theme === 'dark' || resolvedTheme === 'dark';

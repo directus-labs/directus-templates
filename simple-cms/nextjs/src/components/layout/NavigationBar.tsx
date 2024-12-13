@@ -13,7 +13,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/compon
 import { Button } from '@/components/ui/button';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 import { ChevronDown } from 'lucide-react';
-import ThemeSwitch from '../ui/ThemeToggle';
+import ThemeToggle from '../ui/ThemeToggle';
 
 const NavigationBar = async () => {
 	let menu;
@@ -80,7 +80,7 @@ const NavigationBar = async () => {
 							))}
 						</NavigationMenuList>
 					</NavigationMenu>
-					<ThemeSwitch />
+					<ThemeToggle />
 				</nav>
 				{/* Mobile Navigation */}
 				<div className="flex md:hidden items-center gap-2">
@@ -126,7 +126,7 @@ const NavigationBar = async () => {
 							</div>
 						</DropdownMenuContent>
 					</DropdownMenu>
-					<ThemeSwitch />
+					<ThemeToggle />
 				</div>
 			</div>
 		</header>
