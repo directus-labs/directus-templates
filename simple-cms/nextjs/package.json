@@ -8,7 +8,7 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"generate:types": "node dist/scripts/generate-types.js",
+		"generate:types": "tsx ./src/lib/directus/generateDirectusTypes.ts",
 		"lint": "next lint",
 		"lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
 		"format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
@@ -57,7 +57,7 @@
 		"prettier-plugin-tailwindcss": "^0.6.9",
 		"tailwindcss": "^3.4.15",
 		"tailwindcss-animate": "^1.0.7",
-		"ts-node": "^10.9.2",
+		"tsx": "^4.19.2",
 		"typescript": "^5.7.2",
 		"typescript-eslint": "^8.16.0"
 	}

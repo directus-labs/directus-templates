@@ -9,7 +9,7 @@ export interface BlockButton {
 	/** @description Text to include on the button */
 	label?: string | null;
 	/** @description What type of button */
-	variant?: 'solid' | 'outline' | 'soft' | 'ghost' | 'link' | null;
+	variant?: 'default' | 'outline' | 'soft' | 'ghost' | 'link' | null;
 	button_group?: BlockButtonGroup | string | null;
 	url?: string | null;
 }
@@ -292,7 +292,6 @@ export interface DirectusActivity {
 	user_agent?: string | null;
 	collection?: string;
 	item?: string;
-	comment?: string | null;
 	origin?: string | null;
 	revisions?: DirectusRevision[] | string[];
 }
@@ -305,12 +304,7 @@ export interface DirectusCollection {
 	display_template?: string | null;
 	hidden?: boolean;
 	singleton?: boolean;
-	translations?: Array<{
-		language: string;
-		translation: string;
-		singular: string;
-		plural: string;
-	}> | null;
+	translations?: Array<{ language: string; translation: string; singular: string; plural: string }> | null;
 	archive_field?: string | null;
 	archive_app_filter?: boolean;
 	archive_value?: string | null;
