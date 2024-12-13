@@ -72,10 +72,10 @@ src/
 │   │   ├── button.tsx                # shadcn
 │   │   ├── collapsible.tsx           # shadcn
 │   │   ├── dialog.tsx                # shadcn
-│   │   ├── dropdown-menu.tsx          # shadcn
+│   │   ├── dropdown-menu.tsx         # shadcn
 │   │   ├── input.tsx                 # shadcn
 │   │   ├── label.tsx                 # shadcn
-│   │   ├── navigation-menu.tsx        # shadcn
+│   │   ├── navigation-menu.tsx       # shadcn
 │   │   ├── separator.tsx             # shadcn
 │   │   ├── ThemeProvider.tsx         # Light/dark mode provider
 │   │   ├── ThemeToggle.tsx           # Toggle light/dark mode
