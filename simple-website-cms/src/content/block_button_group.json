@@ -1,0 +1,24 @@
+[
+  {
+    "id": "0b1512d8-3bec-4dbc-919c-4514bbe37dc1",
+    "sort": null,
+    "buttons": [
+      "3d583c03-4909-4001-aad2-cd7af6ec53af"
+    ]
+  },
+  {
+    "id": "4cd6d4ca-82ea-4daf-ae79-a4c4265bfb27",
+    "sort": null,
+    "buttons": [
+      "5f902715-6e50-491b-b29c-b947a11a10f1"
+    ]
+  },
+  {
+    "id": "aed01afb-490d-42d3-bbf4-cf64081494b9",
+    "sort": null,
+    "buttons": [
+      "47ddfe4e-721a-483f-a09b-4c10fe0cec1a",
+      "b74af9dd-cc34-451c-88cf-c3e14c39cf4f"
+    ]
+  }
+]

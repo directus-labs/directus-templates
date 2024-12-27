@@ -1,0 +1,188 @@
+[
+  {
+    "id": "01914ef3-5512-4c89-9709-904f9b47ddeb",
+    "dashboard": "5a5b8448-16f4-46b1-abe8-19730cadc3a5",
+    "name": "Submissions Over Time",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 1,
+    "position_y": 20,
+    "width": 36,
+    "height": 12,
+    "options": {
+      "collection": "form_submissions",
+      "precision": "day",
+      "function": "count",
+      "range": "auto",
+      "filter": {
+        "_and": [
+          {
+            "_and": [
+              {
+                "timestamp": {
+                  "_between": [
+                    "{{dateFrom}}",
+                    "{{dateTo}}"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "dateField": "timestamp",
+      "valueField": "id"
+    },
+    "date_created": "2024-09-12T20:57:38.458Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "19b3d901-aa7c-4a04-bc9a-800e43510e69",
+    "dashboard": "5a5b8448-16f4-46b1-abe8-19730cadc3a5",
+    "name": "Submissions",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "list",
+    "position_x": 1,
+    "position_y": 35,
+    "width": 36,
+    "height": 30,
+    "options": {
+      "collection": "form_submissions",
+      "limit": 100,
+      "sortField": "id",
+      "linkToItem": true,
+      "displayTemplate": "{{timestamp}} • {{values}} • {{form}}"
+    },
+    "date_created": "2024-09-12T21:00:02.732Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "3861ceb1-11ff-4e9d-a985-60d862d90aa3",
+    "dashboard": "5a5b8448-16f4-46b1-abe8-19730cadc3a5",
+    "name": "From",
+    "icon": "date_range",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "variable",
+    "position_x": 1,
+    "position_y": 6,
+    "width": 18,
+    "height": 6,
+    "options": {
+      "field": "dateFrom",
+      "type": "timestamp",
+      "inter": "datetime",
+      "defaultValue": "2024-01-01T12:00:00-05:00",
+      "options": {
+        "use24": false
+      }
+    },
+    "date_created": "2024-09-12T20:56:09.536Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "53575d2f-e3a0-4532-a176-d047cbbc11a7",
+    "dashboard": "5a5b8448-16f4-46b1-abe8-19730cadc3a5",
+    "name": "Submissions - Last 30 Days",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 1,
+    "position_y": 12,
+    "width": 18,
+    "height": 8,
+    "options": {
+      "collection": "form_submissions",
+      "field": "id",
+      "function": "count",
+      "sortField": null,
+      "conditionalFormatting": null,
+      "filter": {
+        "_and": [
+          {
+            "timestamp": {
+              "_gt": "$NOW(-30d)"
+            }
+          }
+        ]
+      }
+    },
+    "date_created": "2024-09-12T20:56:09.528Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "8cb3b63c-d8e3-4078-9160-096e32b9fcb0",
+    "dashboard": "5a5b8448-16f4-46b1-abe8-19730cadc3a5",
+    "name": "Submissions - Total",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 19,
+    "position_y": 12,
+    "width": 18,
+    "height": 8,
+    "options": {
+      "collection": "form_submissions",
+      "field": "id",
+      "function": "count",
+      "sortField": null
+    },
+    "date_created": "2024-09-12T21:00:59.426Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "b770ea7e-1b49-441f-ba6f-2d4b90e08070",
+    "dashboard": "5a5b8448-16f4-46b1-abe8-19730cadc3a5",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 3,
+    "width": 36,
+    "height": 3,
+    "options": {
+      "text": "Form Dashboard"
+    },
+    "date_created": "2024-09-12T21:00:39.624Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "dc01026c-1728-4e71-ab45-7cea9fc4751c",
+    "dashboard": "5a5b8448-16f4-46b1-abe8-19730cadc3a5",
+    "name": "To",
+    "icon": "date_range",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "variable",
+    "position_x": 19,
+    "position_y": 6,
+    "width": 18,
+    "height": 6,
+    "options": {
+      "field": "dateTo",
+      "type": "timestamp",
+      "inter": "datetime",
+      "defaultValue": "2025-01-01T12:00:00-05:00",
+      "options": {
+        "use24": false
+      }
+    },
+    "date_created": "2024-09-12T20:56:09.540Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  }
+]

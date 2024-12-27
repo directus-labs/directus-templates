@@ -1,0 +1,22 @@
+[
+  {
+    "id": "8ba4ed6f-d330-4675-ae46-119c533a0928",
+    "name": "Team Member",
+    "icon": "supervised_user_circle",
+    "description": "Role for internal team members and employees",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "ef049c8b-546b-4bbc-9cd7-b05d77e58b66",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_description",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  }
+]

@@ -1,0 +1,383 @@
+[
+  {
+    "id": "0beeeb1a-2338-4ab4-95f5-0757bf3e43be",
+    "name": "Log Error",
+    "key": "log_error",
+    "type": "log",
+    "position_x": 37,
+    "position_y": 17,
+    "options": {
+      "message": "Trigger did NOT include a `to` address. "
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "7c8732cd-9d9e-44be-a3f6-89c0d42c7687",
+    "date_created": "2024-12-19T15:26:30.553Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "0cf30253-f9ed-413f-ac27-7a0ecffa9ee4",
+    "name": "Globals",
+    "key": "globals",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "flow": "69e87d0b-df14-4779-bdc8-abc05f2f1e97"
+    },
+    "resolve": "5df25cf8-b407-4fef-9d3b-c328f89f1561",
+    "reject": null,
+    "flow": "d4bbac48-a444-49e0-aedb-9af5273b88df",
+    "date_created": "2024-09-13T04:12:38.641Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "2adf33da-7fd7-42f7-a6fe-48409463d51b",
+    "name": "Update",
+    "key": "update",
+    "type": "item-update",
+    "position_x": 92,
+    "position_y": 1,
+    "options": {
+      "collection": "posts",
+      "payload": {
+        "image": "{{import.data.data.id}}"
+      },
+      "key": "{{$trigger.body.keys}}",
+      "permissions": "$full"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "d4bbac48-a444-49e0-aedb-9af5273b88df",
+    "date_created": "2024-09-13T04:12:38.606Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "3b7d004a-1dba-43c4-b902-a44fd71602ae",
+    "name": "Format",
+    "key": "format",
+    "type": "exec",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports = function(data) {\n    const aiResponse = JSON.parse(data.write)\n\tconst payload = {}\n    payload.title = aiResponse.title\n    payload.description = aiResponse.description\n    payload.content = aiResponse.content\n    payload.slug = aiResponse.slug\n    return payload\n}"
+    },
+    "resolve": "e6c50f84-e229-4f15-8119-c7708256e825",
+    "reject": null,
+    "flow": "5915dd55-fff8-4d47-b48c-a0e42e5033c1",
+    "date_created": "2024-09-13T03:52:01.503Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "599b80e4-7c74-4496-b243-da198c8613d9",
+    "name": "Form",
+    "key": "form",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "forms",
+      "key": [
+        "{{$trigger.payload.form}}"
+      ],
+      "query": {
+        "fields": [
+          "*",
+          "fields.*"
+        ]
+      },
+      "permissions": "$full"
+    },
+    "resolve": "dff1a702-bcc0-4528-905e-309feb880111",
+    "reject": null,
+    "flow": "61757ab0-b139-4079-b5eb-4e05bb8142ac",
+    "date_created": "2024-09-13T03:30:58.055Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "5d667ac5-2594-4f16-a863-3847d8917caa",
+    "name": "Globals",
+    "key": "globals",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "flow": "69e87d0b-df14-4779-bdc8-abc05f2f1e97"
+    },
+    "resolve": "89125be2-8205-4ad0-a77f-bd3e984202b3",
+    "reject": null,
+    "flow": "5915dd55-fff8-4d47-b48c-a0e42e5033c1",
+    "date_created": "2024-09-13T02:39:32.169Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "5df25cf8-b407-4fef-9d3b-c328f89f1561",
+    "name": "Prompt",
+    "key": "prompt",
+    "type": "directus-labs-ai-writer-operation",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "apiKey": "{{globals.openai_api_key}}",
+      "promptKey": "custom",
+      "system": "You are an expert in writing prompts for generating images through Dall•E 3. \n\n## Rules\nReturn only the prompt text",
+      "text": "Use the following information and context to write a prompt to generate an image for a blog post.\n\nImage Style:\n{{ $trigger.body.prompt }}\n\nAspect Ratio: \n{{ $trigger.body.aspect_ratio }}\n\nColor Palette:\n{{ $trigger.body.colors }}",
+      "model": "gpt-4o-mini",
+      "aiProvider": "openai",
+      "apiKeyOpenAi": "{{globals.openai_api_key}}"
+    },
+    "resolve": "d6f73e98-19ef-47d6-8d1f-99d77137d36b",
+    "reject": null,
+    "flow": "d4bbac48-a444-49e0-aedb-9af5273b88df",
+    "date_created": "2024-09-13T04:12:38.633Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "6efe1572-6cdd-4c80-a063-eb71b7f1e519",
+    "name": "Verify To",
+    "key": "verify_to",
+    "type": "condition",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "filter": {
+        "$trigger": {
+          "to": {
+            "_nnull": true
+          }
+        }
+      }
+    },
+    "resolve": "8673740a-f7f8-44dd-9abd-5a714e0d6c74",
+    "reject": "0beeeb1a-2338-4ab4-95f5-0757bf3e43be",
+    "flow": "7c8732cd-9d9e-44be-a3f6-89c0d42c7687",
+    "date_created": "2024-12-19T15:26:30.564Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "8673740a-f7f8-44dd-9abd-5a714e0d6c74",
+    "name": "Send Email",
+    "key": "send_email",
+    "type": "mail",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "to": "{{$trigger.to}}",
+      "subject": "{{$trigger.subject}}",
+      "type": "wysiwyg",
+      "body": "<p>{{$trigger.body}}</p>"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "7c8732cd-9d9e-44be-a3f6-89c0d42c7687",
+    "date_created": "2024-09-25T13:08:40.529Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "89125be2-8205-4ad0-a77f-bd3e984202b3",
+    "name": "Write",
+    "key": "write",
+    "type": "directus-labs-ai-writer-operation",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "apiKey": "{{globals.openai_api_key}}",
+      "model": "gpt-4o-mini",
+      "promptKey": "custom",
+      "system": "You are an expert in writing blog posts that are valuable for readers.\n\n## Rules\n- You are a human content writer. Avoid AI words like \"empower\". Avoid using prolix. Sound human.\n- ALWAYS output a JSON object that matches the sample below.\n{\n\"title\": \"Article Title\",\n\"slug\": \"formatted-slug\",\n\"description\": \"Short summary of the article to entice readers\",\n\"content\": \"Article content goes here. This needs to be properly encoded HTML string with proper line breaks, etc.\"\n}",
+      "json_mode": true,
+      "text": "Write an article based on this prompt.\n{{$trigger.body.prompt}}\n\n\n## Voice\nMatch this style and tone of voice when writing.\n{{ $trigger.body.voice }}",
+      "aiProvider": "openai",
+      "apiKeyOpenAi": "{{globals.openai_api_key}}",
+      "maxToken": 8192
+    },
+    "resolve": "3b7d004a-1dba-43c4-b902-a44fd71602ae",
+    "reject": null,
+    "flow": "5915dd55-fff8-4d47-b48c-a0e42e5033c1",
+    "date_created": "2024-09-13T03:52:01.514Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "bb1b1e3f-032e-48b7-b260-1cf3af4a116c",
+    "name": "Read Globals",
+    "key": "read_globals",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "globals"
+    },
+    "resolve": "fd271542-fac2-42d8-aa10-a02520c3753f",
+    "reject": null,
+    "flow": "69e87d0b-df14-4779-bdc8-abc05f2f1e97",
+    "date_created": "2024-02-26T13:03:38.721Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "bc71ca4e-d979-4ef9-a449-af100a7e1b3b",
+    "name": "Import",
+    "key": "import",
+    "type": "request",
+    "position_x": 74,
+    "position_y": 1,
+    "options": {
+      "method": "POST",
+      "url": "{{globals.directus_url}}/files/import",
+      "body": "{\n  \"url\": \"{{image}}\"\n}",
+      "headers": [
+        {
+          "header": "Authorization",
+          "value": "Bearer fT6_R5in_QUpUSXlLqGIhYtbRlBnopFe"
+        }
+      ]
+    },
+    "resolve": "2adf33da-7fd7-42f7-a6fe-48409463d51b",
+    "reject": null,
+    "flow": "d4bbac48-a444-49e0-aedb-9af5273b88df",
+    "date_created": "2024-09-13T04:12:38.612Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "c846f644-e7c1-43c9-8bb7-81181de0cd60",
+    "name": "Render Template",
+    "key": "render",
+    "type": "liquidjs-operation",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "publicUrl": "http://localhost:8001/",
+      "mode": "custom",
+      "operationMode": "single",
+      "template": "{{ $trigger.template }}",
+      "data": "{{ $trigger.data }}"
+    },
+    "resolve": "edc5e1ae-a3ed-45af-ae77-10409a66cd03",
+    "reject": null,
+    "flow": "5429ccb0-7e97-4ef5-9d65-2bbcf964f9a6",
+    "date_created": "2024-09-25T13:15:05.717Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "d6f73e98-19ef-47d6-8d1f-99d77137d36b",
+    "name": "Image",
+    "key": "image",
+    "type": "directus-labs-ai-image-generation",
+    "position_x": 56,
+    "position_y": 1,
+    "options": {
+      "apiKey": "{{globals.openai_api_key}}",
+      "quality": "hd",
+      "size": "landscape",
+      "prompt": "{{prompt}}"
+    },
+    "resolve": "bc71ca4e-d979-4ef9-a449-af100a7e1b3b",
+    "reject": null,
+    "flow": "d4bbac48-a444-49e0-aedb-9af5273b88df",
+    "date_created": "2024-09-13T04:12:38.623Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "dff1a702-bcc0-4528-905e-309feb880111",
+    "name": "Format",
+    "key": "format",
+    "type": "exec",
+    "position_x": 19,
+    "position_y": 18,
+    "options": {
+      "code": "/**\n * Prepares email template data by matching trigger values with form fields\n * @param {Object} trigger - The trigger object containing payload values\n * @param {Object} form - The form object containing fields and email templates\n * @returns {Array} Array of prepared email template objects\n * @throws {Error} If required data is missing or invalid\n */\nfunction prepareEmailTemplateData(trigger, form) {\n  // Validate input parameters\n  if (!trigger?.payload?.values || !Array.isArray(trigger.payload.values)) {\n    throw new Error('Invalid trigger payload values');\n  }\n  \n  if (!form?.fields || !Array.isArray(form.fields)) {\n    throw new Error('Invalid form fields');\n  }\n  \n  if (!form?.emails || !Array.isArray(form.emails)) {\n    throw new Error('Invalid form emails');\n  }\n\n  // Create an object to store the field name-value pairs\n  const data = {};\n  \n  // Iterate through the trigger values and match them with form fields\n  trigger.payload.values.forEach(item => {\n    if (!item || typeof item !== 'object') {\n      throw new Error('Invalid trigger value item');\n    }\n\n    // Ensure required properties exist\n    if (!item.field && !item.field_name) {\n      throw new Error('Missing field identifier in trigger value');\n    }\n    \n    if (item.value === undefined) {\n      throw new Error('Missing value in trigger value');\n    }\n\n    // Find the corresponding field in the form\n    const formField = form.fields.find(field => field.id === item.field);\n    \n    // If a matching field is found, use its name as the key\n    if (formField && formField.name) {\n      data[formField.name] = item.value;\n    } else {\n      // Fallback to using the field_name from the trigger if no match is found\n      data[item.field_name || item.field] = item.value;\n    }\n  });\n\n  // Process and validate all email templates\n  const emailTemplates = form.emails.map(email => {\n    // Validate required email template properties\n    if (!email.subject) {\n      throw new Error('Missing email subject');\n    }\n    \n    if (!email.message) {\n      throw new Error('Missing email message template');\n    }\n    \n    if (!email.to) {\n      throw new Error('Missing email recipient');\n    }\n\n    // Normalize 'to' field to always be an array\n    const toField = Array.isArray(email.to) ? email.to : [email.to];\n    \n    // Validate each email address\n    toField.forEach(recipient => {\n      if (typeof recipient !== 'string' || !recipient.trim()) {\n        throw new Error('Invalid email recipient');\n      }\n    });\n\n    return {\n      to: toField,\n      subject: email.subject,\n      template: email.message,\n      data: data\n    };\n  });\n\n  return emailTemplates;\n}\n\nmodule.exports = function(data) {\n  if (!data?.$trigger || !data?.form) {\n    throw new Error('Missing required data');\n  }\n  \n  return prepareEmailTemplateData(data.$trigger, data.form);\n};"
+    },
+    "resolve": "fbf696ea-c6af-4230-8f62-c663beebd6d9",
+    "reject": null,
+    "flow": "61757ab0-b139-4079-b5eb-4e05bb8142ac",
+    "date_created": "2024-09-13T03:41:36.144Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "e12b95db-a408-4e7e-b30b-264f7fa8baa3",
+    "name": "Send",
+    "key": "send",
+    "type": "trigger",
+    "position_x": 59,
+    "position_y": 1,
+    "options": {
+      "flow": "7c8732cd-9d9e-44be-a3f6-89c0d42c7687",
+      "payload": "{{ render }}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "61757ab0-b139-4079-b5eb-4e05bb8142ac",
+    "date_created": "2024-09-25T13:33:39.709Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "e6c50f84-e229-4f15-8119-c7708256e825",
+    "name": "Update",
+    "key": "update",
+    "type": "item-update",
+    "position_x": 73,
+    "position_y": 1,
+    "options": {
+      "collection": "posts",
+      "permissions": "$full",
+      "key": [
+        "{{$trigger.body.keys}}"
+      ],
+      "payload": "{{format}}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "5915dd55-fff8-4d47-b48c-a0e42e5033c1",
+    "date_created": "2024-09-13T03:52:01.490Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "edc5e1ae-a3ed-45af-ae77-10409a66cd03",
+    "name": "Format",
+    "key": "format",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports = function(data) {\n\treturn {\n        ...data.$trigger,\n        body: data.render.template\n    }\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "5429ccb0-7e97-4ef5-9d65-2bbcf964f9a6",
+    "date_created": "2024-09-25T13:31:35.265Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "fbf696ea-c6af-4230-8f62-c663beebd6d9",
+    "name": "Render",
+    "key": "render",
+    "type": "trigger",
+    "position_x": 41,
+    "position_y": 1,
+    "options": {
+      "flow": "5429ccb0-7e97-4ef5-9d65-2bbcf964f9a6",
+      "payload": "{{ format }}"
+    },
+    "resolve": "e12b95db-a408-4e7e-b30b-264f7fa8baa3",
+    "reject": null,
+    "flow": "61757ab0-b139-4079-b5eb-4e05bb8142ac",
+    "date_created": "2024-09-25T13:29:26.743Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "fd271542-fac2-42d8-aa10-a02520c3753f",
+    "name": "Format",
+    "key": "format",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports = async function(data) {\n    return data.read_globals[0]\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "69e87d0b-df14-4779-bdc8-abc05f2f1e97",
+    "date_created": "2024-02-26T13:03:38.753Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  }
+]

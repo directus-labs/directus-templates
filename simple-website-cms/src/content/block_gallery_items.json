@@ -1,0 +1,68 @@
+[
+  {
+    "id": "02bb1bbf-c10d-462e-be09-c4556b3ea087",
+    "block_gallery": "34fdcf0e-cc5d-4c40-b61f-4f0a5e167306",
+    "directus_file": "a051ea01-07a5-45cb-bcc6-411af9560be5",
+    "sort": 10
+  },
+  {
+    "id": "1dbac868-e2cc-4930-9f21-5e0dd1b40e52",
+    "block_gallery": "34fdcf0e-cc5d-4c40-b61f-4f0a5e167306",
+    "directus_file": "03a7d1c7-81e2-432f-9561-9df2691189c8",
+    "sort": 7
+  },
+  {
+    "id": "1f520e55-4054-47f9-896a-baf2787ec007",
+    "block_gallery": "34fdcf0e-cc5d-4c40-b61f-4f0a5e167306",
+    "directus_file": "dc258f02-d1a3-47f4-9f3e-2a71a0010c56",
+    "sort": 12
+  },
+  {
+    "id": "297914c3-b1dd-4683-b6bf-5b8cad3bf743",
+    "block_gallery": "7b5e5649-40be-4f54-a2fb-b021a520645d",
+    "directus_file": "03a7d1c7-81e2-432f-9561-9df2691189c8",
+    "sort": 5
+  },
+  {
+    "id": "2a0369dc-1b43-4d5a-9832-d180a0aa0295",
+    "block_gallery": "34fdcf0e-cc5d-4c40-b61f-4f0a5e167306",
+    "directus_file": "c2a301bd-74ed-4a50-9b85-3cb1f40f8dee",
+    "sort": 8
+  },
+  {
+    "id": "46f226f4-6d13-4783-878f-3ae0eafcfd5d",
+    "block_gallery": "34fdcf0e-cc5d-4c40-b61f-4f0a5e167306",
+    "directus_file": "6964d750-1c00-4b9c-81e4-0c81cfa82bbb",
+    "sort": 9
+  },
+  {
+    "id": "553ea498-554a-478c-89d5-99f33e56642d",
+    "block_gallery": "7b5e5649-40be-4f54-a2fb-b021a520645d",
+    "directus_file": "a051ea01-07a5-45cb-bcc6-411af9560be5",
+    "sort": 1
+  },
+  {
+    "id": "62ab01e9-27f7-44e5-90bb-d3f6258dd0cf",
+    "block_gallery": "7b5e5649-40be-4f54-a2fb-b021a520645d",
+    "directus_file": "50570a31-a990-453c-bdfc-0ad7175dd8bf",
+    "sort": 2
+  },
+  {
+    "id": "9527868b-136a-48a9-917d-44e0abc835e2",
+    "block_gallery": "7b5e5649-40be-4f54-a2fb-b021a520645d",
+    "directus_file": "c2a301bd-74ed-4a50-9b85-3cb1f40f8dee",
+    "sort": 4
+  },
+  {
+    "id": "d3481aae-7dc4-446f-8b68-50e77aab58da",
+    "block_gallery": "34fdcf0e-cc5d-4c40-b61f-4f0a5e167306",
+    "directus_file": "50570a31-a990-453c-bdfc-0ad7175dd8bf",
+    "sort": 11
+  },
+  {
+    "id": "f6ce1b83-5020-4a5a-9c71-0d69d3b216ff",
+    "block_gallery": "7b5e5649-40be-4f54-a2fb-b021a520645d",
+    "directus_file": "6964d750-1c00-4b9c-81e4-0c81cfa82bbb",
+    "sort": 3
+  }
+]

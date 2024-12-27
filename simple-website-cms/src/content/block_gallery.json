@@ -1,0 +1,33 @@
+[
+  {
+    "headline": "Check out some of our latest templates",
+    "id": "34fdcf0e-cc5d-4c40-b61f-4f0a5e167306",
+    "tagline": "Template Gallery",
+    "items": [
+      "1dbac868-e2cc-4930-9f21-5e0dd1b40e52",
+      "2a0369dc-1b43-4d5a-9832-d180a0aa0295",
+      "46f226f4-6d13-4783-878f-3ae0eafcfd5d",
+      "02bb1bbf-c10d-462e-be09-c4556b3ea087",
+      "d3481aae-7dc4-446f-8b68-50e77aab58da",
+      "1f520e55-4054-47f9-896a-baf2787ec007"
+    ]
+  },
+  {
+    "headline": "<p>This is an <em>amazing</em> gallery</p>",
+    "id": "61a1866b-5bff-473a-a6e3-106cd6b37412",
+    "tagline": null,
+    "items": []
+  },
+  {
+    "headline": "Get started even faster",
+    "id": "7b5e5649-40be-4f54-a2fb-b021a520645d",
+    "tagline": "Directus Templates",
+    "items": [
+      "553ea498-554a-478c-89d5-99f33e56642d",
+      "62ab01e9-27f7-44e5-90bb-d3f6258dd0cf",
+      "f6ce1b83-5020-4a5a-9c71-0d69d3b216ff",
+      "9527868b-136a-48a9-917d-44e0abc835e2",
+      "297914c3-b1dd-4683-b6bf-5b8cad3bf743"
+    ]
+  }
+]

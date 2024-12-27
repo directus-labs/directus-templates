@@ -1,0 +1,17 @@
+[
+  {
+    "id": "d0f67ad6-abbb-45d6-8d3e-b499a4c74d80",
+    "name": "2. Private",
+    "parent": null
+  },
+  {
+    "id": "e6308546-92fb-4b10-b586-eefaf1d97f7f",
+    "name": "3. Uploads",
+    "parent": null
+  },
+  {
+    "id": "ece7bab9-5433-4a63-b9f7-bde8b517d6d9",
+    "name": "1. Public",
+    "parent": null
+  }
+]

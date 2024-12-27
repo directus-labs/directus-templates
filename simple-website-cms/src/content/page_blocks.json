@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1f774f44-3e33-4b0f-93f4-fdd6df898438",
+    "sort": 1,
+    "page": "9821199f-4b05-49fb-8407-fbfe9b866ef0",
+    "item": "185eca12-4af1-4a1c-bfd7-4bc2fab52097",
+    "collection": "block_form",
+    "hide_block": false,
+    "background": "light"
+  },
+  {
+    "id": "b4d48d5a-0450-4e8c-8c5b-198e7063a10f",
+    "sort": 1,
+    "page": "636dc283-e634-4d5d-aada-e6743db46036",
+    "item": "d81ab264-b2be-4077-84e7-b1406e74d9c3",
+    "collection": "block_hero",
+    "hide_block": false,
+    "background": "light"
+  },
+  {
+    "id": "bc826e30-4988-4035-98bd-5ffc4799e5fc",
+    "sort": 1,
+    "page": "93023385-f574-4040-9ead-42b717db2015",
+    "item": "a6275645-16b7-4994-8100-8c43ca07ab06",
+    "collection": "block_richtext",
+    "hide_block": false,
+    "background": "light"
+  },
+  {
+    "id": "090e286c-3dfe-4638-89d9-09b2e0caf2ea",
+    "sort": 1,
+    "page": null,
+    "item": "93693278-93bc-4a70-a54c-bbbf1e0037d7",
+    "collection": "block_hero",
+    "hide_block": false,
+    "background": "light"
+  },
+  {
+    "id": "45227f61-5ff1-431c-8dee-1a50d369325f",
+    "sort": 1,
+    "page": "1ce02298-817a-46bc-ac92-6a6c10c20f88",
+    "item": "060b632d-d70d-4db1-8b95-4fbab7a52ae8",
+    "collection": "block_posts",
+    "hide_block": false,
+    "background": "light"
+  },
+  {
+    "id": "2b017efb-ce7c-4b90-9f59-a39236ffe571",
+    "sort": 2,
+    "page": "1ce02298-817a-46bc-ac92-6a6c10c20f88",
+    "item": "3e262b2d-48fc-4816-b5e8-c991817d56fc",
+    "collection": "block_form",
+    "hide_block": false,
+    "background": "light"
+  },
+  {
+    "id": "0ff1d6c4-ff77-46c6-ad02-f9ae31484505",
+    "sort": 2,
+    "page": "2a62887e-2384-4bd2-a919-7665d85fed07",
+    "item": "1134799b-3fd1-47ea-963f-13d8ac1b9e3a",
+    "collection": "block_richtext",
+    "hide_block": false,
+    "background": "light"
+  },
+  {
+    "id": "2d9abe8f-a7ad-480d-8fc7-603c712e2f40",
+    "sort": 2,
+    "page": "636dc283-e634-4d5d-aada-e6743db46036",
+    "item": "129625db-433f-4104-9922-3b803ba4599d",
+    "collection": "block_richtext",
+    "hide_block": false,
+    "background": "light"
+  },
+  {
+    "id": "529e6408-7372-4195-b82d-e444c06ac492",
+    "sort": 3,
+    "page": "636dc283-e634-4d5d-aada-e6743db46036",
+    "item": "34fdcf0e-cc5d-4c40-b61f-4f0a5e167306",
+    "collection": "block_gallery",
+    "hide_block": false,
+    "background": "dark"
+  },
+  {
+    "id": "ed613af3-b584-47e7-9584-7d6d4d87eaf5",
+    "sort": 3,
+    "page": null,
+    "item": "7b5e5649-40be-4f54-a2fb-b021a520645d",
+    "collection": "block_gallery",
+    "hide_block": false,
+    "background": "light"
+  },
+  {
+    "id": "39d02b18-18d2-4c29-9268-038f72ea05fe",
+    "sort": 4,
+    "page": "636dc283-e634-4d5d-aada-e6743db46036",
+    "item": "48cf2543-15e0-454f-9b31-cbf3c2406712",
+    "collection": "block_pricing",
+    "hide_block": false,
+    "background": "light"
+  },
+  {
+    "id": "7e1ce212-3f8a-43b4-aff7-131bf4241e30",
+    "sort": 5,
+    "page": "636dc283-e634-4d5d-aada-e6743db46036",
+    "item": "1419faec-e263-431c-bd5f-a57f394c39f6",
+    "collection": "block_form",
+    "hide_block": false,
+    "background": "light"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "636dc283-e634-4d5d-aada-e6743db46036",
+    "sort": 1,
+    "title": "Home ",
+    "permalink": "/",
+    "description": "Directus is a great choice for your headless CMS.",
+    "status": "published",
+    "published_at": "2024-09-01T16:00:00.000Z",
+    "blocks": [
+      "b4d48d5a-0450-4e8c-8c5b-198e7063a10f",
+      "2d9abe8f-a7ad-480d-8fc7-603c712e2f40",
+      "529e6408-7372-4195-b82d-e444c06ac492",
+      "39d02b18-18d2-4c29-9268-038f72ea05fe",
+      "7e1ce212-3f8a-43b4-aff7-131bf4241e30"
+    ]
+  },
+  {
+    "id": "1ce02298-817a-46bc-ac92-6a6c10c20f88",
+    "sort": 2,
+    "title": "Blog",
+    "permalink": "/blog",
+    "description": null,
+    "status": "published",
+    "published_at": "2024-09-01T16:00:00.000Z",
+    "blocks": [
+      "45227f61-5ff1-431c-8dee-1a50d369325f",
+      "2b017efb-ce7c-4b90-9f59-a39236ffe571"
+    ]
+  },
+  {
+    "id": "9821199f-4b05-49fb-8407-fbfe9b866ef0",
+    "sort": 3,
+    "title": "Contact",
+    "permalink": "/contact",
+    "description": null,
+    "status": "published",
+    "published_at": "2024-07-01T16:00:00.000Z",
+    "blocks": [
+      "1f774f44-3e33-4b0f-93f4-fdd6df898438"
+    ]
+  },
+  {
+    "id": "2a62887e-2384-4bd2-a919-7665d85fed07",
+    "sort": 4,
+    "title": "About Us",
+    "permalink": "/about-us",
+    "description": null,
+    "status": "published",
+    "published_at": "2024-12-01T17:00:00.000Z",
+    "blocks": [
+      "0ff1d6c4-ff77-46c6-ad02-f9ae31484505"
+    ]
+  },
+  {
+    "id": "93023385-f574-4040-9ead-42b717db2015",
+    "sort": 5,
+    "title": "Privacy Policy",
+    "permalink": "/privacy-policy",
+    "description": null,
+    "status": "published",
+    "published_at": "2024-05-01T16:00:00.000Z",
+    "blocks": [
+      "bc826e30-4988-4035-98bd-5ffc4799e5fc"
+    ]
+  }
+]
