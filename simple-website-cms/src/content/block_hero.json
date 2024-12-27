@@ -1,0 +1,42 @@
+[
+  {
+    "headline": "<p>Get to <em>MVP</em> faster</p>",
+    "id": "6aa654f5-b55f-4436-a35c-1f989f26268a",
+    "image": "df0745c2-b6e3-4b37-b64d-55a4eb0033ab",
+    "button_group": "aed01afb-490d-42d3-bbf4-cf64081494b9",
+    "description": null,
+    "alignment": null,
+    "tagline": null,
+    "layout": null
+  },
+  {
+    "headline": "<p>Custom <em>web development and design</em> services</p>",
+    "id": "8ece685c-e903-443b-b29d-b36491709743",
+    "image": "df0745c2-b6e3-4b37-b64d-55a4eb0033ab",
+    "button_group": "0b1512d8-3bec-4dbc-919c-4514bbe37dc1",
+    "description": null,
+    "alignment": null,
+    "tagline": null,
+    "layout": null
+  },
+  {
+    "headline": null,
+    "id": "93693278-93bc-4a70-a54c-bbbf1e0037d7",
+    "image": null,
+    "button_group": null,
+    "description": null,
+    "alignment": null,
+    "tagline": null,
+    "layout": null
+  },
+  {
+    "headline": "Headless but not brainless",
+    "id": "d81ab264-b2be-4077-84e7-b1406e74d9c3",
+    "image": "df0745c2-b6e3-4b37-b64d-55a4eb0033ab",
+    "button_group": "4cd6d4ca-82ea-4daf-ae79-a4c4265bfb27",
+    "description": "Directus gives you a backend that is perfect for Headless CMS use cases but also everything beyond. Authentication, user permissions.",
+    "alignment": "left",
+    "tagline": "Backend + CMS",
+    "layout": "image_right"
+  }
+]

@@ -1,0 +1,424 @@
+[
+  {
+    "collection": "activities",
+    "meta": {
+      "collection": "activities",
+      "icon": "playlist_add_check",
+      "note": null,
+      "display_template": "{{name}} • {{activity_type}} • {{start_date}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 4,
+      "group": "crm",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "activities",
+      "comment": null
+    }
+  },
+  {
+    "collection": "activity_contacts",
+    "meta": {
+      "collection": "activity_contacts",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "activities",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "activity_contacts",
+      "comment": null
+    }
+  },
+  {
+    "collection": "contacts",
+    "meta": {
+      "collection": "contacts",
+      "icon": "emoji_people",
+      "note": null,
+      "display_template": "{{first_name}} {{last_name}} <{{email}}>",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "is_active",
+      "archive_app_filter": true,
+      "archive_value": "false",
+      "unarchive_value": "true",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "crm",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "contacts",
+      "comment": null
+    }
+  },
+  {
+    "collection": "contact_tags",
+    "meta": {
+      "collection": "contact_tags",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "contacts",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "contact_tags",
+      "comment": null
+    }
+  },
+  {
+    "collection": "crm",
+    "meta": {
+      "collection": "crm",
+      "icon": "view_kanban",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "CRM"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "crm_settings",
+    "meta": {
+      "collection": "crm_settings",
+      "icon": "perm_data_setting",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "CRM Settings"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 5,
+      "group": "crm",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "deal_contacts",
+    "meta": {
+      "collection": "deal_contacts",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "deals",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "deal_contacts",
+      "comment": null
+    }
+  },
+  {
+    "collection": "deals",
+    "meta": {
+      "collection": "deals",
+      "icon": "handshake",
+      "note": null,
+      "display_template": "{{name}} • {{deal_stage}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "crm",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "deals",
+      "comment": null
+    }
+  },
+  {
+    "collection": "deal_stages",
+    "meta": {
+      "collection": "deal_stages",
+      "icon": "flag",
+      "note": null,
+      "display_template": "{{color}} {{icon}} {{name}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "crm_settings",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "deal_stages",
+      "comment": null
+    }
+  },
+  {
+    "collection": "organization_addresses",
+    "meta": {
+      "collection": "organization_addresses",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "organizations",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "organization_addresses",
+      "comment": null
+    }
+  },
+  {
+    "collection": "organization_contacts",
+    "meta": {
+      "collection": "organization_contacts",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "organizations",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "organization_contacts",
+      "comment": null
+    }
+  },
+  {
+    "collection": "organizations",
+    "meta": {
+      "collection": "organizations",
+      "icon": "storefront",
+      "note": null,
+      "display_template": "{{logo}} {{name}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "is_active",
+      "archive_app_filter": true,
+      "archive_value": "false",
+      "unarchive_value": "true",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "crm",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "organizations",
+      "comment": null
+    }
+  },
+  {
+    "collection": "organization_tags",
+    "meta": {
+      "collection": "organization_tags",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "organizations",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "organization_tags",
+      "comment": null
+    }
+  },
+  {
+    "collection": "tags",
+    "meta": {
+      "collection": "tags",
+      "icon": "tag",
+      "note": null,
+      "display_template": "{{color}} {{name}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "crm_settings",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "tags",
+      "comment": null
+    }
+  }
+]

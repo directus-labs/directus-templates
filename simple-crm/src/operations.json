@@ -1,0 +1,35 @@
+[
+  {
+    "id": "0bd6c898-6bec-49c6-bf8c-3f411ab71e89",
+    "name": "Create Activity",
+    "key": "create_activity",
+    "type": "item-create",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "collection": "activities",
+      "payload": "{{format_activity}}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "395d7d3e-7b59-4e27-b074-879c69b65736",
+    "date_created": "2024-09-25T11:52:46.962Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3"
+  },
+  {
+    "id": "c29d4e82-c607-4ea2-9272-582de40c5660",
+    "name": "Format Activity",
+    "key": "format_activity",
+    "type": "exec",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "code": "/* \n  This function takes accepts a Directus Flow data object and formats it into a proper activity object.\n  @param {object} data - The Directus Flow data object\n  @returns {object} - The formatted activity object\n*/\nfunction formatActivity(data) {\n  const trigger = data.$trigger;\n  const acct = data.$accountability;\n\n  const {\n    activity_type,\n    start_date,\n    name,\n    activity_notes,\n    is_completed,\n    collection,\n    keys,\n  } = trigger.body;\n\n  // Default the owner of the activity to the user who created the activity\n  const owner = acct.user;\n\n  const formattedActivity = {\n    activity_type,\n    start_date,\n    name,\n    activity_notes,\n    is_completed,\n    owner,\n  };\n\n  switch (collection) {\n    case \"contacts\":\n      // Contacts is a many to many relationship, so we need to format the keys as an array of objects\n      formattedActivity.contacts = keys.map((key) => ({ contact: key }));\n      break;\n    case \"organizations\":\n      formattedActivity.organization = keys[0];\n      break;\n    case \"deals\":\n      formattedActivity.deal = keys[0];\n      break;\n    default:\n      throw new Error(`Unsupported collection type: ${collection}`);\n  }\n\n  return formattedActivity;\n}\n\nmodule.exports = function (data) {\n  return formatActivity(data);\n};\n"
+    },
+    "resolve": "0bd6c898-6bec-49c6-bf8c-3f411ab71e89",
+    "reject": null,
+    "flow": "395d7d3e-7b59-4e27-b074-879c69b65736",
+    "date_created": "2024-09-25T11:50:16.517Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3"
+  }
+]

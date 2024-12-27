@@ -1,0 +1,316 @@
+[
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "orders",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "order_number",
+          "date_created",
+          "status",
+          "fulfillment_status",
+          "payment_status",
+          "line_items"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "order_number": 137.59375,
+          "fulfillment_status": 154.71484375,
+          "payment_status": 146.67578125
+        }
+      },
+      "kanban": {
+        "groupField": "fulfillment_status",
+        "groupTitle": null,
+        "userField": null,
+        "showUngrouped": false
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "products",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "status",
+          "thumbnail",
+          "title",
+          "slug",
+          "category"
+        ],
+        "sort": [
+          "-description"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "status": 44.881256103515625,
+          "thumbnail": 70.375,
+          "title": 253.40625
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "customers",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "email",
+          "first_name",
+          "last_name",
+          "phone"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "email": 187.82421875
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "tax_rates",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "code",
+          "rate",
+          "title"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "code": 93.07528686523438,
+          "rate": 102.741455078125
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_translations",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "editable-layout": {
+        "fields": [
+          "language",
+          "key",
+          "value"
+        ]
+      }
+    },
+    "layout_options": {
+      "editable-layout": {
+        "widths": {
+          "language": 120.01278686523438
+        },
+        "autosave": false
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "product_variants",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "product",
+          "sku",
+          "color",
+          "size",
+          "price",
+          "weight",
+          "weight_unit"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "product": 224.54296875,
+          "color": 108.77734375,
+          "size": 96.15234375,
+          "price": 106.81640625,
+          "weight": 96.03515625,
+          "weight_unit": 57.2578125
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "categories",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "title",
+          "sub_categories",
+          "parent_category"
+        ],
+        "sort": [
+          "-parent_category"
+        ]
+      },
+      "dcb-tree-view": {
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "title": 138.80859375,
+          "is_active": 94.1640625
+        }
+      },
+      "dcb-tree-view": {
+        "labelPrimary": "{{title}}",
+        "metaCollectionName": "categories_meta",
+        "slugifyFieldName": null,
+        "debug": false
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": "1. Fulfillment",
+    "user": null,
+    "role": null,
+    "collection": "orders",
+    "search": null,
+    "layout": "kanban",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "order_number",
+          "date_created",
+          "status",
+          "fulfillment_status",
+          "payment_status",
+          "line_items"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "order_number": 137.59375,
+          "fulfillment_status": 154.71484375,
+          "payment_status": 146.67578125
+        }
+      },
+      "kanban": {
+        "groupField": "fulfillment_status",
+        "groupTitle": null,
+        "userField": null,
+        "showUngrouped": false
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "view_kanban",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_files",
+    "search": null,
+    "layout": "cards",
+    "layout_query": {
+      "cards": {
+        "sort": [
+          "-uploaded_on"
+        ],
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "cards": {
+        "icon": "insert_drive_file",
+        "title": "{{ title }}",
+        "subtitle": "{{ type }} • {{ filesize }}",
+        "size": 4,
+        "imageFit": "crop"
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  }
+]

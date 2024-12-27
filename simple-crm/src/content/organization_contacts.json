@@ -1,0 +1,20 @@
+[
+  {
+    "id": "703f0579-81f9-48db-bd29-3a1d08acf12e",
+    "contact": "6589d027-6b41-4730-acf9-991644b1ffc1",
+    "organization": "714d8285-8fcb-4139-b86f-72003dc80b6a",
+    "sort": 1
+  },
+  {
+    "id": "79ce674d-a4ab-4582-842a-f7cb303eeebe",
+    "contact": "6fc88eba-a296-48f3-8756-3e00edc09372",
+    "organization": "77bef88e-368b-4e1e-ba48-d23397511c45",
+    "sort": null
+  },
+  {
+    "id": "e5818095-d0ce-4ff8-8eb9-2bec4d56c8c3",
+    "contact": "19e91419-3afc-4e7c-9a72-069c82e25fb2",
+    "organization": "682a0d80-2362-4340-bed9-92dbbd4f5672",
+    "sort": 1
+  }
+]

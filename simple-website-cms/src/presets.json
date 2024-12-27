@@ -1,0 +1,252 @@
+[
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "pages",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "title",
+          "status",
+          "permalink",
+          "blocks",
+          "published_at"
+        ],
+        "sort": [
+          "sort"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "status": 149.625,
+          "title": 179.501708984375
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark_border",
+    "color": null
+  },
+  {
+    "bookmark": "1. Workflow",
+    "user": null,
+    "role": null,
+    "collection": "posts",
+    "search": null,
+    "layout": "kanban",
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "status",
+          "image",
+          "title",
+          "date_published"
+        ],
+        "sort": [
+          "-date_published"
+        ],
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "kanban": {
+        "titleField": "title",
+        "showUngrouped": false,
+        "dateField": "published_at",
+        "textField": "description",
+        "crop": true,
+        "groupField": "status",
+        "groupTitle": null,
+        "userField": "author"
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "view_kanban",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_files",
+    "search": null,
+    "layout": "cards",
+    "layout_query": {
+      "cards": {
+        "sort": [
+          "-uploaded_on"
+        ],
+        "page": 1,
+        "limit": 25
+      }
+    },
+    "layout_options": {
+      "cards": {
+        "icon": "insert_drive_file",
+        "title": "{{ title }}",
+        "subtitle": "{{ type }} • {{ filesize }}",
+        "size": 4,
+        "imageFit": "crop"
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark_border",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "posts",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "image",
+          "title",
+          "status",
+          "published_at",
+          "slug",
+          "author"
+        ],
+        "limit": 25
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "image": 55.890625,
+          "title": 375.66015625,
+          "status": 170.03125
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark_border",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_presets",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "limit": 25,
+        "fields": [
+          "bookmark",
+          "id",
+          "role",
+          "user",
+          "collection"
+        ],
+        "sort": [
+          "-collection"
+        ]
+      }
+    },
+    "layout_options": null,
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark_border",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "forms",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "title",
+          "fields",
+          "submissions",
+          "is_active"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {}
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "form_submissions",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "form",
+          "timestamp",
+          "values",
+          "id"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {}
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "navigation",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "title",
+          "id",
+          "items",
+          "is_active"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "id": 114.37890625
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  }
+]

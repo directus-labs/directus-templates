@@ -1,0 +1,62 @@
+[
+  {
+    "id": "307380fe-195e-44cc-9cc0-6993aeee9428",
+    "name": "Files - Upload",
+    "icon": "upload",
+    "description": "Grants access to upload files less than 5mb.",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  },
+  {
+    "id": "52598a64-071d-4071-96fa-4b620d6189b5",
+    "name": "Team - App Access",
+    "icon": "badge",
+    "description": "Grants Directus Studio access to team members",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": true
+  },
+  {
+    "id": "8ba4ed6f-d330-4675-ae46-119c533a0928",
+    "name": "Content - Edit",
+    "icon": "edit",
+    "description": "Grants ability to edit content for the website",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  },
+  {
+    "id": "abf8a154-5b1c-4a46-ac9c-7300570f4f17",
+    "name": "Content - Read",
+    "icon": "public",
+    "description": "Grants ability to read public content",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  },
+  {
+    "id": "ee1055a2-7c03-4b0b-9b65-ca68491b6329",
+    "name": "Forms - Submission",
+    "icon": "smart_button",
+    "description": "Allows form submissions.",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  },
+  {
+    "id": "ef049c8b-546b-4bbc-9cd7-b05d77e58b66",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_policy_description",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": true,
+    "app_access": true
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ce2d532a-6e01-4904-b0f7-9fef7d970791",
+    "sort": null,
+    "quantity": 1,
+    "product": "949797a2-2c71-471a-bfac-c2dec68fdeb1",
+    "subtotal": "29.99",
+    "total": "29.99",
+    "order": "5df850a6-20e1-4619-8341-7f8f4d09fe8a",
+    "price": "29.99",
+    "product_variant": "2086ece8-bd1d-47b6-ae70-cd7ba9b0e2f4"
+  },
+  {
+    "id": "c8b92c31-1d37-42ac-88a8-05b3cff56b29",
+    "sort": null,
+    "quantity": 1,
+    "product": "ce31bbeb-3f60-4853-98f0-ac87c37175bc",
+    "subtotal": "19.99",
+    "total": "19.99",
+    "order": "5df850a6-20e1-4619-8341-7f8f4d09fe8a",
+    "price": "19.99",
+    "product_variant": "17f75217-ab99-4229-ba58-4dbe5e93849f"
+  }
+]

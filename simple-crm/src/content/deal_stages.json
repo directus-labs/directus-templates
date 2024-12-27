@@ -1,0 +1,56 @@
+[
+  {
+    "id": "3818f0c1-f427-44d0-a355-98d579aa52b6",
+    "sort": 1,
+    "name": "New",
+    "color": "#3399FF",
+    "icon": "fiber_new",
+    "is_won": false,
+    "is_lost": false
+  },
+  {
+    "id": "33c5977e-7606-4cb6-9ce5-5ff6ad086267",
+    "sort": 2,
+    "name": "Qualification",
+    "color": "#FFC23B",
+    "icon": "equalizer",
+    "is_won": false,
+    "is_lost": false
+  },
+  {
+    "id": "b4bce2ce-8a6b-474b-a079-577e82f4a56c",
+    "sort": 3,
+    "name": "Proposal",
+    "color": "#FFA439",
+    "icon": "edit_document",
+    "is_won": false,
+    "is_lost": false
+  },
+  {
+    "id": "098d3e67-f501-44f3-83c9-f0667ab95fde",
+    "sort": 4,
+    "name": "Closed - Won",
+    "color": "#2ECDA7",
+    "icon": "check_circle",
+    "is_won": true,
+    "is_lost": false
+  },
+  {
+    "id": "15f06d29-db8b-47b5-a551-b63df10bdc96",
+    "sort": 5,
+    "name": "Closed - Lost",
+    "color": "#E35169",
+    "icon": "cancel",
+    "is_won": false,
+    "is_lost": true
+  },
+  {
+    "id": "cdcb15a8-570c-4ae7-92f7-4036ecd852e0",
+    "sort": 6,
+    "name": "Closed - Unqualified",
+    "color": "#A2B5CD",
+    "icon": "history_toggle_off",
+    "is_won": false,
+    "is_lost": true
+  }
+]

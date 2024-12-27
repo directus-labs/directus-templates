@@ -1,0 +1,37 @@
+[
+  {
+    "id": "46106587-26cf-4d38-9726-f9b4c4a32ec1",
+    "sort": 1,
+    "title": "Apparel",
+    "parent_category": null,
+    "is_active": true,
+    "sub_categories": [
+      "c0e32ecb-2c7d-42cc-a7c8-776085b8d359",
+      "5c2b07e6-e07c-4181-8b17-30b1a846f166"
+    ]
+  },
+  {
+    "id": "c0e32ecb-2c7d-42cc-a7c8-776085b8d359",
+    "sort": 2,
+    "title": "Shirts",
+    "parent_category": "46106587-26cf-4d38-9726-f9b4c4a32ec1",
+    "is_active": true,
+    "sub_categories": []
+  },
+  {
+    "id": "5c2b07e6-e07c-4181-8b17-30b1a846f166",
+    "sort": 3,
+    "title": "Hoodies",
+    "parent_category": "46106587-26cf-4d38-9726-f9b4c4a32ec1",
+    "is_active": true,
+    "sub_categories": []
+  },
+  {
+    "id": "b777f13f-e503-43ea-86eb-7bbecd8d8b08",
+    "sort": null,
+    "title": "Drinkware",
+    "parent_category": null,
+    "is_active": true,
+    "sub_categories": []
+  }
+]

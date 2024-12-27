@@ -1,0 +1,5476 @@
+{
+  "version": 1,
+  "directus": "11.1.2",
+  "vendor": "postgres",
+  "collections": [
+    {
+      "collection": "categories",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": "is_active",
+        "archive_value": "false",
+        "collapse": "open",
+        "collection": "categories",
+        "color": null,
+        "display_template": "{{title}}",
+        "group": "ecommerce_settings",
+        "hidden": false,
+        "icon": "local_offer",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 1,
+        "sort_field": "sort",
+        "translations": null,
+        "unarchive_value": "true",
+        "versioning": false
+      },
+      "schema": {
+        "name": "categories"
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": "is_active",
+        "archive_value": "false",
+        "collapse": "open",
+        "collection": "customer_addresses",
+        "color": null,
+        "display_template": "{{address_line_1}} • {{address_line_2}}",
+        "group": "customers",
+        "hidden": true,
+        "icon": null,
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 1,
+        "sort_field": "sort",
+        "translations": null,
+        "unarchive_value": "true",
+        "versioning": false
+      },
+      "schema": {
+        "name": "customer_addresses"
+      }
+    },
+    {
+      "collection": "customers",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": "archived",
+        "collapse": "open",
+        "collection": "customers",
+        "color": null,
+        "display_template": "{{first_name}} {{last_name}} <{{email}}>",
+        "group": "ecommerce",
+        "hidden": false,
+        "icon": "person_pin",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 2,
+        "sort_field": null,
+        "translations": null,
+        "unarchive_value": "draft",
+        "versioning": false
+      },
+      "schema": {
+        "name": "customers"
+      }
+    },
+    {
+      "collection": "ecommerce",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": null,
+        "collapse": "open",
+        "collection": "ecommerce",
+        "color": null,
+        "display_template": null,
+        "group": null,
+        "hidden": false,
+        "icon": "shopping_basket",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 1,
+        "sort_field": null,
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "eCommerce"
+          }
+        ],
+        "unarchive_value": null,
+        "versioning": false
+      }
+    },
+    {
+      "collection": "ecommerce_settings",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": null,
+        "collapse": "closed",
+        "collection": "ecommerce_settings",
+        "color": null,
+        "display_template": null,
+        "group": "ecommerce",
+        "hidden": false,
+        "icon": "settings_suggest",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 4,
+        "sort_field": null,
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "Settings"
+          }
+        ],
+        "unarchive_value": null,
+        "versioning": false
+      }
+    },
+    {
+      "collection": "order_items",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": "archived",
+        "collapse": "open",
+        "collection": "order_items",
+        "color": null,
+        "display_template": null,
+        "group": "orders",
+        "hidden": true,
+        "icon": null,
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 1,
+        "sort_field": "sort",
+        "translations": null,
+        "unarchive_value": "draft",
+        "versioning": false
+      },
+      "schema": {
+        "name": "order_items"
+      }
+    },
+    {
+      "collection": "orders",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": "status",
+        "archive_value": "archived",
+        "collapse": "closed",
+        "collection": "orders",
+        "color": null,
+        "display_template": "{{order_number}} • {{status}}",
+        "group": "ecommerce",
+        "hidden": false,
+        "icon": "data_check",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 1,
+        "sort_field": null,
+        "translations": null,
+        "unarchive_value": "pending",
+        "versioning": false
+      },
+      "schema": {
+        "name": "orders"
+      }
+    },
+    {
+      "collection": "product_images",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": null,
+        "collapse": "open",
+        "collection": "product_images",
+        "color": null,
+        "display_template": null,
+        "group": "products",
+        "hidden": true,
+        "icon": null,
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 3,
+        "sort_field": null,
+        "translations": null,
+        "unarchive_value": null,
+        "versioning": false
+      },
+      "schema": {
+        "name": "product_images"
+      }
+    },
+    {
+      "collection": "product_variants",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": null,
+        "collapse": "open",
+        "collection": "product_variants",
+        "color": null,
+        "display_template": "{{color}} • {{size}} • {{price}}",
+        "group": "products",
+        "hidden": false,
+        "icon": "gamepad",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 2,
+        "sort_field": null,
+        "translations": null,
+        "unarchive_value": null,
+        "versioning": false
+      },
+      "schema": {
+        "name": "product_variants"
+      }
+    },
+    {
+      "collection": "products",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": "status",
+        "archive_value": "inactive",
+        "collapse": "closed",
+        "collection": "products",
+        "color": null,
+        "display_template": "{{title}}",
+        "group": "ecommerce",
+        "hidden": false,
+        "icon": "sports_esports",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 3,
+        "sort_field": "sort",
+        "translations": null,
+        "unarchive_value": "active",
+        "versioning": false
+      },
+      "schema": {
+        "name": "products"
+      }
+    },
+    {
+      "collection": "tax_rates",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": null,
+        "collapse": "open",
+        "collection": "tax_rates",
+        "color": null,
+        "display_template": "{{code}} • {{rate}} ({{title}})",
+        "group": "ecommerce_settings",
+        "hidden": false,
+        "icon": "percent",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 2,
+        "sort_field": null,
+        "translations": null,
+        "unarchive_value": null,
+        "versioning": false
+      },
+      "schema": {
+        "name": "tax_rates"
+      }
+    }
+  ],
+  "fields": [
+    {
+      "collection": "categories",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "categories",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "categories",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "categories",
+      "field": "sort",
+      "type": "integer",
+      "meta": {
+        "collection": "categories",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "sort",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "sort",
+        "table": "categories",
+        "data_type": "integer",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 32,
+        "numeric_scale": 0,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "categories",
+      "field": "title",
+      "type": "string",
+      "meta": {
+        "collection": "categories",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "title",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "title",
+        "table": "categories",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "categories",
+      "field": "sub_categories",
+      "type": "alias",
+      "meta": {
+        "collection": "categories",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": {
+          "template": "{{title}}"
+        },
+        "field": "sub_categories",
+        "group": null,
+        "hidden": false,
+        "interface": "list-o2m",
+        "note": null,
+        "options": {
+          "displayTemplate": "{{title}}",
+          "enableLink": true,
+          "sort": "sort",
+          "template": "{{title}}"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": [
+          "o2m"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "categories",
+      "field": "parent_category",
+      "type": "uuid",
+      "meta": {
+        "collection": "categories",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": {
+          "template": "{{title}}"
+        },
+        "field": "parent_category",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{title}}"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "parent_category",
+        "table": "categories",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "categories",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "categories",
+      "field": "is_active",
+      "type": "boolean",
+      "meta": {
+        "collection": "categories",
+        "conditions": null,
+        "display": "boolean",
+        "display_options": null,
+        "field": "is_active",
+        "group": null,
+        "hidden": false,
+        "interface": "boolean",
+        "note": null,
+        "options": {
+          "label": "Active"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "cast-boolean"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "is_active",
+        "table": "categories",
+        "data_type": "boolean",
+        "default_value": true,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "customer_addresses",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "sort",
+      "type": "integer",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "sort",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "sort",
+        "table": "customer_addresses",
+        "data_type": "integer",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 32,
+        "numeric_scale": 0,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "customer",
+      "type": "uuid",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "customer",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "customer",
+        "table": "customer_addresses",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "customers",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "address_line_1",
+      "type": "string",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "address_line_1",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "address_line_1",
+        "table": "customer_addresses",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "address_line_2",
+      "type": "string",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "address_line_2",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "address_line_2",
+        "table": "customer_addresses",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "city",
+      "type": "string",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "city",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "city",
+        "table": "customer_addresses",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "state",
+      "type": "string",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "state",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 10,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "state",
+        "table": "customer_addresses",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "postal_code",
+      "type": "string",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "postal_code",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 11,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "postal_code",
+        "table": "customer_addresses",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "country_code",
+      "type": "string",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "country_code",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 12,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "country_code",
+        "table": "customer_addresses",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "is_shipping",
+      "type": "boolean",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "is_shipping",
+        "group": null,
+        "hidden": false,
+        "interface": "boolean",
+        "note": null,
+        "options": {
+          "label": "Shipping Address"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": [
+          "cast-boolean"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "is_shipping",
+        "table": "customer_addresses",
+        "data_type": "boolean",
+        "default_value": false,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "is_billing",
+      "type": "boolean",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "is_billing",
+        "group": null,
+        "hidden": false,
+        "interface": "boolean",
+        "note": null,
+        "options": {
+          "label": "Billing Address"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 6,
+        "special": [
+          "cast-boolean"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "is_billing",
+        "table": "customer_addresses",
+        "data_type": "boolean",
+        "default_value": false,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "is_active",
+      "type": "boolean",
+      "meta": {
+        "collection": "customer_addresses",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "is_active",
+        "group": null,
+        "hidden": true,
+        "interface": "boolean",
+        "note": null,
+        "options": {
+          "label": "Active"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "cast-boolean"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "is_active",
+        "table": "customer_addresses",
+        "data_type": "boolean",
+        "default_value": false,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": "meta_profile",
+        "hidden": false,
+        "interface": "input",
+        "note": "Unique identifier for customer",
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "id",
+        "table": "customers",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "user_created",
+      "type": "uuid",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_created",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "user-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_created",
+        "table": "customers",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_created",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": {
+          "use24": false
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "date-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_created",
+        "table": "customers",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "user_updated",
+      "type": "uuid",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 3,
+        "special": [
+          "user-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_updated",
+        "table": "customers",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "date_updated",
+      "type": "timestamp",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "date-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_updated",
+        "table": "customers",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "first_name",
+      "type": "string",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "first_name",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "first_name",
+        "table": "customers",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "last_name",
+      "type": "string",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "last_name",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "last_name",
+        "table": "customers",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "email",
+      "type": "string",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "email",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": {
+          "iconLeft": "mark_email_unread"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "email",
+        "table": "customers",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": true,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "phone",
+      "type": "string",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "phone",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": {
+          "iconLeft": "phone_in_talk"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "phone",
+        "table": "customers",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "password",
+      "type": "hash",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "password",
+        "group": "meta_profile",
+        "hidden": false,
+        "interface": "input-hash",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": [
+          "hash"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "password",
+        "table": "customers",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "orders",
+      "type": "alias",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": {
+          "template": "{{order_number}} • {{status}} • {{date_created}}"
+        },
+        "field": "orders",
+        "group": "meta_tabs",
+        "hidden": false,
+        "interface": "list-o2m",
+        "note": null,
+        "options": {
+          "enableLink": true,
+          "fields": [
+            "status",
+            "order_number",
+            "line_items",
+            "subtotal",
+            "tax_total",
+            "shipping_total",
+            "total"
+          ],
+          "layout": "table",
+          "sort": null
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "o2m"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "fill"
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "addresses",
+      "type": "alias",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "addresses",
+        "group": "meta_tabs",
+        "hidden": false,
+        "interface": "list-o2m",
+        "note": null,
+        "options": {
+          "enableLink": true
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "o2m"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "meta_tabs",
+      "type": "alias",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "meta_tabs",
+        "group": null,
+        "hidden": false,
+        "interface": "group-tabs",
+        "note": null,
+        "options": {
+          "fillWidth": true
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "meta_profile",
+      "type": "alias",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "meta_profile",
+        "group": "meta_tabs",
+        "hidden": false,
+        "interface": "group-raw",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "Profile"
+          }
+        ],
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "is_subscribed",
+      "type": "boolean",
+      "meta": {
+        "collection": "customers",
+        "conditions": null,
+        "display": "boolean",
+        "display_options": null,
+        "field": "is_subscribed",
+        "group": "meta_profile",
+        "hidden": false,
+        "interface": "boolean",
+        "note": "Is customer subscribed to marketing emails?",
+        "options": {
+          "label": "Marketing Emails"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "cast-boolean"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "is_subscribed",
+        "table": "customers",
+        "data_type": "boolean",
+        "default_value": false,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "directus_settings",
+      "field": "command_palette_settings",
+      "type": "json",
+      "meta": {
+        "collection": "directus_settings",
+        "conditions": null,
+        "display": "raw",
+        "display_options": null,
+        "field": "command_palette_settings",
+        "group": null,
+        "hidden": false,
+        "interface": "input-code",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "command_palette_settings",
+        "table": "directus_settings",
+        "data_type": "json",
+        "default_value": {},
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "order_items",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "order_items",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "sort",
+      "type": "integer",
+      "meta": {
+        "collection": "order_items",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "sort",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "sort",
+        "table": "order_items",
+        "data_type": "integer",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 32,
+        "numeric_scale": 0,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "quantity",
+      "type": "integer",
+      "meta": {
+        "collection": "order_items",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "quantity",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "quantity",
+        "table": "order_items",
+        "data_type": "integer",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 32,
+        "numeric_scale": 0,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "product",
+      "type": "uuid",
+      "meta": {
+        "collection": "order_items",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": {
+          "template": "{{title}}"
+        },
+        "field": "product",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{title}}"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "m2o"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "product",
+        "table": "order_items",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "products",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "subtotal",
+      "type": "decimal",
+      "meta": {
+        "collection": "order_items",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "format": true,
+          "prefix": "$"
+        },
+        "field": "subtotal",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": {
+          "iconLeft": "attach_money"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "subtotal",
+        "table": "order_items",
+        "data_type": "numeric",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 10,
+        "numeric_scale": 2,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "total",
+      "type": "decimal",
+      "meta": {
+        "collection": "order_items",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "format": true,
+          "prefix": "$"
+        },
+        "field": "total",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": {
+          "iconLeft": "attach_money"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "total",
+        "table": "order_items",
+        "data_type": "numeric",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 10,
+        "numeric_scale": 2,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "order",
+      "type": "uuid",
+      "meta": {
+        "collection": "order_items",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "order",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "order",
+        "table": "order_items",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "orders",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "price",
+      "type": "decimal",
+      "meta": {
+        "collection": "order_items",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "format": true,
+          "prefix": "$"
+        },
+        "field": "price",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": {
+          "iconLeft": "attach_money"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "price",
+        "table": "order_items",
+        "data_type": "numeric",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 10,
+        "numeric_scale": 2,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "product_variant",
+      "type": "uuid",
+      "meta": {
+        "collection": "order_items",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "product_variant",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "filter": {
+            "_and": [
+              {
+                "product": {
+                  "_eq": "{{product}}"
+                }
+              }
+            ]
+          }
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": [
+          "m2o"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "product_variant",
+        "table": "order_items",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "product_variants",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "orders",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "status",
+      "type": "string",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "choices": [
+            {
+              "color": "#A2B5CD",
+              "text": "$t:pending",
+              "value": "pending"
+            },
+            {
+              "color": "var(--theme--primary)",
+              "text": "$t:completed",
+              "value": "completed"
+            },
+            {
+              "color": "#A2B5CD",
+              "text": "$t:archived",
+              "value": "archived"
+            },
+            {
+              "color": "#E35169",
+              "text": "$t:canceled",
+              "value": "canceled"
+            }
+          ]
+        },
+        "field": "status",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": null,
+        "options": {
+          "choices": [
+            {
+              "color": "#A2B5CD",
+              "text": "$t:pending",
+              "value": "pending"
+            },
+            {
+              "color": "var(--theme--primary)",
+              "text": "$t:completed",
+              "value": "completed"
+            },
+            {
+              "color": "#18222F",
+              "text": "$t:archived",
+              "value": "archived"
+            },
+            {
+              "color": "#E35169",
+              "text": "$t:canceled",
+              "value": "canceled"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "status",
+        "table": "orders",
+        "data_type": "character varying",
+        "default_value": "pending",
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "user_created",
+      "type": "uuid",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_created",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "user-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_created",
+        "table": "orders",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_created",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 3,
+        "special": [
+          "date-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_created",
+        "table": "orders",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "user_updated",
+      "type": "uuid",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "user-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_updated",
+        "table": "orders",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "date_updated",
+      "type": "timestamp",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 5,
+        "special": [
+          "date-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_updated",
+        "table": "orders",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "customer",
+      "type": "uuid",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "customer",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 13,
+        "special": [
+          "m2o"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "customer",
+        "table": "orders",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": true,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "customers",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "fulfillment_status",
+      "type": "string",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "choices": [
+            {
+              "color": "#3399FF",
+              "icon": "fiber_new",
+              "text": "$t:open",
+              "value": "open"
+            },
+            {
+              "color": "#FFC23B",
+              "icon": "downloading",
+              "text": "$t:in_progress",
+              "value": "in_progress"
+            },
+            {
+              "color": "#2ECDA7",
+              "icon": "check",
+              "text": "$t:fulfilled",
+              "value": "fulfilled"
+            },
+            {
+              "color": "#E35169",
+              "icon": "stop_circle",
+              "text": "$t:on_hold",
+              "value": "on_hold"
+            }
+          ]
+        },
+        "field": "fulfillment_status",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": null,
+        "options": {
+          "choices": [
+            {
+              "color": "#3399FF",
+              "icon": "fiber_new",
+              "text": "$t:open",
+              "value": "open"
+            },
+            {
+              "color": "#FFC23B",
+              "icon": "downloading",
+              "text": "$t:in_progress",
+              "value": "in_progress"
+            },
+            {
+              "color": "#2ECDA7",
+              "icon": "check",
+              "text": "$t:fulfilled",
+              "value": "fulfilled"
+            },
+            {
+              "color": "#E35169",
+              "icon": "stop_circle",
+              "text": "$t:on_hold",
+              "value": "on_hold"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 10,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "fulfillment_status",
+        "table": "orders",
+        "data_type": "character varying",
+        "default_value": "open",
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "payment_status",
+      "type": "string",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "choices": [
+            {
+              "color": "#FFA439",
+              "icon": "warning",
+              "text": "$t:not_paid",
+              "value": "not_paid"
+            },
+            {
+              "color": "#FFC23B",
+              "icon": "hourglass_bottom",
+              "text": "$t:awaiting",
+              "value": "awaiting"
+            },
+            {
+              "color": "#2ECDA7",
+              "icon": "check_box",
+              "text": "$t:paid",
+              "value": "paid"
+            },
+            {
+              "color": "#E35169",
+              "icon": "keyboard_return",
+              "text": "$t:refunded",
+              "value": "refunded"
+            }
+          ]
+        },
+        "field": "payment_status",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": null,
+        "options": {
+          "choices": [
+            {
+              "color": "#FFA439",
+              "icon": "warning",
+              "text": "$t:not_paid",
+              "value": "not_paid"
+            },
+            {
+              "color": "#FFC23B",
+              "icon": "hourglass_bottom",
+              "text": "$t:awaiting",
+              "value": "awaiting"
+            },
+            {
+              "color": "#2ECDA7",
+              "icon": "check_box",
+              "text": "$t:paid",
+              "value": "paid"
+            },
+            {
+              "color": "#E35169",
+              "icon": "keyboard_return",
+              "text": "$t:refunded",
+              "value": "refunded"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 11,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "payment_status",
+        "table": "orders",
+        "data_type": "character varying",
+        "default_value": "not_paid",
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "billing_address",
+      "type": "uuid",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "billing_address",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "filter": {
+            "_and": [
+              {
+                "customer": {
+                  "_eq": "{{customer}}"
+                }
+              }
+            ]
+          }
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 14,
+        "special": [
+          "m2o"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "billing_address",
+        "table": "orders",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "customer_addresses",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "shipping_address",
+      "type": "uuid",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "shipping_address",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "filter": {
+            "_and": [
+              {
+                "customer": {
+                  "_eq": "{{customer}}"
+                }
+              }
+            ]
+          }
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 15,
+        "special": [
+          "m2o"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "shipping_address",
+        "table": "orders",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "customer_addresses",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "completed_at",
+      "type": "timestamp",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "completed_at",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": {
+          "use24": false
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "completed_at",
+        "table": "orders",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "canceled_at",
+      "type": "timestamp",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "canceled_at",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": {
+          "use24": false
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "canceled_at",
+        "table": "orders",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "line_items",
+      "type": "alias",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": {
+          "template": "{{product}} • {{quantity}} • {{total}}"
+        },
+        "field": "line_items",
+        "group": null,
+        "hidden": false,
+        "interface": "list-o2m",
+        "note": null,
+        "options": {
+          "enableLink": true,
+          "enableSearchFilter": true,
+          "fields": [
+            "product",
+            "quantity",
+            "total",
+            "product_variant.color",
+            "product_variant.size"
+          ],
+          "layout": "table"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 17,
+        "special": [
+          "o2m"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "fill"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "order_number",
+      "type": "string",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "order_number",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "order_number",
+        "table": "orders",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "divider_status",
+      "type": "alias",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "divider_status",
+        "group": null,
+        "hidden": false,
+        "interface": "presentation-divider",
+        "note": null,
+        "options": {
+          "color": "#A2B5CD",
+          "icon": "info",
+          "inlineTitle": true,
+          "title": "Customer"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 12,
+        "special": [
+          "alias",
+          "no-data"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "divider_items",
+      "type": "alias",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "divider_items",
+        "group": null,
+        "hidden": false,
+        "interface": "presentation-divider",
+        "note": null,
+        "options": {
+          "color": "#A2B5CD",
+          "icon": "local_shipping",
+          "inlineTitle": true,
+          "title": "Items"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 16,
+        "special": [
+          "alias",
+          "no-data"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "subtotal",
+      "type": "decimal",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "format": true,
+          "prefix": "$"
+        },
+        "field": "subtotal",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": "Subtotal for entire order before taxes and shipping",
+        "options": {
+          "iconLeft": "attach_money"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 18,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "subtotal",
+        "table": "orders",
+        "data_type": "numeric",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 10,
+        "numeric_scale": 2,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "total",
+      "type": "decimal",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "format": true,
+          "prefix": "$"
+        },
+        "field": "total",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": "Total amount for the entire order",
+        "options": {
+          "iconLeft": "attach_money"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 21,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "total",
+        "table": "orders",
+        "data_type": "numeric",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 10,
+        "numeric_scale": 2,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "tax_total",
+      "type": "decimal",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "format": true,
+          "prefix": "$"
+        },
+        "field": "tax_total",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": "Tax amount owed for entire order",
+        "options": {
+          "iconLeft": "attach_money"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 19,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "tax_total",
+        "table": "orders",
+        "data_type": "numeric",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 10,
+        "numeric_scale": 2,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "shipping_total",
+      "type": "decimal",
+      "meta": {
+        "collection": "orders",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "format": true,
+          "prefix": "$"
+        },
+        "field": "shipping_total",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": "Shipping amount owed for entire order",
+        "options": {
+          "iconLeft": "attach_money"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 20,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "shipping_total",
+        "table": "orders",
+        "data_type": "numeric",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 10,
+        "numeric_scale": 2,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "product_images",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "product_images",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "product_images",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "product_images",
+      "field": "product",
+      "type": "uuid",
+      "meta": {
+        "collection": "product_images",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "product",
+        "group": null,
+        "hidden": true,
+        "interface": null,
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "product",
+        "table": "product_images",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "products",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "product_images",
+      "field": "file",
+      "type": "uuid",
+      "meta": {
+        "collection": "product_images",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "file",
+        "group": null,
+        "hidden": true,
+        "interface": null,
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "file",
+        "table": "product_images",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "product_images",
+      "field": "sort",
+      "type": "integer",
+      "meta": {
+        "collection": "product_images",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "sort",
+        "group": null,
+        "hidden": true,
+        "interface": null,
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "sort",
+        "table": "product_images",
+        "data_type": "integer",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 32,
+        "numeric_scale": 0,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "product_variants",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "product_variants",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "product_variants",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "product_variants",
+      "field": "product",
+      "type": "uuid",
+      "meta": {
+        "collection": "product_variants",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": {
+          "template": "{{title}}"
+        },
+        "field": "product",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{title}}"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "m2o"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "product",
+        "table": "product_variants",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "products",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "product_variants",
+      "field": "price",
+      "type": "decimal",
+      "meta": {
+        "collection": "product_variants",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "format": true,
+          "prefix": "$"
+        },
+        "field": "price",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": {
+          "iconLeft": "attach_money"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "price",
+        "table": "product_variants",
+        "data_type": "numeric",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 10,
+        "numeric_scale": 5,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "product_variants",
+      "field": "sku",
+      "type": "string",
+      "meta": {
+        "collection": "product_variants",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "sku",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "sku",
+        "table": "product_variants",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "product_variants",
+      "field": "image",
+      "type": "uuid",
+      "meta": {
+        "collection": "product_variants",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "image",
+        "group": null,
+        "hidden": false,
+        "interface": "file-image",
+        "note": null,
+        "options": {
+          "crop": false
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": [
+          "file"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "image",
+        "table": "product_variants",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "product_variants",
+      "field": "color",
+      "type": "string",
+      "meta": {
+        "collection": "product_variants",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "color",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 5,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "color",
+        "table": "product_variants",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "product_variants",
+      "field": "size",
+      "type": "string",
+      "meta": {
+        "collection": "product_variants",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "size",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "size",
+        "table": "product_variants",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "product_variants",
+      "field": "weight",
+      "type": "decimal",
+      "meta": {
+        "collection": "product_variants",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "weight",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "weight",
+        "table": "product_variants",
+        "data_type": "numeric",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 10,
+        "numeric_scale": 5,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "product_variants",
+      "field": "weight_unit",
+      "type": "string",
+      "meta": {
+        "collection": "product_variants",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "weight_unit",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": null,
+        "options": {
+          "choices": [
+            {
+              "text": "g",
+              "value": "g"
+            },
+            {
+              "text": "kg",
+              "value": "kg"
+            },
+            {
+              "text": "lb",
+              "value": "lb"
+            },
+            {
+              "text": "oz",
+              "value": "oz"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "weight_unit",
+        "table": "product_variants",
+        "data_type": "character varying",
+        "default_value": "oz",
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "products",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "products",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "products",
+      "field": "status",
+      "type": "string",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "choices": [
+            {
+              "background": "var(--theme--primary-background)",
+              "color": "var(--theme--primary)",
+              "foreground": "var(--theme--primary)",
+              "text": "$t:published",
+              "value": "published"
+            },
+            {
+              "background": "var(--theme--background-normal)",
+              "color": "var(--theme--foreground)",
+              "foreground": "var(--theme--foreground)",
+              "text": "$t:draft",
+              "value": "draft"
+            },
+            {
+              "background": "var(--theme--warning-background)",
+              "color": "var(--theme--warning)",
+              "foreground": "var(--theme--warning)",
+              "text": "$t:archived",
+              "value": "archived"
+            }
+          ],
+          "showAsDot": true
+        },
+        "field": "status",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": null,
+        "options": {
+          "choices": [
+            {
+              "color": "#2ECDA7",
+              "text": "$t:active",
+              "value": "active"
+            },
+            {
+              "color": "#18222F",
+              "text": "$t:out_of_stock",
+              "value": "out_of_stock"
+            },
+            {
+              "color": "#18222F",
+              "text": "$t:backordered",
+              "value": "backordered"
+            },
+            {
+              "color": "#A2B5CD",
+              "text": "$t:hidden",
+              "value": "hidden"
+            },
+            {
+              "color": "#A2B5CD",
+              "text": "$t:inactive",
+              "value": "inactive"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "status",
+        "table": "products",
+        "data_type": "character varying",
+        "default_value": "draft",
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "products",
+      "field": "sort",
+      "type": "integer",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "sort",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "sort",
+        "table": "products",
+        "data_type": "integer",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 32,
+        "numeric_scale": 0,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "products",
+      "field": "user_created",
+      "type": "uuid",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_created",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 3,
+        "special": [
+          "user-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_created",
+        "table": "products",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_created",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "date-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_created",
+        "table": "products",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "products",
+      "field": "user_updated",
+      "type": "uuid",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 5,
+        "special": [
+          "user-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_updated",
+        "table": "products",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "date_updated",
+      "type": "timestamp",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 6,
+        "special": [
+          "date-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_updated",
+        "table": "products",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "products",
+      "field": "title",
+      "type": "string",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "title",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": "Name of this product",
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "title",
+        "table": "products",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "products",
+      "field": "slug",
+      "type": "string",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "font": "monospace"
+        },
+        "field": "slug",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": "Unique URL for this product",
+        "options": {
+          "slug": true
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "slug",
+        "table": "products",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "products",
+      "field": "description",
+      "type": "text",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "description",
+        "group": null,
+        "hidden": false,
+        "interface": "input-rich-text-html",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 11,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "description",
+        "table": "products",
+        "data_type": "text",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "products",
+      "field": "thumbnail",
+      "type": "uuid",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "image",
+        "display_options": null,
+        "field": "thumbnail",
+        "group": null,
+        "hidden": false,
+        "interface": "file-image",
+        "note": "Main thumbnail used for this product",
+        "options": {
+          "crop": false
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 13,
+        "special": [
+          "file"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "thumbnail",
+        "table": "products",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "variants",
+      "type": "alias",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": {
+          "template": "{{color}} • {{size}} • {{price}} • {{sku}}"
+        },
+        "field": "variants",
+        "group": null,
+        "hidden": false,
+        "interface": "list-o2m",
+        "note": null,
+        "options": {
+          "enableCreate": false,
+          "enableLink": true,
+          "enableSelect": false,
+          "sort": null,
+          "template": "{{color}} • {{size}} • {{price}} • {{sku}}"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 18,
+        "special": [
+          "o2m"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "color",
+      "type": "csv",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "labels",
+        "display_options": null,
+        "field": "color",
+        "group": null,
+        "hidden": false,
+        "interface": "tags",
+        "note": "What colors are available?",
+        "options": {
+          "allowOther": true,
+          "capitalization": null,
+          "choices": [
+            {
+              "text": "Gray",
+              "value": "gray"
+            }
+          ],
+          "iconRight": "invert_colors",
+          "whitespace": null
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 16,
+        "special": [
+          "cast-csv"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "color",
+        "table": "products",
+        "data_type": "text",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "products",
+      "field": "size",
+      "type": "csv",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "labels",
+        "display_options": null,
+        "field": "size",
+        "group": null,
+        "hidden": false,
+        "interface": "tags",
+        "note": "What sizes are available?",
+        "options": {
+          "allowOther": true,
+          "capitalization": null,
+          "choices": [
+            {
+              "text": "Gray",
+              "value": "gray"
+            }
+          ],
+          "iconRight": "height",
+          "presets": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ],
+          "whitespace": null
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 17,
+        "special": [
+          "cast-csv"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "size",
+        "table": "products",
+        "data_type": "text",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "products",
+      "field": "divider_variants",
+      "type": "alias",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "divider_variants",
+        "group": null,
+        "hidden": false,
+        "interface": "presentation-divider",
+        "note": null,
+        "options": {
+          "color": "#A2B5CD",
+          "icon": "variables",
+          "inlineTitle": true,
+          "title": "Variants"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 15,
+        "special": [
+          "alias",
+          "no-data"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "category",
+      "type": "uuid",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": {
+          "template": "{{title}}"
+        },
+        "field": "category",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{title}}"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 10,
+        "special": [
+          "m2o"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "category",
+        "table": "products",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "categories",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "images",
+      "type": "alias",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": null,
+        "field": "images",
+        "group": null,
+        "hidden": false,
+        "interface": "files",
+        "note": "Gallery of images featured on the product page",
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 14,
+        "special": [
+          "files"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "divider_images",
+      "type": "alias",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "divider_images",
+        "group": null,
+        "hidden": false,
+        "interface": "presentation-divider",
+        "note": null,
+        "options": {
+          "color": "#A2B5CD",
+          "icon": "image",
+          "inlineTitle": true,
+          "title": "Images"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 12,
+        "special": [
+          "alias",
+          "no-data"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "notice_variants",
+      "type": "alias",
+      "meta": {
+        "collection": "products",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "notice_variants",
+        "group": null,
+        "hidden": false,
+        "interface": "presentation-notice",
+        "note": null,
+        "options": {
+          "icon": "info",
+          "text": "Creating and updating variants is handled for you automatically on save. Update the colors and sizes and hit Ctrl + S or Cmd + S (Mac) to save and stay on the page."
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 19,
+        "special": [
+          "alias",
+          "no-data"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "tax_rates",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "tax_rates",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "tax_rates",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "tax_rates",
+      "field": "title",
+      "type": "string",
+      "meta": {
+        "collection": "tax_rates",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "title",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "title",
+        "table": "tax_rates",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "tax_rates",
+      "field": "rate",
+      "type": "decimal",
+      "meta": {
+        "collection": "tax_rates",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "format": true,
+          "suffix": "%"
+        },
+        "field": "rate",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": {
+          "iconRight": "percent"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "rate",
+        "table": "tax_rates",
+        "data_type": "numeric",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 10,
+        "numeric_scale": 3,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "tax_rates",
+      "field": "code",
+      "type": "string",
+      "meta": {
+        "collection": "tax_rates",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "code",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "code",
+        "table": "tax_rates",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "collection": "categories",
+      "field": "parent_category",
+      "related_collection": "categories",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "categories",
+        "many_field": "parent_category",
+        "one_allowed_collections": null,
+        "one_collection": "categories",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": "sub_categories",
+        "sort_field": "sort"
+      },
+      "schema": {
+        "table": "categories",
+        "column": "parent_category",
+        "foreign_key_table": "categories",
+        "foreign_key_column": "id",
+        "constraint_name": "categories_parent_category_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "customer_addresses",
+      "field": "customer",
+      "related_collection": "customers",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "customer_addresses",
+        "many_field": "customer",
+        "one_allowed_collections": null,
+        "one_collection": "customers",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": "addresses",
+        "sort_field": null
+      },
+      "schema": {
+        "table": "customer_addresses",
+        "column": "customer",
+        "foreign_key_table": "customers",
+        "foreign_key_column": "id",
+        "constraint_name": "customer_addresses_customer_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "user_created",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "customers",
+        "many_field": "user_created",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "customers",
+        "column": "user_created",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "customers_user_created_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "customers",
+      "field": "user_updated",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "customers",
+        "many_field": "user_updated",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "customers",
+        "column": "user_updated",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "customers_user_updated_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "product",
+      "related_collection": "products",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "order_items",
+        "many_field": "product",
+        "one_allowed_collections": null,
+        "one_collection": "products",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "order_items",
+        "column": "product",
+        "foreign_key_table": "products",
+        "foreign_key_column": "id",
+        "constraint_name": "order_items_product_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "order",
+      "related_collection": "orders",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "order_items",
+        "many_field": "order",
+        "one_allowed_collections": null,
+        "one_collection": "orders",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": "line_items",
+        "sort_field": null
+      },
+      "schema": {
+        "table": "order_items",
+        "column": "order",
+        "foreign_key_table": "orders",
+        "foreign_key_column": "id",
+        "constraint_name": "order_items_order_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "order_items",
+      "field": "product_variant",
+      "related_collection": "product_variants",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "order_items",
+        "many_field": "product_variant",
+        "one_allowed_collections": null,
+        "one_collection": "product_variants",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "order_items",
+        "column": "product_variant",
+        "foreign_key_table": "product_variants",
+        "foreign_key_column": "id",
+        "constraint_name": "order_items_product_variant_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "user_created",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "orders",
+        "many_field": "user_created",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "orders",
+        "column": "user_created",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "orders_user_created_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "user_updated",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "orders",
+        "many_field": "user_updated",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "orders",
+        "column": "user_updated",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "orders_user_updated_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "customer",
+      "related_collection": "customers",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "orders",
+        "many_field": "customer",
+        "one_allowed_collections": null,
+        "one_collection": "customers",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": "orders",
+        "sort_field": null
+      },
+      "schema": {
+        "table": "orders",
+        "column": "customer",
+        "foreign_key_table": "customers",
+        "foreign_key_column": "id",
+        "constraint_name": "orders_customer_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "billing_address",
+      "related_collection": "customer_addresses",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "orders",
+        "many_field": "billing_address",
+        "one_allowed_collections": null,
+        "one_collection": "customer_addresses",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "orders",
+        "column": "billing_address",
+        "foreign_key_table": "customer_addresses",
+        "foreign_key_column": "id",
+        "constraint_name": "orders_billing_address_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "orders",
+      "field": "shipping_address",
+      "related_collection": "customer_addresses",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "orders",
+        "many_field": "shipping_address",
+        "one_allowed_collections": null,
+        "one_collection": "customer_addresses",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "orders",
+        "column": "shipping_address",
+        "foreign_key_table": "customer_addresses",
+        "foreign_key_column": "id",
+        "constraint_name": "orders_shipping_address_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "product_images",
+      "field": "file",
+      "related_collection": "directus_files",
+      "meta": {
+        "junction_field": "product",
+        "many_collection": "product_images",
+        "many_field": "file",
+        "one_allowed_collections": null,
+        "one_collection": "directus_files",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "product_images",
+        "column": "file",
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id",
+        "constraint_name": "product_images_file_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "CASCADE"
+      }
+    },
+    {
+      "collection": "product_images",
+      "field": "product",
+      "related_collection": "products",
+      "meta": {
+        "junction_field": "file",
+        "many_collection": "product_images",
+        "many_field": "product",
+        "one_allowed_collections": null,
+        "one_collection": "products",
+        "one_collection_field": null,
+        "one_deselect_action": "delete",
+        "one_field": "images",
+        "sort_field": "sort"
+      },
+      "schema": {
+        "table": "product_images",
+        "column": "product",
+        "foreign_key_table": "products",
+        "foreign_key_column": "id",
+        "constraint_name": "product_images_product_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "CASCADE"
+      }
+    },
+    {
+      "collection": "product_variants",
+      "field": "product",
+      "related_collection": "products",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "product_variants",
+        "many_field": "product",
+        "one_allowed_collections": null,
+        "one_collection": "products",
+        "one_collection_field": null,
+        "one_deselect_action": "delete",
+        "one_field": "variants",
+        "sort_field": null
+      },
+      "schema": {
+        "table": "product_variants",
+        "column": "product",
+        "foreign_key_table": "products",
+        "foreign_key_column": "id",
+        "constraint_name": "product_variants_product_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "CASCADE"
+      }
+    },
+    {
+      "collection": "product_variants",
+      "field": "image",
+      "related_collection": "directus_files",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "product_variants",
+        "many_field": "image",
+        "one_allowed_collections": null,
+        "one_collection": "directus_files",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "product_variants",
+        "column": "image",
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id",
+        "constraint_name": "product_variants_image_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "user_updated",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "products",
+        "many_field": "user_updated",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "products",
+        "column": "user_updated",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "products_user_updated_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "user_created",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "products",
+        "many_field": "user_created",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "products",
+        "column": "user_created",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "products_user_created_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "thumbnail",
+      "related_collection": "directus_files",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "products",
+        "many_field": "thumbnail",
+        "one_allowed_collections": null,
+        "one_collection": "directus_files",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "products",
+        "column": "thumbnail",
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id",
+        "constraint_name": "products_thumbnail_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "products",
+      "field": "category",
+      "related_collection": "categories",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "products",
+        "many_field": "category",
+        "one_allowed_collections": null,
+        "one_collection": "categories",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "products",
+        "column": "category",
+        "foreign_key_table": "categories",
+        "foreign_key_column": "id",
+        "constraint_name": "products_category_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    }
+  ]
+}

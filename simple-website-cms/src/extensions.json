@@ -1,0 +1,218 @@
+[
+  {
+    "id": "1c09c3a4-2750-4a01-94fd-c0d91fe35870",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "1c09c3a4-2750-4a01-94fd-c0d91fe35870",
+      "folder": "467d87ba-5246-41b7-be33-2bd0aa9c6c5e",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/467d87ba-5246-41b7-be33-2bd0aa9c6c5e",
+      "name": "@directus-labs/ai-image-generation-operation",
+      "version": "1.0.1",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "https://api.openai.com/v1/**"
+            ],
+            "methods": [
+              "POST"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "2d64a791-0274-441b-88d3-70675fb29335",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "2d64a791-0274-441b-88d3-70675fb29335",
+      "folder": "09bdf221-3b49-44ff-a514-6258a67ff587",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/09bdf221-3b49-44ff-a514-6258a67ff587",
+      "name": "@directus-labs/experimental-m2a-interface",
+      "version": "1.1.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.10.0",
+      "local": true
+    }
+  },
+  {
+    "id": "8a827d6a-f820-4814-8803-9bcf398282d4",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "8a827d6a-f820-4814-8803-9bcf398282d4",
+      "folder": "9bde3cf6-c3bd-4bbf-befe-e65294d4b632",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/9bde3cf6-c3bd-4bbf-befe-e65294d4b632",
+      "name": "directus-extension-wpslug-interface",
+      "version": "1.1.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^v9.9.0",
+      "local": true
+    }
+  },
+  {
+    "id": "8c20b301-38aa-48a7-99c4-3142338da1b2",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "8c20b301-38aa-48a7-99c4-3142338da1b2",
+      "folder": "b9534a05-19a0-4f19-912b-729086969eef",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/b9534a05-19a0-4f19-912b-729086969eef",
+      "name": "@directus-labs/ai-writer-operation",
+      "version": "1.3.1",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.0.0 || ^11.0.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "https://api.openai.com/v1/**",
+              "https://api.anthropic.com/v1/**",
+              "https://api.replicate.com/v1/**"
+            ],
+            "methods": [
+              "POST",
+              "GET"
+            ]
+          },
+          "log": {},
+          "sleep": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "a2587ead-a73a-4718-88e2-02de0c78d57a",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "a2587ead-a73a-4718-88e2-02de0c78d57a",
+      "folder": "64489dc4-ae84-472d-a9f8-fad653d43ba5",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/64489dc4-ae84-472d-a9f8-fad653d43ba5",
+      "name": "@directus-labs/liquidjs-operation",
+      "version": "1.0.1",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "http://*",
+              "https://*"
+            ],
+            "methods": [
+              "GET"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "bfa185ec-f15c-4d3e-8e0e-06925ba6cdfe",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "bfa185ec-f15c-4d3e-8e0e-06925ba6cdfe",
+      "folder": "3b80b125-4f65-4a6f-96c6-4ede2ed9f506",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/3b80b125-4f65-4a6f-96c6-4ede2ed9f506",
+      "name": "@directus-labs/simple-list-interface",
+      "version": "1.0.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.10.0",
+      "local": true
+    }
+  },
+  {
+    "id": "c53d1496-ab3b-4a23-9b0c-9fb8ce85800f",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "c53d1496-ab3b-4a23-9b0c-9fb8ce85800f",
+      "folder": "e77fd62a-c9f5-4937-b153-cf10d8d13264",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/e77fd62a-c9f5-4937-b153-cf10d8d13264",
+      "name": "@directus-labs/command-palette-module",
+      "version": "1.0.1",
+      "type": "module",
+      "entrypoint": "dist/index.js",
+      "host": "^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "dab2c341-5ce5-42da-872f-40e596c4db16",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "dab2c341-5ce5-42da-872f-40e596c4db16",
+      "folder": "9621987d-012d-475a-bd7f-e293cac7b077",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/9621987d-012d-475a-bd7f-e293cac7b077",
+      "name": "directus-extension-group-tabs-interface",
+      "version": "2.1.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.1.0",
+      "local": true
+    }
+  }
+]

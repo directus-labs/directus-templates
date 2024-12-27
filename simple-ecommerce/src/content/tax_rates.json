@@ -1,0 +1,14 @@
+[
+  {
+    "id": "3d192a11-b855-498a-a8a3-e98300f87b46",
+    "title": "West Virginia Sales Tax",
+    "rate": "6.500",
+    "code": "WV"
+  },
+  {
+    "id": "db1903cf-976a-481c-87ca-7747ca8b52e2",
+    "title": "Non-Taxable",
+    "rate": "0.000",
+    "code": "NON"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "36493b64-2bad-4c58-9d70-785ccb12ee26",
+    "on_success": "message",
+    "sort": null,
+    "submit_label": "Get Started",
+    "success_message": null,
+    "title": "Contact Us",
+    "success_redirect_url": null,
+    "is_active": true,
+    "emails": null,
+    "fields": [
+      "eef0eb77-ecab-4fba-9903-c46d6ad6d85b",
+      "bbc7b1c6-304e-4ee1-9afa-c5cffda6af27",
+      "a3d87bc0-f143-44ca-bea0-9eaf56b67783",
+      "a5222af8-f9a2-4d1a-9713-7ce0e2d5edc5",
+      "56c64efd-520f-4578-acca-e0565e247681"
+    ],
+    "submissions": []
+  },
+  {
+    "id": "5da3d356-d818-434f-b225-db35c418bbb6",
+    "on_success": "message",
+    "sort": null,
+    "submit_label": "Subscribe",
+    "success_message": "Thanks for subscribing to our newsletter! Please check your inbox for confirmation.",
+    "title": "Newsletter",
+    "success_redirect_url": null,
+    "is_active": true,
+    "emails": [
+      {
+        "to": [
+          "sales@example.com"
+        ],
+        "subject": "Newsletter Signup",
+        "message": "<h2>Newsletter Sign Up</h2>\n<table style=\"border-collapse: collapse; width: 100%; height: 122.227px;\" border=\"1\"><colgroup><col style=\"width: 46.0494%;\"><col style=\"width: 53.9369%;\"></colgroup>\n<tbody>\n<tr style=\"height: 61.1094px;\">\n<td style=\"height: 61.1094px;\"><strong>Name</strong></td>\n<td style=\"height: 61.1094px;\">{# first-name #}</td>\n</tr>\n<tr style=\"height: 61.1172px;\">\n<td style=\"height: 61.1172px;\"><strong>Email</strong></td>\n<td style=\"height: 61.1172px;\">{# email #}</td>\n</tr>\n</tbody>\n</table>"
+      }
+    ],
+    "fields": [
+      "0f3deba1-9d6b-44a0-aa87-a9b38e834beb",
+      "d37bc00f-bfb5-4496-85c3-70190b21b707"
+    ],
+    "submissions": [
+      "133ad5ce-02ef-4f4e-b0a2-408bf9f99ff0",
+      "3805e2c0-ebba-4070-a1b3-b39ba1b4932b"
+    ]
+  }
+]

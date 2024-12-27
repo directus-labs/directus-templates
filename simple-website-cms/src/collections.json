@@ -1,0 +1,747 @@
+[
+  {
+    "collection": "block_button",
+    "meta": {
+      "collection": "block_button",
+      "icon": null,
+      "note": null,
+      "display_template": "{{label}} - {{type}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Button",
+          "singular": "Button",
+          "plural": "Buttons"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "block_button_group",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_button",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_button_group",
+    "meta": {
+      "collection": "block_button_group",
+      "icon": "smart_button",
+      "note": null,
+      "display_template": "{{buttons.label}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Button Group",
+          "singular": "Button Group",
+          "plural": "Button Groups"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#18222F",
+      "item_duplication_fields": null,
+      "sort": 8,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_button_group",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_form",
+    "meta": {
+      "collection": "block_form",
+      "icon": "format_shapes",
+      "note": null,
+      "display_template": "{{form.title}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Form"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_form",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_gallery",
+    "meta": {
+      "collection": "block_gallery",
+      "icon": "grid_view",
+      "note": null,
+      "display_template": "{{headline}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Gallery",
+          "singular": "Gallery",
+          "plural": "Gallery"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#1A212C",
+      "item_duplication_fields": null,
+      "sort": 5,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_gallery",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_gallery_items",
+    "meta": {
+      "collection": "block_gallery_items",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "block_gallery",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_gallery_items",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_hero",
+    "meta": {
+      "collection": "block_hero",
+      "icon": "aspect_ratio",
+      "note": null,
+      "display_template": "{{headline}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Hero",
+          "singular": "Hero",
+          "plural": "Hero"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#1A212C",
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_hero",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_posts",
+    "meta": {
+      "collection": "block_posts",
+      "icon": "signpost",
+      "note": null,
+      "display_template": "{{headline}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Posts"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 4,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_posts",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_pricing",
+    "meta": {
+      "collection": "block_pricing",
+      "icon": "attach_money",
+      "note": null,
+      "display_template": "{{headline}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Pricing"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 7,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_pricing",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_pricing_cards",
+    "meta": {
+      "collection": "block_pricing_cards",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "block_pricing",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_pricing_cards",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_richtext",
+    "meta": {
+      "collection": "block_richtext",
+      "icon": "format_color_text",
+      "note": null,
+      "display_template": "{{headline}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Rich Text",
+          "singular": "Rich Text",
+          "plural": "Rich Text"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#1A212C",
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_richtext",
+      "comment": null
+    }
+  },
+  {
+    "collection": "blocks",
+    "meta": {
+      "collection": "blocks",
+      "icon": "content_copy",
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#1A212C",
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": null,
+      "collapse": "closed",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "form_fields",
+    "meta": {
+      "collection": "form_fields",
+      "icon": null,
+      "note": "Individual fields for each form",
+      "display_template": "{{name}} • {{type}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "forms",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "form_fields",
+      "comment": null
+    }
+  },
+  {
+    "collection": "forms",
+    "meta": {
+      "collection": "forms",
+      "icon": "text_format",
+      "note": "Dynamic forms",
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "is_active",
+      "archive_app_filter": true,
+      "archive_value": "false",
+      "unarchive_value": "true",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": [
+        "title",
+        "submit_label",
+        "on_success",
+        "success_message",
+        "success_redirect_url",
+        "status",
+        "fields"
+      ],
+      "sort": 3,
+      "group": "website",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "forms",
+      "comment": null
+    }
+  },
+  {
+    "collection": "form_submissions",
+    "meta": {
+      "collection": "form_submissions",
+      "icon": "inbox",
+      "note": "Data for all form responses",
+      "display_template": "{{timestamp}} • {{form}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 4,
+      "group": "website",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "form_submissions",
+      "comment": null
+    }
+  },
+  {
+    "collection": "form_submission_values",
+    "meta": {
+      "collection": "form_submission_values",
+      "icon": "list",
+      "note": "Individual responses to each form field within a form submission",
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Submission Values"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "form_submissions",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "form_submission_values",
+      "comment": null
+    }
+  },
+  {
+    "collection": "globals",
+    "meta": {
+      "collection": "globals",
+      "icon": "south_america",
+      "note": "Site-wide settings",
+      "display_template": null,
+      "hidden": false,
+      "singleton": true,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 6,
+      "group": "website",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "globals",
+      "comment": null
+    }
+  },
+  {
+    "collection": "navigation",
+    "meta": {
+      "collection": "navigation",
+      "icon": "menu_open",
+      "note": "Dynamic menus for your site",
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "is_active",
+      "archive_app_filter": true,
+      "archive_value": "false",
+      "unarchive_value": "true",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": [
+        "title",
+        "status",
+        "items.title",
+        "items.type",
+        "items.page",
+        "items.post",
+        "items.url",
+        "items.children",
+        "items.parent"
+      ],
+      "sort": 5,
+      "group": "website",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "navigation",
+      "comment": null
+    }
+  },
+  {
+    "collection": "navigation_items",
+    "meta": {
+      "collection": "navigation_items",
+      "icon": "navigate_next",
+      "note": "Individual menu items",
+      "display_template": "{{title}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#18222F",
+      "item_duplication_fields": [
+        "children",
+        "has_children",
+        "image",
+        "label",
+        "navigation",
+        "open_in_new_tab",
+        "page",
+        "title",
+        "type",
+        "url",
+        "post"
+      ],
+      "sort": 1,
+      "group": "navigation",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "navigation_items",
+      "comment": null
+    }
+  },
+  {
+    "collection": "page_blocks",
+    "meta": {
+      "collection": "page_blocks",
+      "icon": "code_blocks",
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": false,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": "#18222F",
+      "item_duplication_fields": [],
+      "sort": 3,
+      "group": "pages",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "page_blocks",
+      "comment": null
+    }
+  },
+  {
+    "collection": "pages",
+    "meta": {
+      "collection": "pages",
+      "icon": "web_asset",
+      "note": "Dynamic page builder",
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "website",
+      "collapse": "open",
+      "preview_url": "http://localhost:3000/posts/{{slug}}?preview=true",
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "pages",
+      "comment": null
+    }
+  },
+  {
+    "collection": "posts",
+    "meta": {
+      "collection": "posts",
+      "icon": "article",
+      "note": "Individual blog posts",
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": [
+        "title",
+        "slug",
+        "author",
+        "status",
+        "image",
+        "description",
+        "content"
+      ],
+      "sort": 2,
+      "group": "website",
+      "collapse": "open",
+      "preview_url": "http://localhost:3000/posts/{{slug}}?preview=true",
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "posts",
+      "comment": null
+    }
+  },
+  {
+    "collection": "website",
+    "meta": {
+      "collection": "website",
+      "icon": "folder_special",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  }
+]

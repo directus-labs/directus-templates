@@ -1,0 +1,26 @@
+[
+  {
+    "id": "5df850a6-20e1-4619-8341-7f8f4d09fe8a",
+    "status": "pending",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23",
+    "date_created": "2024-09-25T15:07:21.005Z",
+    "user_updated": "71639435-1dc5-4f21-8c11-603deee67b23",
+    "date_updated": "2024-09-26T06:03:21.478Z",
+    "customer": "9abce8fa-15c5-4167-931d-bb90e199a378",
+    "fulfillment_status": "in_progress",
+    "payment_status": "awaiting",
+    "billing_address": "1f78c46d-4db5-4d5e-b757-a160e2df4a90",
+    "shipping_address": "1f78c46d-4db5-4d5e-b757-a160e2df4a90",
+    "completed_at": null,
+    "canceled_at": null,
+    "order_number": "1000-A",
+    "subtotal": "29.99",
+    "total": "36.49",
+    "tax_total": "1.50",
+    "shipping_total": "5.00",
+    "line_items": [
+      "ce2d532a-6e01-4904-b0f7-9fef7d970791",
+      "c8b92c31-1d37-42ac-88a8-05b3cff56b29"
+    ]
+  }
+]

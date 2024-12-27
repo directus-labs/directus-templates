@@ -1,0 +1,756 @@
+[
+  {
+    "collection": "organizations",
+    "field": "logo",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "organizations_logo_foreign",
+      "table": "organizations",
+      "column": "logo",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "organizations",
+      "many_field": "logo",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "organizations",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "organizations_user_created_foreign",
+      "table": "organizations",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "organizations",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "organizations",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "organizations_user_updated_foreign",
+      "table": "organizations",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "organizations",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "organizations",
+    "field": "owner",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "organizations_owner_foreign",
+      "table": "organizations",
+      "column": "owner",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "organizations",
+      "many_field": "owner",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "deals",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "deals_user_updated_foreign",
+      "table": "deals",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "deals",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "deals",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "deals_user_created_foreign",
+      "table": "deals",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "deals",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "deals",
+    "field": "owner",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "deals_owner_foreign",
+      "table": "deals",
+      "column": "owner",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "deals",
+      "many_field": "owner",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "contacts",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "contacts_user_updated_foreign",
+      "table": "contacts",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "contacts",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "contacts",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "contacts_user_created_foreign",
+      "table": "contacts",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "contacts",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "activities",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "activities_user_created_foreign",
+      "table": "activities",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "activities",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "activities",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "activities_user_updated_foreign",
+      "table": "activities",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "activities",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "activities",
+    "field": "owner",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "activities_owner_foreign",
+      "table": "activities",
+      "column": "owner",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "activities",
+      "many_field": "owner",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "organization_addresses",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "organization_addresses_user_created_foreign",
+      "table": "organization_addresses",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "organization_addresses",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "organization_addresses",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "organization_addresses_user_updated_foreign",
+      "table": "organization_addresses",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "organization_addresses",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "activity_contacts",
+    "field": "activity",
+    "related_collection": "activities",
+    "schema": {
+      "constraint_name": "activity_contacts_activity_foreign",
+      "table": "activity_contacts",
+      "column": "activity",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "activities",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "activity_contacts",
+      "many_field": "activity",
+      "one_collection": "activities",
+      "one_field": "contacts",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "contact",
+      "sort_field": null,
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "contact_tags",
+    "field": "contact",
+    "related_collection": "contacts",
+    "schema": {
+      "constraint_name": "contact_tags_contact_foreign",
+      "table": "contact_tags",
+      "column": "contact",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "contacts",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "contact_tags",
+      "many_field": "contact",
+      "one_collection": "contacts",
+      "one_field": "tags",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "tag",
+      "sort_field": "sort",
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "deal_contacts",
+    "field": "contact",
+    "related_collection": "contacts",
+    "schema": {
+      "constraint_name": "deal_contacts_contact_foreign",
+      "table": "deal_contacts",
+      "column": "contact",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "contacts",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "deal_contacts",
+      "many_field": "contact",
+      "one_collection": "contacts",
+      "one_field": "deals",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "deal",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "organization_contacts",
+    "field": "contact",
+    "related_collection": "contacts",
+    "schema": {
+      "constraint_name": "organization_contacts_contact_foreign",
+      "table": "organization_contacts",
+      "column": "contact",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "contacts",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "organization_contacts",
+      "many_field": "contact",
+      "one_collection": "contacts",
+      "one_field": "organizations",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "organization",
+      "sort_field": "sort",
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "activity_contacts",
+    "field": "contact",
+    "related_collection": "contacts",
+    "schema": {
+      "constraint_name": "activity_contacts_contact_foreign",
+      "table": "activity_contacts",
+      "column": "contact",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "contacts",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "activity_contacts",
+      "many_field": "contact",
+      "one_collection": "contacts",
+      "one_field": "activities",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "activity",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "deals",
+    "field": "deal_stage",
+    "related_collection": "deal_stages",
+    "schema": {
+      "constraint_name": "deals_deal_stage_foreign",
+      "table": "deals",
+      "column": "deal_stage",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "deal_stages",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "deals",
+      "many_field": "deal_stage",
+      "one_collection": "deal_stages",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "activities",
+    "field": "deal",
+    "related_collection": "deals",
+    "schema": {
+      "constraint_name": "activities_deal_foreign",
+      "table": "activities",
+      "column": "deal",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "deals",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "activities",
+      "many_field": "deal",
+      "one_collection": "deals",
+      "one_field": "activities",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "deal_contacts",
+    "field": "deal",
+    "related_collection": "deals",
+    "schema": {
+      "constraint_name": "deal_contacts_deal_foreign",
+      "table": "deal_contacts",
+      "column": "deal",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "deals",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "deal_contacts",
+      "many_field": "deal",
+      "one_collection": "deals",
+      "one_field": "contacts",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "contact",
+      "sort_field": "sort",
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "organization_tags",
+    "field": "organization",
+    "related_collection": "organizations",
+    "schema": {
+      "constraint_name": "organization_tags_organization_foreign",
+      "table": "organization_tags",
+      "column": "organization",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "organizations",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "organization_tags",
+      "many_field": "organization",
+      "one_collection": "organizations",
+      "one_field": "tags",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "tag",
+      "sort_field": "sort",
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "deals",
+    "field": "organization",
+    "related_collection": "organizations",
+    "schema": {
+      "constraint_name": "deals_organization_foreign",
+      "table": "deals",
+      "column": "organization",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "organizations",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "deals",
+      "many_field": "organization",
+      "one_collection": "organizations",
+      "one_field": "deals",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "activities",
+    "field": "organization",
+    "related_collection": "organizations",
+    "schema": {
+      "constraint_name": "activities_organization_foreign",
+      "table": "activities",
+      "column": "organization",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "organizations",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "activities",
+      "many_field": "organization",
+      "one_collection": "organizations",
+      "one_field": "activities",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "organization_contacts",
+    "field": "organization",
+    "related_collection": "organizations",
+    "schema": {
+      "constraint_name": "organization_contacts_organization_foreign",
+      "table": "organization_contacts",
+      "column": "organization",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "organizations",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "organization_contacts",
+      "many_field": "organization",
+      "one_collection": "organizations",
+      "one_field": "contacts",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "contact",
+      "sort_field": "sort",
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "organization_addresses",
+    "field": "organization",
+    "related_collection": "organizations",
+    "schema": {
+      "constraint_name": "organization_addresses_organization_foreign",
+      "table": "organization_addresses",
+      "column": "organization",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "organizations",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "organization_addresses",
+      "many_field": "organization",
+      "one_collection": "organizations",
+      "one_field": "addresses",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": "sort",
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "organization_tags",
+    "field": "tag",
+    "related_collection": "tags",
+    "schema": {
+      "constraint_name": "organization_tags_tag_foreign",
+      "table": "organization_tags",
+      "column": "tag",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "tags",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "organization_tags",
+      "many_field": "tag",
+      "one_collection": "tags",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "organization",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "contact_tags",
+    "field": "tag",
+    "related_collection": "tags",
+    "schema": {
+      "constraint_name": "contact_tags_tag_foreign",
+      "table": "contact_tags",
+      "column": "tag",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "tags",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "contact_tags",
+      "many_field": "tag",
+      "one_collection": "tags",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "contact",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  }
+]

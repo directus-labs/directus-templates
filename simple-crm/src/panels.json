@@ -1,0 +1,192 @@
+[
+  {
+    "id": "4ab5bda5-4cdf-46e1-920e-e4a2f8b3e209",
+    "dashboard": "f1bea1ac-2060-4edd-bc4d-a21f1776b340",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 26,
+    "width": 32,
+    "height": 3,
+    "options": {
+      "text": "Open Deals"
+    },
+    "date_created": "2024-09-25T12:25:29.989Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3"
+  },
+  {
+    "id": "53273f43-c5f1-4430-a17f-57afc9691915",
+    "dashboard": "f1bea1ac-2060-4edd-bc4d-a21f1776b340",
+    "name": "Percentage of Goal ($500k)",
+    "icon": "percent",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "meter",
+    "position_x": 17,
+    "position_y": 8,
+    "width": 16,
+    "height": 13,
+    "options": {
+      "collection": "deals",
+      "field": "deal_value",
+      "fn": "sum",
+      "max": 500000,
+      "filter": {
+        "_and": [
+          {
+            "deal_stage": {
+              "is_won": {
+                "_eq": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    "date_created": "2024-09-25T12:19:02.979Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3"
+  },
+  {
+    "id": "78f4323c-3721-4ec4-9e7c-11f3f260e991",
+    "dashboard": "f1bea1ac-2060-4edd-bc4d-a21f1776b340",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 5,
+    "width": 32,
+    "height": 3,
+    "options": {
+      "text": "Sales Performance"
+    },
+    "date_created": "2024-09-25T12:19:02.973Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3"
+  },
+  {
+    "id": "8ecb0b8f-808a-412c-b685-98c01d3246dc",
+    "dashboard": "f1bea1ac-2060-4edd-bc4d-a21f1776b340",
+    "name": "Won Deals ($)",
+    "icon": "check_circle",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 1,
+    "position_y": 8,
+    "width": 16,
+    "height": 13,
+    "options": {
+      "collection": "deals",
+      "field": "deal_value",
+      "function": "sum",
+      "sortField": "id",
+      "filter": {
+        "_and": [
+          {
+            "deal_stage": {
+              "is_won": {
+                "_eq": true
+              }
+            }
+          }
+        ]
+      },
+      "prefix": "$ ",
+      "unit": ","
+    },
+    "date_created": "2024-09-25T12:19:38.423Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3"
+  },
+  {
+    "id": "b4fa60f6-059e-4b77-811b-f700b6a82ed1",
+    "dashboard": "f1bea1ac-2060-4edd-bc4d-a21f1776b340",
+    "name": "Open Deal Value",
+    "icon": "attach_money",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric-list",
+    "position_x": 1,
+    "position_y": 45,
+    "width": 32,
+    "height": 16,
+    "options": {
+      "collection": "deals",
+      "limit": 100,
+      "groupByField": "name",
+      "aggregateField": "deal_value",
+      "aggregateFunction": "sum",
+      "filter": {
+        "_and": [
+          {
+            "deal_stage": {
+              "is_won": {
+                "_neq": true
+              }
+            }
+          },
+          {
+            "deal_stage": {
+              "is_lost": {
+                "_neq": true
+              }
+            }
+          }
+        ]
+      },
+      "prefix": "$ "
+    },
+    "date_created": "2024-09-25T12:29:05.441Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3"
+  },
+  {
+    "id": "d8a77e05-eee5-453c-a979-e65eb63ef4d3",
+    "dashboard": "f1bea1ac-2060-4edd-bc4d-a21f1776b340",
+    "name": "Open Deals",
+    "icon": "downloading",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "list",
+    "position_x": 1,
+    "position_y": 29,
+    "width": 32,
+    "height": 16,
+    "options": {
+      "collection": "deals",
+      "limit": 100,
+      "linkToItem": true,
+      "displayTemplate": "{{name}} • {{deal_stage}} • Expected close {{expected_close_date}}",
+      "sortField": "expected_close_date",
+      "sortDirection": "asc",
+      "filter": {
+        "_and": [
+          {
+            "deal_stage": {
+              "is_won": {
+                "_neq": true
+              }
+            }
+          },
+          {
+            "deal_stage": {
+              "is_lost": {
+                "_neq": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    "date_created": "2024-09-25T12:25:29.980Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3"
+  }
+]

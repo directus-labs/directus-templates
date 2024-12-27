@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1419faec-e263-431c-bd5f-a57f394c39f6",
+    "form": "5da3d356-d818-434f-b225-db35c418bbb6",
+    "headline": "Get all the goodness, right in your inbox",
+    "tagline": "Newsletter"
+  },
+  {
+    "id": "185eca12-4af1-4a1c-bfd7-4bc2fab52097",
+    "form": "36493b64-2bad-4c58-9d70-785ccb12ee26",
+    "headline": "Let's talk about your project",
+    "tagline": "Contact"
+  },
+  {
+    "id": "3e262b2d-48fc-4816-b5e8-c991817d56fc",
+    "form": "5da3d356-d818-434f-b225-db35c418bbb6",
+    "headline": "Subscribe to get updates",
+    "tagline": "Newsletter"
+  }
+]

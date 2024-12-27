@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1f78c46d-4db5-4d5e-b757-a160e2df4a90",
+    "sort": null,
+    "customer": "9abce8fa-15c5-4167-931d-bb90e199a378",
+    "address_line_1": "123 Main St",
+    "address_line_2": null,
+    "city": "Los Angeles",
+    "state": "CA",
+    "postal_code": "55555",
+    "country_code": "US",
+    "is_shipping": true,
+    "is_billing": false,
+    "is_active": false
+  }
+]

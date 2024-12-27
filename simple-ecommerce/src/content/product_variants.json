@@ -1,0 +1,57 @@
+[
+  {
+    "id": "17f75217-ab99-4229-ba58-4dbe5e93849f",
+    "product": "ce31bbeb-3f60-4853-98f0-ac87c37175bc",
+    "price": "19.99000",
+    "sku": "TUMBLER-20",
+    "image": null,
+    "color": "White",
+    "size": null,
+    "weight": "4.00000",
+    "weight_unit": "oz"
+  },
+  {
+    "id": "2086ece8-bd1d-47b6-ae70-cd7ba9b0e2f4",
+    "product": "949797a2-2c71-471a-bfac-c2dec68fdeb1",
+    "price": "20.00000",
+    "sku": "BLACK-S",
+    "image": null,
+    "color": "Black",
+    "size": "S",
+    "weight": "3.00000",
+    "weight_unit": "oz"
+  },
+  {
+    "id": "29a0e1a9-ea0b-4ac2-9223-3e68fa8885dd",
+    "product": "949797a2-2c71-471a-bfac-c2dec68fdeb1",
+    "price": "20.00000",
+    "sku": "BLACK-M",
+    "image": null,
+    "color": "Black",
+    "size": "M",
+    "weight": "3.00000",
+    "weight_unit": "oz"
+  },
+  {
+    "id": "8dee98e4-ded3-4939-8e9a-86c0f5c4d27f",
+    "product": "949797a2-2c71-471a-bfac-c2dec68fdeb1",
+    "price": "20.00000",
+    "sku": "BLACK-L",
+    "image": null,
+    "color": "Black",
+    "size": "L",
+    "weight": "3.00000",
+    "weight_unit": "oz"
+  },
+  {
+    "id": "d2c9728d-f149-4ceb-b208-8914032be9de",
+    "product": "949797a2-2c71-471a-bfac-c2dec68fdeb1",
+    "price": "20.00000",
+    "sku": "BLACK-XL",
+    "image": null,
+    "color": "Black",
+    "size": "XL",
+    "weight": "3.00000",
+    "weight_unit": "oz"
+  }
+]

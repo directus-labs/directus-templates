@@ -1,0 +1,50 @@
+[
+  {
+    "id": "49ed6f64-7494-41f7-8c04-cfc7f32c5824",
+    "name": "Util -> Create Variants",
+    "icon": "fiber_new",
+    "color": null,
+    "description": "Create variants whenever creating a new product",
+    "status": "active",
+    "trigger": "event",
+    "accountability": "all",
+    "options": {
+      "type": "filter",
+      "scope": [
+        "items.create"
+      ],
+      "collections": [
+        "products"
+      ],
+      "return": "$last"
+    },
+    "operation": "bd0a0a62-44b8-4faf-9b46-33a881b95b19",
+    "date_created": "2024-09-26T05:14:07.472Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23",
+    "operations": null
+  },
+  {
+    "id": "fd406c19-b52c-4037-b14a-914234714c2c",
+    "name": "Util -> Update Variants",
+    "icon": "update",
+    "color": null,
+    "description": "Updates the variants whenever the color or size attributes change",
+    "status": "active",
+    "trigger": "event",
+    "accountability": "all",
+    "options": {
+      "type": "filter",
+      "scope": [
+        "items.update"
+      ],
+      "collections": [
+        "products"
+      ],
+      "return": "$last"
+    },
+    "operation": "95d18982-fd6d-479b-9b40-82988e24a362",
+    "date_created": "2024-09-26T05:30:25.187Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23",
+    "operations": null
+  }
+]

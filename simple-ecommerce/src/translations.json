@@ -1,0 +1,80 @@
+[
+  {
+    "id": "2c693bcb-39b4-4211-b19a-372820429dd1",
+    "language": "en-US",
+    "key": "pending",
+    "value": "Pending"
+  },
+  {
+    "id": "37104e3a-d808-4507-8d30-822dcd2e605c",
+    "language": "en-US",
+    "key": "fulfilled",
+    "value": "Fulfilled"
+  },
+  {
+    "id": "5a32fd5c-ff44-43a8-8c4a-e220f2c7f563",
+    "language": "en-US",
+    "key": "paid",
+    "value": "Paid"
+  },
+  {
+    "id": "8471c5de-520e-4fdc-a26f-2c32b0492fa4",
+    "language": "en-US",
+    "key": "in_progress",
+    "value": "In Progress"
+  },
+  {
+    "id": "86c59a98-f7c7-4564-abb7-1e9bbd9076a3",
+    "language": "en-US",
+    "key": "on_hold",
+    "value": "On Hold"
+  },
+  {
+    "id": "99390097-227b-4937-9175-5e02dbf03bbe",
+    "language": "en-US",
+    "key": "completed",
+    "value": "Completed"
+  },
+  {
+    "id": "cf7070ad-3c7a-4fca-97b3-a5589c898d2d",
+    "language": "en-US",
+    "key": "backordered",
+    "value": "Backordered"
+  },
+  {
+    "id": "d11b87b6-3b85-465a-aabb-b72c39f199e5",
+    "language": "en-US",
+    "key": "canceled",
+    "value": "Canceled"
+  },
+  {
+    "id": "dc3f1e25-b2c9-4cec-8c0f-588cf50ace83",
+    "language": "en-US",
+    "key": "refunded",
+    "value": "Refunded"
+  },
+  {
+    "id": "e3d0c690-a95b-4322-9754-a22e22aff731",
+    "language": "en-US",
+    "key": "not_paid",
+    "value": "Not Paid"
+  },
+  {
+    "id": "f174c411-a6f1-480c-a998-523328c51834",
+    "language": "en-US",
+    "key": "awaiting",
+    "value": "Awaiting Payment"
+  },
+  {
+    "id": "f4d53980-ea01-444f-9e7b-4b61665929fc",
+    "language": "en-US",
+    "key": "out_of_stock",
+    "value": "Out of Stock"
+  },
+  {
+    "id": "f5686d06-0e31-44d5-97c0-e152f4226f12",
+    "language": "en-US",
+    "key": "open",
+    "value": "Open"
+  }
+]

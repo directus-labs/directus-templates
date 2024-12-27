@@ -1,0 +1,479 @@
+[
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "contacts",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "first_name",
+          "last_name",
+          "email",
+          "phone",
+          "organizations"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "first_name": 123.7578125,
+          "last_name": 143.00390625,
+          "email": 274.296875
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "organizations",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "logo",
+          "name",
+          "contacts",
+          "deals",
+          "addresses",
+          "owner",
+          "tags"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "logo": 56.13671875,
+          "name": 202.7109375
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "deal_stages",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "color",
+          "icon",
+          "name"
+        ],
+        "sort": [
+          "sort"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "color": 32,
+          "icon": 32,
+          "name": 222.51953125
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "deals",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "name",
+          "deal_stage",
+          "deal_value",
+          "owner",
+          "expected_close_date"
+        ],
+        "sort": [
+          "expected_close_date"
+        ]
+      }
+    },
+    "layout_options": {
+      "kanban": {
+        "groupField": "deal_stage",
+        "groupTitle": "name",
+        "dateField": "next_contact_date",
+        "crop": false,
+        "userField": "owner",
+        "showUngrouped": false
+      },
+      "tabular": {
+        "widths": {
+          "name": 275.328125,
+          "deal_stage": 213.3671875,
+          "expected_close_date": 192.921875
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "activities",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "name",
+          "activity_type",
+          "organization",
+          "start_date",
+          "contacts",
+          "deal",
+          "owner",
+          "is_completed"
+        ]
+      },
+      "editable-layout": {
+        "fields": [
+          "name",
+          "due_date",
+          "activity_notes",
+          "activity_type"
+        ],
+        "sort": [
+          "-due_date"
+        ],
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "editable-layout": {
+        "widths": {
+          "due_date": 170.92578125
+        }
+      },
+      "tabular": {
+        "widths": {
+          "name": 235.76953125,
+          "activity_type": 143.11328125,
+          "start_date": 207.00390625,
+          "deal": 251.37890625
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "tags",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "color",
+          "name",
+          "tag_collections"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "color": 38.30859375
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_files",
+    "search": null,
+    "layout": "cards",
+    "layout_query": {
+      "cards": {
+        "sort": [
+          "-uploaded_on"
+        ],
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "cards": {
+        "icon": "insert_drive_file",
+        "title": "{{ title }}",
+        "subtitle": "{{ type }} • {{ filesize }}",
+        "size": 4,
+        "imageFit": "crop"
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": "1. My Pipeline",
+    "user": null,
+    "role": null,
+    "collection": "deals",
+    "search": null,
+    "layout": "kanban",
+    "layout_query": {
+      "kanban": {
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "kanban": {
+        "groupField": "deal_stage",
+        "groupTitle": "name",
+        "dateField": "next_contact_date",
+        "crop": false,
+        "userField": "owner",
+        "showUngrouped": false,
+        "textField": null
+      }
+    },
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "owner": {
+            "_eq": "$CURRENT_USER"
+          }
+        }
+      ]
+    },
+    "icon": "view_kanban",
+    "color": "var(--theme--foreground-subdued)"
+  },
+  {
+    "bookmark": "1. My Next 7 Days",
+    "user": null,
+    "role": null,
+    "collection": "activities",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "name",
+          "activity_type",
+          "deal",
+          "owner"
+        ]
+      },
+      "editable-layout": {
+        "fields": [
+          "name",
+          "due_date",
+          "activity_notes",
+          "activity_type"
+        ],
+        "sort": [
+          "-due_date"
+        ],
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "editable-layout": {
+        "widths": {
+          "due_date": 170.92578125
+        }
+      },
+      "tabular": {
+        "widths": {
+          "name": 348.12109375
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "is_completed": {
+            "_eq": false
+          }
+        },
+        {
+          "start_date": {
+            "_lte": "$NOW(+7d)"
+          }
+        }
+      ]
+    },
+    "icon": "auto_schedule",
+    "color": "var(--theme--foreground-subdued)"
+  },
+  {
+    "bookmark": "1. My Accounts",
+    "user": null,
+    "role": null,
+    "collection": "organizations",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "name",
+          "contacts",
+          "addresses",
+          "owner",
+          "tags"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "tags.tag": 454.125
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "owner": {
+            "_eq": "$CURRENT_USER"
+          }
+        }
+      ]
+    },
+    "icon": "store",
+    "color": "var(--theme--foreground-subdued)"
+  },
+  {
+    "bookmark": "1. My Contacts",
+    "user": null,
+    "role": null,
+    "collection": "contacts",
+    "search": null,
+    "layout": null,
+    "layout_query": {
+      "tabular": {
+        "page": 1
+      }
+    },
+    "layout_options": null,
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "organizations": {
+            "organization": {
+              "owner": {
+                "_eq": "$CURRENT_USER"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "icon": "supervised_user_circle",
+    "color": "var(--theme--foreground-subdued)"
+  },
+  {
+    "bookmark": "2. Completed",
+    "user": null,
+    "role": null,
+    "collection": "activities",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "name",
+          "activity_type",
+          "deal",
+          "owner"
+        ]
+      },
+      "editable-layout": {
+        "fields": [
+          "name",
+          "due_date",
+          "activity_notes",
+          "activity_type"
+        ],
+        "sort": [
+          "-due_date"
+        ],
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "editable-layout": {
+        "widths": {
+          "due_date": 170.92578125
+        }
+      },
+      "tabular": {
+        "widths": {
+          "name": 348.12109375
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "is_completed": {
+            "_eq": true
+          }
+        }
+      ]
+    },
+    "icon": "flag_circle",
+    "color": "var(--theme--foreground-subdued)"
+  }
+]

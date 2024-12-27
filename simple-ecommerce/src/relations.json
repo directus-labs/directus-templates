@@ -1,0 +1,522 @@
+[
+  {
+    "collection": "product_variants",
+    "field": "image",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "product_variants_image_foreign",
+      "table": "product_variants",
+      "column": "image",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "product_variants",
+      "many_field": "image",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "products",
+    "field": "thumbnail",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "products_thumbnail_foreign",
+      "table": "products",
+      "column": "thumbnail",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "products",
+      "many_field": "thumbnail",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "product_images",
+    "field": "file",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "product_images_file_foreign",
+      "table": "product_images",
+      "column": "file",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "product_images",
+      "many_field": "file",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "product",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "orders",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "orders_user_created_foreign",
+      "table": "orders",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "orders",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "orders",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "orders_user_updated_foreign",
+      "table": "orders",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "orders",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "products",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "products_user_updated_foreign",
+      "table": "products",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "products",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "products",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "products_user_created_foreign",
+      "table": "products",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "products",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "customers",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "customers_user_created_foreign",
+      "table": "customers",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "customers",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "customers",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "customers_user_updated_foreign",
+      "table": "customers",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "customers",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "orders",
+    "field": "billing_address",
+    "related_collection": "customer_addresses",
+    "schema": {
+      "constraint_name": "orders_billing_address_foreign",
+      "table": "orders",
+      "column": "billing_address",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "customer_addresses",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "orders",
+      "many_field": "billing_address",
+      "one_collection": "customer_addresses",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "orders",
+    "field": "shipping_address",
+    "related_collection": "customer_addresses",
+    "schema": {
+      "constraint_name": "orders_shipping_address_foreign",
+      "table": "orders",
+      "column": "shipping_address",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "customer_addresses",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "orders",
+      "many_field": "shipping_address",
+      "one_collection": "customer_addresses",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "orders",
+    "field": "customer",
+    "related_collection": "customers",
+    "schema": {
+      "constraint_name": "orders_customer_foreign",
+      "table": "orders",
+      "column": "customer",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "customers",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "orders",
+      "many_field": "customer",
+      "one_collection": "customers",
+      "one_field": "orders",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "customer_addresses",
+    "field": "customer",
+    "related_collection": "customers",
+    "schema": {
+      "constraint_name": "customer_addresses_customer_foreign",
+      "table": "customer_addresses",
+      "column": "customer",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "customers",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "customer_addresses",
+      "many_field": "customer",
+      "one_collection": "customers",
+      "one_field": "addresses",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "product_variants",
+    "field": "product",
+    "related_collection": "products",
+    "schema": {
+      "constraint_name": "product_variants_product_foreign",
+      "table": "product_variants",
+      "column": "product",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "products",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "product_variants",
+      "many_field": "product",
+      "one_collection": "products",
+      "one_field": "variants",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "product_images",
+    "field": "product",
+    "related_collection": "products",
+    "schema": {
+      "constraint_name": "product_images_product_foreign",
+      "table": "product_images",
+      "column": "product",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "products",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "product_images",
+      "many_field": "product",
+      "one_collection": "products",
+      "one_field": "images",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "file",
+      "sort_field": "sort",
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "order_items",
+    "field": "product",
+    "related_collection": "products",
+    "schema": {
+      "constraint_name": "order_items_product_foreign",
+      "table": "order_items",
+      "column": "product",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "products",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "order_items",
+      "many_field": "product",
+      "one_collection": "products",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "order_items",
+    "field": "order",
+    "related_collection": "orders",
+    "schema": {
+      "constraint_name": "order_items_order_foreign",
+      "table": "order_items",
+      "column": "order",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "orders",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "order_items",
+      "many_field": "order",
+      "one_collection": "orders",
+      "one_field": "line_items",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "order_items",
+    "field": "product_variant",
+    "related_collection": "product_variants",
+    "schema": {
+      "constraint_name": "order_items_product_variant_foreign",
+      "table": "order_items",
+      "column": "product_variant",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "product_variants",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "order_items",
+      "many_field": "product_variant",
+      "one_collection": "product_variants",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "categories",
+    "field": "parent_category",
+    "related_collection": "categories",
+    "schema": {
+      "constraint_name": "categories_parent_category_foreign",
+      "table": "categories",
+      "column": "parent_category",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "categories",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "categories",
+      "many_field": "parent_category",
+      "one_collection": "categories",
+      "one_field": "sub_categories",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": "sort",
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "products",
+    "field": "category",
+    "related_collection": "categories",
+    "schema": {
+      "constraint_name": "products_category_foreign",
+      "table": "products",
+      "column": "category",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "categories",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "products",
+      "many_field": "category",
+      "one_collection": "categories",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  }
+]

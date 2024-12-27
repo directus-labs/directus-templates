@@ -1,0 +1,89 @@
+[
+  {
+    "id": "5c01060f-51d2-4d83-9cc5-273b4db13321",
+    "name": "Product",
+    "key": "product",
+    "type": "item-read",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "collection": "products",
+      "key": "{{$trigger.keys}}",
+      "query": {
+        "fields": [
+          "*",
+          "variants.*"
+        ]
+      }
+    },
+    "resolve": "a12502bb-2daa-4ca7-b4af-998d600a9f32",
+    "reject": null,
+    "flow": "fd406c19-b52c-4037-b14a-914234714c2c",
+    "date_created": "2024-09-26T05:32:23.265Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "86307250-be0e-43a1-bed1-d20b014d08f6",
+    "name": "Return",
+    "key": "return",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 17,
+    "options": {
+      "code": "module.exports = function(data) {\n\t// If color or size aren't updated, then just return payload\n\treturn data.$trigger.payload\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "fd406c19-b52c-4037-b14a-914234714c2c",
+    "date_created": "2024-09-26T05:43:33.302Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "95d18982-fd6d-479b-9b40-82988e24a362",
+    "name": "Update",
+    "key": "update",
+    "type": "exec",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports = function(data) {\n\t// Check if color or size are present\n\tconst payload = data.$trigger.payload\n    \n    if(!payload.color && !payload.size) {\n        throw new Error('No color or size in payload. Returning payload')\n    }\n}"
+    },
+    "resolve": "5c01060f-51d2-4d83-9cc5-273b4db13321",
+    "reject": "86307250-be0e-43a1-bed1-d20b014d08f6",
+    "flow": "fd406c19-b52c-4037-b14a-914234714c2c",
+    "date_created": "2024-09-26T05:43:33.306Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "a12502bb-2daa-4ca7-b4af-998d600a9f32",
+    "name": "Variants",
+    "key": "variants",
+    "type": "exec",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "code": "const generateCombinations = (arrays) => {\n  return arrays.reduce((acc, curr) => \n    curr.length ? acc.flatMap(x => curr.map(y => [...x, y])) : acc,\n    [[]]\n  );\n};\n\nconst createVariant = (productId, combination) => {\n  const [c, s] = combination;\n  const sku = [c, s].filter(Boolean).map(v => v.toUpperCase()).join('-');\n  \n  return {\n    product: productId,\n    color: c,\n    size: s,\n    sku\n  };\n};\n\nconst handleProductUpdate = (triggerPayload, currentProduct) => {\n  if (!currentProduct || typeof currentProduct !== 'object') {\n    throw new Error('Invalid or missing currentProduct data');\n  }\n\n  const productId = currentProduct.id;\n  if (!productId) {\n    throw new Error('Missing product ID in currentProduct data');\n  }\n\n  // Safely access payload and current product properties\n  const payload = triggerPayload?.payload || {};\n  const newColors = Array.isArray(payload.color) ? payload.color : currentProduct.color || [];\n  const newSizes = Array.isArray(payload.size) ? payload.size : currentProduct.size || [];\n\n  // If no colors or sizes available, return early\n  if (newColors.length === 0 && newSizes.length === 0) {\n    return { variants: {} };\n  }\n\n  const currentVariants = Array.isArray(currentProduct.variants) ? currentProduct.variants : [];\n\n  // Generate new variants based on updated or existing colors and sizes\n  const newCombinations = generateCombinations([newColors, newSizes]);\n  const potentialNewVariants = newCombinations.map(combo => createVariant(productId, combo));\n\n  // Identify variants to create, update, or delete\n  const variantsToCreate = [];\n  const variantsToUpdate = [];\n  const variantsToDelete = [];\n\n  potentialNewVariants.forEach(newVariant => {\n    const existingVariant = currentVariants.find(v => \n      v.color === newVariant.color && v.size === newVariant.size\n    );\n\n    if (existingVariant) {\n      if (existingVariant.sku !== newVariant.sku) {\n        variantsToUpdate.push({ ...newVariant, id: existingVariant.id });\n      }\n    } else {\n      variantsToCreate.push(newVariant);\n    }\n  });\n\n  currentVariants.forEach(currentVariant => {\n    const stillExists = potentialNewVariants.some(v => \n      v.color === currentVariant.color && v.size === currentVariant.size\n    );\n\n    if (!stillExists) {\n      variantsToDelete.push(currentVariant.id);\n    }\n  });\n\n  // Prepare the result in the required format\n  const result = {\n    variants: {}\n  };\n\n  if (variantsToCreate.length > 0) result.variants.create = variantsToCreate;\n  if (variantsToUpdate.length > 0) result.variants.update = variantsToUpdate;\n  if (variantsToDelete.length > 0) result.variants.delete = variantsToDelete;\n\n  return result;\n};\n\n\nmodule.exports = function(data) {\n\tconst variants = handleProductUpdate(data.$trigger, data.product)\n    // Since color or size have been updated, return modified payload\n\treturn {\n        ...data.$trigger.payload,\n        ...variants\n    }\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "fd406c19-b52c-4037-b14a-914234714c2c",
+    "date_created": "2024-09-26T05:43:33.274Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "bd0a0a62-44b8-4faf-9b46-33a881b95b19",
+    "name": "Variants",
+    "key": "variants",
+    "type": "exec",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "code": "const generateCombinations = (arrays) => {\n  return arrays.reduce((acc, curr) => \n    curr.length ? acc.flatMap(x => curr.map(y => [...x, y])) : acc,\n    [[]]\n  );\n};\n\nconst createVariant = (id, combination) => {\n  const [c, s] = combination;\n  let sku = [c, s].filter(Boolean).map(v => v.toUpperCase()).join('-');\n  \n  if (!sku && id === undefined) {\n    sku = 'NEW-PRODUCT';\n  } else if (!sku && id !== undefined) {\n    sku = id.toUpperCase();\n  }\n  \n  const variant = {\n    sku\n  };\n\n  if (c !== undefined) variant.color = c;\n  if (s !== undefined) variant.size = s;\n\n  return variant;\n};\n\nconst createVariants = (data) => {\n  const { id, color = [], size = [] } = data;\n\n  const attributes = [color, size].filter(attr => attr.length > 0);\n  const combinations = generateCombinations(attributes);\n  \n  const variants = combinations.length \n    ? combinations.map(combo => createVariant(id, combo))\n    : [createVariant(id, [])];\n\n  return {\n    variants: {\n      create: variants\n    }\n  };\n};\n\nmodule.exports = function(data) {\n\tconst variants = createVariants(data.$trigger.payload)\n    return {\n        ...data.$trigger.payload,\n        ...variants\n    }\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "49ed6f64-7494-41f7-8c04-cfc7f32c5824",
+    "date_created": "2024-09-26T05:15:53.142Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "author": "",
+  "description": "",
+  "directusTemplate": true,
+  "files": [
+    "src"
+  ],
+  "name": "directus-template-simple-ecommerce",
+  "templateName": "Simple eCommerce",
+  "version": "1.0.0"
+}

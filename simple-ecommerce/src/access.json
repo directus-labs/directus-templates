@@ -1,0 +1,16 @@
+[
+  {
+    "id": "d629f971-d0ff-491f-99bb-7d060055b960",
+    "role": null,
+    "user": null,
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17",
+    "sort": 1
+  },
+  {
+    "id": "e1be4619-9c51-4c2b-be9d-abfc6d1a037d",
+    "role": "c537905b-a75c-4a35-be45-74cd696d789e",
+    "user": null,
+    "policy": "611daef9-b88f-4af7-94f2-45017149fb6c",
+    "sort": null
+  }
+]
