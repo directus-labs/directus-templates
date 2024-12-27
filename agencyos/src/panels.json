@@ -1,11 +1,11 @@
 [
   {
     "id": "16690e0b-ffc4-471f-9762-d4f2e55ad543",
-    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "date_created": "2023-09-11T13:08:17.998Z",
-    "name": null,
     "icon": null,
+    "name": null,
     "color": null,
     "type": "label",
     "options": {
@@ -16,18 +16,18 @@
     },
     "note": null,
     "position_x": 2,
-    "height": 5,
     "width": 20,
+    "height": 5,
     "position_y": 43,
     "show_header": false
   },
   {
     "id": "2080c1a2-404d-4886-acfd-2ed468c2ec73",
-    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "date_created": "2023-10-20T02:20:10.608Z",
-    "name": "Past Due Tasks",
     "icon": "warning",
+    "name": "Past Due Tasks",
     "color": "#E35169",
     "type": "metric",
     "options": {
@@ -61,18 +61,18 @@
     },
     "note": null,
     "position_x": 22,
-    "height": 5,
     "width": 15,
+    "height": 5,
     "position_y": 16,
     "show_header": true
   },
   {
     "id": "23dec2a6-f1a8-450b-81eb-6d6eb772b69b",
-    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "date_created": "2023-10-20T02:03:36.538Z",
-    "name": "Select User",
     "icon": "supervised_user_circle",
+    "name": "Select User",
     "color": "#18222F",
     "type": "relational-variable",
     "options": {
@@ -89,18 +89,18 @@
     },
     "note": null,
     "position_x": 2,
-    "height": 6,
     "width": 30,
+    "height": 6,
     "position_y": 8,
     "show_header": true
   },
   {
     "id": "24c2b515-4d64-4919-9410-8a40cfba81ce",
-    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "date_created": "2023-10-20T02:22:22.622Z",
-    "name": "Past Due Activities",
     "icon": "warning",
+    "name": "Past Due Activities",
     "color": "#E35169",
     "type": "metric",
     "options": {
@@ -134,18 +134,18 @@
     },
     "note": null,
     "position_x": 22,
-    "height": 5,
     "width": 15,
+    "height": 5,
     "position_y": 43,
     "show_header": true
   },
   {
     "id": "28d6c776-0caa-4038-a1be-e7e11d3b9eee",
-    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "date_created": "2023-10-20T02:30:19.377Z",
-    "name": "Proposal Amount",
     "icon": null,
+    "name": "Proposal Amount",
     "color": "#FFA439",
     "type": "metric",
     "options": {
@@ -177,18 +177,18 @@
     },
     "note": null,
     "position_x": 17,
-    "height": 6,
     "width": 15,
+    "height": 6,
     "position_y": 23,
     "show_header": false
   },
   {
     "id": "33d54856-e7a5-4346-bb50-448535fee9b9",
-    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "date_created": "2023-10-10T02:38:55.691Z",
-    "name": "Submissions With Comments",
     "icon": "comment",
+    "name": "Submissions With Comments",
     "color": "#18222F",
     "type": "list",
     "options": {
@@ -228,18 +228,18 @@
     },
     "note": null,
     "position_x": 32,
-    "height": 26,
     "width": 25,
+    "height": 26,
     "position_y": 14,
     "show_header": true
   },
   {
     "id": "39c82b64-df2a-4d83-a2b8-a41575e87af3",
-    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "date_created": "2023-10-10T02:45:00.908Z",
-    "name": "Date From",
     "icon": "date_range",
+    "name": "Date From",
     "color": "#18222F",
     "type": "variable",
     "options": {
@@ -253,18 +253,18 @@
     },
     "note": null,
     "position_x": 1,
-    "height": 6,
     "width": 15,
+    "height": 6,
     "position_y": 7,
     "show_header": true
   },
   {
     "id": "3ca99f50-b186-4213-be9c-8773904cfd5e",
-    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "date_created": "2023-10-10T02:21:58.888Z",
-    "name": "Feedback",
     "icon": null,
+    "name": "Feedback",
     "color": null,
     "type": "label",
     "options": {
@@ -274,18 +274,18 @@
     },
     "note": null,
     "position_x": 1,
-    "height": 6,
     "width": 30,
+    "height": 6,
     "position_y": 1,
     "show_header": false
   },
   {
     "id": "429d22a1-d60c-4daa-a9c0-a2db3cbb89b3",
-    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "date_created": "2023-10-20T02:40:03.582Z",
-    "name": "Date From",
     "icon": "calendar_month",
+    "name": "Date From",
     "color": "#18222F",
     "type": "variable",
     "options": {
@@ -299,18 +299,18 @@
     },
     "note": null,
     "position_x": 17,
-    "height": 6,
     "width": 15,
+    "height": 6,
     "position_y": 8,
     "show_header": true
   },
   {
     "id": "4a74d1ec-9900-4d85-8c67-b803f5f7c4b3",
-    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "date_created": "2023-10-20T02:34:31.178Z",
-    "name": "Qualification",
     "icon": null,
+    "name": "Qualification",
     "color": "#FFC23B",
     "type": "metric",
     "options": {
@@ -340,18 +340,18 @@
     },
     "note": null,
     "position_x": 2,
-    "height": 7,
     "width": 15,
+    "height": 7,
     "position_y": 16,
     "show_header": true
   },
   {
     "id": "64783f47-3380-406a-a436-b065dfeaaae8",
-    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "date_created": "2023-09-11T13:02:00.788Z",
-    "name": "User Tasks",
     "icon": "checklist",
+    "name": "User Tasks",
     "color": "#18222F",
     "type": "list",
     "options": {
@@ -383,18 +383,50 @@
     },
     "note": null,
     "position_x": 2,
-    "height": 20,
     "width": 50,
+    "height": 20,
     "position_y": 21,
     "show_header": true
   },
   {
+    "id": "67071ea8-f03b-431d-8e89-14ad40258215",
+    "user_created": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
+    "date_created": "2024-02-29T16:51:04.731Z",
+    "icon": "magnify_docked",
+    "name": "Posts In Review",
+    "color": null,
+    "type": "metric",
+    "options": {
+      "collection": "posts",
+      "field": "id",
+      "function": "count",
+      "sortField": "id",
+      "filter": {
+        "_and": [
+          {
+            "status": {
+              "_eq": "in_review"
+            }
+          }
+        ]
+      },
+      "suffix": "posts"
+    },
+    "note": null,
+    "position_x": 27,
+    "width": 16,
+    "height": 6,
+    "position_y": 44,
+    "show_header": true
+  },
+  {
     "id": "6ea8ff25-d7f8-4494-b29e-79246cce6af9",
-    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "date_created": "2023-10-20T02:40:03.541Z",
-    "name": "Date From",
     "icon": "calendar_month",
+    "name": "Date From",
     "color": "#18222F",
     "type": "variable",
     "options": {
@@ -408,18 +440,18 @@
     },
     "note": null,
     "position_x": 2,
-    "height": 6,
     "width": 15,
+    "height": 6,
     "position_y": 8,
     "show_header": true
   },
   {
     "id": "775d0469-a878-4814-b5c3-2558dbab1b1a",
-    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "date_created": "2023-10-10T02:45:00.925Z",
-    "name": "Date To",
     "icon": "date_range",
+    "name": "Date To",
     "color": "#18222F",
     "type": "variable",
     "options": {
@@ -433,18 +465,18 @@
     },
     "note": null,
     "position_x": 16,
-    "height": 6,
     "width": 15,
+    "height": 6,
     "position_y": 7,
     "show_header": true
   },
   {
     "id": "77a5d341-747b-4210-baf8-10a61bf6a10a",
-    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "date_created": "2023-10-10T02:49:58.360Z",
-    "name": "Search",
     "icon": "screen_search_desktop",
+    "name": "Search",
     "color": "#18222F",
     "type": "variable",
     "options": {
@@ -459,18 +491,103 @@
     },
     "note": "Search response comments for a string of text.",
     "position_x": 32,
-    "height": 6,
     "width": 25,
+    "height": 6,
     "position_y": 7,
     "show_header": true
   },
   {
+    "id": "7a171d85-eae4-4c85-bac0-dd1d5d40bee7",
+    "user_created": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
+    "date_created": "2024-02-15T16:42:00.137Z",
+    "icon": null,
+    "name": "Published Pages",
+    "color": null,
+    "type": "metric",
+    "options": {
+      "collection": "pages",
+      "field": "id",
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "status": {
+              "_eq": "published"
+            }
+          }
+        ]
+      },
+      "suffix": " pages"
+    },
+    "note": null,
+    "position_x": 32,
+    "width": 24,
+    "height": 7,
+    "position_y": 2,
+    "show_header": true
+  },
+  {
+    "id": "7f562cef-9b23-44a7-b618-107a4b1fa717",
+    "user_created": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
+    "date_created": "2024-02-21T16:47:13.113Z",
+    "icon": "sports_basketball",
+    "name": "Published Posts",
+    "color": "#FFA439",
+    "type": "list",
+    "options": {
+      "collection": "posts",
+      "field": "id",
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "status": {
+              "_eq": "published"
+            }
+          }
+        ]
+      },
+      "limit": -1,
+      "displayTemplate": "{{title}} - {{slug}}",
+      "linkToItem": true
+    },
+    "note": null,
+    "position_x": 4,
+    "width": 33,
+    "height": 26,
+    "position_y": 51,
+    "show_header": true
+  },
+  {
+    "id": "80963cd5-c9ec-4413-aa57-a088804b1684",
+    "user_created": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
+    "date_created": "2024-02-29T16:56:29.025Z",
+    "icon": null,
+    "name": null,
+    "color": null,
+    "type": "bar-chart",
+    "options": {
+      "collection": "os_tasks",
+      "xAxis": "assigned_to",
+      "function": "count"
+    },
+    "note": null,
+    "position_x": 3,
+    "width": 42,
+    "height": 10,
+    "position_y": 69,
+    "show_header": false
+  },
+  {
     "id": "8194088d-4321-4cce-94e3-ac77d8f02ef6",
-    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "date_created": "2023-10-10T02:32:38.957Z",
-    "name": "Total Submissions Over Time",
     "icon": "show_chart",
+    "name": "Total Submissions Over Time",
     "color": "#6644FF",
     "type": "time-series",
     "options": {
@@ -502,18 +619,18 @@
     },
     "note": null,
     "position_x": 1,
-    "height": 10,
     "width": 30,
+    "height": 10,
     "position_y": 20,
     "show_header": true
   },
   {
     "id": "8628bb84-90bb-4ff1-8142-42d385bbe3f0",
-    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "date_created": "2023-10-20T02:44:16.222Z",
-    "name": "User Dashboard",
     "icon": "task_alt",
+    "name": "User Dashboard",
     "color": null,
     "type": "label",
     "options": {
@@ -524,18 +641,18 @@
     },
     "note": null,
     "position_x": 2,
-    "height": 4,
     "width": 30,
+    "height": 4,
     "position_y": 4,
     "show_header": false
   },
   {
     "id": "96e4f6a7-2673-4394-bddc-3b59c1999d2b",
-    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "date_created": "2023-10-20T02:14:21.226Z",
-    "name": "Open Activities",
     "icon": "notifications_active",
+    "name": "Open Activities",
     "color": "#18222F",
     "type": "metric",
     "options": {
@@ -564,18 +681,18 @@
     },
     "note": null,
     "position_x": 37,
-    "height": 5,
     "width": 15,
+    "height": 5,
     "position_y": 43,
     "show_header": true
   },
   {
     "id": "9bf6a9fe-3dc2-460c-863b-3533876c569d",
-    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "date_created": "2023-10-10T02:27:51.804Z",
-    "name": "Total Submissions",
     "icon": "numbers",
+    "name": "Total Submissions",
     "color": "#A2B5CD",
     "type": "metric",
     "options": {
@@ -604,18 +721,18 @@
     },
     "note": null,
     "position_x": 1,
-    "height": 6,
     "width": 15,
+    "height": 6,
     "position_y": 14,
     "show_header": true
   },
   {
     "id": "b2be5f3d-0500-442d-a8c7-84a8d06c92e6",
-    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "date_created": "2023-09-11T13:03:32.298Z",
-    "name": "Open Tasks",
     "icon": "notifications_active",
+    "name": "Open Tasks",
     "color": "#18222F",
     "type": "metric",
     "options": {
@@ -644,18 +761,18 @@
     },
     "note": null,
     "position_x": 37,
-    "height": 5,
     "width": 15,
+    "height": 5,
     "position_y": 16,
     "show_header": true
   },
   {
     "id": "b45fdb03-f5c4-414f-aeec-9f33f3e0340b",
-    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "date_created": "2023-10-10T02:35:06.509Z",
-    "name": "Average Rating Over Time",
     "icon": "area_chart",
+    "name": "Average Rating Over Time",
     "color": "#2ECDA7",
     "type": "time-series",
     "options": {
@@ -688,18 +805,18 @@
     },
     "note": null,
     "position_x": 1,
-    "height": 10,
     "width": 30,
+    "height": 10,
     "position_y": 30,
     "show_header": true
   },
   {
     "id": "b6e4c3e3-655a-42e0-a72a-cb6906fae70f",
-    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "date_created": "2023-09-11T13:08:17.946Z",
-    "name": "User Activities",
     "icon": "checklist",
+    "name": "User Activities",
     "color": "#18222F",
     "type": "list",
     "options": {
@@ -721,19 +838,19 @@
       }
     },
     "note": null,
-    "position_x": 2,
-    "height": 20,
+    "position_x": 3,
     "width": 50,
+    "height": 20,
     "position_y": 48,
     "show_header": true
   },
   {
     "id": "b8f3d4ba-b3f6-4169-bcb8-1a8b44dacda0",
-    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "date_created": "2023-10-20T02:29:33.372Z",
-    "name": "Won Deals",
     "icon": "hotel_class",
+    "name": "Won Deals",
     "color": "#2ECDA7",
     "type": "metric",
     "options": {
@@ -763,18 +880,18 @@
     },
     "note": null,
     "position_x": 32,
-    "height": 7,
     "width": 18,
+    "height": 7,
     "position_y": 16,
     "show_header": true
   },
   {
     "id": "be40aae0-728b-4171-8c1e-34ca955f89eb",
-    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "ea9c9be7-dcb3-4351-8a05-0d30c150bb64",
     "date_created": "2023-10-10T02:32:38.940Z",
-    "name": "Average Rating",
     "icon": "star",
+    "name": "Average Rating",
     "color": "#18222F",
     "type": "metric",
     "options": {
@@ -805,18 +922,18 @@
     },
     "note": "Average rating across all articles. Rating is from 1 - 4. 1 being the lowest score. 4 being the highest.",
     "position_x": 16,
-    "height": 6,
     "width": 15,
+    "height": 6,
     "position_y": 14,
     "show_header": true
   },
   {
     "id": "c0b8367a-e18e-4f83-8cfe-a6fa92a17553",
-    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
     "date_created": "2023-09-11T13:10:48.116Z",
-    "name": "Tasks",
     "icon": "task_alt",
+    "name": "Tasks",
     "color": null,
     "type": "label",
     "options": {
@@ -827,18 +944,18 @@
     },
     "note": null,
     "position_x": 2,
-    "height": 5,
     "width": 20,
+    "height": 5,
     "position_y": 16,
     "show_header": false
   },
   {
     "id": "dd4f2150-6f2c-42ca-860e-6388ab34a951",
-    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "date_created": "2023-10-20T02:36:29.067Z",
-    "name": "Open Deals",
     "icon": null,
+    "name": "Open Deals",
     "color": "#18222F",
     "type": "list",
     "options": {
@@ -861,18 +978,18 @@
     },
     "note": null,
     "position_x": 2,
-    "height": 18,
     "width": 48,
+    "height": 18,
     "position_y": 31,
     "show_header": true
   },
   {
     "id": "e02ea3df-0463-453a-a47b-668e29281085",
-    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "date_created": "2023-10-20T02:34:31.208Z",
-    "name": "Qualification Amount",
     "icon": null,
+    "name": "Qualification Amount",
     "color": "#FFA439",
     "type": "metric",
     "options": {
@@ -904,18 +1021,18 @@
     },
     "note": null,
     "position_x": 2,
-    "height": 6,
     "width": 15,
+    "height": 6,
     "position_y": 23,
     "show_header": false
   },
   {
     "id": "e622d2c5-5e75-47fa-9d92-a7e112d57478",
-    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "date_created": "2023-10-20T02:30:19.344Z",
-    "name": "Proposal",
     "icon": null,
+    "name": "Proposal",
     "color": "#FFA439",
     "type": "metric",
     "options": {
@@ -945,18 +1062,18 @@
     },
     "note": null,
     "position_x": 17,
-    "height": 7,
     "width": 15,
+    "height": 7,
     "position_y": 16,
     "show_header": true
   },
   {
     "id": "e72af19e-3b25-42eb-a415-0c3d3b011749",
-    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "date_created": "2023-10-20T02:40:45.886Z",
-    "name": null,
     "icon": null,
+    "name": null,
     "color": null,
     "type": "label",
     "options": {
@@ -967,18 +1084,39 @@
     },
     "note": null,
     "position_x": 2,
-    "height": 6,
     "width": 30,
+    "height": 6,
     "position_y": 2,
     "show_header": false
   },
   {
+    "id": "ea78af5e-7a58-484f-85b2-e92bec6ed782",
+    "user_created": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "dashboard": "d283dd34-6886-4cfd-b1c5-744320562acc",
+    "date_created": "2024-03-14T15:31:18.134Z",
+    "icon": "avg_time",
+    "name": "Total Tasks",
+    "color": null,
+    "type": "metric",
+    "options": {
+      "collection": "os_tasks",
+      "field": "id",
+      "function": "count"
+    },
+    "note": null,
+    "position_x": 32,
+    "width": 24,
+    "height": 9,
+    "position_y": 4,
+    "show_header": true
+  },
+  {
     "id": "f5f8724b-5881-418b-b613-544507755d29",
-    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "user_created": "95e535d2-f45b-4d94-891b-a89ee6ed1475",
+    "dashboard": "0d85d827-a045-4dee-bcd3-d72d3a91cc52",
     "date_created": "2023-10-20T02:29:33.389Z",
-    "name": "Won Amount",
     "icon": "hotel_class",
+    "name": "Won Amount",
     "color": "#2ECDA7",
     "type": "metric",
     "options": {
@@ -1011,8 +1149,8 @@
     },
     "note": null,
     "position_x": 32,
-    "height": 6,
     "width": 18,
+    "height": 6,
     "position_y": 23,
     "show_header": false
   }

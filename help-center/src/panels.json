@@ -85,13 +85,12 @@
     "note": null,
     "type": "label",
     "position_x": 1,
-    "position_y": 1,
+    "position_y": 3,
     "width": 30,
-    "height": 6,
+    "height": 4,
     "options": {
       "text": "Help Center Feedback",
-      "color": "#8196B0",
-      "fontWeight": 500
+      "color": "#8196B0"
     },
     "date_created": "2024-02-26T13:02:50.265Z",
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"

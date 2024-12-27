@@ -1,0 +1,52 @@
+[
+  {
+    "id": "8ba4ed6f-d330-4675-ae46-119c533a0928",
+    "name": "Help Center - Update Articles",
+    "icon": "article",
+    "description": "Policy to allow creating and updating content.",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  },
+  {
+    "id": "9ecc2969-8b38-4088-9dc1-78334a206445",
+    "name": "Help Center - Create Feedback",
+    "icon": "android",
+    "description": "Policy to allow creating feedback on articles.",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  },
+  {
+    "id": "abf8a154-5b1c-4a46-ac9c-7300570f4f17",
+    "name": "Help Center - Read",
+    "icon": "chrome_reader_mode",
+    "description": "Policy for read access for Help Center content.",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  },
+  {
+    "id": "bd5a4ddf-05fa-4349-85c1-12a5afcce010",
+    "name": "Team",
+    "icon": "badge",
+    "description": "App access for team members.",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": true
+  },
+  {
+    "id": "ef049c8b-546b-4bbc-9cd7-b05d77e58b66",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_policy_description",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": true,
+    "app_access": true
+  }
+]

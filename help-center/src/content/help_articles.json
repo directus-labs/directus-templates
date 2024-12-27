@@ -1,25 +1,10 @@
 [
   {
-    "date_created": "2024-02-26T15:12:43.458Z",
-    "date_updated": "2024-02-26T15:39:32.540Z",
-    "help_collection": "3c790c7e-9931-4fea-946a-42113f9e6ad1",
-    "id": "8498db54-6603-4666-990c-dad6c2b3dc9b",
-    "owner": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
-    "sort": null,
-    "status": "published",
-    "title": "Integrating with Third-Party Services",
-    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
-    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
-    "translations": [
-      "71b72d5f-fc2d-45c3-ad2d-42f5d127918a"
-    ]
-  },
-  {
     "date_created": "2024-02-26T15:12:16.399Z",
-    "date_updated": "2024-02-26T16:07:24.014Z",
+    "date_updated": "2024-09-12T17:26:30.687Z",
     "help_collection": "8d7cb6e3-bae7-48f6-9af3-4b510167289c",
     "id": "f4a66e30-4a96-4aa5-9d32-2ed36fb98154",
-    "owner": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "owner": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
     "sort": null,
     "status": "draft",
     "title": "Navigating the Dashboard",
@@ -31,10 +16,10 @@
   },
   {
     "date_created": "2024-02-26T15:11:40.223Z",
-    "date_updated": "2024-02-26T16:56:38.429Z",
+    "date_updated": "2024-09-12T17:26:30.687Z",
     "help_collection": "8d7cb6e3-bae7-48f6-9af3-4b510167289c",
     "id": "b34210d5-bc42-4b1b-b1f6-7841984ae8d1",
-    "owner": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "owner": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
     "sort": null,
     "status": "published",
     "title": "Creating Your Account",
@@ -47,10 +32,10 @@
   },
   {
     "date_created": "2024-02-26T15:13:53.941Z",
-    "date_updated": "2024-02-26T15:56:59.270Z",
+    "date_updated": "2024-09-12T17:26:30.687Z",
     "help_collection": "3c790c7e-9931-4fea-946a-42113f9e6ad1",
     "id": "8a833dda-ecba-43ab-ae5f-66ba143750a5",
-    "owner": "1a3e5ba4-c118-4607-9918-77d36b74a9a3",
+    "owner": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
     "sort": null,
     "status": "review",
     "title": "Customizing Your Workflow",
@@ -59,6 +44,21 @@
     "translations": [
       "66df1a72-13ca-40c1-b8db-5dd9b0f01fc8",
       "b5ff7712-3d63-445d-a751-e976c67b8a10"
+    ]
+  },
+  {
+    "date_created": "2024-02-26T15:12:43.458Z",
+    "date_updated": "2024-09-12T17:26:30.687Z",
+    "help_collection": "3c790c7e-9931-4fea-946a-42113f9e6ad1",
+    "id": "8498db54-6603-4666-990c-dad6c2b3dc9b",
+    "owner": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "sort": null,
+    "status": "published",
+    "title": "Integrating with Third-Party Services",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "translations": [
+      "71b72d5f-fc2d-45c3-ad2d-42f5d127918a"
     ]
   }
 ]
