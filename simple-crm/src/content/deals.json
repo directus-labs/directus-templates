@@ -1,0 +1,123 @@
+[
+  {
+    "id": "46cb7519-7328-4465-a44b-f8e8783aa78e",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T21:58:20.047Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-24T22:07:04.005Z",
+    "name": "HealthPlus Digital Transformation",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "organization": "052711ed-09eb-4cdb-b83f-89be088ea209",
+    "deal_value": 150000,
+    "deal_stage": "3818f0c1-f427-44d0-a355-98d579aa52b6",
+    "deal_notes": "<p>Overhauling their patient management system with a new digital platform.</p>",
+    "next_contact_date": "2024-11-01T11:30:00.000Z",
+    "expected_close_date": "2025-03-31T23:59:59.000Z",
+    "contacts": [],
+    "activities": [
+      "12e04279-d87e-4975-8b48-c12a8d5c6a4d",
+      "63148609-8bed-4dfa-b030-124ad6195917",
+      "923e1791-f100-495f-b258-a18c01730b9b",
+      "d97f66eb-3cc5-4e77-9238-c298ba9a0a79"
+    ]
+  },
+  {
+    "id": "5f3599bf-1947-4315-91c3-b01d11edc81a",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T18:07:12.692Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-11-04T17:42:21.378Z",
+    "name": "Tezla Deal",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "organization": "77bef88e-368b-4e1e-ba48-d23397511c45",
+    "deal_value": 5000,
+    "deal_stage": "33c5977e-7606-4cb6-9ce5-5ff6ad086267",
+    "deal_notes": "<p>I'm working with them on a new website.</p>",
+    "next_contact_date": "2024-09-26T16:00:00.000Z",
+    "expected_close_date": "2024-09-25T16:00:00.000Z",
+    "contacts": [
+      "d5b66bb7-7586-4ad6-902b-58c594bce3d1"
+    ],
+    "activities": [
+      "6841aefc-e7fc-4c0e-b9a5-4f803ed280e5"
+    ]
+  },
+  {
+    "id": "703d4ce5-0069-4726-9418-32247bfe1f9e",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T21:58:20.035Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-24T22:08:01.195Z",
+    "name": "CloudNine Expansion",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "organization": "714d8285-8fcb-4139-b86f-72003dc80b6a",
+    "deal_value": 120000,
+    "deal_stage": "15f06d29-db8b-47b5-a551-b63df10bdc96",
+    "deal_notes": "<p>Upgrading their current cloud infrastructure to support rapid growth.</p>",
+    "next_contact_date": "2024-10-05T10:00:00.000Z",
+    "expected_close_date": null,
+    "contacts": [],
+    "activities": [
+      "a69f01dc-f02f-48f7-ad21-6a8602a02e8b"
+    ]
+  },
+  {
+    "id": "731bf24b-6de4-4501-a6b1-252549aa034c",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T21:58:20.030Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-24T22:00:05.266Z",
+    "name": "SolarTech Solutions",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "organization": "682a0d80-2362-4340-bed9-92dbbd4f5672",
+    "deal_value": 75000,
+    "deal_stage": "b4bce2ce-8a6b-474b-a079-577e82f4a56c",
+    "deal_notes": "<p>Proposing a comprehensive solar panel installation for their new office building.</p>",
+    "next_contact_date": "2024-10-15T14:30:00.000Z",
+    "expected_close_date": "2024-12-31T23:59:59.000Z",
+    "contacts": [],
+    "activities": [
+      "b2ced6d7-38a1-4308-bc91-4dac57076b31"
+    ]
+  },
+  {
+    "id": "7bbc60c7-6cc6-460d-a767-2943038ef408",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T21:58:20.038Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-11-04T17:19:50.857Z",
+    "name": "GreenGrove Eco-Packaging",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "organization": "8cbba979-f760-4155-ae3e-9262e38456bc",
+    "deal_value": 50000,
+    "deal_stage": "098d3e67-f501-44f3-83c9-f0667ab95fde",
+    "deal_notes": "<p>Developing custom eco-friendly packaging solutions for their product line.</p>",
+    "next_contact_date": "2024-10-20T09:00:00.000Z",
+    "expected_close_date": "2025-01-15T23:59:59.000Z",
+    "contacts": [],
+    "activities": [
+      "560799d2-6017-46d8-becb-4f0501fef95e",
+      "b61f7430-6500-4521-bead-2f9ea3535d5d"
+    ]
+  },
+  {
+    "id": "862fae54-73b5-44e1-ba14-2c7dc1502d97",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T21:58:20.043Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-24T22:07:17.442Z",
+    "name": "TechNova AI Integration",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "organization": "34111da1-efb4-4acf-a5d5-aa1f7be4be1d",
+    "deal_value": 200000,
+    "deal_stage": "b4bce2ce-8a6b-474b-a079-577e82f4a56c",
+    "deal_notes": "<p>Implementing advanced AI solutions for predictive maintenance in their manufacturing process.</p>",
+    "next_contact_date": "2024-10-25T13:00:00.000Z",
+    "expected_close_date": "2025-02-28T23:59:59.000Z",
+    "contacts": [],
+    "activities": [
+      "9d2b659b-1e84-4fa0-aa2a-d4e6d0135a60",
+      "f67a0834-5ce5-4212-a12a-2668d5b24587"
+    ]
+  }
+]

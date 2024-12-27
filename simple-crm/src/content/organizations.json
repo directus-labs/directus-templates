@@ -1,0 +1,171 @@
+[
+  {
+    "id": "052711ed-09eb-4cdb-b83f-89be088ea209",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T22:07:04.000Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-11-04T17:22:51.179Z",
+    "name": "HealthPlus",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "logo": "d01d4ff6-c319-4e31-b574-aa84368d31e8",
+    "website": null,
+    "organization_notes": null,
+    "is_active": true,
+    "annual_revenue": null,
+    "number_of_employees": null,
+    "industry": "Healthcare",
+    "contacts": [],
+    "activities": [
+      "12e04279-d87e-4975-8b48-c12a8d5c6a4d",
+      "63148609-8bed-4dfa-b030-124ad6195917",
+      "923e1791-f100-495f-b258-a18c01730b9b",
+      "d97f66eb-3cc5-4e77-9238-c298ba9a0a79"
+    ],
+    "deals": [
+      "46cb7519-7328-4465-a44b-f8e8783aa78e"
+    ],
+    "addresses": [],
+    "tags": []
+  },
+  {
+    "id": "34111da1-efb4-4acf-a5d5-aa1f7be4be1d",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T22:07:17.423Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-24T22:28:42.232Z",
+    "name": "TechNova",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "logo": "17ac8a25-1ba0-4d92-90a1-2403a3107ce0",
+    "website": null,
+    "organization_notes": null,
+    "is_active": true,
+    "annual_revenue": null,
+    "number_of_employees": null,
+    "industry": null,
+    "contacts": [],
+    "activities": [
+      "9d2b659b-1e84-4fa0-aa2a-d4e6d0135a60",
+      "f67a0834-5ce5-4212-a12a-2668d5b24587"
+    ],
+    "deals": [
+      "862fae54-73b5-44e1-ba14-2c7dc1502d97"
+    ],
+    "addresses": [],
+    "tags": []
+  },
+  {
+    "id": "682a0d80-2362-4340-bed9-92dbbd4f5672",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T21:56:00.427Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-24T22:29:09.499Z",
+    "name": "SolarTech Inc.",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "logo": "079fb4b8-925e-4bd9-b674-76d517b94073",
+    "website": "https://solartechinc.com",
+    "organization_notes": "<p>Leading provider of solar energy solutions for commercial properties.</p>",
+    "is_active": true,
+    "annual_revenue": "$5mil - $10mil",
+    "number_of_employees": "100-500 employees",
+    "industry": null,
+    "contacts": [
+      "e5818095-d0ce-4ff8-8eb9-2bec4d56c8c3"
+    ],
+    "activities": [
+      "b2ced6d7-38a1-4308-bc91-4dac57076b31"
+    ],
+    "deals": [
+      "731bf24b-6de4-4501-a6b1-252549aa034c"
+    ],
+    "addresses": [
+      "64106282-2b39-45f6-99a9-643de04103be"
+    ],
+    "tags": []
+  },
+  {
+    "id": "714d8285-8fcb-4139-b86f-72003dc80b6a",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T21:56:00.438Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-24T22:33:59.835Z",
+    "name": "CloudNine Technologies",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "logo": "b742d3fe-952c-4215-bbe7-42fee88e992a",
+    "website": "https://cloudninetech.com",
+    "organization_notes": "<p>Innovative cloud computing solutions for enterprises.</p>",
+    "is_active": true,
+    "annual_revenue": "More than $10mil",
+    "number_of_employees": "More than 500 employees",
+    "industry": null,
+    "contacts": [
+      "703f0579-81f9-48db-bd29-3a1d08acf12e"
+    ],
+    "activities": [
+      "a69f01dc-f02f-48f7-ad21-6a8602a02e8b"
+    ],
+    "deals": [
+      "703d4ce5-0069-4726-9418-32247bfe1f9e"
+    ],
+    "addresses": [
+      "fdecb0c7-0c95-43c3-9183-49d7e4f6e4b0"
+    ],
+    "tags": []
+  },
+  {
+    "id": "77bef88e-368b-4e1e-ba48-d23397511c45",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T17:54:15.054Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-24T20:41:10.694Z",
+    "name": "Tezla",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "logo": "13cdfde4-bcc8-489e-ac86-d47698e684f8",
+    "website": "https://tesla.com",
+    "organization_notes": "<p>This company is going places...</p>",
+    "is_active": true,
+    "annual_revenue": "More than $10mil",
+    "number_of_employees": "More than 500 employees",
+    "industry": null,
+    "contacts": [
+      "79ce674d-a4ab-4582-842a-f7cb303eeebe"
+    ],
+    "activities": [
+      "6841aefc-e7fc-4c0e-b9a5-4f803ed280e5"
+    ],
+    "deals": [
+      "5f3599bf-1947-4315-91c3-b01d11edc81a"
+    ],
+    "addresses": [
+      "50ee1911-8290-48bf-a7be-0bc0b380bd34"
+    ],
+    "tags": [
+      "64c12353-a15c-4464-b316-f3eb0a6d7d78"
+    ]
+  },
+  {
+    "id": "8cbba979-f760-4155-ae3e-9262e38456bc",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_created": "2024-09-24T22:07:43.216Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-24T22:29:28.701Z",
+    "name": "GreenGrove Eco-Packaging",
+    "owner": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "logo": "604c60f9-1d3d-4a0d-be38-547f08391b1c",
+    "website": null,
+    "organization_notes": null,
+    "is_active": true,
+    "annual_revenue": null,
+    "number_of_employees": null,
+    "industry": null,
+    "contacts": [],
+    "activities": [
+      "560799d2-6017-46d8-becb-4f0501fef95e",
+      "b61f7430-6500-4521-bead-2f9ea3535d5d"
+    ],
+    "deals": [
+      "7bbc60c7-6cc6-460d-a767-2943038ef408"
+    ],
+    "addresses": [],
+    "tags": []
+  }
+]

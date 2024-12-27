@@ -1,0 +1,18 @@
+[
+  {
+    "id": "4e48ad3a-fc2f-4ea7-b757-b8e97d3112cb",
+    "name": "VIP",
+    "tag_collections": [
+      "contacts"
+    ],
+    "color": "#3399FF"
+  },
+  {
+    "id": "a24f3ea2-35d6-4557-9ba6-3a0908ca56c9",
+    "name": "Key Account",
+    "tag_collections": [
+      "organizations"
+    ],
+    "color": "#E35169"
+  }
+]

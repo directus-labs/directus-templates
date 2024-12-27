@@ -1,0 +1,65 @@
+[
+  {
+    "id": "19e91419-3afc-4e7c-9a72-069c82e25fb2",
+    "date_created": "2024-09-24T21:54:35.819Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-24T22:01:57.378Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "first_name": "Sarah",
+    "last_name": "Johnson",
+    "email": "sarah.johnson@solartechinc.com",
+    "phone": "+14805551234",
+    "is_active": true,
+    "contact_notes": "<p>Key decision maker for the SolarTech Solutions project.</p>",
+    "organizations": [
+      "e5818095-d0ce-4ff8-8eb9-2bec4d56c8c3"
+    ],
+    "deals": [],
+    "activities": [],
+    "tags": []
+  },
+  {
+    "id": "6589d027-6b41-4730-acf9-991644b1ffc1",
+    "date_created": "2024-09-24T21:54:35.824Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-24T22:01:50.430Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "first_name": "Michael",
+    "last_name": "Chen",
+    "email": "m.chen@cloudninetech.com",
+    "phone": "+14085557890",
+    "is_active": true,
+    "contact_notes": "<p>CTO of CloudNine Technologies, primary technical contact for the expansion project.</p>",
+    "organizations": [
+      "703f0579-81f9-48db-bd29-3a1d08acf12e"
+    ],
+    "deals": [],
+    "activities": [],
+    "tags": []
+  },
+  {
+    "id": "6fc88eba-a296-48f3-8756-3e00edc09372",
+    "date_created": "2024-09-24T17:56:52.245Z",
+    "user_updated": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "date_updated": "2024-09-25T12:14:50.113Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "first_name": "Edon",
+    "last_name": "Dusk",
+    "email": "edon@example.com",
+    "phone": "+15456454234",
+    "is_active": true,
+    "contact_notes": null,
+    "organizations": [
+      "79ce674d-a4ab-4582-842a-f7cb303eeebe"
+    ],
+    "deals": [
+      "d5b66bb7-7586-4ad6-902b-58c594bce3d1"
+    ],
+    "activities": [
+      "5c4b482b-0f77-4d71-9f05-1808e4f8c057"
+    ],
+    "tags": [
+      "7375bbb7-9654-4e1d-a7e7-dfbcec03eae7"
+    ]
+  }
+]

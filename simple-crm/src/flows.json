@@ -1,0 +1,181 @@
+[
+  {
+    "id": "395d7d3e-7b59-4e27-b074-879c69b65736",
+    "name": "New Activity",
+    "icon": "playlist_add_check",
+    "color": null,
+    "description": "Quickly create a new activity for a contact, deal, or organization",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "deals",
+        "organizations",
+        "contacts"
+      ],
+      "requireConfirmation": true,
+      "confirmationDescription": "Create New Activity",
+      "fields": [
+        {
+          "field": "name",
+          "type": "string",
+          "name": "Name",
+          "meta": {
+            "interface": "input",
+            "note": "Label for this activity",
+            "width": "full",
+            "required": true,
+            "options": {
+              "trim": true
+            }
+          }
+        },
+        {
+          "field": "activity_type",
+          "type": "string",
+          "name": "Activity Type",
+          "meta": {
+            "interface": "select-dropdown",
+            "options": {
+              "choices": [
+                {
+                  "text": "$t:call",
+                  "value": "call",
+                  "icon": "call",
+                  "color": "#3399FF"
+                },
+                {
+                  "text": "$t:meeting",
+                  "value": "meeting",
+                  "icon": "calendar_today",
+                  "color": "#2ECDA7"
+                },
+                {
+                  "text": "$t:email",
+                  "value": "email",
+                  "icon": "send",
+                  "color": "#FFA439"
+                }
+              ]
+            },
+            "width": "half",
+            "note": "What kind of activity?",
+            "required": true
+          }
+        },
+        {
+          "field": "start_date",
+          "type": "timestamp",
+          "name": "Start Date",
+          "meta": {
+            "interface": "datetime",
+            "note": "When should this start or be completed?",
+            "width": "half",
+            "required": true,
+            "options": {
+              "use24": false
+            }
+          }
+        },
+        {
+          "field": "activity_notes",
+          "type": "text",
+          "name": "Activity Notes",
+          "meta": {
+            "interface": "input-rich-text-html",
+            "note": "Do you have any important comments or notes about this activity?",
+            "width": "full"
+          }
+        },
+        {
+          "field": "is_completed",
+          "type": "boolean",
+          "name": "Completed",
+          "meta": {
+            "interface": "boolean",
+            "note": "Has this activity already been done? (ie logging a call)",
+            "width": "full",
+            "options": {
+              "label": "Completed"
+            },
+            "required": false
+          }
+        }
+      ]
+    },
+    "operation": "c29d4e82-c607-4ea2-9272-582de40c5660",
+    "date_created": "2024-09-24T19:28:17.169Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "operations": null
+  },
+  {
+    "id": "e18e75d2-06b3-4252-b5f6-d0aad2d960e8",
+    "name": "Send Email",
+    "icon": "send",
+    "color": null,
+    "description": "Quickly send an email to a specific contact or all contacts tied to a deal.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "contacts",
+        "deals"
+      ],
+      "requireConfirmation": true,
+      "fields": [
+        {
+          "field": "to",
+          "type": "csv",
+          "name": "To",
+          "meta": {
+            "interface": "tags",
+            "note": "Add an address and press enter to save. Note:Will default to the contact email if left blank.",
+            "width": "full",
+            "required": true
+          }
+        },
+        {
+          "field": "subject",
+          "type": "string",
+          "name": "Subject",
+          "meta": {
+            "interface": "input",
+            "width": "full",
+            "required": true
+          }
+        },
+        {
+          "field": "body",
+          "type": "text",
+          "name": "Body",
+          "meta": {
+            "interface": "input-rich-text-html",
+            "required": true,
+            "options": {
+              "toolbar": [
+                "bold",
+                "italic",
+                "h2",
+                "numlist",
+                "bullist",
+                "removeformat",
+                "blockquote",
+                "customLink",
+                "customImage",
+                "hr",
+                "code"
+              ]
+            }
+          }
+        }
+      ],
+      "confirmationDescription": "Send An Email"
+    },
+    "operation": null,
+    "date_created": "2024-09-24T20:12:53.445Z",
+    "user_created": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "operations": null
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "0bea41d8-6c0a-4bdc-aa92-58257c81ae13",
+    "language": "en-US",
+    "key": "meeting",
+    "value": "Meeting"
+  },
+  {
+    "id": "2e6a8509-b48f-4ef1-91ba-9859a9b96127",
+    "language": "en-US",
+    "key": "contacts",
+    "value": "Contacts"
+  },
+  {
+    "id": "7142a75a-6119-46b1-98e8-bb8ba0a60de8",
+    "language": "en-US",
+    "key": "organizations",
+    "value": "Organizations"
+  },
+  {
+    "id": "bc2b66d5-01a7-40e7-8da9-4e31f5b7fed4",
+    "language": "en-US",
+    "key": "call",
+    "value": "Call"
+  },
+  {
+    "id": "e309a1fc-d9b2-4f4a-849f-16d926ac7c80",
+    "language": "en-US",
+    "key": "crm",
+    "value": "CRM"
+  }
+]

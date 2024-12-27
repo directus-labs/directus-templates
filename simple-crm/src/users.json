@@ -1,0 +1,31 @@
+[
+  {
+    "id": "b9c003ce-e839-463a-99da-b98fc33ef4f3",
+    "first_name": "Mike Scott",
+    "last_name": null,
+    "email": "crm@example.com",
+    "password": "**********",
+    "location": null,
+    "title": null,
+    "description": null,
+    "tags": null,
+    "avatar": "3ed710b0-1a72-4064-bd00-c6e534a291f6",
+    "language": null,
+    "tfa_secret": null,
+    "status": "active",
+    "role": "b4e8ed16-5db1-4d0e-85bc-54ffd79248c8",
+    "token": "**********",
+    "last_access": "2024-12-27T13:30:27.034Z",
+    "last_page": "/content/deals/5f3599bf-1947-4315-91c3-b01d11edc81a",
+    "provider": "default",
+    "external_identifier": null,
+    "auth_data": null,
+    "email_notifications": true,
+    "appearance": null,
+    "theme_dark": null,
+    "theme_light": null,
+    "theme_light_overrides": null,
+    "theme_dark_overrides": null,
+    "policies": null
+  }
+]
