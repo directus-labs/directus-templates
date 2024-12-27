@@ -1,0 +1,32 @@
+[
+  {
+    "id": "5de308ad-5280-47d1-9684-c58e03dda627",
+    "name": "Submit Orders",
+    "icon": "add_shopping_cart",
+    "description": "Allows order creation. Best for use on server side for security reasons.",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  },
+  {
+    "id": "611daef9-b88f-4af7-94f2-45017149fb6c",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_description",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": true,
+    "app_access": true
+  },
+  {
+    "id": "abf8a154-5b1c-4a46-ac9c-7300570f4f17",
+    "name": "Read Products and Content",
+    "icon": "public",
+    "description": "Grants access to read published products, content, and assets",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  }
+]

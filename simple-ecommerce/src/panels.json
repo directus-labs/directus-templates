@@ -1,0 +1,335 @@
+[
+  {
+    "id": "03fc9b26-ab08-41ff-aa25-9609f09556ac",
+    "dashboard": "82a3c7d2-5cf7-408b-ad5d-9f1dd73e64a2",
+    "name": "Total Orders",
+    "icon": "numbers",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 13,
+    "position_y": 18,
+    "width": 12,
+    "height": 5,
+    "options": {
+      "collection": "orders",
+      "field": "id",
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "date_created": {
+              "_between": [
+                "{{dateFrom}}",
+                "{{dateTo}}"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "date_created": "2024-09-26T13:43:32.907Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "07cfb335-ef0a-407d-92d8-64d42fd94273",
+    "dashboard": "82a3c7d2-5cf7-408b-ad5d-9f1dd73e64a2",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 5,
+    "width": 36,
+    "height": 3,
+    "options": {
+      "text": "Sales"
+    },
+    "date_created": "2024-09-26T13:43:32.861Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "2aa251a1-c98c-4ac3-8677-10636889b5a1",
+    "dashboard": "82a3c7d2-5cf7-408b-ad5d-9f1dd73e64a2",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 38,
+    "width": 36,
+    "height": 3,
+    "options": {
+      "text": "Needs Attention",
+      "color": "#E35169"
+    },
+    "date_created": "2024-09-26T13:46:00.365Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "4b610f1d-0717-40d5-8290-825d35dc7423",
+    "dashboard": "82a3c7d2-5cf7-408b-ad5d-9f1dd73e64a2",
+    "name": "To",
+    "icon": "date_range",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "variable",
+    "position_x": 25,
+    "position_y": 8,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "field": "dateTo",
+      "type": "timestamp",
+      "inter": "datetime",
+      "options": {
+        "use24": false
+      },
+      "defaultValue": "2025-12-31T12:00:00-05:00"
+    },
+    "date_created": "2024-09-26T13:43:32.898Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "9858e58f-2d74-4c6a-bb65-47e6c50c227c",
+    "dashboard": "82a3c7d2-5cf7-408b-ad5d-9f1dd73e64a2",
+    "name": "Orders with Issues",
+    "icon": "sentiment_sad",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "directus-panel-table",
+    "position_x": 1,
+    "position_y": 41,
+    "width": 36,
+    "height": 13,
+    "options": {
+      "collection": "orders",
+      "sort_field": "date_created",
+      "filter": {
+        "_and": [
+          {
+            "_or": [
+              {
+                "fulfillment_status": {
+                  "_eq": "on_hold"
+                }
+              },
+              {
+                "payment_status": {
+                  "_eq": "not_paid"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "fields": [
+        "order_number",
+        "status",
+        "fulfillment_status",
+        "payment_status",
+        "customer"
+      ],
+      "limit": 100
+    },
+    "date_created": "2024-09-26T13:48:01.647Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "9c87ede9-b891-4fd5-996a-12531ca8f505",
+    "dashboard": "82a3c7d2-5cf7-408b-ad5d-9f1dd73e64a2",
+    "name": "Sales ($) over Time",
+    "icon": "attach_money",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 19,
+    "position_y": 23,
+    "width": 18,
+    "height": 11,
+    "options": {
+      "collection": "orders",
+      "precision": "day",
+      "function": "sum",
+      "range": "auto",
+      "dateField": "date_created",
+      "valueField": "total",
+      "filter": {
+        "_and": [
+          {
+            "date_created": {
+              "_between": [
+                "{{dateFrom}}",
+                "{{dateTo}}"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "date_created": "2024-09-26T13:43:32.891Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "afe41ce8-ec12-439e-8ae1-1b14a804b0c4",
+    "dashboard": "82a3c7d2-5cf7-408b-ad5d-9f1dd73e64a2",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 8,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "text": "Use this dashboard to track store performance.\nYou can filter orders by adjusting the date range to the right.",
+      "whiteSpace": "normal",
+      "fontWeight": 300,
+      "color": "#A2B5CD",
+      "textAlign": "left"
+    },
+    "date_created": "2024-09-26T13:50:46.781Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "b2ec7d9b-7037-4a6f-ad5d-0049c6dae979",
+    "dashboard": "82a3c7d2-5cf7-408b-ad5d-9f1dd73e64a2",
+    "name": "# Orders over Time",
+    "icon": "av_timer",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 1,
+    "position_y": 23,
+    "width": 18,
+    "height": 11,
+    "options": {
+      "collection": "orders",
+      "precision": "day",
+      "function": "count",
+      "range": "auto",
+      "dateField": "date_created",
+      "valueField": "id",
+      "filter": {
+        "_and": [
+          {
+            "date_created": {
+              "_between": [
+                "{{dateFrom}}",
+                "{{dateTo}}"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "date_created": "2024-09-26T13:43:32.885Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "dfcb5159-7413-4302-90e1-c3742f5ccac1",
+    "dashboard": "82a3c7d2-5cf7-408b-ad5d-9f1dd73e64a2",
+    "name": "Average Order ($)",
+    "icon": "attach_money",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 25,
+    "position_y": 18,
+    "width": 12,
+    "height": 5,
+    "options": {
+      "collection": "orders",
+      "field": "total",
+      "function": "avg",
+      "filter": {
+        "_and": [
+          {
+            "date_created": {
+              "_between": [
+                "{{dateFrom}}",
+                "{{dateTo}}"
+              ]
+            }
+          }
+        ]
+      },
+      "prefix": "$",
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-09-26T13:43:32.909Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "e0348409-5b03-4fe6-a301-38bca12a1d47",
+    "dashboard": "82a3c7d2-5cf7-408b-ad5d-9f1dd73e64a2",
+    "name": "Total Sales ($)",
+    "icon": "attach_money",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 1,
+    "position_y": 18,
+    "width": 12,
+    "height": 5,
+    "options": {
+      "collection": "orders",
+      "field": "total",
+      "function": "sum",
+      "filter": {
+        "_and": [
+          {
+            "date_created": {
+              "_between": [
+                "{{dateFrom}}",
+                "{{dateTo}}"
+              ]
+            }
+          }
+        ]
+      },
+      "prefix": "$",
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-09-26T13:43:32.904Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  },
+  {
+    "id": "f464520a-a223-48cb-b350-2e461727d39a",
+    "dashboard": "82a3c7d2-5cf7-408b-ad5d-9f1dd73e64a2",
+    "name": "From",
+    "icon": "date_range",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "variable",
+    "position_x": 13,
+    "position_y": 8,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "field": "dateFrom",
+      "type": "timestamp",
+      "inter": "datetime",
+      "options": {
+        "use24": false
+      },
+      "defaultValue": "2024-01-01T12:00:00-05:00"
+    },
+    "date_created": "2024-09-26T13:43:32.895Z",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23"
+  }
+]

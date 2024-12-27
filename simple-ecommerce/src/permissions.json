@@ -1,0 +1,290 @@
+[
+  {
+    "collection": "order_items",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "orders",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "tax_rates",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "products",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "product_variants",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "customers",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "customers",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "customer_addresses",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "customer_addresses",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "customer_addresses",
+    "action": "update",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "customers",
+    "action": "update",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "order_items",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "orders",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "order_items",
+    "action": "update",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "orders",
+    "action": "update",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "categories",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "5de308ad-5280-47d1-9684-c58e03dda627"
+  },
+  {
+    "collection": "product_images",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "product": {
+            "status": {
+              "_neq": "inactive"
+            }
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "product_variants",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "product": {
+            "status": {
+              "_neq": "inactive"
+            }
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "products",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "status": {
+            "_neq": "inactive"
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "tax_rates",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "categories",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "is_active": {
+            "_eq": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "directus_files",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "folder": {
+            "name": {
+              "_ncontains": "Private"
+            }
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  }
+]

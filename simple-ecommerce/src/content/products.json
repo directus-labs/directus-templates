@@ -1,0 +1,58 @@
+[
+  {
+    "id": "ce31bbeb-3f60-4853-98f0-ac87c37175bc",
+    "status": "active",
+    "sort": null,
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23",
+    "date_created": "2024-09-26T04:46:26.868Z",
+    "user_updated": "71639435-1dc5-4f21-8c11-603deee67b23",
+    "date_updated": "2024-09-26T05:01:20.555Z",
+    "title": "Directus Tumbler",
+    "slug": "20oz-tumbler",
+    "description": "<p class=\"whitespace-pre-wrap break-words\">Behold, the Directus Tumbler 20oz - the perfect vessel for your caffeine addiction, because let's face it, you're not sleeping anyway. This sleek white tumbler features our majestic leaping rabbit logo, symbolizing how quickly you'll hop to fix that production bug at 2 AM.</p>\n<p class=\"whitespace-pre-wrap break-words\">With 20 ounces of liquid capacity, it holds enough coffee to fuel your coding sprints or drown your sorrows after a failed deployment. The insulated design keeps your beverage hot, unlike your CPU after running that inefficient nested loop you swore was optimized.</p>\n<p class=\"whitespace-pre-wrap break-words\">Sturdy enough to withstand your desk-flipping tantrums and sealed tight to prevent spills on your precious mechanical keyboard. Remember, caffeine is cheaper than therapy, and this tumbler is your new best friend in the digital trenches.</p>\n<p class=\"whitespace-pre-wrap break-words\">Warning: May cause excessive productivity and sarcastic code comments. Directus is not responsible for any \"rabbit hole\" debugging sessions that occur while using this product.</p>",
+    "thumbnail": "638bf080-5ec6-4d55-a29e-267f4022b3e7",
+    "color": [
+      "White"
+    ],
+    "size": null,
+    "category": "b777f13f-e503-43ea-86eb-7bbecd8d8b08",
+    "variants": [
+      "17f75217-ab99-4229-ba58-4dbe5e93849f"
+    ],
+    "images": [
+      "9a4fbc00-b6b9-4a8c-9b01-aec10eb549c8"
+    ]
+  },
+  {
+    "id": "949797a2-2c71-471a-bfac-c2dec68fdeb1",
+    "status": "active",
+    "sort": null,
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23",
+    "date_created": "2024-09-25T15:11:41.905Z",
+    "user_updated": "71639435-1dc5-4f21-8c11-603deee67b23",
+    "date_updated": "2024-09-26T06:08:38.984Z",
+    "title": "Directus Super Soft T-Shirt",
+    "slug": "directus-super-soft-tee",
+    "description": "<p>Ah, the Directus Super Soft Tee - for when you want to look professional while feeling like you're still in your pajamas.</p>\n<p>Behold, the ultimate developer camouflage: a shirt that says \"I'm a serious techie\" while whispering \"I haven't changed in three days.\" This charcoal grey tee features our leaping rabbit logo, symbolizing how quickly you'll hop from \"just one more commit\" to \"oops, it's 3 AM.\"<br>Crafted from fabric so soft, you'll forget you're wearing it - perfect for those 48-hour coding marathons.</p>\n<p>The minimalist design screams \"I care about UX\" while the comfortable fit says \"I prioritize function over form in my wardrobe choices.\"</p>\n<p><strong>Warning:</strong> May cause an irresistible urge to explain headless CMS architecture to strangers. Side effects include increased confidence in code reviews and a sudden affinity for rabbit-related puns.</p>\n<p><strong>Disclaimer:</strong> Directus is not responsible for any job offers, envious glances, or impromptu whiteboard sessions that may result from wearing this shirt. Hand wash cold, or just wear it in the shower - we know you're going to anyway.</p>",
+    "thumbnail": "6a0656da-1da8-46d5-92e1-817052fc67eb",
+    "color": [
+      "Black"
+    ],
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "category": "c0e32ecb-2c7d-42cc-a7c8-776085b8d359",
+    "variants": [
+      "2086ece8-bd1d-47b6-ae70-cd7ba9b0e2f4",
+      "29a0e1a9-ea0b-4ac2-9223-3e68fa8885dd",
+      "8dee98e4-ded3-4939-8e9a-86c0f5c4d27f",
+      "d2c9728d-f149-4ceb-b208-8914032be9de"
+    ],
+    "images": [
+      "6876d083-bf01-4986-9e0e-74233c43f68b"
+    ]
+  }
+]

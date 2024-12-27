@@ -1,0 +1,21 @@
+[
+  {
+    "id": "9abce8fa-15c5-4167-931d-bb90e199a378",
+    "user_created": "71639435-1dc5-4f21-8c11-603deee67b23",
+    "date_created": "2024-09-25T15:07:20.980Z",
+    "user_updated": "71639435-1dc5-4f21-8c11-603deee67b23",
+    "date_updated": "2024-09-26T12:03:56.532Z",
+    "first_name": "Snoop",
+    "last_name": "Catt",
+    "email": "snoop@example.com",
+    "phone": null,
+    "password": null,
+    "is_subscribed": false,
+    "orders": [
+      "5df850a6-20e1-4619-8341-7f8f4d09fe8a"
+    ],
+    "addresses": [
+      "1f78c46d-4db5-4d5e-b757-a160e2df4a90"
+    ]
+  }
+]

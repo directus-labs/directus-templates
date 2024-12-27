@@ -1,0 +1,120 @@
+[
+  {
+    "id": "41ca762d-e56a-4377-87c2-73ca6f77cca2",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "41ca762d-e56a-4377-87c2-73ca6f77cca2",
+      "folder": "a4cd622d-0861-4ae5-8b39-7fc67bfa48c1",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/a4cd622d-0861-4ae5-8b39-7fc67bfa48c1",
+      "name": "@directus-labs/table-view-panel",
+      "version": "1.0.0",
+      "type": "panel",
+      "entrypoint": "dist/index.js",
+      "host": "^10.10.0",
+      "local": true
+    }
+  },
+  {
+    "id": "9244f25b-c61a-4702-96ae-1cda6610f9d9",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "9244f25b-c61a-4702-96ae-1cda6610f9d9",
+      "folder": "1334d624-b000-4b82-a783-1926450d1feb",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/1334d624-b000-4b82-a783-1926450d1feb",
+      "name": "directus-extension-classified-group",
+      "version": "1.0.5",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.1.11",
+      "local": true
+    }
+  },
+  {
+    "id": "a2587ead-a73a-4718-88e2-02de0c78d57a",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "a2587ead-a73a-4718-88e2-02de0c78d57a",
+      "folder": "64489dc4-ae84-472d-a9f8-fad653d43ba5",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/64489dc4-ae84-472d-a9f8-fad653d43ba5",
+      "name": "@directus-labs/liquidjs-operation",
+      "version": "1.0.1",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "http://*",
+              "https://*"
+            ],
+            "methods": [
+              "GET"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "c53d1496-ab3b-4a23-9b0c-9fb8ce85800f",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "c53d1496-ab3b-4a23-9b0c-9fb8ce85800f",
+      "folder": "e77fd62a-c9f5-4937-b153-cf10d8d13264",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/e77fd62a-c9f5-4937-b153-cf10d8d13264",
+      "name": "@directus-labs/command-palette-module",
+      "version": "1.0.1",
+      "type": "module",
+      "entrypoint": "dist/index.js",
+      "host": "^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "dab2c341-5ce5-42da-872f-40e596c4db16",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "dab2c341-5ce5-42da-872f-40e596c4db16",
+      "folder": "9621987d-012d-475a-bd7f-e293cac7b077",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/9621987d-012d-475a-bd7f-e293cac7b077",
+      "name": "directus-extension-group-tabs-interface",
+      "version": "2.1.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.1.0",
+      "local": true
+    }
+  }
+]

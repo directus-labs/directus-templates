@@ -1,0 +1,334 @@
+[
+  {
+    "collection": "categories",
+    "meta": {
+      "collection": "categories",
+      "icon": "local_offer",
+      "note": null,
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "is_active",
+      "archive_app_filter": true,
+      "archive_value": "false",
+      "unarchive_value": "true",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "ecommerce_settings",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "categories",
+      "comment": null
+    }
+  },
+  {
+    "collection": "customer_addresses",
+    "meta": {
+      "collection": "customer_addresses",
+      "icon": null,
+      "note": null,
+      "display_template": "{{address_line_1}} • {{address_line_2}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "is_active",
+      "archive_app_filter": true,
+      "archive_value": "false",
+      "unarchive_value": "true",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "customers",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "customer_addresses",
+      "comment": null
+    }
+  },
+  {
+    "collection": "customers",
+    "meta": {
+      "collection": "customers",
+      "icon": "person_pin",
+      "note": null,
+      "display_template": "{{first_name}} {{last_name}} <{{email}}>",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "ecommerce",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "customers",
+      "comment": null
+    }
+  },
+  {
+    "collection": "ecommerce",
+    "meta": {
+      "collection": "ecommerce",
+      "icon": "shopping_basket",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "eCommerce"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "ecommerce_settings",
+    "meta": {
+      "collection": "ecommerce_settings",
+      "icon": "settings_suggest",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Settings"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 4,
+      "group": "ecommerce",
+      "collapse": "closed",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "order_items",
+    "meta": {
+      "collection": "order_items",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "orders",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "order_items",
+      "comment": null
+    }
+  },
+  {
+    "collection": "orders",
+    "meta": {
+      "collection": "orders",
+      "icon": "data_check",
+      "note": null,
+      "display_template": "{{order_number}} • {{status}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "pending",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "ecommerce",
+      "collapse": "closed",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "orders",
+      "comment": null
+    }
+  },
+  {
+    "collection": "product_images",
+    "meta": {
+      "collection": "product_images",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "products",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "product_images",
+      "comment": null
+    }
+  },
+  {
+    "collection": "products",
+    "meta": {
+      "collection": "products",
+      "icon": "sports_esports",
+      "note": null,
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "inactive",
+      "unarchive_value": "active",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "ecommerce",
+      "collapse": "closed",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "products",
+      "comment": null
+    }
+  },
+  {
+    "collection": "product_variants",
+    "meta": {
+      "collection": "product_variants",
+      "icon": "gamepad",
+      "note": null,
+      "display_template": "{{color}} • {{size}} • {{price}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "products",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "product_variants",
+      "comment": null
+    }
+  },
+  {
+    "collection": "tax_rates",
+    "meta": {
+      "collection": "tax_rates",
+      "icon": "percent",
+      "note": null,
+      "display_template": "{{code}} • {{rate}} ({{title}})",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "ecommerce_settings",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "tax_rates",
+      "comment": null
+    }
+  }
+]

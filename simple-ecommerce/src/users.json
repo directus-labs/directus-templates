@@ -1,0 +1,31 @@
+[
+  {
+    "id": "71639435-1dc5-4f21-8c11-603deee67b23",
+    "first_name": "Villy",
+    "last_name": "Vonka",
+    "email": "ecommerce@example.com",
+    "password": "**********",
+    "location": null,
+    "title": null,
+    "description": null,
+    "tags": null,
+    "avatar": "2c9ff5bc-4644-4a97-800a-a7fda87ac2e0",
+    "language": null,
+    "tfa_secret": null,
+    "status": "active",
+    "role": "c537905b-a75c-4a35-be45-74cd696d789e",
+    "token": "**********",
+    "last_access": "2024-12-27T13:33:16.486Z",
+    "last_page": "/content/products/ce31bbeb-3f60-4853-98f0-ac87c37175bc",
+    "provider": "default",
+    "external_identifier": null,
+    "auth_data": null,
+    "email_notifications": true,
+    "appearance": null,
+    "theme_dark": null,
+    "theme_light": null,
+    "theme_light_overrides": null,
+    "theme_dark_overrides": null,
+    "policies": null
+  }
+]
