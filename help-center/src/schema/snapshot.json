@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "directus": "10.9.3",
+  "directus": "11.1.0",
   "vendor": "postgres",
   "collections": [
     {
@@ -242,7 +242,7 @@
         "display_template": null,
         "group": null,
         "hidden": false,
-        "icon": null,
+        "icon": "language",
         "item_duplication_fields": null,
         "note": null,
         "preview_url": null,
