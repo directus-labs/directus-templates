@@ -13,8 +13,8 @@ const config: Config = {
 				code: ['Fira Mono', 'monospace'],
 			},
 			fontSize: {
-				title: ['24px', '33.6px'], // Title
-				headline: ['56px', '78.4px'], // Headline
+				tagline: ['24px', '33.6px'], // Tagline
+				headline: ['56px', '64px'], // Headline
 				h1: ['56px', '78.4px'], // Heading 1
 				h2: ['36px', '50.4px'], // Heading 2
 				h3: ['24px', '33.6px'], // Heading 3
@@ -30,9 +30,14 @@ const config: Config = {
 				right: 'text-right',
 			},
 			colors: {
-				background: 'var(--background-color)',
+				background: {
+					DEFAULT: 'var(--background-color)',
+					muted: 'var(--background-color-muted)',
+					variant: 'var(--background-variant-color)',
+				},
 				foreground: 'var(--foreground-color)',
 				primary: 'var(--accent-color-light)',
+				input: 'var(--input-color)',
 				secondary: 'var(--accent-color-dark)',
 				accent: 'var(--accent-color)',
 				soft: 'var(--accent-color-soft)',
@@ -96,13 +101,38 @@ const config: Config = {
 						},
 						code: {
 							fontFamily: 'Fira Mono',
-							fontSize: '0.875rem',
-							fontWeight: '500',
-							lineHeight: '1.4',
-							backgroundColor: 'var(--gray-100)',
-							padding: '0.25rem 0.5rem',
+							fontSize: 'clamp(0.875rem, 1rem, 1.125rem)',
+							fontWeight: '400',
+							lineHeight: '1.6',
+							backgroundColor: 'var(--background-color-muted)',
+							color: 'var(--foreground-color)',
 							borderRadius: '4px',
-							textAlign: 'left',
+							padding: '0.15rem 0.35rem',
+							display: 'inline',
+							'&::before': {
+								content: 'none',
+							},
+							'&::after': {
+								content: 'none',
+							},
+						},
+						'p > code': {
+							'&::before': {
+								content: 'none',
+							},
+							'&::after': {
+								content: 'none',
+							},
+						},
+						pre: {
+							fontFamily: 'Fira Mono',
+							fontSize: 'clamp(0.9rem, 1.125rem, 1.25rem)',
+							lineHeight: '1.6',
+							backgroundColor: 'var(--background-color-muted)',
+							color: 'var(--foreground-color)',
+							borderRadius: '8px',
+							padding: '1rem',
+							overflowX: 'auto',
 						},
 						blockquote: {
 							fontStyle: 'italic',
@@ -122,6 +152,10 @@ const config: Config = {
 						},
 						li: {
 							marginBottom: '0.5rem',
+							'& p': {
+								display: 'inline',
+								margin: '0',
+							},
 						},
 					},
 				},
@@ -138,15 +172,13 @@ const config: Config = {
 						blockquote: {
 							borderLeftColor: 'var(--gray-700)',
 						},
-						code: {
-							backgroundColor: '#1f2937',
-						},
 					},
 				},
 			},
 		},
 	},
 	plugins: [tailwindcssAnimate, typography],
+	safelist: ['grid-cols-1', 'sm:grid-cols-2', 'lg:grid-cols-3'],
 };
 
 export default config;

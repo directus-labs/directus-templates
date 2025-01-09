@@ -26,15 +26,15 @@ export interface BlockForm {
 	id: string;
 	/** @description Form to show within block */
 	form?: Form | string | null;
-	title?: string | null;
 	headline?: string | null;
+	tagline?: string | null;
 }
 
 export interface BlockGallery {
 	headline?: string | null;
 	/** @required */
 	id: string;
-	title?: string | null;
+	tagline?: string | null;
 }
 
 export interface BlockGalleryItem {
@@ -46,30 +46,37 @@ export interface BlockGalleryItem {
 }
 
 export interface BlockHero {
+	/** @description Larger main headline for this section. */
 	headline?: string | null;
 	/** @required */
 	id: string;
+	/** @description The image to include in the hero. */
 	image?: DirectusFile | string | null;
-	title?: string | null;
+	/** @description Action buttons to include in the hero. */
 	button_group?: BlockButtonGroup | string | null;
+	/** @description Supporting copy below the headline. */
 	description?: string | null;
+	/** @description Where is the image placed? */
 	alignment?: 'left' | 'center' | 'right' | null;
+	/** @description Smaller copy show above the headline to label a section or add context. */
+	tagline?: string | null;
 }
 
 export interface BlockPost {
 	/** @required */
 	id: string;
-	title?: string | null;
 	headline?: string | null;
 	/** @required */
 	collection: 'posts';
+	tagline?: string | null;
+	limit?: number | null;
 }
 
 export interface BlockPricing {
 	/** @required */
 	id: string;
-	title?: string | null;
 	headline?: string | null;
+	tagline?: string | null;
 	pricing_cards?: BlockPricingCard[] | string[];
 }
 
@@ -92,8 +99,8 @@ export interface BlockRichtext {
 	headline?: string | null;
 	/** @required */
 	id: string;
-	title?: string | null;
 	alignment?: 'left' | 'center' | null;
+	tagline?: string | null;
 }
 
 export interface FormField {
@@ -102,7 +109,7 @@ export interface FormField {
 	/** @description Unique field identifier, not shown to users (lowercase, hyphenated) */
 	name?: string | null;
 	/** @description Input type for the field */
-	type?: 'text' | 'textarea' | 'checkbox' | 'radio' | 'file' | 'select' | 'hidden' | null;
+	type?: 'text' | 'textarea' | 'checkbox' | 'checkbox_group' | 'radio' | 'file' | 'select' | 'hidden' | null;
 	/** @description Text label shown to form users */
 	label?: string | null;
 	/** @description Default text shown in empty input */
@@ -157,12 +164,12 @@ export interface FormSubmission {
 }
 
 export interface FormSubmissionValue {
-	/** @required */
-	id: string;
+	id?: string;
 	form_submission?: FormSubmission | string | null;
 	field?: FormField | string | null;
 	value?: string | null;
 	sort?: number | null;
+	file?: DirectusFile | string | null;
 }
 
 export interface Globals {
@@ -188,6 +195,8 @@ export interface Globals {
 	openai_api_key?: string | null;
 	directus_url?: string | null;
 	accent_color?: string | null;
+	/** @description Logo to display when site is in dark mode */
+	dark_mode_logo?: DirectusFile | string | null;
 }
 
 export interface Navigation {

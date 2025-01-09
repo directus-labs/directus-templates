@@ -1,65 +1,55 @@
-import { fetchFooterData } from '@/lib/directus/fetchers';
+'use client';
+
 import Link from 'next/link';
-import ThemeToggle from '../ui/ThemeToggle';
+import ThemeToggle from '@/components/ui/ThemeToggle';
+import Container from '@/components/ui/container';
+import { Key } from 'react';
 
-const Footer = async () => {
-	let footerData;
-	try {
-		footerData = await fetchFooterData();
-	} catch (error) {
-		console.error('Error loading footer data:', error);
-
-		return null;
-	}
-
-	const { navPrimary, globals } = footerData;
+export default function Footer({ navigation, globals }: { navigation: any; globals: any }) {
+	const directusURL = process.env.NEXT_PUBLIC_DIRECTUS_URL;
+	const lightLogoUrl = globals?.logo ? `${directusURL}/assets/${globals.logo}` : '/images/logo.svg';
+	const darkLogoUrl = globals?.dark_mode_logo ? `${directusURL}/assets/${globals.dark_mode_logo}` : '';
 
 	return (
-		<footer className="bg-gray dark:bg-gray py-16">
-			<div className="px-16 lg:px-32 text-foreground dark:text-black">
+		<footer className="bg-gray dark:bg-[var(--background-variant-color)] py-16">
+			<Container className="text-foreground dark:text-white">
 				<div className="flex flex-col md:flex-row justify-between items-start gap-8 pt-8">
 					<div className="flex-1">
-						<Link href="/">
-							{globals?.logo ? (
-								<img
-									src={`${process.env.NEXT_PUBLIC_DIRECTUS_URL}/assets/${globals.logo}`}
-									alt="Logo"
-									className="w-[120px] h-auto"
-								/>
-							) : (
-								<img src="/images/logo.svg" alt="Logo" className="w-[90px] h-[45px]" />
+						<Link href="/" className="inline-block transition-opacity hover:opacity-70">
+							<img
+								src={lightLogoUrl}
+								alt="Logo"
+								className={darkLogoUrl ? 'w-[120px] h-auto dark:hidden' : 'w-[120px] h-auto'}
+							/>
+							{darkLogoUrl && (
+								<img src={darkLogoUrl} alt="Logo (Dark Mode)" className="w-[120px] h-auto hidden dark:block" />
 							)}
 						</Link>
 						{globals?.description && <p className="text-description mt-2">{globals.description}</p>}
-
-						{/* Social Links */}
 						{globals?.social_links && (
 							<div className="mt-4 flex space-x-4">
-								{globals.social_links.map((social) => (
+								{globals.social_links.map((social: { service: Key | null | undefined; url: string | undefined }) => (
 									<a
 										key={social.service}
 										href={social.url}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="hover:text-accent"
+										className="size-8 rounded bg-transparent inline-flex items-center justify-center transition-colors hover:opacity-70"
 									>
 										<img
 											src={`/icons/social/${social.service}.svg`}
 											alt={`${social.service} icon`}
-											width={24}
-											height={24}
-											className="size-6"
+											className="size-6 dark:invert"
 										/>
 									</a>
 								))}
 							</div>
 						)}
 					</div>
-
 					<div className="flex flex-col items-start md:items-end flex-1">
 						<nav className="w-full md:w-auto text-left">
 							<ul className="space-y-4">
-								{navPrimary?.items?.map((group: any) => (
+								{navigation?.items?.map((group: any) => (
 									<li key={group.id}>
 										{group.page?.permalink ? (
 											<Link href={group.page.permalink} className="text-nav font-medium hover:underline">
@@ -77,9 +67,7 @@ const Footer = async () => {
 						</nav>
 					</div>
 				</div>
-			</div>
+			</Container>
 		</footer>
 	);
-};
-
-export default Footer;
+}

@@ -5,8 +5,24 @@ const withBundleAnalyzer = initializeBundleAnalyzer({
 	enabled: process.env.BUNDLE_ANALYZER_ENABLED === 'true',
 });
 
+const ContentSecurityPolicy = `
+    default-src 'self';
+    script-src 'self' 'unsafe-eval' 'unsafe-inline';
+    frame-src *;
+    style-src 'self' 'unsafe-inline';
+    img-src * blob: data:;
+    media-src *;
+    connect-src *;
+    font-src 'self' data:;
+    frame-ancestors 'self' http://localhost:3000 https://simple-cms-starter.directus.app;
+`;
+
 const nextConfig: NextConfig = {
-	output: 'standalone',
+	webpack: (config) => {
+		config.cache = false;
+
+		return config;
+	},
 	images: {
 		dangerouslyAllowSVG: true,
 		remotePatterns: [
@@ -16,6 +32,24 @@ const nextConfig: NextConfig = {
 				pathname: '/assets/**',
 			},
 		],
+	},
+	env: {
+		DIRECTUS_PUBLIC_TOKEN: process.env.DIRECTUS_PUBLIC_TOKEN,
+		DIRECTUS_FORM_TOKEN: process.env.DIRECTUS_FORM_TOKEN,
+		DRAFT_MODE_SECRET: process.env.DRAFT_MODE_SECRET,
+	},
+	async headers() {
+		return [
+			{
+				source: '/:path*',
+				headers: [
+					{
+						key: 'Content-Security-Policy',
+						value: ContentSecurityPolicy.replace(/\n/g, '').trim(),
+					},
+				],
+			},
+		];
 	},
 };
 

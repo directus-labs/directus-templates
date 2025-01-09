@@ -1,3 +1,4 @@
+import { getDirectusAssetURL } from '@/lib/directus/directus-utils';
 import Image, { ImageProps } from 'next/image';
 
 export interface DirectusImageProps extends Omit<ImageProps, 'src'> {
@@ -5,7 +6,7 @@ export interface DirectusImageProps extends Omit<ImageProps, 'src'> {
 }
 
 const DirectusImage = ({ uuid, alt, width, height, ...rest }: DirectusImageProps) => {
-	const src = `${process.env.NEXT_PUBLIC_DIRECTUS_URL}/assets/${uuid}`;
+	const src = getDirectusAssetURL(uuid);
 
 	return <Image src={src} alt={alt} width={width} height={height} {...rest} />;
 };

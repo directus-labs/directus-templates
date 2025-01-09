@@ -1,15 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import DirectusImage from '@/components/shared/DirectusImage';
-import Title from '@/components/ui/Title';
+import Tagline from '../ui/Tagline';
 import Headline from '@/components/ui/Headline';
-import { Dialog, DialogContent, DialogDescription, DialogOverlay, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogClose } from '@/components/ui/dialog';
 import { ArrowLeft, ArrowRight, ZoomIn, X } from 'lucide-react';
 
 interface GalleryProps {
 	data: {
-		title?: string;
+		tagline?: string;
 		headline?: string;
 		items: Array<{
 			id: string;
@@ -20,7 +20,7 @@ interface GalleryProps {
 }
 
 const Gallery = ({ data }: GalleryProps) => {
-	const { title, headline, items = [] } = data;
+	const { tagline, headline, items = [] } = data;
 	const [isLightboxOpen, setLightboxOpen] = useState(false);
 	const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -41,9 +41,37 @@ const Gallery = ({ data }: GalleryProps) => {
 		setCurrentIndex((prevIndex) => (prevIndex < sortedItems.length - 1 ? prevIndex + 1 : 0));
 	};
 
+	const handleKeyDown = (e: KeyboardEvent) => {
+		if (isLightboxOpen) {
+			e.stopPropagation();
+			switch (e.key) {
+				case 'ArrowLeft':
+					e.preventDefault();
+					handlePrev();
+					break;
+				case 'ArrowRight':
+					e.preventDefault();
+					handleNext();
+					break;
+				case 'Escape':
+					e.preventDefault();
+					setLightboxOpen(false);
+					break;
+				default:
+					break;
+			}
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener('keydown', handleKeyDown);
+
+		return () => window.removeEventListener('keydown', handleKeyDown);
+	}, [isLightboxOpen]);
+
 	return (
-		<section className="p-6">
-			{title && <Title title={title} />}
+		<section className="relative">
+			{tagline && <Tagline tagline={tagline} />}
 			{headline && <Headline headline={headline} />}
 
 			{sortedItems.length > 0 && (
@@ -70,43 +98,52 @@ const Gallery = ({ data }: GalleryProps) => {
 				</div>
 			)}
 
-			{/* Lightbox */}
 			{isLightboxOpen && isValidIndex && (
 				<Dialog open={isLightboxOpen} onOpenChange={setLightboxOpen}>
-					<DialogOverlay className="fixed inset-0 bg-black bg-opacity-30 z-50" />
 					<DialogContent
-						className="flex bg-transparent border-none items-center justify-center p-2"
-						style={{ maxHeight: '90vh' }}
+						className="flex max-w-full max-h-full items-center justify-center  p-2 bg-transparent border-none z-50"
+						hideCloseButton
 					>
 						<DialogTitle className="sr-only">Gallery Image</DialogTitle>
 						<DialogDescription className="sr-only">
 							Viewing image {currentIndex + 1} of {sortedItems.length}.
 						</DialogDescription>
 
-						<div className="relative max-w-4xl w-full">
+						<div className="relative flex justify-center items-center w-[90vw] h-[90vh]">
 							<DirectusImage
 								uuid={sortedItems[currentIndex].directus_file}
 								alt={`Gallery item ${sortedItems[currentIndex].id}`}
-								width="1200"
-								height="800"
-								className="w-full h-auto max-h-full object-contain"
+								width={1200}
+								height={800}
+								className="size-full object-contain"
 							/>
 						</div>
-
-						<button
-							className="absolute -left-16 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-70 rounded-full p-3 hover:bg-opacity-90"
-							onClick={handlePrev}
-							aria-label="Previous"
-						>
-							<ArrowLeft className="size-8" />
-						</button>
-						<button
-							className="absolute -right-16 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-70 rounded-full p-3 hover:bg-opacity-90"
-							onClick={handleNext}
-							aria-label="Next"
-						>
-							<ArrowRight className="size-8" />
-						</button>
+						<div className="absolute bottom-4 inset-x-0 flex justify-between items-center px-4">
+							<button
+								className="flex items-center gap-2 text-white bg-black bg-opacity-70 rounded-full px-4 py-2 hover:bg-opacity-90"
+								onClick={handlePrev}
+								aria-label="Previous"
+							>
+								<ArrowLeft className="size-8" />
+								<span>Prev</span>
+							</button>
+							<button
+								className="flex items-center gap-2 text-white bg-black bg-opacity-70 rounded-full px-4 py-2 hover:bg-opacity-90"
+								onClick={handleNext}
+								aria-label="Next"
+							>
+								<span>Next</span>
+								<ArrowRight className="size-8" />
+							</button>
+						</div>
+						<DialogClose asChild>
+							<button
+								className="absolute top-4 right-4 text-white bg-black bg-opacity-70 rounded-full p-2 hover:bg-opacity-90"
+								aria-label="Close"
+							>
+								<X className="size-8" />
+							</button>
+						</DialogClose>
 					</DialogContent>
 				</Dialog>
 			)}

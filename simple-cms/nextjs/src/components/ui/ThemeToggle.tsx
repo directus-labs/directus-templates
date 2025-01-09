@@ -17,7 +17,7 @@ const ThemeToggle = ({ className }: ThemeToggleProps) => {
 			aria-label="Toggle Dark Mode"
 			onClick={() => setTheme(isDark ? 'light' : 'dark')}
 			className={clsx(
-				'p-1 rounded-full border border-neutral-300 dark:border-neutral-600 bg-neutral-100 dark:bg-neutral-800 transition-colors',
+				'p-1 rounded-full border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 transition-colors',
 				className,
 			)}
 		>

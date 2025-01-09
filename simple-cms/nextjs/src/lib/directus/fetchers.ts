@@ -1,10 +1,11 @@
-import { BlockPost, PageBlock, Post } from '@/types/directus-schema';
+import { BlockPost, PageBlock, Post, Schema } from '@/types/directus-schema';
 import { useDirectus } from './directus';
+import { QueryFilter, readItems, aggregate, readItem, readSingleton } from '@directus/sdk';
 
 /**
  * Fetches page data by permalink, including all nested blocks and dynamically fetching blog posts if required.
  */
-export const fetchPageData = async (permalink: string) => {
+export const fetchPageData = async (permalink: string, postPage = 1) => {
 	const { directus, readItems } = useDirectus();
 
 	try {
@@ -22,12 +23,13 @@ export const fetchPageData = async (permalink: string) => {
 							'collection',
 							'item',
 							'sort',
+							'hide_block',
 							{
 								item: {
-									block_richtext: ['title', 'headline', 'content', 'alignment'],
-									block_gallery: ['id', 'title', 'headline', { items: ['id', 'directus_file', 'sort'] }],
+									block_richtext: ['tagline', 'headline', 'content', 'alignment'],
+									block_gallery: ['id', 'tagline', 'headline', { items: ['id', 'directus_file', 'sort'] }],
 									block_pricing: [
-										'title',
+										'tagline',
 										'headline',
 										{
 											pricing_cards: [
@@ -53,7 +55,7 @@ export const fetchPageData = async (permalink: string) => {
 										},
 									],
 									block_hero: [
-										'title',
+										'tagline',
 										'headline',
 										'description',
 										'alignment',
@@ -75,14 +77,45 @@ export const fetchPageData = async (permalink: string) => {
 											],
 										},
 									],
-									block_posts: ['title', 'headline', 'collection'],
+									block_posts: ['tagline', 'headline', 'collection', 'limit'],
+									block_form: [
+										'id',
+										'tagline',
+										'headline',
+										{
+											form: [
+												'id',
+												'title',
+												'submit_label',
+												'success_message',
+												'on_success',
+												'success_redirect_url',
+												'is_active',
+												{
+													fields: [
+														'id',
+														'name',
+														'type',
+														'label',
+														'placeholder',
+														'help',
+														'validation',
+														'width',
+														'choices',
+														'required',
+														'sort',
+													],
+												},
+											],
+										},
+									],
 								},
 							},
 						],
 					},
 				],
 				deep: {
-					blocks: { _sort: ['sort'] },
+					blocks: { _sort: ['sort'], _filter: { hide_block: { _neq: true } } },
 				},
 			}),
 		);
@@ -100,11 +133,14 @@ export const fetchPageData = async (permalink: string) => {
 					typeof block.item === 'object' &&
 					(block.item as BlockPost).collection === 'posts'
 				) {
+					const limit = (block.item as BlockPost).limit ?? 6;
 					const posts = await directus.request<Post[]>(
 						readItems('posts', {
 							fields: ['id', 'title', 'description', 'slug', 'image', 'status', 'published_at'],
 							filter: { status: { _eq: 'published' } },
 							sort: ['-published_at'],
+							limit,
+							page: postPage,
 						}),
 					);
 
@@ -121,50 +157,20 @@ export const fetchPageData = async (permalink: string) => {
 };
 
 /**
- * Fetches footer navigation and global site data.
+ * Fetches global site data, header navigation, and footer navigation.
  */
-export const fetchFooterData = async () => {
-	const { directus, readItem, readSingleton } = useDirectus();
+export const fetchSiteData = async () => {
+	const { directus } = useDirectus();
 
 	try {
-		const [navPrimary, globals] = await Promise.all([
+		const [globals, headerNavigation, footerNavigation] = await Promise.all([
 			directus.request(
-				readItem('navigation', 'footer', {
-					fields: [
-						{
-							items: [
-								'id',
-								'title',
-								'page',
-								{
-									page: ['permalink'],
-									children: ['id', 'title', 'url', { page: ['permalink'] }],
-								},
-							],
-						},
-					],
+				readSingleton('globals', {
+					fields: ['title', 'description', 'logo', 'dark_mode_logo', 'social_links', 'accent_color', 'favicon'],
 				}),
 			),
-			directus.request(readSingleton('globals', { fields: ['description', 'logo', 'social_links'] })),
-		]);
-
-		return { navPrimary, globals };
-	} catch (error) {
-		console.error('Error fetching footer data:', error);
-		throw new Error('Failed to fetch footer data');
-	}
-};
-
-/**
- * Fetches header navigation.
- */
-export const fetchNavigationData = async (key: string) => {
-	const { directus, readItem, readSingleton } = useDirectus();
-
-	try {
-		const [navigation, globals] = await Promise.all([
 			directus.request(
-				readItem('navigation', key, {
+				readItem('navigation', 'main', {
 					fields: [
 						{
 							items: [
@@ -180,32 +186,59 @@ export const fetchNavigationData = async (key: string) => {
 					deep: { items: { _sort: ['sort'] } },
 				}),
 			),
-			directus.request(readSingleton('globals', { fields: ['logo'] })),
+			directus.request(
+				readItem('navigation', 'footer', {
+					fields: [
+						{
+							items: [
+								'id',
+								'title',
+								{
+									page: ['permalink'],
+									children: ['id', 'title', 'url', { page: ['permalink'] }],
+								},
+							],
+						},
+					],
+				}),
+			),
 		]);
 
-		return { navigation, globals };
+		return { globals, headerNavigation, footerNavigation };
 	} catch (error) {
-		console.error(`Error fetching navigation data for key "${key}":`, error);
-		throw new Error('Failed to fetch navigation data');
+		console.error('Error fetching site data:', error);
+		throw new Error('Failed to fetch site data');
 	}
 };
 
 /**
- * Fetches a single blog post by slug.
+ * Fetches a single blog post by slug. Handles live preview mode
  */
-export const fetchPostBySlug = async (slug: string) => {
+export const fetchPostBySlug = async (slug: string, options?: { draft?: boolean }) => {
 	const { directus, readItems } = useDirectus();
 
 	try {
-		const post = await directus.request(
+		const filter: QueryFilter<Schema, Post> = options?.draft
+			? { slug: { _eq: slug } }
+			: { slug: { _eq: slug }, status: { _eq: 'published' } };
+
+		const posts = await directus.request(
 			readItems('posts', {
-				filter: { slug: { _eq: slug } },
+				filter,
 				limit: 1,
-				fields: ['id', 'title', 'content', 'image', 'description', 'author'],
+				fields: ['id', 'title', 'content', 'status', 'image', 'description', 'author'],
 			}),
 		);
 
-		return post[0] || null;
+		const post = posts[0];
+
+		if (!post) {
+			console.error(`No post found with slug: ${slug}`);
+
+			return null;
+		}
+
+		return post;
 	} catch (error) {
 		console.error(`Error fetching post with slug "${slug}":`, error);
 		throw new Error(`Failed to fetch post with slug "${slug}"`);
@@ -251,5 +284,50 @@ export const fetchAuthorById = async (authorId: string) => {
 	} catch (error) {
 		console.error(`Error fetching author with ID "${authorId}":`, error);
 		throw new Error(`Failed to fetch author with ID "${authorId}"`);
+	}
+};
+
+/**
+ * Fetches paginated blog posts.
+ */
+export const fetchPaginatedPosts = async (limit: number, page: number) => {
+	const { directus } = useDirectus();
+	try {
+		const response = await directus.request(
+			readItems('posts', {
+				limit,
+				page,
+				sort: ['-published_at'],
+				fields: ['id', 'title', 'description', 'slug', 'image'],
+				filter: { status: { _eq: 'published' } },
+			}),
+		);
+
+		return response;
+	} catch (error) {
+		console.error('Error fetching paginated posts:', error);
+		throw new Error('Failed to fetch paginated posts');
+	}
+};
+
+/**
+ * Fetches the total number of published blog posts.
+ */
+export const fetchTotalPostCount = async (): Promise<number> => {
+	const { directus } = useDirectus();
+
+	try {
+		const response = await directus.request(
+			aggregate('posts', {
+				aggregate: { count: '*' },
+				filter: { status: { _eq: 'published' } },
+			}),
+		);
+
+		return Number(response[0]?.count) || 0;
+	} catch (error) {
+		console.error('Error fetching total post count:', error);
+
+		return 0;
 	}
 };

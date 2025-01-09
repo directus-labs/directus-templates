@@ -1,10 +1,10 @@
-import Title from '@/components/ui/Title';
+import Tagline from '../ui/Tagline';
 import Headline from '@/components/ui/Headline';
 import PricingCard from '@/components/blocks/PricingCard';
 
 interface PricingProps {
 	data: {
-		title?: string;
+		tagline?: string;
 		headline?: string;
 		pricing_cards: Array<{
 			id: string;
@@ -14,6 +14,7 @@ interface PricingProps {
 			badge?: string;
 			features?: string[];
 			button?: {
+				id: string;
 				label: string | null;
 				variant: string | null;
 				url: string | null;
@@ -24,7 +25,7 @@ interface PricingProps {
 }
 
 const Pricing = ({ data }: PricingProps) => {
-	const { title, headline, pricing_cards } = data;
+	const { tagline, headline, pricing_cards } = data;
 
 	if (!pricing_cards || !Array.isArray(pricing_cards)) {
 		return null;
@@ -32,20 +33,18 @@ const Pricing = ({ data }: PricingProps) => {
 
 	const gridClasses = (() => {
 		if (pricing_cards.length === 1) return 'grid-cols-1';
-		if (pricing_cards.length === 2) return 'grid-cols-1 sm:grid-cols-2';
+		if (pricing_cards.length % 3 === 0) return 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
 
-		return 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
+		// Default to 2 columns for pricing cards
+		return 'grid-cols-1 sm:grid-cols-2';
 	})();
 
-	const containerStyles =
-		pricing_cards.length === 1 || pricing_cards.length === 2 ? 'mx-auto max-w-screen-md' : 'max-w-full';
-
 	return (
-		<section className="space-y-8">
-			{title && <Title title={title} />}
+		<section>
+			{tagline && <Tagline tagline={tagline} />}
 			{headline && <Headline headline={headline} />}
 
-			<div className={`grid gap-6 ${gridClasses} ${containerStyles}`}>
+			<div className={`grid gap-6 mt-8 ${gridClasses}`}>
 				{pricing_cards.map((card) => (
 					<PricingCard key={card.id} card={card} />
 				))}

@@ -1,27 +1,42 @@
 import '@/styles/globals.css';
 import '@/styles/fonts.css';
-import type { ReactNode } from 'react';
-import type { Metadata } from 'next';
+import { ReactNode } from 'react';
+import { Metadata } from 'next';
+
+import NavigationBar from '@/components/layout/NavigationBar';
 import Footer from '@/components/layout/Footer';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
-import NavigationBar from '@/components/layout/NavigationBar';
+import { fetchSiteData } from '@/lib/directus/fetchers';
+import { getDirectusAssetURL } from '@/lib/directus/directus-utils';
 
-export const metadata: Metadata = {
-	title: 'Simple CMS',
-	description: 'A starter CMS template powered by Next.js and Directus.',
-	icons: {
-		icon: '/favicon.ico',
-	},
-};
+export async function generateMetadata(): Promise<Metadata> {
+	const { globals } = await fetchSiteData();
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+	const siteTitle = globals?.title ?? 'Simple CMS';
+	const siteDescription = globals?.description ?? 'A starter CMS template powered by Next.js and Directus.';
+	const faviconURL = globals?.favicon ? getDirectusAssetURL(globals.favicon) : '/favicon.ico';
+
+	return {
+		title: siteTitle,
+		description: siteDescription,
+		icons: {
+			icon: faviconURL,
+		},
+	};
+}
+
+export default async function RootLayout({ children }: { children: ReactNode }) {
+	const { globals, headerNavigation, footerNavigation } = await fetchSiteData();
+
+	const accentColor = globals?.accent_color || '#6644ff';
+
 	return (
-		<html lang="en" suppressHydrationWarning>
-			<body className="antialiased font-sans">
+		<html lang="en" style={{ '--accent-color': accentColor } as React.CSSProperties} suppressHydrationWarning>
+			<body className="antialiased font-sans flex flex-col min-h-screen">
 				<ThemeProvider>
-					<NavigationBar />
-					<main className="min-h-screen px-2 md:px-8 lg:px-16">{children}</main>
-					<Footer />
+					<NavigationBar navigation={headerNavigation} globals={globals} />
+					<main className="flex-grow">{children}</main>
+					<Footer navigation={footerNavigation} globals={globals} />
 				</ThemeProvider>
 			</body>
 		</html>

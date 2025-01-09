@@ -1,4 +1,4 @@
-import Title from '@/components/ui/Title';
+import Tagline from '../ui/Tagline';
 import Headline from '@/components/ui/Headline';
 import BaseText from '@/components/ui/Text';
 import DirectusImage from '@/components/shared/DirectusImage';
@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 
 interface HeroProps {
 	data: {
-		title: string;
+		tagline: string;
 		headline: string;
 		description: string;
 		alignment: 'left' | 'center' | 'right';
@@ -27,12 +27,12 @@ interface HeroProps {
 }
 
 const Hero = ({ data }: HeroProps) => {
-	const { alignment, title, headline, description, image, button_group } = data;
+	const { alignment, tagline, headline, description, image, button_group } = data;
 
 	return (
 		<section
 			className={cn(
-				'relative w-full max-w-screen-lg mx-auto px-4 flex flex-col gap-6 md:gap-12 md:min-h-[60vh]',
+				'relative w-full mx-auto flex flex-col gap-6 md:gap-12',
 				alignment === 'center'
 					? 'items-center text-center'
 					: alignment === 'right'
@@ -43,10 +43,10 @@ const Hero = ({ data }: HeroProps) => {
 			<div
 				className={cn(
 					'flex flex-col gap-4 w-full',
-					alignment === 'center' ? 'md:w-1/2 items-center' : 'md:w-1/2 items-start',
+					alignment === 'center' ? 'md:w-3/4 xl:w-2/3 items-center' : 'md:w-1/2 items-start',
 				)}
 			>
-				<Title title={title} />
+				<Tagline tagline={tagline} />
 				<Headline headline={headline} />
 				{description && <BaseText content={description} />}
 				{button_group && button_group.buttons.length > 0 && (
@@ -56,10 +56,15 @@ const Hero = ({ data }: HeroProps) => {
 				)}
 			</div>
 			{image && (
-				<div className={cn('relative w-full', alignment === 'center' ? 'h-[400px]' : 'h-[562px]', 'md:w-1/2')}>
+				<div
+					className={cn(
+						'relative w-full',
+						alignment === 'center' ? 'md:w-3/4 xl:w-2/3 h-[400px]' : 'md:w-1/2 h-[562px]',
+					)}
+				>
 					<DirectusImage
 						uuid={image}
-						alt={title || 'Hero Image'}
+						alt={tagline || headline || 'Hero Image'}
 						fill
 						sizes={alignment === 'center' ? '100vw' : '(max-width: 768px) 100vw, 50vw'}
 					/>
