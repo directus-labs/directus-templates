@@ -14,7 +14,7 @@ const ContentSecurityPolicy = `
     media-src *;
     connect-src *;
     font-src 'self' data:;
-    frame-ancestors 'self' http://localhost:3000 https://simple-cms-starter.directus.app;
+    frame-ancestors 'self' http://localhost:3000 ${process.env.NEXT_PUBLIC_DIRECTUS_URL};
 `;
 
 const nextConfig: NextConfig = {
@@ -28,7 +28,7 @@ const nextConfig: NextConfig = {
 		remotePatterns: [
 			{
 				protocol: 'https',
-				hostname: 'simple-cms-starter.directus.app',
+				hostname: process.env.NEXT_PUBLIC_DIRECTUS_URL?.split('//')[1] || '',
 				pathname: '/assets/**',
 			},
 		],
