@@ -1,31 +1,34 @@
 import { fetchPageData } from '@/lib/directus/fetchers';
-import { generatePageMetadata } from '@/lib/utils';
 import PageBuilder from '@/components/layout/PageBuilder';
-import { Metadata } from 'next';
 import { PageBlock } from '@/types/directus-schema';
 
-export async function generateMetadata({ params }: { params: Promise<{ permalink?: string[] }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ permalink?: string[] }> }) {
 	const { permalink } = await params;
 	const permalinkSegments = permalink || [];
 	const resolvedPermalink = `/${permalinkSegments.join('/')}`.replace(/\/$/, '') || '/';
 
-	let page;
 	try {
-		page = await fetchPageData(resolvedPermalink);
+		const page = await fetchPageData(resolvedPermalink);
+
+		if (!page) {
+			return;
+		}
+
+		return {
+			title: page.title,
+			description: page.description,
+			openGraph: {
+				title: page.title,
+				description: page.description,
+				url: `${process.env.NEXT_PUBLIC_SITE_URL}${resolvedPermalink}`,
+				type: 'website',
+			},
+		};
 	} catch (error) {
-		console.error('Error loading page:', error);
+		console.error('Error loading page metadata:', error);
 
-		return generatePageMetadata({
-			pageTitle: '404 - Page Not Found',
-			resolvedPermalink,
-		});
+		return;
 	}
-
-	return generatePageMetadata({
-		pageTitle: page?.title || 'Untitled Page',
-		pageDescription: page?.description || null,
-		resolvedPermalink,
-	});
 }
 
 export default async function Page({ params }: { params: Promise<{ permalink?: string[] }> }) {

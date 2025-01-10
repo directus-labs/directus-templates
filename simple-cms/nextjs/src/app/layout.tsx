@@ -12,12 +12,15 @@ import { getDirectusAssetURL } from '@/lib/directus/directus-utils';
 export async function generateMetadata(): Promise<Metadata> {
 	const { globals } = await fetchSiteData();
 
-	const siteTitle = globals?.title ?? 'Simple CMS';
-	const siteDescription = globals?.description ?? 'A starter CMS template powered by Next.js and Directus.';
+	const siteTitle = globals?.title || 'Simple CMS';
+	const siteDescription = globals?.description || 'A starter CMS template powered by Next.js and Directus.';
 	const faviconURL = globals?.favicon ? getDirectusAssetURL(globals.favicon) : '/favicon.ico';
 
 	return {
-		title: siteTitle,
+		title: {
+			default: siteTitle,
+			template: `%s | ${siteTitle}`,
+		},
 		description: siteDescription,
 		icons: {
 			icon: faviconURL,
