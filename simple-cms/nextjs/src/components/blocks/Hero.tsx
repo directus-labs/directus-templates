@@ -67,6 +67,7 @@ const Hero = ({ data }: HeroProps) => {
 						alt={tagline || headline || 'Hero Image'}
 						fill
 						sizes={alignment === 'center' ? '100vw' : '(max-width: 768px) 100vw, 50vw'}
+						className="object-contain"
 					/>
 				</div>
 			)}
