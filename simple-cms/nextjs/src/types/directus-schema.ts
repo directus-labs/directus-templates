@@ -196,7 +196,7 @@ export interface Globals {
 	directus_url?: string | null;
 	accent_color?: string | null;
 	/** @description Logo to display when site is in dark mode */
-	dark_mode_logo?: DirectusFile | string | null;
+	logo_dark_mode?: DirectusFile | string | null;
 }
 
 export interface Navigation {

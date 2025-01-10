@@ -8,7 +8,7 @@ import { Key } from 'react';
 export default function Footer({ navigation, globals }: { navigation: any; globals: any }) {
 	const directusURL = process.env.NEXT_PUBLIC_DIRECTUS_URL;
 	const lightLogoUrl = globals?.logo ? `${directusURL}/assets/${globals.logo}` : '/images/logo.svg';
-	const darkLogoUrl = globals?.dark_mode_logo ? `${directusURL}/assets/${globals.dark_mode_logo}` : '';
+	const darkLogoUrl = globals?.logo_dark_mode ? `${directusURL}/assets/${globals.logo_dark_mode}` : '';
 
 	return (
 		<footer className="bg-gray dark:bg-[var(--background-variant-color)] py-16">

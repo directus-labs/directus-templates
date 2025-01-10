@@ -166,7 +166,7 @@ export const fetchSiteData = async () => {
 		const [globals, headerNavigation, footerNavigation] = await Promise.all([
 			directus.request(
 				readSingleton('globals', {
-					fields: ['title', 'description', 'logo', 'dark_mode_logo', 'social_links', 'accent_color', 'favicon'],
+					fields: ['title', 'description', 'logo', 'logo_dark_mode', 'social_links', 'accent_color', 'favicon'],
 				}),
 			),
 			directus.request(
