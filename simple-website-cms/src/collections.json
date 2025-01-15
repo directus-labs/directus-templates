@@ -671,7 +671,7 @@
       "sort": 1,
       "group": "website",
       "collapse": "open",
-      "preview_url": "http://localhost:3000/posts/{{slug}}?preview=true",
+      "preview_url": null,
       "versioning": false
     },
     "schema": {
@@ -709,7 +709,7 @@
       "sort": 2,
       "group": "website",
       "collapse": "open",
-      "preview_url": "http://localhost:3000/posts/{{slug}}?preview=true",
+      "preview_url": null,
       "versioning": false
     },
     "schema": {

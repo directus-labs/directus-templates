@@ -44,17 +44,6 @@
     "url": null
   },
   {
-    "id": "dda7d91c-b449-4ab3-9d9d-84d4e8c09caf",
-    "sort": null,
-    "type": "url",
-    "page": null,
-    "post": null,
-    "label": "Get Started",
-    "variant": "solid",
-    "button_group": null,
-    "url": "/your-stripe-checkout-link"
-  },
-  {
     "id": "efb97ae9-d95e-4f9d-bf00-9df9966c65ec",
     "sort": null,
     "type": "url",
@@ -64,5 +53,16 @@
     "variant": "solid",
     "button_group": null,
     "url": "/get-a-demo"
+  },
+  {
+    "id": "dda7d91c-b449-4ab3-9d9d-84d4e8c09caf",
+    "sort": null,
+    "type": "url",
+    "page": null,
+    "post": null,
+    "label": "Get Started",
+    "variant": "default",
+    "button_group": null,
+    "url": "/your-stripe-checkout-link"
   }
 ]

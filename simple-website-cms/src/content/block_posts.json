@@ -3,6 +3,7 @@
     "id": "060b632d-d70d-4db1-8b95-4fbab7a52ae8",
     "headline": "All rabbits, all the time",
     "collection": "posts",
-    "tagline": "Blog"
+    "tagline": "Blog",
+    "limit": 6
   }
 ]

@@ -30,5 +30,6 @@
   "logo": "43ddd7b8-9b2f-4aa1-b63c-933b4ae81ca2",
   "openai_api_key": null,
   "directus_url": "http://0.0.0.0:8055",
-  "primary_color": "#6644FF"
+  "logo_dark_mode": "ae390ba1-fcff-4b99-a445-5f19257095d1",
+  "accent_color": "#6644FF"
 }

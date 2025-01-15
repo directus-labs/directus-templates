@@ -99,7 +99,12 @@
       "logo_on_light_bg",
       "theme",
       "logo",
-      "favicon"
+      "favicon",
+      "logo_dark_mode",
+      "accent_color",
+      "notice-7-fv9g",
+      "divider_logo",
+      "divider_social"
     ],
     "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
   },
@@ -585,7 +590,10 @@
       "tagline",
       "description",
       "divider_social",
-      "social_links"
+      "social_links",
+      "logo_dark_mode",
+      "accent_color",
+      "notice-7-fv9g"
     ],
     "policy": "8ba4ed6f-d330-4675-ae46-119c533a0928"
   },
@@ -605,7 +613,10 @@
       "tagline",
       "description",
       "divider_social",
-      "social_links"
+      "social_links",
+      "logo_dark_mode",
+      "accent_color",
+      "notice-7-fv9g"
     ],
     "policy": "8ba4ed6f-d330-4675-ae46-119c533a0928"
   },
@@ -625,7 +636,10 @@
       "tagline",
       "description",
       "divider_social",
-      "social_links"
+      "social_links",
+      "logo_dark_mode",
+      "notice-7-fv9g",
+      "accent_color"
     ],
     "policy": "8ba4ed6f-d330-4675-ae46-119c533a0928"
   },
