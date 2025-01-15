@@ -3,14 +3,19 @@ export interface BlockButton {
 	/** @required */
 	id: string;
 	sort?: number | null;
+	/** @description What type of link is this? Page and Post allow you to link to internal content. URL is for external content. Group can contain other menu items. */
 	type?: 'page' | 'post' | 'url' | null;
+	/** @description The internal page to link to. */
 	page?: Page | string | null;
+	/** @description The internal post to link to. */
 	post?: Post | string | null;
-	/** @description Text to include on the button */
+	/** @description Text to include on the button. */
 	label?: string | null;
 	/** @description What type of button */
 	variant?: 'default' | 'outline' | 'soft' | 'ghost' | 'link' | null;
+	/** @description The id of the Button Group this button belongs to. */
 	button_group?: BlockButtonGroup | string | null;
+	/** @description The URL to link to. Could be relative (ie `/my-page`) or a full external URL (ie `https://docs.directus.io`) */
 	url?: string | null;
 }
 
@@ -18,6 +23,7 @@ export interface BlockButtonGroup {
 	/** @required */
 	id: string;
 	sort?: number | null;
+	/** @description Add individual buttons to the button group. */
 	buttons?: BlockButton[] | string[];
 }
 
@@ -26,48 +32,56 @@ export interface BlockForm {
 	id: string;
 	/** @description Form to show within block */
 	form?: Form | string | null;
+	/** @description Larger main headline for this page section. */
 	headline?: string | null;
+	/** @description Smaller copy shown above the headline to label a section or add extra context. */
 	tagline?: string | null;
 }
 
 export interface BlockGallery {
+	/** @description Larger main headline for this page section. */
 	headline?: string | null;
 	/** @required */
 	id: string;
+	/** @description Smaller copy shown above the headline to label a section or add extra context. */
 	tagline?: string | null;
 }
 
 export interface BlockGalleryItem {
 	/** @required */
 	id: string;
+	/** @description The id of the gallery block this item belongs to. */
 	block_gallery?: BlockGallery | string | null;
+	/** @description The id of the file included in the gallery. */
 	directus_file?: DirectusFile | string | null;
 	sort?: number | null;
 }
 
 export interface BlockHero {
-	/** @description Larger main headline for this section. */
+	/** @description Larger main headline for this page section. */
 	headline?: string | null;
 	/** @required */
 	id: string;
-	/** @description The image to include in the hero. */
+	/** @description Featured image in the hero. */
 	image?: DirectusFile | string | null;
-	/** @description Action buttons to include in the hero. */
+	/** @description Action buttons that show below headline and description. */
 	button_group?: BlockButtonGroup | string | null;
-	/** @description Supporting copy below the headline. */
+	/** @description Supporting copy that shows below the headline. */
 	description?: string | null;
-	/** @description Where is the image placed? */
-	alignment?: 'left' | 'center' | 'right' | null;
-	/** @description Smaller copy show above the headline to label a section or add context. */
+	/** @description Smaller copy shown above the headline to label a section or add extra context. */
 	tagline?: string | null;
+	/** @description The layout for the component. You can set the image to display left, right, or in the center of page.. */
+	layout?: string | null;
 }
 
 export interface BlockPost {
 	/** @required */
 	id: string;
+	/** @description Larger main headline for this page section. */
 	headline?: string | null;
-	/** @required */
+	/** @description The collection of content to fetch and display on the page within this block. @required */
 	collection: 'posts';
+	/** @description Smaller copy shown above the headline to label a section or add extra context. */
 	tagline?: string | null;
 	limit?: number | null;
 }
@@ -75,31 +89,46 @@ export interface BlockPost {
 export interface BlockPricing {
 	/** @required */
 	id: string;
+	/** @description Larger main headline for this page section. */
 	headline?: string | null;
+	/** @description Smaller copy shown above the headline to label a section or add extra context. */
 	tagline?: string | null;
+	/** @description The individual pricing cards to display. */
 	pricing_cards?: BlockPricingCard[] | string[];
 }
 
 export interface BlockPricingCard {
 	/** @required */
 	id: string;
+	/** @description Name of the pricing plan. Shown at the top of the card. */
 	title?: string | null;
+	/** @description Short, one sentence description of the pricing plan and who it is for. */
 	description?: string | null;
+	/** @description Price and term for the pricing plan. (ie `$199/mo`) */
 	price?: string | null;
+	/** @description Badge that displays at the top of the pricing plan card to add helpful context. */
 	badge?: string | null;
+	/** @description Short list of features included in this plan. Press `Enter` to add another item to the list. */
 	features?: any | null;
+	/** @description The action button / link shown at the bottom of the pricing card. */
 	button?: BlockButton | string | null;
+	/** @description The id of the pricing block this card belongs to. */
 	pricing?: BlockPricing | string | null;
+	/** @description Add highlighted border around the pricing plan to make it stand out. */
 	is_highlighted?: boolean | null;
 	sort?: number | null;
 }
 
 export interface BlockRichtext {
+	/** @description Rich text content for this block. */
 	content?: string | null;
+	/** @description Larger main headline for this page section. */
 	headline?: string | null;
 	/** @required */
 	id: string;
+	/** @description Controls how the content block is positioned on the page. Choose "Left" to align the block against the left margin or "Center" to position the block in the middle of the page. This setting affects the entire content block's placement, not the text alignment within it. */
 	alignment?: 'left' | 'center' | null;
+	/** @description Smaller copy shown above the headline to label a section or add extra context. */
 	tagline?: string | null;
 }
 
@@ -109,38 +138,39 @@ export interface FormField {
 	/** @description Unique field identifier, not shown to users (lowercase, hyphenated) */
 	name?: string | null;
 	/** @description Input type for the field */
-	type?: 'text' | 'textarea' | 'checkbox' | 'checkbox_group' | 'radio' | 'file' | 'select' | 'hidden' | null;
-	/** @description Text label shown to form users */
+	type?: string | null;
+	/** @description Text label shown to form users. */
 	label?: string | null;
-	/** @description Default text shown in empty input */
+	/** @description Default text shown in empty input. */
 	placeholder?: string | null;
 	/** @description Additional instructions shown below the input */
 	help?: string | null;
-	/** @description Validation rules (e.g. `email|max:255`) */
+	/** @description Available rules: `email`, `url`, `min:5`, `max:20`, `length:10`. Combine with pipes example: `email|max:255` */
 	validation?: string | null;
 	/** @description Field width on the form */
 	width?: '100' | '67' | '50' | '33' | null;
 	/** @description Options for radio or select inputs */
 	choices?: Array<{ text: string; value: string }> | null;
+	/** @description Parent form this field belongs to. */
 	form?: Form | string | null;
 	sort?: number | null;
-	/** @description Make this field mandatory */
+	/** @description Make this field mandatory to complete. */
 	required?: boolean | null;
 }
 
 export interface Form {
 	/** @required */
 	id: string;
-	/** @description Action after successful submission */
+	/** @description Action after successful submission. */
 	on_success?: 'redirect' | 'message' | null;
 	sort?: number | null;
-	/** @description Text shown on submit button */
+	/** @description Text shown on submit button. */
 	submit_label?: string | null;
 	/** @description Message shown after successful submission. */
 	success_message?: string | null;
-	/** @description Form name (for internal reference) */
+	/** @description Form name (for internal reference). */
 	title?: string | null;
-	/** @description Destination URL after successful submission */
+	/** @description Destination URL after successful submission. */
 	success_redirect_url?: string | null;
 	/** @description Show or hide this form from the site. */
 	is_active?: boolean | null;
@@ -148,25 +178,28 @@ export interface Form {
 	emails?: Array<{ to: string[]; subject: string; message: string }> | null;
 	/** @description Form structure and input fields */
 	fields?: FormField[] | string[];
-	/** @description Received form responses */
+	/** @description Received form responses. */
 	submissions?: FormSubmission[] | string[];
 }
 
 export interface FormSubmission {
 	/** @description Unique ID for this specific form submission @required */
 	id: string;
-	/** @description Submission date and time */
+	/** @description Form submission date and time. */
 	timestamp?: string | null;
-	/** @description Associated form */
+	/** @description Associated form for this submission. */
 	form?: Form | string | null;
 	/** @description Submitted field responses */
 	values?: FormSubmissionValue[] | string[];
 }
 
 export interface FormSubmissionValue {
-	id?: string;
+	/** @required */
+	id: string;
+	/** @description Parent form submission for this value. */
 	form_submission?: FormSubmission | string | null;
 	field?: FormField | string | null;
+	/** @description The data entered by the user for this specific field in the form submission. */
 	value?: string | null;
 	sort?: number | null;
 	file?: DirectusFile | string | null;
@@ -182,7 +215,7 @@ export interface Globals {
 		service: 'facebook' | 'instagram' | 'linkedin' | 'twitter' | 'vimeo' | 'youtube' | 'github' | 'discord' | 'docker';
 		url: string;
 	}> | null;
-	/** @description Short phrase describing the site */
+	/** @description Short phrase describing the site. */
 	tagline?: string | null;
 	/** @description Main site title */
 	title?: string | null;
@@ -190,12 +223,15 @@ export interface Globals {
 	url?: string | null;
 	/** @description Small icon for browser tabs. 1:1 ratio. No larger than 512px × 512px. */
 	favicon?: DirectusFile | string | null;
-	/** @description Main logo shown on the site */
+	/** @description Main logo shown on the site (for light mode). */
 	logo?: DirectusFile | string | null;
+	/** @description Secret OpenAI API key. Don't share with anyone outside your team. */
 	openai_api_key?: string | null;
+	/** @description The public URL for this Directus instance. Used in Flows. */
 	directus_url?: string | null;
+	/** @description Accent color for the website (used on buttons, links, etc). */
 	accent_color?: string | null;
-	/** @description Logo to display when site is in dark mode */
+	/** @description Main logo shown on the site (for dark mode). */
 	logo_dark_mode?: DirectusFile | string | null;
 }
 
@@ -206,24 +242,27 @@ export interface Navigation {
 	title?: string | null;
 	/** @description Show or hide this menu from the site. */
 	is_active?: boolean | null;
-	/** @description Links within the menu */
+	/** @description Links within the menu. */
 	items?: NavigationItem[] | string[];
 }
 
 export interface NavigationItem {
 	/** @required */
 	id: string;
+	/** @description Navigation menu that the individual links belong to. */
 	navigation?: Navigation | string | null;
-	/** @description The internal page to link to */
+	/** @description The internal page to link to. */
 	page?: Page | string | null;
+	/** @description The parent navigation item. */
 	parent?: NavigationItem | string | null;
 	sort?: number | null;
-	/** @description Label shown to the user for the menu item @required */
+	/** @description Label shown to the user for the menu item. @required */
 	title: string;
 	/** @description What type of link is this? Page and Post allow you to link to internal content. URL is for external content. Group can contain other menu items. */
 	type?: 'page' | 'post' | 'url' | 'group' | null;
+	/** @description The URL to link to. Could be relative (ie `/my-page`) or a full external URL (ie `https://docs.directus.io`) */
 	url?: string | null;
-	/** @description The internal post to link to */
+	/** @description The internal post to link to. */
 	post?: Post | string | null;
 	/** @description Add child menu items within the group. */
 	children?: NavigationItem[] | string[];
@@ -233,12 +272,15 @@ export interface PageBlock {
 	/** @required */
 	id: string;
 	sort?: number | null;
+	/** @description The id of the page that this block belongs to. */
 	page?: Page | string | null;
+	/** @description The data for the block. */
 	item?: BlockHero | BlockRichtext | BlockForm | BlockPost | BlockGallery | BlockPricing | string | null;
+	/** @description The collection (type of block). */
 	collection?: string | null;
 	/** @description Temporarily hide this block on the website without having to remove it from your page. */
 	hide_block?: boolean | null;
-	/** @description Background color for the block */
+	/** @description Background color for the block to create contrast. Does not control dark or light mode for the entire site. */
 	background?: 'light' | 'dark' | null;
 }
 
@@ -246,15 +288,15 @@ export interface Page {
 	/** @required */
 	id: string;
 	sort?: number | null;
-	/** @description Page title (visible to visitors and used in SEO) @required */
+	/** @description Page title (visible to visitors and used in SEO). @required */
 	title: string;
-	/** @description Unique URL for this page (start with `/`, can have multiple segments `/about/me`)) @required */
+	/** @description Unique URL for this page (start with `/`, can have multiple segments `/about/me`)). @required */
 	permalink: string;
 	/** @description Short summary of what's on the page. Also used for SEO meta description. */
 	description?: string | null;
-	/** @description Is this page published on the site? */
+	/** @description Is this page published? */
 	status?: 'draft' | 'in_review' | 'published';
-	/** @description Publish now or schedule for later */
+	/** @description Publish now or schedule for later. */
 	published_at?: string | null;
 	/** @description Create and arrange different content blocks (like text, images, or videos) to build your page. */
 	blocks?: PageBlock[] | string[];
@@ -278,7 +320,7 @@ export interface Post {
 	description?: string | null;
 	/** @description Select the team member who wrote this post */
 	author?: DirectusUser | string | null;
-	/** @description Publish now or schedule for later */
+	/** @description Publish now or schedule for later. */
 	published_at?: string | null;
 }
 
@@ -558,6 +600,7 @@ export interface DirectusSettings {
 	public_registration_verify_email?: boolean;
 	public_registration_role?: DirectusRole | string | null;
 	public_registration_email_filter?: any | null;
+	/** @description Settings for the Command Palette Module. */
 	command_palette_settings?: Record<string, any> | null;
 }
 
@@ -589,6 +632,8 @@ export interface DirectusUser {
 	theme_light?: string | null;
 	theme_light_overrides?: any | null;
 	theme_dark_overrides?: any | null;
+	/** @description Blog posts this user has authored. */
+	posts?: Post[] | string[];
 	policies?: DirectusAccess[] | string[];
 }
 

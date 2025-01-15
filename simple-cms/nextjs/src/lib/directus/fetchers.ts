@@ -58,7 +58,7 @@ export const fetchPageData = async (permalink: string, postPage = 1) => {
 										'tagline',
 										'headline',
 										'description',
-										'alignment',
+										'layout',
 										'image',
 										{
 											button_group: [
