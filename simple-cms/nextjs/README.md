@@ -26,7 +26,14 @@ To set up this template, ensure you have the following:
 - **Node.js** (16.x or newer)
 - **npm** or **pnpm**
 - Access to a **Directus** instance ([cloud or self-hosted](../../README.md))
+  
+## ⚠️ Directus Setup Instructions
 
+For instructions on setting up Directus, choose one of the following:
+
+- [Setting up Directus Cloud](https://github.com/directus-labs/starters?tab=readme-ov-file#using-directus-with-a-cloud-instance-recommended)
+- [Setting up Directus Self-Hosted](https://github.com/directus-labs/starters?tab=readme-ov-file#using-directus-locally)
+  
 ### **Environment Variables**
 
 To get started, you need to configure environment variables. Follow these steps:
