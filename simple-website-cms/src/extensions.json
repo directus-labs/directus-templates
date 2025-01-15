@@ -57,6 +57,26 @@
     }
   },
   {
+    "id": "335e9232-b5c7-48bf-ae06-d4e524df53a6",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "335e9232-b5c7-48bf-ae06-d4e524df53a6",
+      "folder": "d5be4536-fc29-4c6b-b866-5a28ddedffb0",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/d5be4536-fc29-4c6b-b866-5a28ddedffb0",
+      "name": "@directus-labs/super-header-interface",
+      "version": "1.0.1",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.0.0 || ^11.0.0",
+      "local": true
+    }
+  },
+  {
     "id": "8a827d6a-f820-4814-8803-9bcf398282d4",
     "bundle": null,
     "meta": {
@@ -156,6 +176,43 @@
     }
   },
   {
+    "id": "af053cdb-242e-4142-a053-e3e23d7658e5",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "af053cdb-242e-4142-a053-e3e23d7658e5",
+      "folder": "3f627cf9-4079-4880-b32a-3848829c93dc",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/3f627cf9-4079-4880-b32a-3848829c93dc",
+      "name": "@directus-labs/card-select-interfaces",
+      "version": "1.0.0",
+      "type": "bundle",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "entries": [
+        {
+          "name": "radio-cards-interface",
+          "type": "interface"
+        },
+        {
+          "name": "checkbox-cards-interface",
+          "type": "interface"
+        },
+        {
+          "name": "image-uuid-interface",
+          "type": "interface"
+        }
+      ],
+      "host": "^10.0.0 || ^11.0.0",
+      "local": true
+    }
+  },
+  {
     "id": "bfa185ec-f15c-4d3e-8e0e-06925ba6cdfe",
     "bundle": null,
     "meta": {
@@ -213,6 +270,51 @@
       "entrypoint": "dist/index.js",
       "host": "^10.1.0",
       "local": true
+    }
+  },
+  {
+    "id": "0fe9b997-3aac-4fbf-8d36-fea91ddb883f",
+    "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5",
+    "meta": {
+      "enabled": true,
+      "id": "0fe9b997-3aac-4fbf-8d36-fea91ddb883f",
+      "folder": "image-uuid-interface",
+      "source": "registry",
+      "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5"
+    },
+    "schema": {
+      "name": "image-uuid-interface",
+      "type": "interface"
+    }
+  },
+  {
+    "id": "3b327243-154b-4040-8cc6-284bff1e61ff",
+    "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5",
+    "meta": {
+      "enabled": true,
+      "id": "3b327243-154b-4040-8cc6-284bff1e61ff",
+      "folder": "radio-cards-interface",
+      "source": "registry",
+      "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5"
+    },
+    "schema": {
+      "name": "radio-cards-interface",
+      "type": "interface"
+    }
+  },
+  {
+    "id": "cfe77abd-a824-4930-a113-b77d458e786b",
+    "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5",
+    "meta": {
+      "enabled": true,
+      "id": "cfe77abd-a824-4930-a113-b77d458e786b",
+      "folder": "checkbox-cards-interface",
+      "source": "registry",
+      "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5"
+    },
+    "schema": {
+      "name": "checkbox-cards-interface",
+      "type": "interface"
     }
   }
 ]

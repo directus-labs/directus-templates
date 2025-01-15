@@ -14,21 +14,5 @@
     "value": "steve@example.com",
     "sort": 2,
     "file": null
-  },
-  {
-    "id": "63df3a8a-75dd-4ea5-94d6-cad8c0820ef4",
-    "form_submission": "133ad5ce-02ef-4f4e-b0a2-408bf9f99ff0",
-    "field": "d37bc00f-bfb5-4496-85c3-70190b21b707",
-    "value": "test@example.com",
-    "sort": null,
-    "file": null
-  },
-  {
-    "id": "6883038b-15bf-4635-8216-a362e62e7ca2",
-    "form_submission": "133ad5ce-02ef-4f4e-b0a2-408bf9f99ff0",
-    "field": "0f3deba1-9d6b-44a0-aa87-a9b38e834beb",
-    "value": "Mistral AI",
-    "sort": null,
-    "file": null
   }
 ]

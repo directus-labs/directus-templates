@@ -814,7 +814,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 2,
+      "sort": 3,
       "width": "full",
       "translations": null,
       "note": "Smaller copy shown above the headline to label a section or add extra context.",
@@ -956,7 +956,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 2,
+      "sort": 3,
       "width": "full",
       "translations": null,
       "note": "Smaller copy shown above the headline to label a section or add extra context.",
@@ -1194,7 +1194,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 3,
+      "sort": 4,
       "width": "full",
       "translations": null,
       "note": "Larger main headline for this page section.",
@@ -1291,8 +1291,8 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 7,
-      "width": "half",
+      "sort": 8,
+      "width": "full",
       "translations": null,
       "note": "Featured image in the hero.",
       "conditions": null,
@@ -1340,10 +1340,12 @@
         "enableSelect": false
       },
       "display": "related-values",
-      "display_options": null,
+      "display_options": {
+        "template": "{{buttons.label}}"
+      },
       "readonly": false,
       "hidden": false,
-      "sort": 5,
+      "sort": 6,
       "width": "full",
       "translations": null,
       "note": "Action buttons that show below headline and description.",
@@ -1390,72 +1392,10 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 4,
+      "sort": 5,
       "width": "full",
       "translations": null,
       "note": "Supporting copy that shows below the headline.",
-      "conditions": null,
-      "required": false,
-      "group": null,
-      "validation": null,
-      "validation_message": null
-    }
-  },
-  {
-    "collection": "block_hero",
-    "field": "alignment",
-    "type": "string",
-    "schema": {
-      "name": "alignment",
-      "table": "block_hero",
-      "data_type": "character varying",
-      "default_value": null,
-      "generation_expression": null,
-      "max_length": 255,
-      "numeric_precision": null,
-      "numeric_scale": null,
-      "is_generated": false,
-      "is_nullable": true,
-      "is_unique": false,
-      "is_indexed": false,
-      "is_primary_key": false,
-      "has_auto_increment": false,
-      "foreign_key_schema": null,
-      "foreign_key_table": null,
-      "foreign_key_column": null,
-      "comment": null
-    },
-    "meta": {
-      "collection": "block_hero",
-      "field": "alignment",
-      "special": null,
-      "interface": "select-radio",
-      "options": {
-        "choices": [
-          {
-            "text": "Left",
-            "value": "left"
-          },
-          {
-            "text": "Center",
-            "value": "center"
-          },
-          {
-            "text": "Right",
-            "value": "right"
-          }
-        ]
-      },
-      "display": "formatted-value",
-      "display_options": {
-        "format": true
-      },
-      "readonly": false,
-      "hidden": true,
-      "sort": 9,
-      "width": "full",
-      "translations": null,
-      "note": "Where is the image placed?",
       "conditions": null,
       "required": false,
       "group": null,
@@ -1497,7 +1437,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 2,
+      "sort": 3,
       "width": "full",
       "translations": null,
       "note": "Smaller copy shown above the headline to label a section or add extra context.",
@@ -1536,25 +1476,32 @@
       "collection": "block_hero",
       "field": "layout",
       "special": null,
-      "interface": "select-dropdown",
+      "interface": "radio-cards-interface",
       "options": {
         "choices": [
           {
             "text": "Image Left",
             "value": "image_left",
-            "icon": "format_image_left"
+            "icon": "format_image_left",
+            "icon_type": "image",
+            "image": "d5a1290f-8819-4e7c-b292-bffe5b1c8274.jpg"
           },
           {
             "text": "Image Center",
             "value": "image_center",
-            "icon": "image"
+            "icon": "image",
+            "icon_type": "image",
+            "image": "8a652e52-a275-4dde-9fc5-edf2188afe56.jpg"
           },
           {
             "text": "Image Right",
             "value": "image_right",
-            "icon": "format_image_right"
+            "icon": "format_image_right",
+            "icon_type": "image",
+            "image": "fe7c7e04-5aac-4370-8bbd-6fd578d26ea1.jpg"
           }
-        ]
+        ],
+        "gridSize": 3
       },
       "display": "labels",
       "display_options": {
@@ -1579,8 +1526,8 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 8,
-      "width": "half",
+      "sort": 9,
+      "width": "full",
       "translations": null,
       "note": "The layout for the component. You can set the image to display left, right, or in the center of page..",
       "conditions": null,
@@ -1735,7 +1682,7 @@
       "readonly": false,
       "hidden": false,
       "sort": 5,
-      "width": "full",
+      "width": "half",
       "translations": null,
       "note": "The collection of content to fetch and display on the page within this block.",
       "conditions": null,
@@ -1783,6 +1730,51 @@
       "width": "full",
       "translations": null,
       "note": "Smaller copy shown above the headline to label a section or add extra context.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "block_posts",
+    "field": "limit",
+    "type": "integer",
+    "schema": {
+      "name": "limit",
+      "table": "block_posts",
+      "data_type": "integer",
+      "default_value": 6,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "block_posts",
+      "field": "limit",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 6,
+      "width": "half",
+      "translations": null,
+      "note": null,
       "conditions": null,
       "required": false,
       "group": null,
@@ -1927,7 +1919,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 2,
+      "sort": 3,
       "width": "full",
       "translations": null,
       "note": "Smaller copy shown above the headline to label a section or add extra context.",
@@ -2648,7 +2640,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 2,
+      "sort": 3,
       "width": "full",
       "translations": null,
       "note": "Smaller copy shown above the headline to label a section or add extra context.",
@@ -2833,50 +2825,59 @@
       "collection": "form_fields",
       "field": "type",
       "special": null,
-      "interface": "select-dropdown",
+      "interface": "radio-cards-interface",
       "options": {
         "choices": [
           {
             "text": "Text",
             "value": "text",
-            "icon": "format_color_text"
+            "icon": "format_color_text",
+            "icon_type": "icon"
           },
           {
             "text": "Textarea",
             "value": "textarea",
-            "icon": "display_external_input"
+            "icon": "display_external_input",
+            "icon_type": "icon"
           },
           {
             "text": "Checkbox",
             "value": "checkbox",
-            "icon": "check_box_outline_blank"
+            "icon": "check_box_outline_blank",
+            "icon_type": "icon"
           },
           {
             "text": "Checkbox Group",
             "value": "checkbox_group",
-            "icon": "library_add_check"
+            "icon": "library_add_check",
+            "icon_type": "icon"
           },
           {
             "text": "Radio",
             "value": "radio",
-            "icon": "radio_button_unchecked"
+            "icon": "radio_button_unchecked",
+            "icon_type": "icon"
           },
           {
             "text": "File",
             "value": "file",
-            "icon": "attach_file"
+            "icon": "attach_file",
+            "icon_type": "icon"
           },
           {
             "text": "Select",
             "value": "select",
-            "icon": "text_select_move_down"
+            "icon": "text_select_move_down",
+            "icon_type": "icon"
           },
           {
             "text": "Hidden",
             "value": "hidden",
-            "icon": "hide_source"
+            "icon": "hide_source",
+            "icon_type": "icon"
           }
-        ]
+        ],
+        "gridSize": 5
       },
       "display": "labels",
       "display_options": {
@@ -2925,8 +2926,8 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 5,
-      "width": "half",
+      "sort": 6,
+      "width": "full",
       "translations": null,
       "note": "Input type for the field",
       "conditions": null,
@@ -2972,7 +2973,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 6,
+      "sort": 5,
       "width": "half",
       "translations": null,
       "note": "Text label shown to form users.",
@@ -3019,7 +3020,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 7,
+      "sort": 8,
       "width": "half",
       "translations": null,
       "note": "Default text shown in empty input.",
@@ -3066,7 +3067,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 8,
+      "sort": 9,
       "width": "half",
       "translations": null,
       "note": "Additional instructions shown below the input",
@@ -3114,10 +3115,10 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 9,
+      "sort": 11,
       "width": "half",
       "translations": null,
-      "note": "Validation rules (e.g. `email|max:255`)",
+      "note": "Available rules: `email`, `url`, `min:5`, `max:20`, `length:10`. Combine with pipes example: `email|max:255`",
       "conditions": null,
       "required": false,
       "group": null,
@@ -3181,8 +3182,8 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 11,
-      "width": "half",
+      "sort": 12,
+      "width": "full",
       "translations": null,
       "note": "Field width on the form",
       "conditions": null,
@@ -3266,7 +3267,7 @@
       },
       "readonly": false,
       "hidden": true,
-      "sort": 12,
+      "sort": 7,
       "width": "full",
       "translations": null,
       "note": "Options for radio or select inputs",
@@ -3769,7 +3770,7 @@
       "display_options": null,
       "readonly": true,
       "hidden": false,
-      "sort": 1,
+      "sort": 3,
       "width": "half",
       "translations": null,
       "note": "Unique ID for this specific form submission",
@@ -3818,7 +3819,7 @@
       },
       "readonly": true,
       "hidden": false,
-      "sort": 2,
+      "sort": 4,
       "width": "half",
       "translations": null,
       "note": "Form submission date and time.",
@@ -3861,7 +3862,8 @@
       ],
       "interface": "select-dropdown-m2o",
       "options": {
-        "template": "{{title}}"
+        "template": "{{title}}",
+        "enableLink": true
       },
       "display": "related-values",
       "display_options": {
@@ -3869,7 +3871,7 @@
       },
       "readonly": true,
       "hidden": false,
-      "sort": 3,
+      "sort": 2,
       "width": "full",
       "translations": null,
       "note": "Associated form for this submission.",
@@ -4208,7 +4210,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 3,
+      "sort": 4,
       "width": "half",
       "translations": null,
       "note": "Form name (for internal reference).",
@@ -4328,7 +4330,7 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 4,
+      "sort": 5,
       "width": "half",
       "translations": [
         {
@@ -4505,7 +4507,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 10,
+      "sort": 12,
       "width": "full",
       "translations": null,
       "note": "Site summary for search results.",
@@ -4673,7 +4675,7 @@
       "display_options": {},
       "readonly": false,
       "hidden": false,
-      "sort": 12,
+      "sort": 14,
       "width": "full",
       "translations": null,
       "note": "Social media profile URLs",
@@ -4718,7 +4720,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 9,
+      "sort": 11,
       "width": "full",
       "translations": null,
       "note": "Short phrase describing the site.",
@@ -4763,7 +4765,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 3,
+      "sort": 4,
       "width": "half",
       "translations": null,
       "note": "Main site title",
@@ -4808,7 +4810,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 4,
+      "sort": 5,
       "width": "half",
       "translations": null,
       "note": "Public URL for the website",
@@ -4851,13 +4853,14 @@
       ],
       "interface": "file-image",
       "options": {
-        "crop": false
+        "crop": false,
+        "folder": "ece7bab9-5433-4a63-b9f7-bde8b517d6d9"
       },
       "display": null,
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 7,
+      "sort": 9,
       "width": "half",
       "translations": null,
       "note": "Small icon for browser tabs. 1:1 ratio. No larger than 512px × 512px.",
@@ -4900,16 +4903,17 @@
       ],
       "interface": "file-image",
       "options": {
-        "crop": false
+        "crop": false,
+        "folder": "ece7bab9-5433-4a63-b9f7-bde8b517d6d9"
       },
       "display": null,
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 6,
+      "sort": 7,
       "width": "half",
       "translations": null,
-      "note": "Main logo shown on the site.",
+      "note": "Main logo shown on the site (for light mode).",
       "conditions": null,
       "required": false,
       "group": null,
@@ -5015,10 +5019,65 @@
   },
   {
     "collection": "globals",
-    "field": "primary_color",
+    "field": "logo_dark_mode",
+    "type": "uuid",
+    "schema": {
+      "name": "logo_dark_mode",
+      "table": "globals",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "globals",
+      "field": "logo_dark_mode",
+      "special": [
+        "file"
+      ],
+      "interface": "file-image",
+      "options": {
+        "crop": false,
+        "folder": "ece7bab9-5433-4a63-b9f7-bde8b517d6d9"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 8,
+      "width": "half",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Dark Mode Logo"
+        }
+      ],
+      "note": "Main logo shown on the site (for dark mode).",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "globals",
+    "field": "accent_color",
     "type": "string",
     "schema": {
-      "name": "primary_color",
+      "name": "accent_color",
       "table": "globals",
       "data_type": "character varying",
       "default_value": null,
@@ -5039,7 +5098,7 @@
     },
     "meta": {
       "collection": "globals",
-      "field": "primary_color",
+      "field": "accent_color",
       "special": null,
       "interface": "select-color",
       "options": null,
@@ -5047,10 +5106,10 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 8,
-      "width": "full",
+      "sort": 10,
+      "width": "half",
       "translations": null,
-      "note": "Primary color for the website.",
+      "note": "Accent color for the website (used on buttons, links, etc).",
       "conditions": null,
       "required": false,
       "group": null,
@@ -5191,7 +5250,7 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 1,
+      "sort": 4,
       "width": "full",
       "translations": [
         {
@@ -6093,7 +6152,7 @@
       "options": {
         "choices": [
           {
-            "text": "Light",
+            "text": "Default",
             "value": "light",
             "icon": "light_mode"
           },
@@ -6247,7 +6306,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 3,
+      "sort": 4,
       "width": "half",
       "translations": null,
       "note": "Page title (visible to visitors and used in SEO).",
@@ -6298,7 +6357,7 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 4,
+      "sort": 5,
       "width": "half",
       "translations": null,
       "note": "Unique URL for this page (start with `/`, can have multiple segments `/about/me`)).",
@@ -6309,7 +6368,7 @@
         "_and": [
           {
             "permalink": {
-              "_regex": "^\/(?:[a-z0-9]+(?:-[a-z0-9]+)*)?(?:\/[a-z0-9]+(?:-[a-z0-9]+)*)*$"
+              "_regex": "^/(?:[a-z0-9]+(?:-[a-z0-9]+)*(?:/[a-z0-9]+(?:-[a-z0-9]+)*)*)?$"
             }
           }
         ]
@@ -6353,7 +6412,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 12,
+      "sort": 13,
       "width": "full",
       "translations": null,
       "note": "Short summary of what's on the page. Also used for SEO meta description.",
@@ -6446,7 +6505,7 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 6,
+      "sort": 7,
       "width": "half",
       "translations": null,
       "note": "Is this page published?",
@@ -6495,7 +6554,7 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 7,
+      "sort": 8,
       "width": "half",
       "translations": null,
       "note": "Publish now or schedule for later.",
@@ -6582,7 +6641,7 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 13,
+      "sort": 14,
       "width": "full",
       "translations": null,
       "note": "Rich text content of your blog post.",
@@ -6679,7 +6738,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 11,
+      "sort": 12,
       "width": "full",
       "translations": null,
       "note": "Featured image for this post. Used in cards linking to the post and in the post detail page.",
@@ -6730,7 +6789,7 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 4,
+      "sort": 5,
       "width": "full",
       "translations": null,
       "note": "Unique URL for this post (e.g., `yoursite.com/posts/{{your-slug}}`)",
@@ -6868,7 +6927,7 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 6,
+      "sort": 7,
       "width": "half",
       "translations": null,
       "note": "Is this post published?",
@@ -6915,7 +6974,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 3,
+      "sort": 4,
       "width": "full",
       "translations": null,
       "note": "Title of the blog post (used in page title and meta tags)",
@@ -6962,7 +7021,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 8,
+      "sort": 9,
       "width": "half",
       "translations": null,
       "note": "Short summary of the blog post to entice readers.",
@@ -7013,7 +7072,7 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 9,
+      "sort": 10,
       "width": "half",
       "translations": null,
       "note": "Select the team member who wrote this post",
@@ -7062,7 +7121,7 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 7,
+      "sort": 8,
       "width": "half",
       "translations": null,
       "note": "Publish now or schedule for later.",
@@ -7125,6 +7184,36 @@
     }
   },
   {
+    "collection": "block_pricing",
+    "field": "pricing_cards",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "block_pricing",
+      "field": "pricing_cards",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "template": "{{title}} • {{price}}"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 5,
+      "width": "full",
+      "translations": null,
+      "note": "The individual pricing cards to display.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
     "collection": "pages",
     "field": "divider-hgvf0u",
     "type": "alias",
@@ -7146,7 +7235,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 5,
+      "sort": 6,
       "width": "full",
       "translations": null,
       "note": null,
@@ -7179,40 +7268,10 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 8,
+      "sort": 9,
       "width": "full",
       "translations": null,
       "note": null,
-      "conditions": null,
-      "required": false,
-      "group": null,
-      "validation": null,
-      "validation_message": null
-    }
-  },
-  {
-    "collection": "block_pricing",
-    "field": "pricing_cards",
-    "type": "alias",
-    "schema": null,
-    "meta": {
-      "collection": "block_pricing",
-      "field": "pricing_cards",
-      "special": [
-        "o2m"
-      ],
-      "interface": "list-o2m",
-      "options": {
-        "template": "{{title}} • {{price}}"
-      },
-      "display": null,
-      "display_options": null,
-      "readonly": false,
-      "hidden": false,
-      "sort": 5,
-      "width": "full",
-      "translations": null,
-      "note": "The individual pricing cards to display.",
       "conditions": null,
       "required": false,
       "group": null,
@@ -7242,7 +7301,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 5,
+      "sort": 6,
       "width": "full",
       "translations": null,
       "note": null,
@@ -7254,28 +7313,29 @@
     }
   },
   {
-    "collection": "posts",
-    "field": "divider-ygmf1b",
+    "collection": "globals",
+    "field": "divider_social",
     "type": "alias",
     "schema": null,
     "meta": {
-      "collection": "posts",
-      "field": "divider-ygmf1b",
+      "collection": "globals",
+      "field": "divider_social",
       "special": [
         "alias",
         "no-data"
       ],
       "interface": "presentation-divider",
       "options": {
-        "icon": "format_paragraph",
-        "color": "#A2B5CD",
-        "inlineTitle": true
+        "inlineTitle": true,
+        "icon": "link",
+        "title": null,
+        "color": "#A2B5CD"
       },
       "display": null,
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 10,
+      "sort": 13,
       "width": "full",
       "translations": null,
       "note": null,
@@ -7308,7 +7368,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 13,
+      "sort": 15,
       "width": "full",
       "translations": [
         {
@@ -7359,40 +7419,6 @@
     }
   },
   {
-    "collection": "globals",
-    "field": "divider_social",
-    "type": "alias",
-    "schema": null,
-    "meta": {
-      "collection": "globals",
-      "field": "divider_social",
-      "special": [
-        "alias",
-        "no-data"
-      ],
-      "interface": "presentation-divider",
-      "options": {
-        "inlineTitle": true,
-        "icon": "link",
-        "title": null,
-        "color": "#A2B5CD"
-      },
-      "display": null,
-      "display_options": null,
-      "readonly": false,
-      "hidden": false,
-      "sort": 11,
-      "width": "full",
-      "translations": null,
-      "note": null,
-      "conditions": null,
-      "required": false,
-      "group": null,
-      "validation": null,
-      "validation_message": null
-    }
-  },
-  {
     "collection": "posts",
     "field": "divider-cwxsuc",
     "type": "alias",
@@ -7414,40 +7440,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 5,
-      "width": "full",
-      "translations": null,
-      "note": null,
-      "conditions": null,
-      "required": false,
-      "group": null,
-      "validation": null,
-      "validation_message": null
-    }
-  },
-  {
-    "collection": "posts",
-    "field": "notice-g8jmnj",
-    "type": "alias",
-    "schema": null,
-    "meta": {
-      "collection": "posts",
-      "field": "notice-g8jmnj",
-      "special": [
-        "alias",
-        "no-data"
-      ],
-      "interface": "presentation-notice",
-      "options": {
-        "color": "info",
-        "icon": "help",
-        "text": "Need inspiration? Open the right sidebar to use Flows like AI Ghostwriter to help draft your content or AI Image Generator to create custom images that match your style."
-      },
-      "display": null,
-      "display_options": null,
-      "readonly": false,
-      "hidden": false,
-      "sort": 12,
+      "sort": 6,
       "width": "full",
       "translations": null,
       "note": null,
@@ -7478,7 +7471,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 11,
+      "sort": 12,
       "width": "full",
       "translations": null,
       "note": null,
@@ -7533,10 +7526,40 @@
       },
       "readonly": true,
       "hidden": false,
-      "sort": 4,
+      "sort": 5,
       "width": "full",
       "translations": null,
       "note": "Submitted field responses",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "forms",
+    "field": "meta_tabs",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "forms",
+      "field": "meta_tabs",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-tabs",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 6,
+      "width": "full",
+      "translations": null,
+      "note": null,
       "conditions": null,
       "required": false,
       "group": null,
@@ -7608,7 +7631,7 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 10,
+      "sort": 11,
       "width": "full",
       "translations": null,
       "note": "Create and arrange different content blocks (like text, images, or videos) to build your page.",
@@ -7620,25 +7643,40 @@
     }
   },
   {
-    "collection": "forms",
-    "field": "meta_tabs",
+    "collection": "posts",
+    "field": "header-sh6gkg",
     "type": "alias",
     "schema": null,
     "meta": {
-      "collection": "forms",
-      "field": "meta_tabs",
+      "collection": "posts",
+      "field": "header-sh6gkg",
       "special": [
         "alias",
-        "no-data",
-        "group"
+        "no-data"
       ],
-      "interface": "group-tabs",
-      "options": null,
+      "interface": "super-header",
+      "options": {
+        "title": "Content",
+        "icon": "text_snippet",
+        "help": "<p><strong>Need inspiration?</strong> Use Flows like AI Ghostwriter to help draft your content.</p>\n<p><em>Note: This uses OpenAI so you'll need to add your API key in the&nbsp;<a href=\"/admin/content/globals\">Globals</a> collection first.</em></p>",
+        "actions": [
+          {
+            "label": "AI Ghostwriter",
+            "icon": "text_increase",
+            "type": "normal",
+            "actionType": "flow",
+            "flow": {
+              "key": "5915dd55-fff8-4d47-b48c-a0e42e5033c1",
+              "collection": "directus_flows"
+            }
+          }
+        ]
+      },
       "display": null,
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 5,
+      "sort": 13,
       "width": "full",
       "translations": null,
       "note": null,
@@ -7715,39 +7753,6 @@
     }
   },
   {
-    "collection": "block_hero",
-    "field": "divider-1zdl4a",
-    "type": "alias",
-    "schema": null,
-    "meta": {
-      "collection": "block_hero",
-      "field": "divider-1zdl4a",
-      "special": [
-        "alias",
-        "no-data"
-      ],
-      "interface": "presentation-divider",
-      "options": {
-        "inlineTitle": true,
-        "icon": "image",
-        "color": "#A2B5CD"
-      },
-      "display": null,
-      "display_options": null,
-      "readonly": false,
-      "hidden": false,
-      "sort": 6,
-      "width": "full",
-      "translations": null,
-      "note": null,
-      "conditions": null,
-      "required": false,
-      "group": null,
-      "validation": null,
-      "validation_message": null
-    }
-  },
-  {
     "collection": "globals",
     "field": "notice-7-fv9g",
     "type": "alias",
@@ -7767,7 +7772,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 2,
+      "sort": 3,
       "width": "full",
       "translations": null,
       "note": null,
@@ -7792,13 +7797,46 @@
       ],
       "interface": "presentation-notice",
       "options": {
-        "text": "Build dynamic pages quickly using ready-made blocks. <a href=\"https://docs.directus.io/guides/headless-cms/reusable-components.html#create-re-usable-page-components\" target=\"_blank\">See our documentation to learn more about the Page Builder</a>."
+        "text": "Build dynamic pages quickly using ready-made blocks. <a href=\"https://directus.io/docs/tutorials/getting-started/create-reusable-blocks-with-many-to-any-relationships?ref=simple_cms_notices\" target=\"_blank\">See our documentation to learn more about the Page Builder</a>."
       },
       "display": null,
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 9,
+      "sort": 10,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "block_hero",
+    "field": "divider-1zdl4a",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "block_hero",
+      "field": "divider-1zdl4a",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "presentation-divider",
+      "options": {
+        "inlineTitle": true,
+        "icon": "image",
+        "color": "#A2B5CD"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 7,
       "width": "full",
       "translations": null,
       "note": null,
@@ -8111,26 +8149,26 @@
     }
   },
   {
-    "collection": "block_posts",
-    "field": "notice-hc-3x7",
+    "collection": "navigation",
+    "field": "notice-7491js",
     "type": "alias",
     "schema": null,
     "meta": {
-      "collection": "block_posts",
-      "field": "notice-hc-3x7",
+      "collection": "navigation",
+      "field": "notice-7491js",
       "special": [
         "alias",
         "no-data"
       ],
       "interface": "presentation-notice",
       "options": {
-        "text": "Add this block to show a collection of your blog posts on any page. It automatically retrieves and lists all published blog posts."
+        "text": "Create and manage navigation menus for your website. Each menu can contain multiple links organized into a hierarchy."
       },
       "display": null,
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 2,
+      "sort": 5,
       "width": "full",
       "translations": null,
       "note": null,
@@ -8155,13 +8193,13 @@
       ],
       "interface": "presentation-notice",
       "options": {
-        "text": "Form submissions are configured to be read-only for data integrity reasons. But they are a great candidate for use in [Flows](/admin/settings/flows). Directus Flows is a drag and drop, low-code automation builder to simplify tasks like automatic notifications or sending incoming requests to third party services. <a href=\"https://directus.io/tv/quick-connect?ref=simple_website_cms\" target=\"_blank\">Learn more about Flows.</a>"
+        "text": "Form submissions are configured to be read-only for data integrity reasons. But they are a great candidate for use in [Flows](/admin/settings/flows). Directus Flows is a drag and drop, low-code automation builder to simplify tasks like automatic notifications or sending incoming requests to third party services. <a href=\"https://directus.io/docs/guides/automate/flows?ref=simple_website_cms\" target=\"_blank\">Learn more about Flows.</a>"
       },
       "display": null,
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 5,
+      "sort": 6,
       "width": "full",
       "translations": null,
       "note": null,
@@ -8173,26 +8211,40 @@
     }
   },
   {
-    "collection": "navigation",
-    "field": "notice-7491js",
+    "collection": "posts",
+    "field": "header-gebh3-",
     "type": "alias",
     "schema": null,
     "meta": {
-      "collection": "navigation",
-      "field": "notice-7491js",
+      "collection": "posts",
+      "field": "header-gebh3-",
       "special": [
         "alias",
         "no-data"
       ],
-      "interface": "presentation-notice",
+      "interface": "super-header",
       "options": {
-        "text": "Create and manage navigation menus for your website. Each menu can contain multiple links organized into a hierarchy."
+        "title": "Image",
+        "icon": "image",
+        "help": "<p><strong>Need inspiration?</strong> Use Flows like AI Image Generator to generate on-brand images for your post using AI.</p>\n<p><em>Note: This uses OpenAI so you'll need to add your API key in the&nbsp;<a href=\"/admin/content/globals\">Globals</a> collection first.</em></p>",
+        "actions": [
+          {
+            "label": "AI Image Generator",
+            "icon": "image",
+            "type": "normal",
+            "actionType": "flow",
+            "flow": {
+              "key": "d4bbac48-a444-49e0-aedb-9af5273b88df",
+              "collection": "directus_flows"
+            }
+          }
+        ]
       },
       "display": null,
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 4,
+      "sort": 11,
       "width": "full",
       "translations": null,
       "note": null,
@@ -8245,10 +8297,406 @@
       },
       "readonly": false,
       "hidden": false,
-      "sort": 5,
+      "sort": 6,
       "width": "full",
       "translations": null,
       "note": "Links within the menu.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "block_pricing",
+    "field": "header-tuqnwm",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "block_pricing",
+      "field": "header-tuqnwm",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "help": "<p>Display your product or service pricing options in a clear, comparative format. Use this when:</p>\n<ul>\n<li>Showcasing different service tiers</li>\n<li>Highlighting feature differences between plans</li>\n<li>Promoting special offers or featured plans</li>\n<li>Presenting subscription options</li>\n</ul>\n<p>Best practices:</p>\n<ul>\n<li>Use clear, benefit-focused plan names</li>\n<li>Highlight your recommended or most popular option</li>\n<li>Keep feature lists scannable and easy to compare</li>\n<li>Include clear call-to-action buttons for each plan</li>\n</ul>",
+        "title": "Pricing Block",
+        "icon": "attach_money"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "block_hero",
+    "field": "header-iep4m3",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "block_hero",
+      "field": "header-iep4m3",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "title": "Hero Block",
+        "icon": "aspect_ratio",
+        "help": "<p>Creates a prominent section at the top of your page that immediately captures attention. Ideal for:</p>\n<ul>\n<li>Main page headers with impactful headlines</li>\n<li>Showcasing key messages with supporting text</li>\n<li>Featuring high-quality images that support your message</li>\n<li>Adding clear call-to-action buttons</li>\n</ul>\n<p>Tips for effective heroes:</p>\n<ul>\n<li>Keep headlines clear and concise (recommended 2-8 words)</li>\n<li>Use high-resolution images that work well with overlay text</li>\n<li>Consider image placement (left/center/right) based on your headline length</li>\n<li>Add a succinct tagline to provide additional context</li>\n</ul>"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "block_richtext",
+    "field": "header-hvr9wt",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "block_richtext",
+      "field": "header-hvr9wt",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "title": "Rich Text Block",
+        "help": "<p>Perfect for creating formatted text content with headings, paragraphs, and lists. Use this block when you need to:</p>\n<ul>\n<li>Write longer form content with multiple paragraphs</li>\n<li>Create structured content with headings and subheadings</li>\n<li>Include inline formatting like bold, italic, or links</li>\n<li>Add bulleted or numbered lists</li>\n</ul>",
+        "icon": "format_color_text"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "block_form",
+    "field": "header-myzea4",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "block_form",
+      "field": "header-myzea4",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "title": "Form Block",
+        "help": "<p>Embed interactive forms to collect information from your visitors. Great for:</p>\n<ul>\n<li>Contact forms</li>\n<li>Newsletter signups</li>\n<li>Event registrations</li>\n<li>Feedback collection</li>\n<li>Lead generation</li>\n</ul>\n<p>When adding a form:</p>\n<ul>\n<li>Choose from your pre-configured form templates</li>\n<li>Add a clear headline explaining the form's purpose</li>\n<li>Consider adding a tagline with extra context or instructions</li>\n<li>Ensure all required fields are clearly marked</li>\n</ul>\n<p>You can create or edit forms outside of this block in the <a href=\"/admin/content/forms\">Forms collection.</a></p>",
+        "icon": "format_shapes"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "block_gallery",
+    "field": "header-khaf2e",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "block_gallery",
+      "field": "header-khaf2e",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "title": "Gallery Block",
+        "icon": "grid_view",
+        "help": "<p>Create visual showcases with multiple images. Ideal for:</p>\n<ul>\n<li>Product portfolios</li>\n<li>Project showcases</li>\n<li>Event photo collections</li>\n<li>Team member galleries</li>\n<li>Before/after demonstrations</li>\n</ul>\n<p>Tips for great galleries:</p>\n<ul>\n<li>Use consistently sized images for the best presentation</li>\n<li>Add descriptive headlines to provide context</li>\n<li>Consider a tagline to explain what visitors are seeing</li>\n<li>Organize images in a logical sequence</li>\n</ul>"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "block_posts",
+    "field": "header-h6oa3s",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "block_posts",
+      "field": "header-h6oa3s",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "title": "Posts Block",
+        "help": "<p>Automatically displays your most recent blog posts in chronological order. Perfect for:</p>\n<ul>\n<li>Showing latest articles on your homepage</li>\n<li>Keeping your content fresh and up-to-date</li>\n<li>Creating dynamic content sections</li>\n<li>Showcasing your recent writing</li>\n</ul>\n<p>You can:</p>\n<ul>\n<li>Set the number of posts to display</li>\n<li>Add a custom headline and tagline to label the section</li>\n<li>Trust the system to automatically keep your content current</li>\n</ul>\n<p>The posts will automatically update as you publish new content, ensuring your pages always show your latest articles.</p>",
+        "icon": "signpost"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "pages",
+    "field": "header-1h739l",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "pages",
+      "field": "header-1h739l",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "title": "{{title}}",
+        "subtitle": "{{status}} • Published At: {{published_at}}",
+        "help": "<h2>Creating and Managing Pages</h2>\n<p>Pages are the foundation of your website, where you'll combine different content blocks to create engaging layouts. Each page can be built using a mix of blocks like Hero sections, Rich Text, Forms, and more.</p>\n<h3>Page Settings</h3>\n<h4>Title</h4>\n<p>The page title appears in browser tabs and search results. Make it clear and descriptive of the page's content. This is what visitors will see when they bookmark your page or share it on social media.</p>\n<h4>URL (Permalink)</h4>\n<ul>\n<li>Always starts with a forward slash (/)</li>\n<li>Use simple, lowercase words separated by hyphens</li>\n<li>Keep it short but descriptive</li>\n<li>Examples:\n<ul>\n<li>/about</li>\n<li>/contact-us</li>\n<li>/services/web-design</li>\n</ul>\n</li>\n</ul>\n<h4>Description</h4>\n<p>A brief summary of the page that appears in search results. Write 1-2 sentences that clearly explain what visitors will find on this page. Good descriptions help with SEO and encourage people to click through to your site.</p>\n<h4>Publishing Options</h4>\n<ul>\n<li><strong>Draft</strong>: Work on the page without making it public</li>\n<li><strong>In Review</strong>: Submit the page for review by other team members</li>\n<li><strong>Published</strong>: Make the page visible to the public</li>\n<li><strong>Schedule</strong>: Set a future publication date</li>\n</ul>\n<p><img src=\"http://localhost:8001/assets/5e93050a-6f17-4314-a7e5-f78bda425fea.png?width=2076&amp;height=1551\" alt=\"Help Blocks Content.png~bak\" loading=\"lazy\"></p>\n<h2>Working with Blocks</h2>\n<p>Your page content is built by adding and arranging blocks. Think of blocks as building pieces that you can stack and rearrange to create your perfect page layout.</p>\n<h4>Tips for Building with Blocks</h4>\n<ul>\n<li>Start with a Hero block for main landing pages</li>\n<li>Use consistent block types for similar content across pages</li>\n<li>Consider the natural flow of information when ordering blocks</li>\n<li>Preview your page on both desktop and mobile before publishing</li>\n<li>You can temporarily hide blocks without deleting them using the \"Hide block\" toggle</li>\n</ul>\n<h4>Block Background Options</h4>\n<p>Each block can have either a light or dark background:</p>\n<ul>\n<li>Default (light): Default option, best for regular content sections</li>\n<li>Dark: Creates visual contrast, good for highlighting important sections</li>\n</ul>\n<h4>General Tips for All Blocks</h4>\n<ul>\n<li>Preview your changes before publishing</li>\n<li>Consider mobile viewing experience</li>\n<li>Keep related content in the same block type for consistency</li>\n<li>Use clear headlines and taglines to guide your visitors</li>\n<li>Make sure images are optimized for web use</li>\n<li>Test all interactive elements like forms and buttons</li>\n</ul>"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 3,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "posts",
+    "field": "header-q1pj0o",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "posts",
+      "field": "header-q1pj0o",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "title": "{{title}}",
+        "subtitle": "{{status}} • Published At: {{published_at}}",
+        "help": "<h2>Managing Blog Posts</h2>\n<p>Blog posts are a powerful way to share your content, news, and updates with your audience. Each post can include rich text content, images, and metadata to help with organization and discovery.</p>\n<h3>Post Settings</h3>\n<h4>Title</h4>\n<p>The main headline of your blog post. This appears at the top of the post and in preview cards across your site. Make it:</p>\n<ul>\n<li>Engaging and descriptive</li>\n<li>Clear about the post's content</li>\n<li>Optimized for search engines (aim for 50-60 characters)</li>\n</ul>\n<h4>Description</h4>\n<p>A brief preview of your post that appears in blog listings and search results. Write 1-2 compelling sentences that:</p>\n<ul>\n<li>Summarize the main point of your article</li>\n<li>Entice readers to click through</li>\n<li>Include relevant keywords naturally</li>\n</ul>\n<h4>Featured Image</h4>\n<p>The main visual for your post that appears:</p>\n<ul>\n<li>At the top of the post</li>\n<li>In preview cards across your site</li>\n<li>When sharing on social media Use high-quality, relevant images that capture attention and support your content.</li>\n</ul>\n<h4>URL Slug</h4>\n<p>The unique portion of the URL for this post. For example, in \"yoursite.com/posts/my-first-post\", \"my-first-post\" is the slug.</p>\n<ul>\n<li>Use lowercase letters and hyphens</li>\n<li>Keep it short but descriptive</li>\n<li>Include relevant keywords when possible</li>\n<li>Avoid special characters</li>\n</ul>\n<h4>Content</h4>\n<p>The main body of your post, supporting rich text formatting including:</p>\n<ul>\n<li>Headings and subheadings</li>\n<li>Paragraphs with formatting (bold, italic, etc.)</li>\n<li>Links to other content</li>\n<li>Bulleted and numbered lists</li>\n<li>Images and media</li>\n</ul>\n<h4>Author</h4>\n<p>Select the team member who wrote the post. This helps:</p>\n<ul>\n<li>Give credit to your writers</li>\n<li>Build authority for your content</li>\n<li>Allow readers to find more posts by the same author</li>\n</ul>\n<h4>Publishing Options</h4>\n<ul>\n<li><strong>Draft</strong>: Work on the post privately</li>\n<li><strong>In Review</strong>: Submit for team review</li>\n<li><strong>Published</strong>: Make the post public</li>\n<li><strong>Schedule</strong>: Set a future publication date and time</li>\n</ul>\n<h3>Best Practices for Blog Posts</h3>\n<h4>Writing Tips</h4>\n<ul>\n<li>Start with a strong opening paragraph</li>\n<li>Use subheadings to break up long content</li>\n<li>Keep paragraphs short (3-4 sentences)</li>\n<li>Include relevant internal and external links</li>\n<li>End with a clear conclusion or call to action</li>\n</ul>\n<h4>SEO Considerations</h4>\n<ul>\n<li>Include your main keyword in the title</li>\n<li>Use descriptive alt text for images</li>\n<li>Write naturally for your audience</li>\n<li>Link to related content on your site</li>\n<li>Use appropriate heading hierarchy</li>\n</ul>\n<h4>Image Guidelines</h4>\n<ul>\n<li>Choose relevant, high-quality featured images</li>\n<li>Optimize images for web performance</li>\n<li>Use consistent image sizes</li>\n<li>Include descriptive alt text</li>\n<li>Consider image placement within content</li>\n</ul>",
+        "icon": null
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 3,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "forms",
+    "field": "header-j68sg2",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "forms",
+      "field": "header-j68sg2",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "title": "{{title}}",
+        "help": "<h2>Understanding Forms</h2>\n<p>Forms are reusable components that you create once and can place anywhere on your site using Form blocks. Think of the Forms collection as your form template library - you build the forms here, then use Form blocks to display them on your pages.</p>\n<h3>The Forms &amp; Form Blocks Relationship</h3>\n<ol>\n<li>First, create and configure your form in the Forms collection</li>\n<li>Then, add a Form block to any page where you want the form to appear</li>\n<li>Select your form from the dropdown in the Form block settings</li>\n<li>Customize the block's headline and tagline to match your page context</li>\n</ol>\n<p>This approach lets you:</p>\n<ul>\n<li>Reuse the same form across multiple pages</li>\n<li>Update the form once to change it everywhere</li>\n<li>Maintain consistent data collection</li>\n<li>Track submissions from all instances of the form</li>\n</ul>\n<h2>Creating Forms</h2>\n<h3>Basic Settings</h3>\n<h4>Form Title</h4>\n<p>Internal name to identify your form in the admin panel. Choose something descriptive like:</p>\n<ul>\n<li>\"Newsletter Signup 2024\"</li>\n<li>\"Contact Form - Main\"</li>\n<li>\"Event Registration Form\"</li>\n</ul>\n<h4>Submit Button</h4>\n<p>Customize the text on your submit button. Use action-oriented phrases like:</p>\n<ul>\n<li>\"Send Message\"</li>\n<li>\"Sign Up Now\"</li>\n<li>\"Register Today\"</li>\n</ul>\n<h4>Success Handling</h4>\n<p>Choose what happens after submission:</p>\n<p><strong>Show Message</strong></p>\n<ul>\n<li>Display a custom thank you message</li>\n<li>Confirm the submission was received</li>\n<li>Set expectations for next steps</li>\n</ul>\n<p><strong>Redirect</strong></p>\n<ul>\n<li>Send users to a specific thank you page</li>\n<li>Guide them to relevant content</li>\n<li>Start the next step in their journey</li>\n</ul>\n<h4>Email Notifications</h4>\n<p>Configure automated emails for form submissions:</p>\n<ul>\n<li>Add multiple recipient email addresses</li>\n<li>Customize subject lines and messages</li>\n<li>Include form submission details in the email</li>\n</ul>\n<h4>Active Status</h4>\n<p>Control form availability:</p>\n<ul>\n<li>Enable/disable without deleting</li>\n<li>Temporarily pause data collection</li>\n<li>Test before making public</li>\n</ul>\n<h3>Building Your Form</h3>\n<h4>Available Field Types</h4>\n<ul>\n<li><strong>Text</strong>: Single line text input</li>\n<li><strong>Textarea</strong>: Multi-line text input</li>\n<li><strong>Checkbox</strong>: Single yes/no option</li>\n<li><strong>Checkbox Group</strong>: Multiple selectable options</li>\n<li><strong>Radio</strong>: Single choice from options</li>\n<li><strong>Select</strong>: Dropdown menu</li>\n<li><strong>File</strong>: File upload capability</li>\n<li><strong>Hidden</strong>: Invisible fields for tracking</li>\n</ul>\n<h4>Field Configuration</h4>\n<p><strong>Label</strong> The visible field name shown to users</p>\n<p><strong>Placeholder</strong> Optional hint text inside empty fields</p>\n<p><strong>Help Text</strong> Additional instructions below the field</p>\n<p><strong>Required Fields</strong> Mark essential fields that must be filled out</p>\n<p><strong>Width Options</strong> Control field layout:</p>\n<ul>\n<li>Full width (100%)</li>\n<li>Two-thirds (67%)</li>\n<li>Half (50%)</li>\n<li>One-third (33%)</li>\n</ul>\n<p><strong>Validation:</strong> Here's the available rules</p>\n<ul>\n<li>Email format: <code>email</code></li>\n<li>URL format: <code>url</code></li>\n<li>Minimum length: <code>min:5</code> (replace 5 with desired length)</li>\n<li>Maximum length: <code>max:20</code> (replace 20 with desired length)</li>\n<li>Exact length: <code>length:10</code> (replace 10 with desired length)</li>\n<li>Required fields: Set \"Required\" toggle to true</li>\n</ul>\n<p>You can combine rules with pipes: <code>email|max:255</code></p>\n<h2>Using Forms with Form Blocks</h2>\n<h3>Adding Forms to Pages</h3>\n<ol>\n<li>Add a Form block to your page</li>\n<li>Select your form from the dropdown</li>\n<li>Add an optional headline and tagline</li>\n<li>Preview to check the layout</li>\n</ol>\n<h3>Form Block Customization</h3>\n<ul>\n<li>Add context with a headline</li>\n<li>Provide instructions in the tagline</li>\n<li>Match the form to your page content</li>\n<li>Ensure the form fits your layout</li>\n</ul>\n<h2>Best Practices</h2>\n<h3>Form Design &amp; Experience</h3>\n<ul>\n<li>Keep forms as short as possible - only include essential fields</li>\n<li>Group related fields together logically</li>\n<li>Use clear labels and mark required fields</li>\n<li>Ensure error messages are helpful and specific</li>\n<li>Test on both desktop and mobile devices</li>\n</ul>\n<h3>Data Collection</h3>\n<ul>\n<li>Only collect information you'll actually use</li>\n<li>Follow data protection guidelines</li>\n<li>Review submissions regularly</li>\n</ul>\n<h2>Managing Form Submissions</h2>\n<p>All submissions are stored in the <a href=\"/admin/content/form_submissions\">Form Submissions collection</a>.</p>\n<ul>\n<li>Export data as needed</li>\n<li>Configure email notifications</li>\n<li>Track submission sources</li>\n<li>Monitor submission trends</li>\n</ul>",
+        "actions": []
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 3,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "navigation",
+    "field": "header-uzluph",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "navigation",
+      "field": "header-uzluph",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "title": "{{title}}",
+        "help": "<h2>Understanding Navigation</h2>\n<p>Navigation menus help visitors find their way around your site. You can create multiple menus (like main navigation, footer links, or utility menus) and manage them all from this collection.</p>\n<h3>Navigation Structure</h3>\n<p>Each navigation menu consists of:</p>\n<ol>\n<li>A menu container (Navigation)</li>\n<li>Menu items within it (Navigation Items)</li>\n</ol>\n<h2>Creating Navigation Menus</h2>\n<h3>Menu Settings</h3>\n<h4>Title</h4>\n<p>Internal name for your menu (only visible in admin). Examples:</p>\n<ul>\n<li>\"Main Navigation\"</li>\n<li>\"Footer Links\"</li>\n<li>\"Header Utility Menu\"</li>\n</ul>\n<h4>Active Status</h4>\n<p>Toggle menus on/off without deleting them. Useful for:</p>\n<ul>\n<li>Testing new menu structures</li>\n<li>Seasonal navigation changes</li>\n<li>Temporary menu updates</li>\n</ul>\n<h2>Adding Menu Items</h2>\n<h3>Item Types</h3>\n<h4>Page</h4>\n<ul>\n<li>Link to any page in your site</li>\n<li>Automatically updates if page URL changes</li>\n<li>Maintains internal link structure</li>\n</ul>\n<h4>Post</h4>\n<ul>\n<li>Link to a specific blog post</li>\n<li>Useful for featuring important articles</li>\n<li>Updates automatically if post URL changes</li>\n</ul>\n<h4>URL</h4>\n<ul>\n<li>Link to any external website (e.g., \"<a href=\"https://example.com/\">https://example.com</a>\")</li>\n<li>Create social media links</li>\n<li>Link to specific file downloads</li>\n<li>Add internal anchor links (e.g., \"#contact-section\")</li>\n<li>Point to email addresses (e.g., \"mailto:<a href=\"mailto:contact@example.com\">contact@example.com</a>\")</li>\n<li>Link to phone numbers (e.g., \"tel:+1234567890\")</li>\n</ul>\n<h4>Group</h4>\n<ul>\n<li>Creates a container for other menu items</li>\n<li>Appears as a dropdown menu when hovered</li>\n<li>Can contain any mix of Pages, Posts, URLs, or other Groups</li>\n<li>Perfect for organizing related content (e.g., \"Services\", \"Products\")</li>\n<li>Can be nested to create multi-level navigation</li>\n<li>Doesn't require a URL - acts as a category header</li>\n</ul>\n<p>Examples of Group Usage:</p>\n<div>\n<pre>About (Group) \n└─ Our Story (Page)\n└─ Team (Page)\n└─ Careers (URL - External job board)<br>\nServices (Group) \n└─ Consulting (Page) \n└─ Training (Group) \n└─ Online Courses (URL) \n└─ Workshops (Page) \n└─ Support (Page)\n</pre>\n<h3>Item Settings</h3>\n<h4>Title</h4>\n<p>The text shown to visitors in the menu</p>\n<h4>Parent Item</h4>\n<p>For creating nested navigation:</p>\n<ul>\n<li>Select another item as parent</li>\n<li>Creates dropdown menus</li>\n<li>Builds hierarchical structure</li>\n</ul>\n<h4>Sort Order</h4>\n<p>Control the sequence of menu items:</p>\n<ul>\n<li>Drag and drop to reorder</li>\n<li>Items display in ascending order</li>\n<li>Groups show as dropdowns</li>\n</ul>\n<h2>Best Practices</h2>\n<h3>Structure</h3>\n<ul>\n<li>Keep main navigation simple</li>\n<li>Limit dropdown levels to 2-3</li>\n<li>Group related items logically</li>\n<li>Use clear, concise labels</li>\n</ul>\n<h3>Usability</h3>\n<ul>\n<li>Ensure all items are reachable</li>\n<li>Test on mobile devices</li>\n<li>Review links regularly</li>\n<li>Keep labels brief but descriptive</li>\n</ul>\n</div>"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 1,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "globals",
+    "field": "header-ye0gsg",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "globals",
+      "field": "header-ye0gsg",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "title": "{{title}} • Site Settings",
+        "subtitle": "{{url}}",
+        "help": "<h2>Global Settings</h2>\n<p>These settings control site-wide elements that affect your entire website. There's only one global settings record.</p>\n<h3>Site Info</h3>\n<ul>\n<li><strong>Title</strong>: Your website's name, appears in browser tabs and search results</li>\n<li><strong>Tagline</strong>: Short description of your site used in search results</li>\n<li><strong>Description</strong>: Longer site summary for SEO and social sharing</li>\n<li><strong>Website URL</strong>: Your site's public address</li>\n<li><strong>CMS URL</strong>: Address of your admin system</li>\n</ul>\n<h3>Brand Assets</h3>\n<ul>\n<li><strong>Logo</strong>: Main site logo for light backgrounds</li>\n<li><strong>Dark Mode Logo</strong>: Alternate logo for dark themes</li>\n<li><strong>Favicon</strong>: Small icon for browser tabs (max 512&times;512px)</li>\n<li><strong>Accent Color</strong>: Your brand's primary color for buttons and highlights</li>\n</ul>\n<h3>Social Media Links</h3>\n<p>Add URLs for your social profiles:</p>\n<ul>\n<li>Facebook, Instagram, LinkedIn</li>\n<li>Twitter, YouTube, Vimeo</li>\n<li>GitHub, Discord, Docker</li>\n</ul>\n<h3>API Settings</h3>\n<ul>\n<li><strong>OpenAI API Key</strong>: Required for AI-powered features</li>\n</ul>"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "form_submissions",
+    "field": "header-cm_wj7",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "form_submissions",
+      "field": "header-cm_wj7",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "super-header",
+      "options": {
+        "title": "Form Submission",
+        "subtitle": "Submitted at: {{timestamp}}",
+        "help": "<h2>Form Submissions</h2>\n<p>Form submissions are read-only records of responses received through your site's forms. This ensures data integrity and provides a reliable audit trail of all submitted information.</p>\n<h3>Understanding Submissions</h3>\n<p>Each submission contains:</p>\n<ul>\n<li>Unique submission ID</li>\n<li>Timestamp of submission</li>\n<li>Reference to the parent form</li>\n<li>All submitted field values</li>\n</ul>\n<h3>Automating with Flows</h3>\n<p>While submissions are read-only, you can use Flows to automate actions when new submissions arrive:</p>\n<ul>\n<li>Send custom email notifications</li>\n<li>Push data to external services</li>\n<li>Create records in other collections</li>\n<li>Trigger webhooks</li>\n<li>Format and transform submission data</li>\n</ul>\n<p>Think of Flows as your automation toolkit - they let you act on submission data without modifying the original records.</p>\n<h3>Data Management</h3>\n<h4>Exporting Data</h4>\n<p>Export submissions to work with them outside the CMS:</p>\n<ul>\n<li>Download as CSV for spreadsheet analysis</li>\n<li>Include date ranges for periodic reports</li>\n<li>Select specific fields to include</li>\n<li>Export file attachments in bulk</li>\n</ul>\n<h4>Data Cleanup</h4>\n<p>Keep your submission data organized:</p>\n<ul>\n<li>Archive old submissions</li>\n<li>Monitor storage usage from file uploads</li>\n<li>Watch for spam patterns</li>\n<li>Maintain audit logs</li>\n</ul>\n<h3>Privacy &amp; Security</h3>\n<p>Since form submissions often contain personal data:</p>\n<ul>\n<li>Follow your data retention policy</li>\n<li>Handle personal information according to privacy laws</li>\n<li>Regularly review old submissions for deletion</li>\n<li>Consider automation for data cleanup</li>\n<li>Monitor who has access to submission data</li>\n</ul>"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 1,
+      "width": "full",
+      "translations": null,
+      "note": null,
       "conditions": null,
       "required": false,
       "group": null,

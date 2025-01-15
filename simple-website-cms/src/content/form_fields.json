@@ -2,7 +2,7 @@
   {
     "id": "0f3deba1-9d6b-44a0-aa87-a9b38e834beb",
     "name": "first-name",
-    "type": "text",
+    "type": "textarea",
     "label": "First Name",
     "placeholder": null,
     "help": null,
@@ -11,7 +11,7 @@
     "choices": null,
     "form": "5da3d356-d818-434f-b225-db35c418bbb6",
     "sort": 1,
-    "required": false
+    "required": true
   },
   {
     "id": "56c64efd-520f-4578-acca-e0565e247681",
@@ -90,7 +90,7 @@
     "choices": null,
     "form": "5da3d356-d818-434f-b225-db35c418bbb6",
     "sort": 2,
-    "required": false
+    "required": true
   },
   {
     "id": "eef0eb77-ecab-4fba-9903-c46d6ad6d85b",
