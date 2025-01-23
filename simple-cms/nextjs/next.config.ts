@@ -31,6 +31,12 @@ const nextConfig: NextConfig = {
 				hostname: process.env.NEXT_PUBLIC_DIRECTUS_URL?.split('//')[1] || '',
 				pathname: '/assets/**',
 			},
+			{
+				protocol: 'http',
+				hostname: 'localhost',
+				port: '8055',
+				pathname: '/assets/**',
+			},
 		],
 	},
 	env: {
