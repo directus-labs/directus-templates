@@ -671,8 +671,8 @@
       "sort": 1,
       "group": "website",
       "collapse": "open",
-      "preview_url": null,
-      "versioning": false
+      "preview_url": "http://localhost:3000{{permalink}}?preview=true&version={{$version}}",
+      "versioning": true
     },
     "schema": {
       "schema": "public",
@@ -709,8 +709,8 @@
       "sort": 2,
       "group": "website",
       "collapse": "open",
-      "preview_url": null,
-      "versioning": false
+      "preview_url": "http://localhost:3000/blog/{{slug}}?preview=true&version={{$version}}",
+      "versioning": true
     },
     "schema": {
       "schema": "public",

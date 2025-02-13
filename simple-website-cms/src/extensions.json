@@ -62,17 +62,70 @@
     "meta": {
       "enabled": true,
       "id": "335e9232-b5c7-48bf-ae06-d4e524df53a6",
-      "folder": "d5be4536-fc29-4c6b-b866-5a28ddedffb0",
+      "folder": "8ae044cb-6f8c-4196-8392-8c3ae8f9071d",
       "source": "registry",
       "bundle": null
     },
     "schema": {
-      "path": "/directus/node_modules/.directus/extensions/.registry/d5be4536-fc29-4c6b-b866-5a28ddedffb0",
+      "path": "/directus/node_modules/.directus/extensions/.registry/8ae044cb-6f8c-4196-8392-8c3ae8f9071d",
       "name": "@directus-labs/super-header-interface",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "type": "interface",
       "entrypoint": "dist/index.js",
       "host": "^10.0.0 || ^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "631b181f-3a8d-44be-a7e4-120326a9d733",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "631b181f-3a8d-44be-a7e4-120326a9d733",
+      "folder": "4cd50f5f-886b-451b-aac7-efb4ea2587a5",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/4cd50f5f-886b-451b-aac7-efb4ea2587a5",
+      "name": "@directus-labs/inline-repeater-interface",
+      "version": "1.0.0",
+      "type": "interface",
+      "entrypoint": "dist/index.js",
+      "host": "^10.0.0 || ^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
+      "folder": "071941f2-2afa-4341-8f88-2a8198bb9f2e",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/node_modules/.directus/extensions/.registry/071941f2-2afa-4341-8f88-2a8198bb9f2e",
+      "name": "@directus-labs/seo-plugin",
+      "version": "1.0.0",
+      "type": "bundle",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "entries": [
+        {
+          "name": "seo-interface",
+          "type": "interface"
+        },
+        {
+          "name": "seo-display",
+          "type": "display"
+        }
+      ],
+      "host": "^10.10.0",
       "local": true
     }
   },
@@ -143,14 +196,14 @@
     "meta": {
       "enabled": true,
       "id": "a2587ead-a73a-4718-88e2-02de0c78d57a",
-      "folder": "64489dc4-ae84-472d-a9f8-fad653d43ba5",
+      "folder": "f313973c-0a76-4eec-9bdf-8a37713bd797",
       "source": "registry",
       "bundle": null
     },
     "schema": {
-      "path": "/directus/node_modules/.directus/extensions/.registry/64489dc4-ae84-472d-a9f8-fad653d43ba5",
+      "path": "/directus/node_modules/.directus/extensions/.registry/f313973c-0a76-4eec-9bdf-8a37713bd797",
       "name": "@directus-labs/liquidjs-operation",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "type": "operation",
       "entrypoint": {
         "app": "dist/app.js",
@@ -273,6 +326,21 @@
     }
   },
   {
+    "id": "06ba4775-6842-4bd9-8688-c6e362a4e74a",
+    "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
+    "meta": {
+      "enabled": true,
+      "id": "06ba4775-6842-4bd9-8688-c6e362a4e74a",
+      "folder": "seo-display",
+      "source": "registry",
+      "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703"
+    },
+    "schema": {
+      "name": "seo-display",
+      "type": "display"
+    }
+  },
+  {
     "id": "0fe9b997-3aac-4fbf-8d36-fea91ddb883f",
     "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5",
     "meta": {
@@ -284,6 +352,21 @@
     },
     "schema": {
       "name": "image-uuid-interface",
+      "type": "interface"
+    }
+  },
+  {
+    "id": "2c3ce19c-0ad6-422e-af42-fe2858b84eac",
+    "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
+    "meta": {
+      "enabled": true,
+      "id": "2c3ce19c-0ad6-422e-af42-fe2858b84eac",
+      "folder": "seo-interface",
+      "source": "registry",
+      "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703"
+    },
+    "schema": {
+      "name": "seo-interface",
       "type": "interface"
     }
   },

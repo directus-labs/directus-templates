@@ -19,8 +19,8 @@
       "service": "discord"
     },
     {
-      "service": "twitter",
-      "url": "https://twitter.com/directus"
+      "url": "https://x.com/directus",
+      "service": "x"
     }
   ],
   "tagline": "The best site ever",
