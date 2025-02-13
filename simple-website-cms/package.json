@@ -6,6 +6,6 @@
     "src"
   ],
   "name": "directus-template-simple-website-cms",
-  "templateName": "Simple Website CMS",
+  "templateName": "simple-website-cms",
   "version": "1.0.0"
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "directus": "11.3.5",
+  "directus": "11.4.1",
   "vendor": "postgres",
   "collections": [
     {
@@ -633,13 +633,13 @@
         "icon": "web_asset",
         "item_duplication_fields": null,
         "note": "Dynamic page builder",
-        "preview_url": "http://localhost:3000/posts/{{slug}}?preview=true",
+        "preview_url": "http://localhost:3000{{permalink}}?preview=true&version={{$version}}",
         "singleton": false,
         "sort": 1,
         "sort_field": "sort",
         "translations": null,
         "unarchive_value": "draft",
-        "versioning": false
+        "versioning": true
       },
       "schema": {
         "name": "pages"
@@ -669,13 +669,13 @@
           "content"
         ],
         "note": "Individual blog posts",
-        "preview_url": "http://localhost:3000/posts/{{slug}}?preview=true",
+        "preview_url": "http://localhost:3000/blog/{{slug}}?preview=true&version={{$version}}",
         "singleton": false,
         "sort": 2,
         "sort_field": "sort",
         "translations": null,
         "unarchive_value": "draft",
-        "versioning": false
+        "versioning": true
       },
       "schema": {
         "name": "posts"
@@ -1538,14 +1538,14 @@
     },
     {
       "collection": "block_form",
-      "field": "header-myzea4",
+      "field": "meta_header_block_form",
       "type": "alias",
       "meta": {
         "collection": "block_form",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-myzea4",
+        "field": "meta_header_block_form",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -1735,14 +1735,14 @@
     },
     {
       "collection": "block_gallery",
-      "field": "header-khaf2e",
+      "field": "meta_header_block_gallery",
       "type": "alias",
       "meta": {
         "collection": "block_gallery",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-khaf2e",
+        "field": "meta_header_block_gallery",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -2228,14 +2228,14 @@
     },
     {
       "collection": "block_hero",
-      "field": "divider-1zdl4a",
+      "field": "meta_divider_block_here",
       "type": "alias",
       "meta": {
         "collection": "block_hero",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "divider-1zdl4a",
+        "field": "meta_divider_block_here",
         "group": null,
         "hidden": false,
         "interface": "presentation-divider",
@@ -2347,14 +2347,14 @@
     },
     {
       "collection": "block_hero",
-      "field": "header-iep4m3",
+      "field": "meta_header_block_hero",
       "type": "alias",
       "meta": {
         "collection": "block_hero",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-iep4m3",
+        "field": "meta_header_block_hero",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -2614,14 +2614,14 @@
     },
     {
       "collection": "block_posts",
-      "field": "header-h6oa3s",
+      "field": "meta_header_block_posts",
       "type": "alias",
       "meta": {
         "collection": "block_posts",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-h6oa3s",
+        "field": "meta_header_block_posts",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -2817,14 +2817,14 @@
     },
     {
       "collection": "block_pricing",
-      "field": "header-tuqnwm",
+      "field": "meta_header_block_pricing",
       "type": "alias",
       "meta": {
         "collection": "block_pricing",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-tuqnwm",
+        "field": "meta_header_block_pricing",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -3540,14 +3540,14 @@
     },
     {
       "collection": "block_richtext",
-      "field": "header-hvr9wt",
+      "field": "meta_header_block_richtext",
       "type": "alias",
       "meta": {
         "collection": "block_richtext",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-hvr9wt",
+        "field": "meta_header_block_richtext",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -4842,14 +4842,14 @@
     },
     {
       "collection": "form_submissions",
-      "field": "notice-fxfrgx",
+      "field": "meta_notice_submissions",
       "type": "alias",
       "meta": {
         "collection": "form_submissions",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "notice-fxfrgx",
+        "field": "meta_notice_submissions",
         "group": null,
         "hidden": false,
         "interface": "presentation-notice",
@@ -4872,14 +4872,14 @@
     },
     {
       "collection": "form_submissions",
-      "field": "header-cm_wj7",
+      "field": "meta_header_form_submissions",
       "type": "alias",
       "meta": {
         "collection": "form_submissions",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-cm_wj7",
+        "field": "meta_header_form_submissions",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -5393,7 +5393,12 @@
           "no-data",
           "group"
         ],
-        "translations": null,
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "Tabs"
+          }
+        ],
         "validation": null,
         "validation_message": null,
         "width": "full"
@@ -5425,7 +5430,7 @@
         "translations": [
           {
             "language": "en-US",
-            "translation": "Fields"
+            "translation": "Form Fields"
           }
         ],
         "validation": null,
@@ -5681,14 +5686,14 @@
     },
     {
       "collection": "forms",
-      "field": "notice-e1nc86",
+      "field": "meta_notice_form_fields",
       "type": "alias",
       "meta": {
         "collection": "forms",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "notice-e1nc86",
+        "field": "meta_notice_form_fields",
         "group": "meta_fields",
         "hidden": false,
         "interface": "presentation-notice",
@@ -5711,14 +5716,14 @@
     },
     {
       "collection": "forms",
-      "field": "notice-wcutfr",
+      "field": "meta_notice_form_responses",
       "type": "alias",
       "meta": {
         "collection": "forms",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "notice-wcutfr",
+        "field": "meta_notice_form_responses",
         "group": "meta_submissions",
         "hidden": false,
         "interface": "presentation-notice",
@@ -5741,14 +5746,14 @@
     },
     {
       "collection": "forms",
-      "field": "notice-38swil",
+      "field": "meta_notice_form_emails",
       "type": "alias",
       "meta": {
         "collection": "forms",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "notice-38swil",
+        "field": "meta_notice_form_emails",
         "group": "meta_emails",
         "hidden": false,
         "interface": "presentation-notice",
@@ -5771,14 +5776,14 @@
     },
     {
       "collection": "forms",
-      "field": "header-j68sg2",
+      "field": "meta_header_forms",
       "type": "alias",
       "meta": {
         "collection": "forms",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-j68sg2",
+        "field": "meta_header_forms",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -6032,64 +6037,11 @@
         "field": "social_links",
         "group": null,
         "hidden": false,
-        "interface": "list",
+        "interface": "inline-repeater-interface",
         "note": "Social media profile URLs",
         "options": {
           "addLabel": "Add New Link",
           "fields": [
-            {
-              "field": "service",
-              "meta": {
-                "field": "service",
-                "interface": "select-dropdown",
-                "note": "Social media platform name",
-                "options": {
-                  "allowOther": true,
-                  "choices": [
-                    {
-                      "text": "Facebook",
-                      "value": "facebook"
-                    },
-                    {
-                      "text": "Instagram",
-                      "value": "instagram"
-                    },
-                    {
-                      "text": "LinkedIn",
-                      "value": "linkedin"
-                    },
-                    {
-                      "text": "Twitter",
-                      "value": "twitter"
-                    },
-                    {
-                      "text": "Vimeo",
-                      "value": "vimeo"
-                    },
-                    {
-                      "text": "YouTube",
-                      "value": "youtube"
-                    },
-                    {
-                      "text": "GitHub",
-                      "value": "github"
-                    },
-                    {
-                      "text": "Discord",
-                      "value": "discord"
-                    },
-                    {
-                      "text": "Docker",
-                      "value": "docker"
-                    }
-                  ]
-                },
-                "type": "string",
-                "width": "half"
-              },
-              "name": "service",
-              "type": "string"
-            },
             {
               "field": "url",
               "meta": {
@@ -6104,6 +6056,118 @@
                 "width": "half"
               },
               "name": "url",
+              "type": "string"
+            },
+            {
+              "field": "service",
+              "meta": {
+                "display": "labels",
+                "display_options": {
+                  "choices": [
+                    {
+                      "icon": "facebook",
+                      "text": "Facebook",
+                      "value": "facebook"
+                    },
+                    {
+                      "icon": "instagram",
+                      "text": "Instagram",
+                      "value": "instagram"
+                    },
+                    {
+                      "icon": "linkedin",
+                      "text": "LinkedIn",
+                      "value": "linkedin"
+                    },
+                    {
+                      "icon": "twitter",
+                      "text": "X",
+                      "value": "x"
+                    },
+                    {
+                      "icon": "vimeo",
+                      "text": "Vimeo",
+                      "value": "vimeo"
+                    },
+                    {
+                      "icon": "youtube",
+                      "text": "YouTube",
+                      "value": "youtube"
+                    },
+                    {
+                      "icon": "github",
+                      "text": "GitHub",
+                      "value": "github"
+                    },
+                    {
+                      "icon": "discord",
+                      "text": "Discord",
+                      "value": "discord"
+                    },
+                    {
+                      "icon": "docker",
+                      "text": "Docker",
+                      "value": "docker"
+                    }
+                  ]
+                },
+                "field": "service",
+                "interface": "select-dropdown",
+                "note": "Social media platform name",
+                "options": {
+                  "choices": [
+                    {
+                      "icon": "facebook",
+                      "text": "Facebook",
+                      "value": "facebook"
+                    },
+                    {
+                      "icon": "instagram",
+                      "text": "Instagram",
+                      "value": "instagram"
+                    },
+                    {
+                      "icon": "linkedin",
+                      "text": "LinkedIn",
+                      "value": "linkedin"
+                    },
+                    {
+                      "icon": "twitter",
+                      "text": "X",
+                      "value": "x"
+                    },
+                    {
+                      "icon": "vimeo",
+                      "text": "Vimeo",
+                      "value": "vimeo"
+                    },
+                    {
+                      "icon": "youtube",
+                      "text": "YouTube",
+                      "value": "youtube"
+                    },
+                    {
+                      "icon": "github",
+                      "text": "GitHub",
+                      "value": "github"
+                    },
+                    {
+                      "icon": "discord",
+                      "text": "Discord",
+                      "value": "discord"
+                    },
+                    {
+                      "icon": "docker",
+                      "text": "Docker",
+                      "value": "docker"
+                    }
+                  ]
+                },
+                "required": null,
+                "type": "string",
+                "width": "half"
+              },
+              "name": "service",
               "type": "string"
             }
           ],
@@ -6141,14 +6205,14 @@
     },
     {
       "collection": "globals",
-      "field": "divider_social",
+      "field": "meta_divider_globals",
       "type": "alias",
       "meta": {
         "collection": "globals",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "divider_social",
+        "field": "meta_divider_globals",
         "group": null,
         "hidden": false,
         "interface": "presentation-divider",
@@ -6431,14 +6495,14 @@
     },
     {
       "collection": "globals",
-      "field": "notice-7-fv9g",
+      "field": "meta_notice_globals",
       "type": "alias",
       "meta": {
         "collection": "globals",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "notice-7-fv9g",
+        "field": "meta_notice_globals",
         "group": null,
         "hidden": false,
         "interface": "presentation-notice",
@@ -6461,14 +6525,14 @@
     },
     {
       "collection": "globals",
-      "field": "notice-lxmfvi",
+      "field": "meta_notice_security",
       "type": "alias",
       "meta": {
         "collection": "globals",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "notice-lxmfvi",
+        "field": "meta_notice_security",
         "group": "meta_credentials",
         "hidden": false,
         "interface": "presentation-notice",
@@ -6589,14 +6653,14 @@
     },
     {
       "collection": "globals",
-      "field": "header-ye0gsg",
+      "field": "meta_header_globals",
       "type": "alias",
       "meta": {
         "collection": "globals",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-ye0gsg",
+        "field": "meta_header_globals",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -6816,14 +6880,14 @@
     },
     {
       "collection": "navigation",
-      "field": "notice-7491js",
+      "field": "meta_notice_navigation",
       "type": "alias",
       "meta": {
         "collection": "navigation",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "notice-7491js",
+        "field": "meta_notice_navigation",
         "group": null,
         "hidden": false,
         "interface": "presentation-notice",
@@ -6846,14 +6910,14 @@
     },
     {
       "collection": "navigation",
-      "field": "header-uzluph",
+      "field": "meta_header_navigation",
       "type": "alias",
       "meta": {
         "collection": "navigation",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-uzluph",
+        "field": "meta_header_navigation",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -7927,16 +7991,16 @@
         "display": null,
         "display_options": null,
         "field": "title",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "input",
-        "note": "Page title (visible to visitors and used in SEO).",
+        "note": "The title of this page.",
         "options": {
           "placeholder": "About Us"
         },
         "readonly": false,
         "required": true,
-        "sort": 4,
+        "sort": 1,
         "special": null,
         "translations": null,
         "validation": null,
@@ -7974,7 +8038,7 @@
           "font": "monospace"
         },
         "field": "permalink",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "input",
         "note": "Unique URL for this page (start with `/`, can have multiple segments `/about/me`)).",
@@ -7985,14 +8049,14 @@
         },
         "readonly": false,
         "required": true,
-        "sort": 5,
+        "sort": 2,
         "special": null,
         "translations": null,
         "validation": {
           "_and": [
             {
               "permalink": {
-                "_regex": "^/[a-z0-9]+(?:-[a-z0-9]+)*(?:/[a-z0-9]+(?:-[a-z0-9]+)*)*$"
+                "_regex": "^/(?:[a-z0-9]+(?:-[a-z0-9]+)*(?:/[a-z0-9]+(?:-[a-z0-9]+)*)*)?$"
               }
             }
           ]
@@ -8009,7 +8073,7 @@
         "numeric_precision": null,
         "numeric_scale": null,
         "is_nullable": true,
-        "is_unique": false,
+        "is_unique": true,
         "is_indexed": false,
         "is_primary_key": false,
         "is_generated": false,
@@ -8031,7 +8095,7 @@
           "template": "{{collection}}"
         },
         "field": "blocks",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "list-m2a",
         "note": "Create and arrange different content blocks (like text, images, or videos) to build your page.",
@@ -8040,7 +8104,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 11,
+        "sort": 7,
         "special": [
           "m2a"
         ],
@@ -8048,51 +8112,6 @@
         "validation": null,
         "validation_message": null,
         "width": "full"
-      }
-    },
-    {
-      "collection": "pages",
-      "field": "description",
-      "type": "text",
-      "meta": {
-        "collection": "pages",
-        "conditions": null,
-        "display": null,
-        "display_options": null,
-        "field": "description",
-        "group": null,
-        "hidden": false,
-        "interface": "input-multiline",
-        "note": "Short summary of what's on the page. Also used for SEO meta description.",
-        "options": {
-          "placeholder": "Learn about XYZ Company's mission, values, and 20-year history of innovation in sustainable technology. Meet our diverse team of experts."
-        },
-        "readonly": false,
-        "required": false,
-        "sort": 13,
-        "special": null,
-        "translations": null,
-        "validation": null,
-        "validation_message": null,
-        "width": "full"
-      },
-      "schema": {
-        "name": "description",
-        "table": "pages",
-        "data_type": "text",
-        "default_value": null,
-        "max_length": null,
-        "numeric_precision": null,
-        "numeric_scale": null,
-        "is_nullable": true,
-        "is_unique": false,
-        "is_indexed": false,
-        "is_primary_key": false,
-        "is_generated": false,
-        "generation_expression": null,
-        "has_auto_increment": false,
-        "foreign_key_table": null,
-        "foreign_key_column": null
       }
     },
     {
@@ -8106,25 +8125,19 @@
         "display_options": {
           "choices": [
             {
-              "background": "#E2E8F0",
-              "color": null,
-              "foreground": "#18222F",
+              "color": "#A2B5CD",
               "icon": "draft_orders",
               "text": "$t:draft",
               "value": "draft"
             },
             {
-              "background": "#FFA439",
-              "color": null,
-              "foreground": "#FFFFFF",
+              "color": "#FFA439",
               "icon": "rate_review",
               "text": "In Review",
               "value": "in_review"
             },
             {
-              "background": "#2ECDA7",
-              "color": null,
-              "foreground": "#FFFFFF",
+              "color": "#2ECDA7",
               "icon": "check",
               "text": "$t:published",
               "value": "published"
@@ -8132,14 +8145,14 @@
           ]
         },
         "field": "status",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "select-dropdown",
         "note": "Is this page published?",
         "options": {
           "choices": [
             {
-              "color": "#E2E8F0",
+              "color": "#A2B5CD",
               "icon": "draft_orders",
               "text": "$t:draft",
               "value": "draft"
@@ -8160,7 +8173,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 7,
+        "sort": 3,
         "special": null,
         "translations": null,
         "validation": null,
@@ -8196,7 +8209,7 @@
         "display": null,
         "display_options": null,
         "field": "meta_m2a_button",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "directus-labs-experimental-m2a-interface",
         "note": null,
@@ -8205,7 +8218,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 12,
+        "sort": 8,
         "special": [
           "alias",
           "no-data"
@@ -8218,15 +8231,15 @@
     },
     {
       "collection": "pages",
-      "field": "divider-mhnc6m",
+      "field": "meta_divider_content",
       "type": "alias",
       "meta": {
         "collection": "pages",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "divider-mhnc6m",
-        "group": null,
+        "field": "meta_divider_content",
+        "group": "meta_content",
         "hidden": false,
         "interface": "presentation-divider",
         "note": null,
@@ -8237,7 +8250,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 9,
+        "sort": 5,
         "special": [
           "alias",
           "no-data"
@@ -8278,7 +8291,7 @@
           "format": "short"
         },
         "field": "published_at",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "datetime",
         "note": "Publish now or schedule for later.",
@@ -8287,7 +8300,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 8,
+        "sort": 4,
         "special": null,
         "translations": null,
         "validation": null,
@@ -8315,22 +8328,20 @@
     },
     {
       "collection": "pages",
-      "field": "divider-hgvf0u",
+      "field": "meta_notice_pagebuilder",
       "type": "alias",
       "meta": {
         "collection": "pages",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "divider-hgvf0u",
-        "group": null,
+        "field": "meta_notice_pagebuilder",
+        "group": "meta_content",
         "hidden": false,
-        "interface": "presentation-divider",
+        "interface": "presentation-notice",
         "note": null,
         "options": {
-          "color": "#A2B5CD",
-          "icon": "calendar_today",
-          "inlineTitle": true
+          "text": "Build dynamic pages quickly using ready-made blocks. <a href=\"https://directus.io/docs/tutorials/getting-started/create-reusable-blocks-with-many-to-any-relationships?ref=simple_cms_notices\" target=\"_blank\">See our documentation to learn more about the Page Builder</a>."
         },
         "readonly": false,
         "required": false,
@@ -8347,44 +8358,14 @@
     },
     {
       "collection": "pages",
-      "field": "notice-fzxnav",
+      "field": "meta_header_pages",
       "type": "alias",
       "meta": {
         "collection": "pages",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "notice-fzxnav",
-        "group": null,
-        "hidden": false,
-        "interface": "presentation-notice",
-        "note": null,
-        "options": {
-          "text": "Build dynamic pages quickly using ready-made blocks. <a href=\"https://directus.io/docs/tutorials/getting-started/create-reusable-blocks-with-many-to-any-relationships?ref=simple_cms_notices\" target=\"_blank\">See our documentation to learn more about the Page Builder</a>."
-        },
-        "readonly": false,
-        "required": false,
-        "sort": 10,
-        "special": [
-          "alias",
-          "no-data"
-        ],
-        "translations": null,
-        "validation": null,
-        "validation_message": null,
-        "width": "full"
-      }
-    },
-    {
-      "collection": "pages",
-      "field": "header-1h739l",
-      "type": "alias",
-      "meta": {
-        "collection": "pages",
-        "conditions": null,
-        "display": null,
-        "display_options": null,
-        "field": "header-1h739l",
+        "field": "meta_header_pages",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -8404,7 +8385,161 @@
         "translations": null,
         "validation": null,
         "validation_message": null,
+        "width": "fill"
+      }
+    },
+    {
+      "collection": "pages",
+      "field": "meta_tabs",
+      "type": "alias",
+      "meta": {
+        "collection": "pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "meta_tabs",
+        "group": null,
+        "hidden": false,
+        "interface": "group-tabs",
+        "note": null,
+        "options": {
+          "fillWidth": true
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "Tabs"
+          }
+        ],
+        "validation": null,
+        "validation_message": null,
         "width": "full"
+      }
+    },
+    {
+      "collection": "pages",
+      "field": "meta_content",
+      "type": "alias",
+      "meta": {
+        "collection": "pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "meta_content",
+        "group": "meta_tabs",
+        "hidden": false,
+        "interface": "group-raw",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "Content"
+          }
+        ],
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "pages",
+      "field": "meta_seo",
+      "type": "alias",
+      "meta": {
+        "collection": "pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "meta_seo",
+        "group": "meta_tabs",
+        "hidden": false,
+        "interface": "group-raw",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "SEO"
+          }
+        ],
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "pages",
+      "field": "seo",
+      "type": "json",
+      "meta": {
+        "collection": "pages",
+        "conditions": null,
+        "display": "seo-display",
+        "display_options": {
+          "showSearchPreview": true
+        },
+        "field": "seo",
+        "group": "meta_seo",
+        "hidden": false,
+        "interface": "seo-interface",
+        "note": null,
+        "options": {
+          "showSearchControls": true,
+          "titleTemplate": "{{title}}"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "seo",
+        "table": "pages",
+        "data_type": "json",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
       }
     },
     {
@@ -8419,7 +8554,7 @@
           "format": true
         },
         "field": "content",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "input-rich-text-html",
         "note": "Rich text content of your blog post.",
@@ -8448,7 +8583,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 14,
+        "sort": 11,
         "special": null,
         "translations": null,
         "validation": null,
@@ -8529,7 +8664,7 @@
         "display": "image",
         "display_options": null,
         "field": "image",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "file-image",
         "note": "Featured image for this post. Used in cards linking to the post and in the post detail page.",
@@ -8539,7 +8674,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 12,
+        "sort": 9,
         "special": [
           "file"
         ],
@@ -8579,7 +8714,7 @@
           "font": "monospace"
         },
         "field": "slug",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "extension-wpslug",
         "note": "Unique URL for this post (e.g., `yoursite.com/posts/{{your-slug}}`)",
@@ -8590,12 +8725,12 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 5,
+        "sort": 2,
         "special": null,
         "translations": null,
         "validation": null,
         "validation_message": null,
-        "width": "full"
+        "width": "half"
       },
       "schema": {
         "name": "slug",
@@ -8670,25 +8805,19 @@
         "display_options": {
           "choices": [
             {
-              "background": "#E2E8F0",
-              "color": null,
-              "foreground": "#18222F",
+              "color": "#A2B5CD",
               "icon": "draft_orders",
               "text": "$t:draft",
               "value": "draft"
             },
             {
-              "background": "#FFA439",
-              "color": null,
-              "foreground": "#FFFFFF",
+              "color": "#FFA439",
               "icon": "rate_review",
               "text": "In Review",
               "value": "in_review"
             },
             {
-              "background": "#2ECDA7",
-              "color": null,
-              "foreground": "#FFFFFF",
+              "color": "#2ECDA7",
               "icon": "check",
               "text": "$t:published",
               "value": "published"
@@ -8696,14 +8825,14 @@
           ]
         },
         "field": "status",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "select-dropdown",
         "note": "Is this post published?",
         "options": {
           "choices": [
             {
-              "color": "#E2E8F0",
+              "color": "#A2B5CD",
               "icon": "draft_orders",
               "text": "$t:draft",
               "value": "draft"
@@ -8724,7 +8853,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 7,
+        "sort": 4,
         "special": null,
         "translations": null,
         "validation": null,
@@ -8760,7 +8889,7 @@
         "display": null,
         "display_options": null,
         "field": "title",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "input",
         "note": "Title of the blog post (used in page title and meta tags)",
@@ -8769,12 +8898,12 @@
         },
         "readonly": false,
         "required": true,
-        "sort": 4,
+        "sort": 1,
         "special": null,
         "translations": null,
         "validation": null,
         "validation_message": null,
-        "width": "full"
+        "width": "half"
       },
       "schema": {
         "name": "title",
@@ -8805,7 +8934,7 @@
         "display": null,
         "display_options": null,
         "field": "description",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "input-multiline",
         "note": "Short summary of the blog post to entice readers.",
@@ -8814,7 +8943,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 9,
+        "sort": 6,
         "special": null,
         "translations": null,
         "validation": null,
@@ -8852,7 +8981,7 @@
           "circle": true
         },
         "field": "author",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "select-dropdown-m2o",
         "note": "Select the team member who wrote this post",
@@ -8861,7 +8990,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 10,
+        "sort": 7,
         "special": [
           "m2o"
         ],
@@ -8919,7 +9048,7 @@
           "format": "short"
         },
         "field": "published_at",
-        "group": null,
+        "group": "meta_content",
         "hidden": false,
         "interface": "datetime",
         "note": "Publish now or schedule for later.",
@@ -8928,7 +9057,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 8,
+        "sort": 5,
         "special": null,
         "translations": null,
         "validation": null,
@@ -8956,15 +9085,15 @@
     },
     {
       "collection": "posts",
-      "field": "divider-cwxsuc",
+      "field": "meta_divider_info",
       "type": "alias",
       "meta": {
         "collection": "posts",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "divider-cwxsuc",
-        "group": null,
+        "field": "meta_divider_info",
+        "group": "meta_content",
         "hidden": false,
         "interface": "presentation-divider",
         "note": null,
@@ -8975,7 +9104,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 6,
+        "sort": 3,
         "special": [
           "alias",
           "no-data"
@@ -8988,15 +9117,15 @@
     },
     {
       "collection": "posts",
-      "field": "header-sh6gkg",
+      "field": "meta_header_content",
       "type": "alias",
       "meta": {
         "collection": "posts",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-sh6gkg",
-        "group": null,
+        "field": "meta_header_content",
+        "group": "meta_content",
         "hidden": false,
         "interface": "super-header",
         "note": null,
@@ -9019,7 +9148,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 13,
+        "sort": 10,
         "special": [
           "alias",
           "no-data"
@@ -9032,15 +9161,15 @@
     },
     {
       "collection": "posts",
-      "field": "header-gebh3-",
+      "field": "meta_header_image",
       "type": "alias",
       "meta": {
         "collection": "posts",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-gebh3-",
-        "group": null,
+        "field": "meta_header_image",
+        "group": "meta_content",
         "hidden": false,
         "interface": "super-header",
         "note": null,
@@ -9063,7 +9192,7 @@
         },
         "readonly": false,
         "required": false,
-        "sort": 11,
+        "sort": 8,
         "special": [
           "alias",
           "no-data"
@@ -9076,14 +9205,14 @@
     },
     {
       "collection": "posts",
-      "field": "header-q1pj0o",
+      "field": "meta_header_posts",
       "type": "alias",
       "meta": {
         "collection": "posts",
         "conditions": null,
         "display": null,
         "display_options": null,
-        "field": "header-q1pj0o",
+        "field": "meta_header_posts",
         "group": null,
         "hidden": false,
         "interface": "super-header",
@@ -9104,7 +9233,162 @@
         "translations": null,
         "validation": null,
         "validation_message": null,
+        "width": "fill"
+      }
+    },
+    {
+      "collection": "posts",
+      "field": "meta_tabs",
+      "type": "alias",
+      "meta": {
+        "collection": "posts",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "meta_tabs",
+        "group": null,
+        "hidden": false,
+        "interface": "group-tabs",
+        "note": null,
+        "options": {
+          "fillWidth": true
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "Tabs"
+          }
+        ],
+        "validation": null,
+        "validation_message": null,
         "width": "full"
+      }
+    },
+    {
+      "collection": "posts",
+      "field": "meta_content",
+      "type": "alias",
+      "meta": {
+        "collection": "posts",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "meta_content",
+        "group": "meta_tabs",
+        "hidden": false,
+        "interface": "group-raw",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "Content"
+          }
+        ],
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "posts",
+      "field": "meta_seo",
+      "type": "alias",
+      "meta": {
+        "collection": "posts",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "meta_seo",
+        "group": "meta_tabs",
+        "hidden": false,
+        "interface": "group-raw",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "SEO"
+          }
+        ],
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "posts",
+      "field": "seo",
+      "type": "json",
+      "meta": {
+        "collection": "posts",
+        "conditions": null,
+        "display": "seo-display",
+        "display_options": {
+          "showSearchPreview": true
+        },
+        "field": "seo",
+        "group": "meta_seo",
+        "hidden": false,
+        "interface": "seo-interface",
+        "note": null,
+        "options": {
+          "descriptionTemplate": "{{description}}",
+          "showSearchControls": true,
+          "titleTemplate": "{{title}}"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "seo",
+        "table": "posts",
+        "data_type": "json",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
       }
     }
   ],

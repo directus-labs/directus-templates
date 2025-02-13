@@ -1,8 +1,8 @@
 {
   "id": 1,
-  "project_name": "Simple Website CMS",
+  "project_name": "CMS",
   "project_url": null,
-  "project_color": "#0757FF",
+  "project_color": "#6644FF",
   "project_logo": null,
   "public_foreground": null,
   "public_background": null,
@@ -31,7 +31,7 @@
       "transforms": []
     }
   ],
-  "custom_css": ".v-divider.inlineTitle.large.add-margin-top {\n    margin-top: 0 !important;\n}\n\nbody {\n    font-size: 16px !important;\n}\n\n.drawer-item-content {\n   --theme--form--row-gap: 18px;\n   --theme--form--column-gap: 32px;\n}\n\n.v-workspace-tile {\n    background: #fff !important;\n}",
+  "custom_css": ".v-divider.inlineTitle.large.add-margin-top {\n    margin-top: 0 !important;\n}\n\n#sidebar .v-divider.inlineTitle {\n    background-color: var(--theme--background) !important;\n    box-shadow: none !important;\n}\n\nbody {\n    font-size: 16px !important;\n}\n\n.drawer-item-content {\n   --theme--form--row-gap: 18px;\n   --theme--form--column-gap: 32px;\n}\n\n.v-workspace-tile {\n    background: var(--theme--background) !important;\n}",
   "storage_default_folder": null,
   "basemaps": null,
   "mapbox_key": null,
@@ -84,36 +84,36 @@
   "default_theme_light": "Directus Default",
   "theme_light_overrides": {
     "form": {
-      "rowGap": "18px",
+      "rowGap": "16px",
       "field": {
         "input": {
-          "height": "52px",
-          "background": "#ffffff"
+          "height": "48px",
+          "background": "var(--theme--background)"
         }
       }
     },
     "borderWidth": "1px",
     "navigation": {
       "modules": {
-        "background": "color-mix(in srgb, #000000, var(--theme--primary) 80%)",
+        "background": "color-mix(in srgb, var(--theme--foreground), var(--theme--primary) 80%)",
         "button": {
-          "foreground": "color-mix(in srgb, #FFFFFF, var(--theme--primary) 20%)",
+          "foreground": "color-mix(in srgb, var(--theme--background), var(--theme--primary) 20%)",
           "foregroundActive": "var(--theme--primary)",
-          "backgroundActive": "#FFFFFF"
+          "backgroundActive": "var(--theme--background)"
         }
       },
-      "background": "#fff",
+      "background": "var(--theme--background)",
       "project": {
         "background": "transparent"
       },
-      "borderColor": "color-mix(in srgb, #000000, var(--theme--background) 95%)",
+      "borderColor": "color-mix(in srgb, var(--theme--foreground), var(--theme--background) 95%)",
       "borderWidth": "1px",
       "list": {
         "divider": {
           "borderColor": "var(--theme--border-color-subdued)"
         },
-        "backgroundHover": "color-mix(in srgb, #FFFFFF, var(--theme--primary) 10%)",
-        "backgroundActive": "color-mix(in srgb, #FFFFFF, var(--theme--primary) 15%)"
+        "backgroundHover": "color-mix(in srgb, var(--theme--background), var(--theme--primary) 10%)",
+        "backgroundActive": "color-mix(in srgb, var(--theme--background), var(--theme--primary) 15%)"
       }
     },
     "fonts": {
@@ -127,14 +127,14 @@
     },
     "borderRadius": "6px",
     "sidebar": {
-      "background": "#FFFFFF",
+      "background": "var(--theme--background)",
       "borderWidth": "1px",
       "borderColor": "var(--theme--border-color-subdued)",
       "section": {
         "toggle": {
           "borderColor": "var(--theme--border-color-subdued)",
           "borderWidth": "1px",
-          "background": "#FFFFFF",
+          "background": "var(--theme--background)",
           "foreground": "var(--theme--foreground)",
           "foregroundHover": "var(--theme--foreground)",
           "icon": {
@@ -145,10 +145,73 @@
         }
       }
     },
-    "backgroundAccent": "color-mix(in srgb, #FFFFFF, var(--theme--primary) 10%)"
+    "backgroundAccent": "color-mix(in srgb, var(--theme--background), var(--theme--primary) 15%)"
   },
-  "default_theme_dark": null,
-  "theme_dark_overrides": {},
+  "default_theme_dark": "Directus Default",
+  "theme_dark_overrides": {
+    "form": {
+      "rowGap": "16px",
+      "field": {
+        "input": {
+          "height": "48px",
+          "background": "var(--theme--background)"
+        }
+      }
+    },
+    "borderWidth": "1px",
+    "navigation": {
+      "modules": {
+        "background": "color-mix(in srgb, var(--theme--background), var(--theme--primary) 80%)",
+        "button": {
+          "foreground": "color-mix(in srgb, var(--theme--foreground), var(--theme--primary) 20%)",
+          "foregroundActive": "#fff",
+          "backgroundActive": "color-mix(in srgb, var(--theme--primary), var(--theme--background) 40%)"
+        }
+      },
+      "background": "var(--theme--background)",
+      "project": {
+        "background": "transparent"
+      },
+      "borderColor": "color-mix(in srgb, var(--theme--foreground), var(--theme--background) 95%)",
+      "borderWidth": "1px",
+      "list": {
+        "divider": {
+          "borderColor": "var(--theme--border-color-subdued)"
+        },
+        "backgroundHover": "color-mix(in srgb, var(--theme--background), var(--theme--primary) 10%)",
+        "backgroundActive": "color-mix(in srgb, var(--theme--background), var(--theme--primary) 15%)"
+      }
+    },
+    "fonts": {
+      "display": {
+        "fontFamily": "\"Space Grotesk\", system-ui"
+      },
+      "sans": {
+        "fontFamily": "\"DM Sans\", system-ui"
+      }
+    },
+    "borderRadius": "6px",
+    "sidebar": {
+      "background": "var(--theme--background)",
+      "borderWidth": "1px",
+      "borderColor": "var(--theme--border-color-subdued)",
+      "section": {
+        "toggle": {
+          "borderColor": "var(--theme--border-color-subdued)",
+          "borderWidth": "1px",
+          "foreground": "var(--theme--foreground)",
+          "foregroundHover": "var(--theme--foreground)",
+          "icon": {
+            "foreground": "var(--theme--foreground)",
+            "foregroundHover": "var(--theme--foreground)",
+            "foregroundActive": "var(--theme--foreground-accent)"
+          },
+          "background": "var(--theme--background)"
+        }
+      }
+    },
+    "foregroundSubdued": "color-mix(in srgb, var(--theme--background), var(--theme--foreground) 60%)"
+  },
   "report_error_url": null,
   "report_bug_url": null,
   "report_feature_url": null,

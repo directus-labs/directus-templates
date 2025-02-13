@@ -11,10 +11,11 @@
         "page": 1,
         "fields": [
           "title",
-          "status",
           "permalink",
-          "blocks",
-          "published_at"
+          "status",
+          "seo",
+          "published_at",
+          "blocks"
         ],
         "sort": [
           "sort"
@@ -24,8 +25,11 @@
     "layout_options": {
       "tabular": {
         "widths": {
+          "title": 179.501708984375,
           "status": 149.625,
-          "title": 179.501708984375
+          "seo": 97.2890625,
+          "published_at": 192.8046875,
+          "blocks": 106.703125
         }
       }
     },
@@ -64,7 +68,8 @@
         "crop": true,
         "groupField": "status",
         "groupTitle": null,
-        "userField": "author"
+        "userField": "author",
+        "tagsField": null
       }
     },
     "refresh_interval": null,
@@ -115,9 +120,10 @@
         "fields": [
           "image",
           "title",
-          "status",
-          "published_at",
           "slug",
+          "status",
+          "seo",
+          "published_at",
           "author"
         ],
         "limit": 25
@@ -128,7 +134,9 @@
         "widths": {
           "image": 55.890625,
           "title": 375.66015625,
-          "status": 170.03125
+          "status": 141.15625,
+          "seo": 98.453125,
+          "published_at": 182.125
         }
       }
     },
