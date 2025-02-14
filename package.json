@@ -1,7 +1,0 @@
-{
-  "name": "@directus-labs/templates",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ]
-}

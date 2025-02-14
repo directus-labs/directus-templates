@@ -1,0 +1,89 @@
+{
+<<<<<<< HEAD
+  "name": "@directus-labs/templates",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+=======
+  "name": "directus-template-cli",
+  "version": "0.5.1",
+  "description": "CLI Utility for applying templates to a Directus instance.",
+  "author": "bryantgillespie @bryantgillespie",
+  "bin": {
+    "directus-template-cli": "./bin/run"
+  },
+  "homepage": "https://github.com/directus-community/directus-template-cli",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": "directus-community/directus-template-cli",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "dependencies": {
+    "@directus/sdk": "^17.0.1",
+    "@oclif/core": "^3.18.1",
+    "@oclif/plugin-help": "^6.0.12",
+    "@oclif/plugin-plugins": "^4.1.22",
+    "bottleneck": "^2.19.5",
+    "defu": "^6.1.4",
+    "dotenv": "^16.4.1",
+    "formdata-node": "^6.0.3",
+    "giget": "^1.2.1",
+    "inquirer": "^8.2.5",
+    "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "@directus/types": "^12.0.1",
+    "@oclif/test": "^3.1.13",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.10",
+    "chai": "^5.0.3",
+    "eslint": "^8.56.0",
+    "eslint-config-oclif": "^5.0.0",
+    "eslint-config-oclif-typescript": "^3.0.41",
+    "mocha": "^10.2.0",
+    "oclif": "^4.4.2",
+    "shx": "^0.3.3",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "oclif": {
+    "bin": "directus-template-cli",
+    "dirname": "directus-template-cli",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {}
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "npm run lint",
+    "prepack": "npm run build && oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "bugs": "https://github.com/directus-community/directus-template-cli/issues",
+  "keywords": [
+    "directus",
+    "templates",
+    "headless cms",
+    "directus cms",
+    "directus cli"
+  ],
+  "types": "dist/index.d.ts"
+>>>>>>> cli/main
+}

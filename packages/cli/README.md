@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# Directus Templates Monorepo
+=======
 # Directus Template CLI
 
 A streamlined CLI tool for managing Directus templates - making it easy to apply and extract template configurations across instances.
@@ -216,3 +219,4 @@ Note: If you encounter any issues with the CLI, providing these log files can gr
 ## License
 
 This tool is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+>>>>>>> cli/main
