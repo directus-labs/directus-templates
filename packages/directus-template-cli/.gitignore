@@ -1,0 +1,16 @@
+*-debug.log
+*-error.log
+/.nyc_output
+/dist
+/lib
+/package-lock.json
+/tmp
+node_modules
+oclif.manifest.json
+.DS_Store
+templates
+
+/downloads
+/**/downloads
+.env
+.directus-template-cli/logs

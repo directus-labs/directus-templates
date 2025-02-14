@@ -1,128 +1,109 @@
-<a href="https://directus.io" target="_blank">
+# Starter Templates with Directus Integration
 
-  <h1 align="center">Directus Templates</h1>
-</a>
+This repo provides a collection of starter templates for building web applications with Directus integration. Initially, this includes a **Simple CMS**, but upcoming templates will also include **Simple CRM** and **Simple eCommerce** solutions.
 
-<p align="center">Community maintained Directus instance templates to help you jump start your next project. Apply and extract templates with <a href="https://github.com/directus-community/directus-template-cli"target="_blank">directus-template-cli</a>.
-</p>
+Each template is designed to be:
 
-<p align="center">
-  <a href="#introduction"><strong>Introduction</strong></a> ·
-  <a href="#using-templates"><strong>🚧 Using Templates</strong></a> ·
-  <a href="#%EF%B8%8F-contributing"><strong>❤️ Contributing</strong></a>
-</p>
-<br/>
-<br />
-
-# 🚀 Introduction
-
-## What is a Directus "Template"?
-A Directus template is a starter kit or boilerplate for a Directus project. But it could be a full blown application – like [AgencyOS](https://github.com/directus-community/agency-os).
-
-Templates are extracted and applied using the [`directus-template-cli`](https://github.com/directus-community/directus-template-cli) command line utility.
-
-- They're examples of what you can build with Directus
-- They're starting points for your next client project
-- They're going to save you a boatload of time
-
-## What's Included in a Template?
-
-**Schema / Data Model**
-- Schema Snapshot
-- Collections
-- Fields
-- Relations
-
-**Users and Authentication**
-- Users
-- Roles
-- Permissions
-- Presets
-
-**Flows**
-- Flows
-- Operations
-
-**Dashboards**
-- Dashboards
-- Panels
-
-**Assets**
-- Folders
-- Files
-- Actual Files for Assets
-
-**Sample Content / Data**
-- Translations
-- Content
+- **Reusable**: Modular codebases that can be easily extended.
+- **Framework-Specific**: Tailored implementations for popular frameworks like Next.js, Nuxt.js, Svelte, and Astro.
+- **Scalable**: Suitable for small to medium projects and scalable to larger applications.
 
 ---
 
+## **Current and Upcoming Templates**
 
-# **🚧 Using Templates**
+| Template             | Status         | Description                                  |
+| -------------------- | -------------- | -------------------------------------------- |
+| **Simple CMS**       | 🚧 In Progress | A starter CMS template for managing content. |
+| **Simple CRM**       | 🕒 Upcoming    | A CRM template for managing customer data.   |
+| **Simple eCommerce** | 🕒 Upcoming    | A template for building eCommerce solutions. |
 
-To load or use templates you need a Directus instance. Here's a few ways to go about that.
+---
 
-### 1a - Register for a Directus Cloud account
+## **Getting Started**
 
-https://directus.cloud/register
+### **Using Directus with a Cloud Instance (Recommended)**
 
-This is the easy button. You don’t have to mess with Docker or working out how to deploy a Directus instance at AWS,
-Digital Ocean, or similar hosts. A couple of clicks and in less than 2 minutes you’ll have a ready to go Directus
-project.
+1. **Create a New Project**:
 
-OR
+   - Visit [Directus Cloud](https://directus.io/cloud/) and create a new project.
+   - During the setup process, be sure to select the appropriate template for your project (**Simple CMS**, **Simple CRM**, or **Simple eCommerce**).
+   - Once started, it will take around 90 seconds for the Cloud Project to be created.
+   - You will receive an email with your project URL, email, and password for logging in.
+   - If you used GitHub to create your account, this will be your GitHub email.
 
-### 1b - Self Host a Directus Instance
+2. **Access Your New Project**:
 
-If you're prefer to self-host Directus, we highly recommend you do so with Docker. We have several guides on the [Directus docs](https://docs.directus.io/self-hosted/docker-guide.html).
+   - Log in to your project using the URL provided in your email or from the Directus Cloud Dashboard.
 
-**Important Note**: We (the Directus team) cannot provide support for
-self-hosted instances WITHOUT an Enterprise Self-Hosted license or formal support agreement.
-[Learn more and contact our team for details on Enterprise Self-Hosted](https://directus.io/pricing/self-hosted).
+3. **Select a Template**:
+   - Navigate to the folder for the framework you want to use in this repo.
+   - Follow the instructions in that template's README to set up your application and connect it to your cloud instance.
 
+---
 
-[PostgreSQL](https://www.postgresql.org/) is the **tested and preferred** database vendor for templates.
+### **Using Directus Locally**
 
+For local development, follow these steps:
 
-### 2 **- Generate a static token for the admin user**
+1. **Install Docker**:
 
-You need the static token to seed the project.
+   - Ensure Docker is installed and running on your machine: [Download Docker](https://www.docker.com/products/docker-desktop).
 
-1. Go to the User Directory
-2. Choose the Administrative User
-3. Scroll down to the Token field
-4. Generate token and copy it
-5. Save the user (do NOT forget to save because you’ll get an error that shows Invalid token!)
+2. **Clone the Template You Want**:
 
-### 3 **- Apply the Template**
+   - Select the template folder for your chosen framework (e.g., `simple-cms`) and clone it:
+     ```bash
+     git clone https://github.com/your-org/starters.git simple-cms
+     cd simple-cms
+     ```
 
-Open your terminal, run the following command, and simply follow the prompts.
+3. **Navigate to the `directus/` Folder**:
 
-`npx directus-template-cli@latest apply`
+   - Inside your cloned template folder, navigate to the `directus/` folder:
+     ```bash
+     cd directus
+     ```
 
-You can load apply templates from three sources.
+4. **Start Directus**:
 
-- Official Templates (maintained in this repo)
-- Local directory (files on your local computer)
-- GitHub repository (public only)
+   - Run Docker Compose to start the Directus instance:
 
-You can learn more about the
-[Directus Template CLI tool here](https://github.com/directus-community/directus-template-cli).
+     ```bash
+     docker-compose up -d
+     ```
 
-_Note_: It can take a
-few minutes for the template script to run if you’re using a remotely hosted Directus instance.
+   - This will start Directus on [http://localhost:8055](http://localhost:8055). Use the following credentials to log in:
+     - **Admin Email**: `admin@example.com`
+     - **Admin Password**: `d1r3ctu5`
 
-# ❤️ Contributing
+5. **Apply a Template**:
 
-This is community driven project so we'd love to have your contributions.
+   - Use the [Directus Template CLI](https://github.com/directus-labs/directus-template-cli) to apply a pre-configured template for your project. Follow these steps:
 
-You can extract your own templates using:
+     1. \*\*Generate a static token for the admin user:
 
-`npx directus-template-cli@latest extract`
+        - Go to the **Users Directory**
+        - Choose the Administrative User
+        - Scroll down to the **Token** field and generate a static token.
+        - Copy the token and save it. **Do not forget to save the user**, or you will encounter an "Invalid token" error.
 
-Here's how you can contribute:
-- [Make a pull request](https://github.com/directus-community/directus-templates/pulls) to add your own template.
+     2. **Run the Template CLI Tool**:
 
-## 🙏 Thanks To
-Big shout out to [Alex van der Valk (AVDV)](https://github.com/alexvdvalk) for his contributions to this project.
+        - Open your terminal, run the following command, and follow the prompts:
+          ```bash
+          npx directus-template-cli@latest apply
+          ```
+
+     3. **Follow the Prompts**:
+
+        - Choose `Community templates`
+        - Select the template from the list to apply (**Simple Website CMS**, **Simple CRM**, or **Simple eCommerce**)
+        - Fill in your Directus URL
+          ```bash
+          http://localhost:8055
+          ```
+        - Select `Directus Access Token`
+        - Fill in the token you saved from Step 1
+
+---
