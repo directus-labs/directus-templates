@@ -3,6 +3,10 @@ name: manual release
 on:
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: packages/cli
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -25,7 +29,7 @@ jobs:
       - uses: notiz-dev/github-action-json-property@2192e246737701f108a4571462b76c75e7376216
         id: packageVersion
         with:
-          path: 'package.json'
+          path: 'packages/cli/package.json'
           prop_path: 'version'
       - name: Create Github Release
         uses: actions/create-release@v1
