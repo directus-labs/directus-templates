@@ -1,0 +1,32 @@
+# Node.js
+node_modules/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+*.log
+
+# Next.js build output
+.next/
+out/
+
+# Environment variables
+.env
+.env.*.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor Configs
+.idea/
+.vscode/
+
+# Test Coverage
+coverage/
+
+# Tailwind CSS Cache
+.stylelintcache
+
+certificates
