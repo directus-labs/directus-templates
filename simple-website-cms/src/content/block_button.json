@@ -1,5 +1,16 @@
 [
   {
+    "id": "9f5eacab-a8ca-43f4-9830-22009d68cbe5",
+    "sort": 1,
+    "type": "page",
+    "page": "9821199f-4b05-49fb-8407-fbfe9b866ef0",
+    "post": null,
+    "label": "Get A Demo",
+    "variant": "default",
+    "button_group": "c9fdc9d1-4c94-4288-bfc9-208c930211f8",
+    "url": null
+  },
+  {
     "id": "3d583c03-4909-4001-aad2-cd7af6ec53af",
     "sort": 1,
     "type": "pages",
@@ -22,14 +33,58 @@
     "url": null
   },
   {
-    "id": "47ddfe4e-721a-483f-a09b-4c10fe0cec1a",
-    "sort": null,
-    "type": "pages",
-    "page": null,
+    "id": "8259a95e-c996-4880-9d6b-9d0d66848c67",
+    "sort": 1,
+    "type": "page",
+    "page": "9821199f-4b05-49fb-8407-fbfe9b866ef0",
     "post": null,
-    "label": "Learn More",
-    "variant": "solid",
-    "button_group": "aed01afb-490d-42d3-bbf4-cf64081494b9",
+    "label": "Get A Demo",
+    "variant": "default",
+    "button_group": "c26cade8-622c-4ad6-8f2a-b8d894fc2734",
+    "url": null
+  },
+  {
+    "id": "bfab2064-5de2-4e8a-90f1-c4f00d21577f",
+    "sort": 1,
+    "type": "page",
+    "page": "9821199f-4b05-49fb-8407-fbfe9b866ef0",
+    "post": null,
+    "label": "Get A Demo",
+    "variant": "default",
+    "button_group": "dc1f1b1c-87e4-49b6-bfa0-9cb32fae53a2",
+    "url": null
+  },
+  {
+    "id": "91bf487e-7fb8-4b80-ab35-d46c73d21464",
+    "sort": 1,
+    "type": "page",
+    "page": "9821199f-4b05-49fb-8407-fbfe9b866ef0",
+    "post": null,
+    "label": "Get A Demo",
+    "variant": "default",
+    "button_group": "00024c32-7123-4342-8350-44d09ca6827a",
+    "url": null
+  },
+  {
+    "id": "132ee173-ee97-42ca-be68-f368b763b69f",
+    "sort": 1,
+    "type": "page",
+    "page": "9821199f-4b05-49fb-8407-fbfe9b866ef0",
+    "post": null,
+    "label": "Get A Demo",
+    "variant": "default",
+    "button_group": "0effa842-b581-4743-8dbc-06b3a9c2504f",
+    "url": null
+  },
+  {
+    "id": "899acdeb-3ecd-4a85-bd5e-9b4ca47ee3ce",
+    "sort": 1,
+    "type": "page",
+    "page": "9821199f-4b05-49fb-8407-fbfe9b866ef0",
+    "post": null,
+    "label": "Get A Demo",
+    "variant": "default",
+    "button_group": "8b7b84a1-07e5-4bb9-a00e-7dc310a068f6",
     "url": null
   },
   {
@@ -55,7 +110,40 @@
     "url": "/get-a-demo"
   },
   {
+    "id": "47ddfe4e-721a-483f-a09b-4c10fe0cec1a",
+    "sort": null,
+    "type": "pages",
+    "page": null,
+    "post": null,
+    "label": "Learn More",
+    "variant": "solid",
+    "button_group": "aed01afb-490d-42d3-bbf4-cf64081494b9",
+    "url": null
+  },
+  {
     "id": "dda7d91c-b449-4ab3-9d9d-84d4e8c09caf",
+    "sort": null,
+    "type": "url",
+    "page": null,
+    "post": null,
+    "label": "Get Started",
+    "variant": "default",
+    "button_group": null,
+    "url": "/your-stripe-checkout-link"
+  },
+  {
+    "id": "8f540697-9056-4569-b9ea-c612c4f03eb0",
+    "sort": null,
+    "type": "url",
+    "page": null,
+    "post": null,
+    "label": "Talk to Sales",
+    "variant": "solid",
+    "button_group": null,
+    "url": "/get-a-demo"
+  },
+  {
+    "id": "a61575d0-2028-432f-b76a-1a851526833d",
     "sort": null,
     "type": "url",
     "page": null,

@@ -28,7 +28,7 @@
     "published_at": "2024-09-01T16:00:00.000Z",
     "seo": {
       "title": "Why Steampunk Rabbits Are The Future of Work",
-      "meta_description": "This post discusses how steampunk rabbits could be the future of work, highlighting their efficiency, multi-talented nature, and ability to bring charm to the workplace."
+      "meta_description": null
     }
   },
   {
@@ -92,7 +92,8 @@
     "published_at": null,
     "seo": {
       "title": "The Perks of Going Headless: Why You Should Consider a Headless CMS",
-      "meta_description": "Discover why a headless CMS might be the right choice for your business."
+      "meta_description": "Discover why a headless CMS might be the right choice for your business.",
+      "no_index": true
     }
   }
 ]

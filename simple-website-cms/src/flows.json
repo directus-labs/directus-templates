@@ -1,5 +1,27 @@
 [
   {
+    "id": "52fa6db4-a8ec-4bfc-9b36-d52f5a189620",
+    "name": "Utils -> Duplicate Block",
+    "icon": "file_copy",
+    "color": null,
+    "description": "Duplicates a specific page block",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "page_blocks"
+      ],
+      "requireSelection": false,
+      "location": "item",
+      "requireConfirmation": true
+    },
+    "operation": "0255b0b8-3817-402f-a577-0d63328bada7",
+    "date_created": "2025-02-20T22:00:37.422Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "operations": null
+  },
+  {
     "id": "5429ccb0-7e97-4ef5-9d65-2bbcf964f9a6",
     "name": "Utils -> Render Template",
     "icon": "picture_in_picture",

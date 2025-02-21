@@ -326,21 +326,6 @@
     }
   },
   {
-    "id": "06ba4775-6842-4bd9-8688-c6e362a4e74a",
-    "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
-    "meta": {
-      "enabled": true,
-      "id": "06ba4775-6842-4bd9-8688-c6e362a4e74a",
-      "folder": "seo-display",
-      "source": "registry",
-      "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703"
-    },
-    "schema": {
-      "name": "seo-display",
-      "type": "display"
-    }
-  },
-  {
     "id": "0fe9b997-3aac-4fbf-8d36-fea91ddb883f",
     "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5",
     "meta": {
@@ -352,21 +337,6 @@
     },
     "schema": {
       "name": "image-uuid-interface",
-      "type": "interface"
-    }
-  },
-  {
-    "id": "2c3ce19c-0ad6-422e-af42-fe2858b84eac",
-    "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
-    "meta": {
-      "enabled": true,
-      "id": "2c3ce19c-0ad6-422e-af42-fe2858b84eac",
-      "folder": "seo-interface",
-      "source": "registry",
-      "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703"
-    },
-    "schema": {
-      "name": "seo-interface",
       "type": "interface"
     }
   },
@@ -383,6 +353,36 @@
     "schema": {
       "name": "radio-cards-interface",
       "type": "interface"
+    }
+  },
+  {
+    "id": "6afb0edf-fb8f-4a70-9616-8f3fc02409e3",
+    "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
+    "meta": {
+      "enabled": true,
+      "id": "6afb0edf-fb8f-4a70-9616-8f3fc02409e3",
+      "folder": "seo-interface",
+      "source": "registry",
+      "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703"
+    },
+    "schema": {
+      "name": "seo-interface",
+      "type": "interface"
+    }
+  },
+  {
+    "id": "7feb4341-c83c-4336-a273-78085baf202f",
+    "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
+    "meta": {
+      "enabled": true,
+      "id": "7feb4341-c83c-4336-a273-78085baf202f",
+      "folder": "seo-display",
+      "source": "registry",
+      "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703"
+    },
+    "schema": {
+      "name": "seo-display",
+      "type": "display"
     }
   },
   {
