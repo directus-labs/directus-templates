@@ -1190,7 +1190,7 @@
         },
         "geometryType": "Point"
       },
-      "display": null,
+      "display": "raw",
       "display_options": null,
       "readonly": false,
       "hidden": false,
@@ -2488,7 +2488,7 @@
       "special": null,
       "interface": "input",
       "options": null,
-      "display": null,
+      "display": "raw",
       "display_options": null,
       "readonly": false,
       "hidden": false,
@@ -6031,7 +6031,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": true,
-      "sort": 7,
+      "sort": 3,
       "width": "full",
       "translations": null,
       "note": "The id of the page that this block belongs to.",
@@ -6076,7 +6076,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": true,
-      "sort": 8,
+      "sort": 4,
       "width": "full",
       "translations": null,
       "note": "The data for the block.",
@@ -6117,11 +6117,15 @@
       "special": null,
       "interface": null,
       "options": null,
-      "display": null,
-      "display_options": null,
+      "display": "labels",
+      "display_options": {
+        "format": true,
+        "color": "#18222F",
+        "border": true
+      },
       "readonly": false,
       "hidden": true,
-      "sort": 9,
+      "sort": 5,
       "width": "full",
       "translations": null,
       "note": "The collection (type of block).",
@@ -6168,7 +6172,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 10,
+      "sort": 7,
       "width": "half",
       "translations": null,
       "note": "Temporarily hide this block on the website without having to remove it from your page.",
@@ -6226,7 +6230,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 11,
+      "sort": 8,
       "width": "half",
       "translations": null,
       "note": "Background color for the block to create contrast. Does not control dark or light mode for the entire site.",
@@ -7236,7 +7240,7 @@
       "options": {
         "titleTemplate": "{{title}}",
         "descriptionTemplate": "{{description}}",
-        "showSearchControls": true
+        "additionalFields": null
       },
       "display": "seo-display",
       "display_options": {
@@ -7653,38 +7657,6 @@
     }
   },
   {
-    "collection": "pages",
-    "field": "blocks",
-    "type": "alias",
-    "schema": null,
-    "meta": {
-      "collection": "pages",
-      "field": "blocks",
-      "special": [
-        "m2a"
-      ],
-      "interface": "list-m2a",
-      "options": {
-        "enableSelect": false
-      },
-      "display": "related-values",
-      "display_options": {
-        "template": "{{collection}}"
-      },
-      "readonly": false,
-      "hidden": false,
-      "sort": 7,
-      "width": "full",
-      "translations": null,
-      "note": "Create and arrange different content blocks (like text, images, or videos) to build your page.",
-      "conditions": null,
-      "required": false,
-      "group": "meta_content",
-      "validation": null,
-      "validation_message": null
-    }
-  },
-  {
     "collection": "forms",
     "field": "meta_fields",
     "type": "alias",
@@ -7750,6 +7722,39 @@
       "conditions": null,
       "required": false,
       "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "pages",
+    "field": "blocks",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "pages",
+      "field": "blocks",
+      "special": [
+        "m2a"
+      ],
+      "interface": "list-m2a",
+      "options": {
+        "enableSelect": false,
+        "prefix": null
+      },
+      "display": "related-values",
+      "display_options": {
+        "template": "{{collection}}"
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 7,
+      "width": "full",
+      "translations": null,
+      "note": "Create and arrange different content blocks (like text, images, or videos) to build your page.",
+      "conditions": null,
+      "required": false,
+      "group": "meta_content",
       "validation": null,
       "validation_message": null
     }
@@ -8658,7 +8663,7 @@
       "display_options": null,
       "readonly": false,
       "hidden": false,
-      "sort": 5,
+      "sort": 4,
       "width": "full",
       "translations": [
         {

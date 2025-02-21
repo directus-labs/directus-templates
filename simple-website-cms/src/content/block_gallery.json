@@ -19,6 +19,19 @@
     "items": []
   },
   {
+    "headline": "Check out some of our latest templates",
+    "id": "6a29344b-8c14-4a8f-89c4-27703311578f",
+    "tagline": "Template Gallery",
+    "items": [
+      "f4ce25bf-50d6-4417-9826-19b91ce064f1",
+      "d8b48f3e-2f8e-486d-a083-e14499b18bc5",
+      "636288ed-13b0-4195-a09d-016a2766b254",
+      "f0b47a8c-c818-4da4-8be7-bf7de43d54e3",
+      "7d36208a-6953-48a3-bd3b-72c4e96786b0",
+      "94f9e484-57fa-423c-8eb0-dd999009669f"
+    ]
+  },
+  {
     "headline": "Get started even faster",
     "id": "7b5e5649-40be-4f54-a2fb-b021a520645d",
     "tagline": "Directus Templates",

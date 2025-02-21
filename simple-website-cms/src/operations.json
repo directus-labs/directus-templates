@@ -1,5 +1,25 @@
 [
   {
+    "id": "0255b0b8-3817-402f-a577-0d63328bada7",
+    "name": "Get Collection",
+    "key": "get_collection",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "directus_collections",
+      "key": [
+        "{{$trigger.body.collection}}"
+      ],
+      "permissions": "$full"
+    },
+    "resolve": "c0f67e21-7332-4803-a1ae-f9a295b7e48e",
+    "reject": null,
+    "flow": "52fa6db4-a8ec-4bfc-9b36-d52f5a189620",
+    "date_created": "2025-02-20T22:10:11.714Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
     "id": "0beeeb1a-2338-4ab4-95f5-0757bf3e43be",
     "name": "Log Error",
     "key": "log_error",
@@ -239,6 +259,29 @@
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
+    "id": "c0f67e21-7332-4803-a1ae-f9a295b7e48e",
+    "name": "Get Page Block",
+    "key": "get_page_block",
+    "type": "item-read",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "collection": "{{$trigger.body.collection}}",
+      "key": [
+        "{{$trigger.body.keys[0]}}"
+      ],
+      "permissions": "$full",
+      "query": {
+        "fields": "{{get_collection.item_duplication_fields}}"
+      }
+    },
+    "resolve": "faffc005-c291-4be0-b0c8-38413b0a8446",
+    "reject": null,
+    "flow": "52fa6db4-a8ec-4bfc-9b36-d52f5a189620",
+    "date_created": "2025-02-20T22:10:11.730Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
     "id": "c846f644-e7c1-43c9-8bb7-81181de0cd60",
     "name": "Render Template",
     "key": "render",
@@ -345,6 +388,24 @@
     "reject": null,
     "flow": "5429ccb0-7e97-4ef5-9d65-2bbcf964f9a6",
     "date_created": "2024-09-25T13:31:35.265Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "faffc005-c291-4be0-b0c8-38413b0a8446",
+    "name": "Create Page Block",
+    "key": "create_page_block",
+    "type": "item-create",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "collection": "{{$trigger.body.collection}}",
+      "permissions": "$full",
+      "payload": "{{get_page_block}}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "52fa6db4-a8ec-4bfc-9b36-d52f5a189620",
+    "date_created": "2025-02-20T22:42:05.810Z",
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {

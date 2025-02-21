@@ -1686,7 +1686,8 @@
       "first_name",
       "last_name",
       "avatar",
-      "title"
+      "title",
+      "id"
     ],
     "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
   },
