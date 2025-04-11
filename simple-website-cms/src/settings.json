@@ -43,6 +43,11 @@
     },
     {
       "type": "module",
+      "id": "visual",
+      "enabled": true
+    },
+    {
+      "type": "module",
       "id": "users",
       "enabled": true
     },
@@ -258,5 +263,8 @@
     ],
     "triggerRate": 250,
     "commandPaletteEnabled": true
-  }
+  },
+  "visual_editor_urls": [
+    "http://localhost:3000?visual-editing=true"
+  ]
 }

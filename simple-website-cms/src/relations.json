@@ -505,7 +505,7 @@
       "foreign_key_table": "directus_files",
       "foreign_key_column": "id",
       "on_update": "NO ACTION",
-      "on_delete": "SET NULL"
+      "on_delete": "NO ACTION"
     },
     "meta": {
       "many_collection": "posts",

@@ -1,41 +1,5 @@
 [
   {
-    "id": "5310fedc-a6f6-4cda-a1c8-fbde86aecc3e",
-    "sort": 1,
-    "page": null,
-    "item": "6392a07f-124c-4ae7-a0af-0f228d75e442",
-    "collection": "block_hero",
-    "hide_block": false,
-    "background": "light"
-  },
-  {
-    "id": "b4d48d5a-0450-4e8c-8c5b-198e7063a10f",
-    "sort": 1,
-    "page": null,
-    "item": "d81ab264-b2be-4077-84e7-b1406e74d9c3",
-    "collection": "block_hero",
-    "hide_block": false,
-    "background": "light"
-  },
-  {
-    "id": "7fbc3a13-852d-4120-86ad-0b2c674e2407",
-    "sort": 1,
-    "page": "636dc283-e634-4d5d-aada-e6743db46036",
-    "item": "a588c925-f5d1-44d9-add9-173d9d9bc428",
-    "collection": "block_hero",
-    "hide_block": false,
-    "background": "light"
-  },
-  {
-    "id": "30afde11-bbc7-42a6-9a85-3a9149079427",
-    "sort": 1,
-    "page": null,
-    "item": "f04ad32a-0665-4a49-bb22-c4055d097854",
-    "collection": "block_hero",
-    "hide_block": false,
-    "background": "light"
-  },
-  {
     "id": "45227f61-5ff1-431c-8dee-1a50d369325f",
     "sort": 1,
     "page": "1ce02298-817a-46bc-ac92-6a6c10c20f88",
@@ -45,27 +9,9 @@
     "background": "light"
   },
   {
-    "id": "fedb7437-dbf5-4b19-ad99-ff2c8f8aece3",
+    "id": "2b757f25-9c2f-446c-980f-87fb138c6766",
     "sort": 1,
-    "page": null,
-    "item": "d8f1af11-252c-47eb-9d50-fc4b156a63f6",
-    "collection": "block_hero",
-    "hide_block": false,
-    "background": "light"
-  },
-  {
-    "id": "4af158f9-fcec-4c11-a7e2-675ef62b2616",
-    "sort": 1,
-    "page": null,
-    "item": "70909385-4dd4-4960-8c4f-26b7d242eb41",
-    "collection": "block_hero",
-    "hide_block": false,
-    "background": "light"
-  },
-  {
-    "id": "a0982134-428a-4fc5-b48b-9ef9f4f3183e",
-    "sort": 1,
-    "page": null,
+    "page": "636dc283-e634-4d5d-aada-e6743db46036",
     "item": "0e09d473-7f86-4e70-a199-e81e6c04c3c6",
     "collection": "block_hero",
     "hide_block": false,
@@ -108,15 +54,6 @@
     "background": "light"
   },
   {
-    "id": "25dba1ec-f943-41e2-9a5b-26de4655c826",
-    "sort": 2,
-    "page": null,
-    "item": "c9cb3076-1409-4b97-be55-62e7e3ed3c1d",
-    "collection": "block_richtext",
-    "hide_block": false,
-    "background": "light"
-  },
-  {
     "id": "2d9abe8f-a7ad-480d-8fc7-603c712e2f40",
     "sort": 2,
     "page": "636dc283-e634-4d5d-aada-e6743db46036",
@@ -135,24 +72,6 @@
     "background": "dark"
   },
   {
-    "id": "606089aa-82ca-4c0e-9f91-8a7510cd19ae",
-    "sort": 3,
-    "page": null,
-    "item": "6a29344b-8c14-4a8f-89c4-27703311578f",
-    "collection": "block_gallery",
-    "hide_block": false,
-    "background": "dark"
-  },
-  {
-    "id": "cd6ac66a-c362-4d38-a4f6-0347e67c47b3",
-    "sort": 4,
-    "page": null,
-    "item": "a15ef6f7-4f44-4705-820e-5fc76e9489f1",
-    "collection": "block_pricing",
-    "hide_block": false,
-    "background": "light"
-  },
-  {
     "id": "39d02b18-18d2-4c29-9268-038f72ea05fe",
     "sort": 4,
     "page": "636dc283-e634-4d5d-aada-e6743db46036",
@@ -166,15 +85,6 @@
     "sort": 5,
     "page": "636dc283-e634-4d5d-aada-e6743db46036",
     "item": "1419faec-e263-431c-bd5f-a57f394c39f6",
-    "collection": "block_form",
-    "hide_block": false,
-    "background": "light"
-  },
-  {
-    "id": "34a6712a-95b5-4427-9955-1bff1cee0180",
-    "sort": 5,
-    "page": null,
-    "item": "388fb972-bb44-4eac-a2d6-89c99927a4cb",
     "collection": "block_form",
     "hide_block": false,
     "background": "light"
