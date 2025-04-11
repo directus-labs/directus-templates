@@ -12,7 +12,11 @@
     "published_at": null,
     "seo": {
       "title": "Essential Tips for Keeping Your Bunny Feeling Their Best",
-      "meta_description": "Rabbit grooming, encompassing brushing, nail trimming, ear cleaning, and dental care is vital for your bunny's health, appearance, and well-being."
+      "meta_description": "Rabbit grooming, encompassing brushing, nail trimming, ear cleaning, and dental care is vital for your bunny's health, appearance, and well-being.",
+      "og_image": "fe7c7e04-5aac-4370-8bbd-6fd578d26ea1.jpg",
+      "additional_fields": {
+        "super_advanced_seo_metadata": "this plugin rocks"
+      }
     }
   },
   {

@@ -16,21 +16,6 @@
     "sort": null
   },
   {
-    "id": "669231a6-e55f-4621-ae6a-4f73ba87ea28",
-    "title": "Enterprise Plan",
-    "description": "The best plan with all the best features",
-    "price": "$599 /month",
-    "badge": null,
-    "features": [
-      "All of them",
-      "Yes all of them"
-    ],
-    "button": "8f540697-9056-4569-b9ea-c612c4f03eb0",
-    "pricing": "a15ef6f7-4f44-4705-820e-5fc76e9489f1",
-    "is_highlighted": true,
-    "sort": null
-  },
-  {
     "id": "83972d2a-742e-4a6c-8698-563d01dde54d",
     "title": "Enterprise Plan",
     "description": "The best plan with all the best features",
@@ -43,22 +28,6 @@
     "button": "efb97ae9-d95e-4f9d-bf00-9df9966c65ec",
     "pricing": "48cf2543-15e0-454f-9b31-cbf3c2406712",
     "is_highlighted": true,
-    "sort": null
-  },
-  {
-    "id": "e0c23526-eb4e-44b7-8267-2c451b34dac6",
-    "title": "Starter Plan",
-    "description": "Perfect for your small busines",
-    "price": "$199 /month",
-    "badge": "Most Popular",
-    "features": [
-      "One seat",
-      "Unlimited",
-      "Lifetime access"
-    ],
-    "button": "a61575d0-2028-432f-b76a-1a851526833d",
-    "pricing": "a15ef6f7-4f44-4705-820e-5fc76e9489f1",
-    "is_highlighted": false,
     "sort": null
   }
 ]

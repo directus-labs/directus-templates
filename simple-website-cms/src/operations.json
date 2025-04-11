@@ -89,6 +89,24 @@
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
+    "id": "4b46b1e9-1ca0-47c3-86a8-68826136664e",
+    "name": "Get Post",
+    "key": "get_post",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 19,
+    "options": {
+      "permissions": "$full",
+      "collection": "{{$trigger.body.collection}}",
+      "key": "{{$trigger.body.keys}}"
+    },
+    "resolve": "f6ae03f7-014d-43d1-8d69-cf122da302c0",
+    "reject": null,
+    "flow": "3172d021-0b0f-4d4d-bcca-c5c46eb8fadf",
+    "date_created": "2025-04-02T19:01:05.023Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
     "id": "599b80e4-7c74-4496-b243-da198c8613d9",
     "name": "Form",
     "key": "form",
@@ -175,6 +193,34 @@
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
+    "id": "823ee957-6d5a-412c-886d-74d18de73864",
+    "name": "Get Editor",
+    "key": "get_editor",
+    "type": "item-read",
+    "position_x": 38,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "directus_users",
+      "key": [
+        "{{$trigger.body.editor.key}}"
+      ],
+      "query": {
+        "fields": [
+          "id",
+          "first_name",
+          "last_name",
+          "email"
+        ]
+      }
+    },
+    "resolve": "dc181cb9-3853-41b9-98bf-6901472bc1af",
+    "reject": null,
+    "flow": "3172d021-0b0f-4d4d-bcca-c5c46eb8fadf",
+    "date_created": "2025-04-02T19:01:05.036Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
     "id": "8673740a-f7f8-44dd-9abd-5a714e0d6c74",
     "name": "Send Email",
     "key": "send_email",
@@ -215,6 +261,22 @@
     "reject": null,
     "flow": "5915dd55-fff8-4d47-b48c-a0e42e5033c1",
     "date_created": "2024-09-13T03:52:01.514Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "a16e81d1-4177-443e-a292-786a66faee8a",
+    "name": "Globals",
+    "key": "globals",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "flow": "69e87d0b-df14-4779-bdc8-abc05f2f1e97"
+    },
+    "resolve": "823ee957-6d5a-412c-886d-74d18de73864",
+    "reject": null,
+    "flow": "3172d021-0b0f-4d4d-bcca-c5c46eb8fadf",
+    "date_created": "2025-04-02T19:28:58.499Z",
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
@@ -321,6 +383,34 @@
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
+    "id": "dc181cb9-3853-41b9-98bf-6901472bc1af",
+    "name": "Get User",
+    "key": "get_user",
+    "type": "item-read",
+    "position_x": 57,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "directus_users",
+      "key": [
+        "{{$accountability.user}}"
+      ],
+      "query": {
+        "fields": [
+          "id",
+          "first_name",
+          "last_name",
+          "email"
+        ]
+      }
+    },
+    "resolve": "4b46b1e9-1ca0-47c3-86a8-68826136664e",
+    "reject": null,
+    "flow": "3172d021-0b0f-4d4d-bcca-c5c46eb8fadf",
+    "date_created": "2025-04-02T19:12:25.011Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
     "id": "dff1a702-bcc0-4528-905e-309feb880111",
     "name": "Format",
     "key": "format",
@@ -388,6 +478,29 @@
     "reject": null,
     "flow": "5429ccb0-7e97-4ef5-9d65-2bbcf964f9a6",
     "date_created": "2024-09-25T13:31:35.265Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "f6ae03f7-014d-43d1-8d69-cf122da302c0",
+    "name": "Send Email",
+    "key": "send_email",
+    "type": "mail",
+    "position_x": 37,
+    "position_y": 19,
+    "options": {
+      "to": [
+        "{{get_editor.email}}"
+      ],
+      "subject": "🧐 Review Request: {{get_post.title}} from {{get_user.first_name}} {{ get_user.last_name}}",
+      "body": "Hi {{ get_editor.first_name }},\n\n{{ get_user.first_name }} {{ get_user.last_name}} has requested your review on the following content:\n\n[{{ $trigger.body.collection }} – **{{ get_post.title }}**]({{globals.directus_url}}/admin/content/{{$trigger.body.collection}}/{{$trigger.body.keys[0]}})\n\n**Comments:**\n{{ $trigger.body.comments }}\n\n---\n\nPlease review to schedule for publishing or request changes.",
+      "replyTo": [
+        "{{get_user.email}}"
+      ]
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "3172d021-0b0f-4d4d-bcca-c5c46eb8fadf",
+    "date_created": "2025-04-02T19:04:55.879Z",
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {

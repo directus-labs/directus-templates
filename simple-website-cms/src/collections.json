@@ -777,7 +777,7 @@
       "hidden": false,
       "singleton": false,
       "translations": null,
-      "archive_field": null,
+      "archive_field": "status",
       "archive_app_filter": true,
       "archive_value": "archived",
       "unarchive_value": "draft",
