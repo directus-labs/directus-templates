@@ -1,9 +1,29 @@
 [
   {
-    "id": "8ba4ed6f-d330-4675-ae46-119c533a0928",
-    "name": "Team Member",
-    "icon": "supervised_user_circle",
-    "description": "Role for internal team members and employees",
+    "id": "3a4464fb-2189-4710-a164-2503eed88ae7",
+    "name": "Writer",
+    "icon": "docs_add_on",
+    "description": "Role that can create new posts and edit their own posts.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "4516009c-8a04-49e4-b4ac-fd4883da6064",
+    "name": "Editor",
+    "icon": "nest_wake_on_approach",
+    "description": "Role that has the ability to edit and publish all content.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "d70780bd-f3ed-418b-98c2-f5354fd3fa68",
+    "name": "Content Admin",
+    "icon": "admin_panel_settings",
+    "description": "Role with full rights to edit all content. Useful for simple sites or those without publishing approval workflows.",
     "parent": null,
     "children": null,
     "policies": null,

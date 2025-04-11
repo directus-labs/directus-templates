@@ -1191,7 +1191,9 @@
         "geometryType": "Point"
       },
       "display": "raw",
-      "display_options": null,
+      "display_options": {
+        "background": "#A2B5CD"
+      },
       "readonly": false,
       "hidden": false,
       "sort": 4,
@@ -7614,6 +7616,38 @@
     }
   },
   {
+    "collection": "pages",
+    "field": "blocks",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "pages",
+      "field": "blocks",
+      "special": [
+        "m2a"
+      ],
+      "interface": "list-m2a",
+      "options": {
+        "prefix": null
+      },
+      "display": "related-values",
+      "display_options": {
+        "template": "{{collection}}"
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 7,
+      "width": "full",
+      "translations": null,
+      "note": "Create and arrange different content blocks (like text, images, or videos) to build your page.",
+      "conditions": null,
+      "required": false,
+      "group": "meta_content",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
     "collection": "forms",
     "field": "submissions",
     "type": "alias",
@@ -7722,39 +7756,6 @@
       "conditions": null,
       "required": false,
       "group": null,
-      "validation": null,
-      "validation_message": null
-    }
-  },
-  {
-    "collection": "pages",
-    "field": "blocks",
-    "type": "alias",
-    "schema": null,
-    "meta": {
-      "collection": "pages",
-      "field": "blocks",
-      "special": [
-        "m2a"
-      ],
-      "interface": "list-m2a",
-      "options": {
-        "enableSelect": false,
-        "prefix": null
-      },
-      "display": "related-values",
-      "display_options": {
-        "template": "{{collection}}"
-      },
-      "readonly": false,
-      "hidden": false,
-      "sort": 7,
-      "width": "full",
-      "translations": null,
-      "note": "Create and arrange different content blocks (like text, images, or videos) to build your page.",
-      "conditions": null,
-      "required": false,
-      "group": "meta_content",
       "validation": null,
       "validation_message": null
     }

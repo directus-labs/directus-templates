@@ -291,14 +291,14 @@
     "meta": {
       "enabled": true,
       "id": "c53d1496-ab3b-4a23-9b0c-9fb8ce85800f",
-      "folder": "e77fd62a-c9f5-4937-b153-cf10d8d13264",
+      "folder": "b5913ec2-e23c-47d7-ba58-d359334d75f4",
       "source": "registry",
       "bundle": null
     },
     "schema": {
-      "path": "/directus/node_modules/.directus/extensions/.registry/e77fd62a-c9f5-4937-b153-cf10d8d13264",
+      "path": "/directus/node_modules/.directus/extensions/.registry/b5913ec2-e23c-47d7-ba58-d359334d75f4",
       "name": "@directus-labs/command-palette-module",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "type": "module",
       "entrypoint": "dist/index.js",
       "host": "^11.0.0",

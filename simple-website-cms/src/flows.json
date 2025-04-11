@@ -1,5 +1,67 @@
 [
   {
+    "id": "3172d021-0b0f-4d4d-bcca-c5c46eb8fadf",
+    "name": "Request Review",
+    "icon": "approval_delegation",
+    "color": null,
+    "description": "Request a content review for publishing.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "posts"
+      ],
+      "requireConfirmation": true,
+      "confirmationDescription": "Request Review",
+      "fields": [
+        {
+          "field": "editor",
+          "type": "json",
+          "name": "Editor",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "note": "Who should review this for publishing?",
+            "width": "full",
+            "options": {
+              "selectedCollection": "directus_users",
+              "filter": {
+                "_and": [
+                  {
+                    "role": {
+                      "id": {
+                        "_in": [
+                          "ef049c8b-546b-4bbc-9cd7-b05d77e58b66",
+                          "d70780bd-f3ed-418b-98c2-f5354fd3fa68",
+                          "4516009c-8a04-49e4-b4ac-fd4883da6064"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "required": true
+          }
+        },
+        {
+          "field": "comments",
+          "type": "text",
+          "name": "Comments",
+          "meta": {
+            "interface": "input-multiline",
+            "note": "Do you have any helpful notes or comments for the editor?",
+            "width": "full"
+          }
+        }
+      ]
+    },
+    "operation": "a16e81d1-4177-443e-a292-786a66faee8a",
+    "date_created": "2025-04-02T18:54:05.423Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "operations": null
+  },
+  {
     "id": "52fa6db4-a8ec-4bfc-9b36-d52f5a189620",
     "name": "Utils -> Duplicate Block",
     "icon": "file_copy",
