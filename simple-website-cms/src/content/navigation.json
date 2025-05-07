@@ -3,6 +3,10 @@
     "id": "footer",
     "title": "Footer Navigation",
     "is_active": true,
+    "date_created": "2025-05-07T01:05:28.716Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "items": [
       "dc0870f8-e316-48b0-b34d-ca5c4394344c",
       "e096f25c-a549-4fe5-a284-17b0a347037a",
@@ -13,6 +17,10 @@
     "id": "main",
     "title": "Main Navigation",
     "is_active": true,
+    "date_created": "2025-05-07T01:05:28.716Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "items": [
       "192a490a-bbb9-4794-b82f-619a01463723",
       "0ca39155-c212-4b6e-8156-5a4322731c07"

@@ -9,6 +9,10 @@
     "type": "group",
     "url": null,
     "post": null,
+    "date_created": "2025-05-07T01:12:13.856Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "children": [
       "28fde01b-647b-4151-96e5-6d876d3f3329",
       "717b30fd-1bf6-46eb-a0cd-81923c17fcf6"
@@ -24,6 +28,10 @@
     "type": "page",
     "url": null,
     "post": null,
+    "date_created": "2025-05-07T01:12:13.856Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "children": []
   },
   {
@@ -36,6 +44,10 @@
     "type": "page",
     "url": null,
     "post": null,
+    "date_created": "2025-05-07T01:12:13.856Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "children": []
   },
   {
@@ -48,6 +60,10 @@
     "type": "page",
     "url": null,
     "post": null,
+    "date_created": "2025-05-07T01:12:13.856Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "children": []
   },
   {
@@ -60,6 +76,10 @@
     "type": "page",
     "url": "/posts",
     "post": null,
+    "date_created": "2025-05-07T01:12:13.856Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "children": []
   },
   {
@@ -72,6 +92,10 @@
     "type": "page",
     "url": null,
     "post": null,
+    "date_created": "2025-05-07T01:12:13.856Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "children": []
   },
   {
@@ -84,6 +108,10 @@
     "type": "page",
     "url": null,
     "post": null,
+    "date_created": "2025-05-07T01:12:13.856Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "children": []
   }
 ]

@@ -9,6 +9,10 @@
     "success_redirect_url": null,
     "is_active": true,
     "emails": null,
+    "date_created": "2025-05-07T01:00:24.531Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "fields": [
       "eef0eb77-ecab-4fba-9903-c46d6ad6d85b",
       "bbc7b1c6-304e-4ee1-9afa-c5cffda6af27",
@@ -36,6 +40,10 @@
         "message": "<h2>Newsletter Sign Up</h2>\n<table style=\"border-collapse: collapse; width: 100%; height: 122.227px;\" border=\"1\"><colgroup><col style=\"width: 46.0494%;\"><col style=\"width: 53.9369%;\"></colgroup>\n<tbody>\n<tr style=\"height: 61.1094px;\">\n<td style=\"height: 61.1094px;\"><strong>Name</strong></td>\n<td style=\"height: 61.1094px;\">{# first-name #}</td>\n</tr>\n<tr style=\"height: 61.1172px;\">\n<td style=\"height: 61.1172px;\"><strong>Email</strong></td>\n<td style=\"height: 61.1172px;\">{# email #}</td>\n</tr>\n</tbody>\n</table>"
       }
     ],
+    "date_created": "2025-05-07T01:00:24.531Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "fields": [
       "0f3deba1-9d6b-44a0-aa87-a9b38e834beb",
       "d37bc00f-bfb5-4496-85c3-70190b21b707"

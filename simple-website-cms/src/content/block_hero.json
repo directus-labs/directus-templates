@@ -6,6 +6,10 @@
     "button_group": "00024c32-7123-4342-8350-44d09ca6827a",
     "description": "Directus gives you a backend that is perfect for Headless CMS use cases but also everything beyond. Authentication, user permissions.",
     "tagline": "Backend + CMS",
-    "layout": null
+    "layout": "image_right",
+    "date_created": "2025-05-07T01:22:17.909Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:22:18.084Z",
+    "user_updated": null
   }
 ]

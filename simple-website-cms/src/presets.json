@@ -151,7 +151,7 @@
     "role": null,
     "collection": "directus_presets",
     "search": null,
-    "layout": null,
+    "layout": "tabular",
     "layout_query": {
       "tabular": {
         "page": 1,
@@ -249,6 +249,107 @@
       "tabular": {
         "widths": {
           "id": 114.37890625
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "redirects",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "url_from",
+          "url_to",
+          "response_code",
+          "note"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "url_from": 231.5078125,
+          "url_to": 188.86328125,
+          "response_code": 193.484375
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "ai_prompts",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "name",
+          "status",
+          "description",
+          "user_created"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "name": 212.38671875,
+          "status": 133.046875,
+          "description": 395.66015625
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": null,
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "form_fields",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "name",
+          "type",
+          "form",
+          "label",
+          "required",
+          "placeholder"
+        ],
+        "sort": [
+          "-form"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "type": 126.90234375,
+          "form": 115.7109375,
+          "label": 214.52734375
         }
       }
     },

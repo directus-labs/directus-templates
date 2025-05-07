@@ -8,7 +8,11 @@
     "label": "Get A Demo",
     "variant": "default",
     "button_group": null,
-    "url": null
+    "url": null,
+    "date_created": "2025-05-07T01:25:11.102Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:11.192Z",
+    "user_updated": null
   },
   {
     "id": "8259a95e-c996-4880-9d6b-9d0d66848c67",
@@ -19,7 +23,11 @@
     "label": "Get A Demo",
     "variant": "default",
     "button_group": null,
-    "url": null
+    "url": null,
+    "date_created": "2025-05-07T01:25:11.102Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:11.192Z",
+    "user_updated": null
   },
   {
     "id": "bfab2064-5de2-4e8a-90f1-c4f00d21577f",
@@ -30,7 +38,11 @@
     "label": "Get A Demo",
     "variant": "default",
     "button_group": null,
-    "url": null
+    "url": null,
+    "date_created": "2025-05-07T01:25:11.102Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:11.192Z",
+    "user_updated": null
   },
   {
     "id": "132ee173-ee97-42ca-be68-f368b763b69f",
@@ -41,7 +53,11 @@
     "label": "Get A Demo",
     "variant": "default",
     "button_group": null,
-    "url": null
+    "url": null,
+    "date_created": "2025-05-07T01:25:11.102Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:11.192Z",
+    "user_updated": null
   },
   {
     "id": "899acdeb-3ecd-4a85-bd5e-9b4ca47ee3ce",
@@ -52,7 +68,11 @@
     "label": "Get A Demo",
     "variant": "default",
     "button_group": null,
-    "url": null
+    "url": null,
+    "date_created": "2025-05-07T01:25:11.102Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:11.192Z",
+    "user_updated": null
   },
   {
     "id": "91bf487e-7fb8-4b80-ab35-d46c73d21464",
@@ -63,7 +83,11 @@
     "label": "Get A Demo",
     "variant": "default",
     "button_group": "00024c32-7123-4342-8350-44d09ca6827a",
-    "url": null
+    "url": null,
+    "date_created": "2025-05-07T01:25:11.102Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:11.192Z",
+    "user_updated": null
   },
   {
     "id": "5f902715-6e50-491b-b29c-b947a11a10f1",
@@ -74,7 +98,11 @@
     "label": "Get A Demo",
     "variant": "default",
     "button_group": null,
-    "url": null
+    "url": null,
+    "date_created": "2025-05-07T01:25:11.102Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:11.192Z",
+    "user_updated": null
   },
   {
     "id": "dda7d91c-b449-4ab3-9d9d-84d4e8c09caf",
@@ -85,7 +113,11 @@
     "label": "Get Started",
     "variant": "default",
     "button_group": null,
-    "url": "/your-stripe-checkout-link"
+    "url": "/your-stripe-checkout-link",
+    "date_created": "2025-05-07T01:25:11.102Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:11.192Z",
+    "user_updated": null
   },
   {
     "id": "efb97ae9-d95e-4f9d-bf00-9df9966c65ec",
@@ -96,7 +128,11 @@
     "label": "Talk to Sales",
     "variant": "solid",
     "button_group": null,
-    "url": "/get-a-demo"
+    "url": "/get-a-demo",
+    "date_created": "2025-05-07T01:25:11.102Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:11.192Z",
+    "user_updated": null
   },
   {
     "id": "8f540697-9056-4569-b9ea-c612c4f03eb0",
@@ -107,7 +143,11 @@
     "label": "Talk to Sales",
     "variant": "solid",
     "button_group": null,
-    "url": "/get-a-demo"
+    "url": "/get-a-demo",
+    "date_created": "2025-05-07T01:25:11.102Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:11.192Z",
+    "user_updated": null
   },
   {
     "id": "a61575d0-2028-432f-b76a-1a851526833d",
@@ -118,6 +158,10 @@
     "label": "Get Started",
     "variant": "default",
     "button_group": null,
-    "url": "/your-stripe-checkout-link"
+    "url": "/your-stripe-checkout-link",
+    "date_created": "2025-05-07T01:25:11.102Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:11.192Z",
+    "user_updated": null
   }
 ]

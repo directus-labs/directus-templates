@@ -4,27 +4,43 @@
     "headline": "Our promise to you",
     "id": "1134799b-3fd1-47ea-963f-13d8ac1b9e3a",
     "alignment": "center",
-    "tagline": "About Us"
+    "tagline": "About Us",
+    "date_created": "2025-05-07T01:22:45.368Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:22:45.579Z",
+    "user_updated": null
   },
   {
     "content": "<p>We were tired of solutions that were super friendly for content editors but were challenging for developers to work with. Conversely, what good is DX if the content editors don't enjoy using the CMS?</p>",
     "headline": "Make your entire team happy",
     "id": "129625db-433f-4104-9922-3b803ba4599d",
     "alignment": "center",
-    "tagline": "Why Us?"
+    "tagline": "Why Us?",
+    "date_created": "2025-05-07T01:22:45.368Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:22:45.579Z",
+    "user_updated": null
   },
   {
     "content": "<p>At our digital agency, we believe that standing out in the crowded digital landscape requires a unique approach. <a href=\"/team\" target=\"_self\">That's why we take a holistic approach</a> to digital marketing, focusing on building a strong brand identity and developing strategies that are tailored to our clients' specific needs.</p>\n<p><a class=\"btn btn-primary btn-md\" href=\"/contact-us\" target=\"_self\">Test Button</a></p>\n<h1>H1</h1>\n<blockquote>\n<p>Our team of experts brings a diverse range of skills and experiences to the table, including web design, content creation, SEO, social media marketing, and more. We're not just interested in getting quick results; we're invested in helping our clients build sustainable, long-term success.</p>\n</blockquote>\n<ol>\n<li>Number 1</li>\n<li>Number 2 (Who does number 2 work for)</li>\n<li>Number 3</li>\n</ol>\n<ul>\n<li>Item 1</li>\n<li>Item 2</li>\n<li>Item 3</li>\n</ul>\n<h2>H2</h2>\n<p>Some text</p>\n<hr>\n<h3>H3</h3>\n<p>Some text</p>\n<p>From the initial consultation to ongoing support, we're dedicated to providing personalized attention and exceptional service. At our digital agency, we're not just different from the rest - we're better.</p>",
     "headline": "We're different than all the rest.",
     "id": "1619b2fe-ce09-4a78-8c47-1428995c7c1c",
     "alignment": "center",
-    "tagline": null
+    "tagline": null,
+    "date_created": "2025-05-07T01:22:45.368Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:22:45.579Z",
+    "user_updated": null
   },
   {
     "content": "<p><strong>Last updated: [Date]</strong></p>\n<p>Welcome to [Your Website Name] (\"we\", \"us\", \"our\"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us at [Contact Information].</p>\n<p>By using our website, [Your Website URL], you consent to the collection and use of your personal information as described in this privacy policy.</p>\n<h2>Information We Collect</h2>\n<p>We collect personal information that you voluntarily provide to us when registering at the website, expressing an interest in obtaining information about us or our products and services, when participating in activities on the website, or otherwise contacting us.</p>\n<p>The personal information that we collect depends on the context of your interactions with us and the website, the choices you make, and the products and features you use. The personal information we collect can include the following:</p>\n<ul>\n<li>Name and Contact Data: We collect your first and last name, email address, postal address, phone number, and other similar contact data.</li>\n<li>Credentials: We collect passwords, password hints, and similar security information used for authentication and account access.</li>\n<li>Payment Data: We collect data necessary to process your payment if you make purchases, such as your payment instrument number (such as a credit card number), and the security code associated with your payment instrument.</li>\n</ul>\n<h2>How We Use Your Information</h2>\n<p>We use personal information collected via our website for a variety of business purposes described below:</p>\n<ul>\n<li>To provide and manage our services.</li>\n<li>To process your transactions.</li>\n<li>To send you administrative information.</li>\n<li>To respond to your inquiries and provide customer service.</li>\n<li>To send you marketing and promotional communications.</li>\n<li>To enforce our terms, conditions, and policies.</li>\n</ul>\n<h2>Sharing Your Information</h2>\n<p>We may share or disclose your personal information in the following situations:</p>\n<ul>\n<li>With Service Providers: We may share your personal information with third-party service providers to monitor and analyze the use of our service, to contact you.</li>\n<li>For Business Transfers: We may share or transfer your personal information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>\n<li>With Affiliates: We may share your information with our affiliates, in which case we will require those affiliates to honor this privacy policy.</li>\n</ul>\n<h2>Retention of Your Information</h2>\n<p>We will retain your personal information only for as long as is necessary for the purposes set out in this privacy policy, and to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our legal agreements and policies.</p>\n<h2>Security of Your Information</h2>\n<p>We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.</p>\n<h2>Your Privacy Rights</h2>\n<p>Depending on your location, you may have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; and (iv) if applicable, to data portability.</p>\n<h2>Updates to Our Privacy Policy</h2>\n<p>We may update our privacy policy from time to time. The updated version will be indicated by an updated \"Revised\" date and the updated version will be effective as soon as it is accessible. We encourage you to review this privacy policy frequently to be informed of how we are protecting your information.</p>",
     "headline": "We take privacy very seriously",
     "id": "a6275645-16b7-4994-8100-8c43ca07ab06",
     "alignment": "center",
-    "tagline": null
+    "tagline": null,
+    "date_created": "2025-05-07T01:22:45.368Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:22:45.579Z",
+    "user_updated": null
   }
 ]

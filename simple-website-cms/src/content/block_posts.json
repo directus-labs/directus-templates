@@ -4,6 +4,10 @@
     "headline": "All rabbits, all the time",
     "collection": "posts",
     "tagline": "Blog",
-    "limit": 6
+    "limit": 6,
+    "date_created": "2025-05-07T01:22:46.276Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:22:46.369Z",
+    "user_updated": null
   }
 ]

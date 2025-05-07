@@ -5,7 +5,8 @@
     "field": "0f3deba1-9d6b-44a0-aa87-a9b38e834beb",
     "value": "Steve",
     "sort": 1,
-    "file": null
+    "file": null,
+    "timestamp": null
   },
   {
     "id": "54e554ef-82e7-463e-8542-624352cdb5ca",
@@ -13,6 +14,7 @@
     "field": "a3d87bc0-f143-44ca-bea0-9eaf56b67783",
     "value": "steve@example.com",
     "sort": 2,
-    "file": null
+    "file": null,
+    "timestamp": null
   }
 ]

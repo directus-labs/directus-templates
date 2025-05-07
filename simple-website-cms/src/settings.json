@@ -31,8 +31,8 @@
       "transforms": []
     }
   ],
-  "custom_css": ".v-divider.inlineTitle.large.add-margin-top {\n    margin-top: 0 !important;\n}\n\n#sidebar .v-divider.inlineTitle {\n    background-color: var(--theme--background) !important;\n    box-shadow: none !important;\n}\n\nbody {\n    font-size: 16px !important;\n}\n\n.drawer-item-content {\n   --theme--form--row-gap: 18px;\n   --theme--form--column-gap: 32px;\n}\n\n.v-workspace-tile {\n    background: var(--theme--background) !important;\n}",
-  "storage_default_folder": null,
+  "custom_css": ".v-divider.inlineTitle.large.add-margin-top {\n    margin-top: 0 !important;\n}\n\n#sidebar .v-divider.inlineTitle {\n    background-color: var(--theme--background) !important;\n    box-shadow: none !important;\n}\n\nbody {\n    font-size: 16px !important;\n}\n\n.drawer-item-content {\n   --theme--form--row-gap: 16px;\n   --theme--form--column-gap: 32px;\n}\n\n#overlay-outlet {\n   --theme--form--row-gap: 16px;\n   --theme--form--column-gap: 32px;\n}\n    ",
+  "storage_default_folder": "ece7bab9-5433-4a63-b9f7-bde8b517d6d9",
   "basemaps": null,
   "mapbox_key": null,
   "module_bar": [
@@ -150,7 +150,8 @@
         }
       }
     },
-    "backgroundAccent": "color-mix(in srgb, var(--theme--background), var(--theme--primary) 15%)"
+    "backgroundAccent": "color-mix(in srgb, var(--theme--background), var(--theme--primary) 15%)",
+    "foregroundSubdued": "color-mix(in srgb, var(--theme--background), var(--theme--foreground) 60%)"
   },
   "default_theme_dark": "Directus Default",
   "theme_dark_overrides": {
@@ -265,6 +266,11 @@
     "commandPaletteEnabled": true
   },
   "visual_editor_urls": [
-    "http://localhost:3000?visual-editing=true"
+    {
+      "url": "http://localhost:3000?visual-editing=true"
+    },
+    {
+      "url": "http://localhost:3000/blog?visual-editing=true"
+    }
   ]
 }

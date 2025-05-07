@@ -102,14 +102,14 @@
     "meta": {
       "enabled": true,
       "id": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
-      "folder": "071941f2-2afa-4341-8f88-2a8198bb9f2e",
+      "folder": "056a27cf-3806-4bc6-b4bb-f7362851634d",
       "source": "registry",
       "bundle": null
     },
     "schema": {
-      "path": "/directus/node_modules/.directus/extensions/.registry/071941f2-2afa-4341-8f88-2a8198bb9f2e",
+      "path": "/directus/node_modules/.directus/extensions/.registry/056a27cf-3806-4bc6-b4bb-f7362851634d",
       "name": "@directus-labs/seo-plugin",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "bundle",
       "entrypoint": {
         "app": "dist/app.js",
@@ -341,6 +341,21 @@
     }
   },
   {
+    "id": "3584d176-9fd8-444e-b3d4-10889063356a",
+    "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
+    "meta": {
+      "enabled": true,
+      "id": "3584d176-9fd8-444e-b3d4-10889063356a",
+      "folder": "seo-interface",
+      "source": "registry",
+      "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703"
+    },
+    "schema": {
+      "name": "seo-interface",
+      "type": "interface"
+    }
+  },
+  {
     "id": "3b327243-154b-4040-8cc6-284bff1e61ff",
     "bundle": "af053cdb-242e-4142-a053-e3e23d7658e5",
     "meta": {
@@ -356,26 +371,11 @@
     }
   },
   {
-    "id": "6afb0edf-fb8f-4a70-9616-8f3fc02409e3",
+    "id": "c0638bf9-71c7-4cbd-85bf-2908d5e58663",
     "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
     "meta": {
       "enabled": true,
-      "id": "6afb0edf-fb8f-4a70-9616-8f3fc02409e3",
-      "folder": "seo-interface",
-      "source": "registry",
-      "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703"
-    },
-    "schema": {
-      "name": "seo-interface",
-      "type": "interface"
-    }
-  },
-  {
-    "id": "7feb4341-c83c-4336-a273-78085baf202f",
-    "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703",
-    "meta": {
-      "enabled": true,
-      "id": "7feb4341-c83c-4336-a273-78085baf202f",
+      "id": "c0638bf9-71c7-4cbd-85bf-2908d5e58663",
       "folder": "seo-display",
       "source": "registry",
       "bundle": "6d5e25af-4c3e-4c81-8a42-d7b6f66c9703"

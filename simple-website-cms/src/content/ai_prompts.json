@@ -1,0 +1,51 @@
+[
+  {
+    "id": "54560c6d-9a62-4642-8c38-9334889c9cb2",
+    "sort": null,
+    "name": "humanize-content",
+    "status": "published",
+    "description": "Make your content sound more like a human wrote it",
+    "messages": null,
+    "system_prompt": "You are an award-winning article humanizer and expert {{ audience }}. You work for {{company}}.\nYour writing style is world renowned for its rawness, simplicity, impact, and practicality.\nWrite in markdown only.",
+    "date_created": "2025-05-07T00:30:52.830Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null
+  },
+  {
+    "id": "19c62e5d-b566-42c8-a0ab-a145c0e67c9e",
+    "sort": null,
+    "name": "create-article",
+    "status": "published",
+    "description": "Create a new article using an LLM ghostwriter",
+    "messages": [
+      {
+        "role": "user",
+        "text": "# CONTEXT #\nI need to create an article for publication in our Directus CMS. The article will be about {{ topic }}.\n# OBJECTIVE #\nGenerate a complete article that effectively communicates {{ key information/message }} to our audience. The article should include an engaging headline, introduction, body content with appropriate subheadings, and conclusion.\n# STYLE #\nThe article should follow {{ publication name/brand }} style guidelines, with clear paragraph structure, appropriate use of subheadings, and concise sentences. Include relevant keywords for SEO without compromising readability.\n# TONE #\nThe tone should be {{ descriptive tone: informative/conversational/authoritative/etc. }} to effectively engage our target audience while maintaining our brand voice.\n# AUDIENCE #\nOur target readers are {{ audience description }}, who are interested in {{ specific interests/needs }}. They typically have {{ level of knowledge }} about this subject.\n# RESPONSE #\nA complete article with:\n\nAn attention-grabbing headline\nA compelling introduction that establishes the article's purpose\nWell-structured body content with relevant subheadings\nA clear conclusion or call-to-action\nSuggested meta description for SEO (under 160 characters)\n\nThe article should be approximately {{ word count }} words in length and ready for direct publication in our Directus CMS."
+      }
+    ],
+    "system_prompt": "You're a world-class content writer.",
+    "date_created": "2025-05-07T00:30:52.830Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null
+  },
+  {
+    "id": "3b5d8ca2-3418-406f-8f14-46010521a65d",
+    "sort": null,
+    "name": "product-description",
+    "status": "in_review",
+    "description": "Generate product descriptions that convert",
+    "messages": [
+      {
+        "role": "user",
+        "text": "# CONTEXT #\nI need to create a compelling product description for {{ product name }} to be published through our Directus CMS. This product is {{ brief product description }} in the {{ category/industry }} market.\n\n# OBJECTIVE #\nGenerate a complete product description that effectively communicates the key features, benefits, and unique selling points of {{ product name }}. The description should persuade potential customers to make a purchase while providing all necessary product information.\n\n# STYLE #\nThe description should be structured with clear sections highlighting features and benefits. Use bullet points for key specifications and include persuasive language that emphasizes value. Maintain our brand voice while incorporating SEO-friendly keywords.\n\n# TONE #\nThe tone should be {{ enthusiastic/professional/friendly/authoritative }} while remaining authentic and trustworthy. Avoid exaggeration while still highlighting what makes our product special.\n\n# AUDIENCE #\nOur target customers are {{ demographic details }} who {{ pain points/needs }}. They are looking for {{ specific benefits }} and value {{ important factors in purchase decision }}.\n\n# RESPONSE #\nA complete product description with:\n\nAn attention-grabbing headline or product name\nA concise overview paragraph (2-3 sentences)\nKey features and benefits in bullet form or short paragraphs\nTechnical specifications where relevant\nMaterials/ingredients information if applicable\nUsage instructions or suggestions\nA compelling call-to-action\n\nThe description should be approximately {{ word count }} words in length and optimized for both conversion and SEO, ready for implementation in our Directus CMS."
+      }
+    ],
+    "system_prompt": "You're an e-commerce expert. You write product descriptions that sell a ton of product.",
+    "date_created": "2025-05-07T00:30:52.830Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null
+  }
+]
