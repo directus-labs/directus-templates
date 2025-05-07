@@ -10,8 +10,13 @@
       "meta_description": "Directus is a great choice for your headless CMS. I'm also padding out the meta description here just to get a check on the SEO score.",
       "title": "Build your next website faster with our CMS Template",
       "no_index": false,
-      "no_follow": false
+      "no_follow": false,
+      "og_image": "ea743e20-e6e9-4be8-a949-3771cd182810.png"
     },
+    "date_created": "2025-05-07T00:49:42.958Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T02:42:03.377Z",
+    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
     "blocks": [
       "2b757f25-9c2f-446c-980f-87fb138c6766",
       "2d9abe8f-a7ad-480d-8fc7-603c712e2f40",
@@ -31,6 +36,10 @@
       "title": "Learn from our team | Blog",
       "meta_description": "All the tips and advice we've learned about working with headless CMS over the years."
     },
+    "date_created": "2025-05-07T00:49:42.958Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "blocks": [
       "45227f61-5ff1-431c-8dee-1a50d369325f",
       "2b017efb-ce7c-4b90-9f59-a39236ffe571"
@@ -47,6 +56,10 @@
       "no_index": false,
       "title": "Contact Us | Reach out to our team if you need help"
     },
+    "date_created": "2025-05-07T00:49:42.958Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "blocks": [
       "1f774f44-3e33-4b0f-93f4-fdd6df898438"
     ]
@@ -62,6 +75,10 @@
       "title": "About Us",
       "no_index": true
     },
+    "date_created": "2025-05-07T00:49:42.958Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T17:28:42.847Z",
+    "user_updated": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
     "blocks": [
       "0ff1d6c4-ff77-46c6-ad02-f9ae31484505"
     ]
@@ -77,6 +94,10 @@
       "title": "Privacy Policy for Simple Website CMS template",
       "meta_description": "Here's all the fine print for our website. You can read it all. There's nothing secret. It's just words to fill up the page. You'll want to change them later."
     },
+    "date_created": "2025-05-07T00:49:42.958Z",
+    "user_created": null,
+    "date_updated": null,
+    "user_updated": null,
     "blocks": [
       "bc826e30-4988-4035-98bd-5ffc4799e5fc"
     ]

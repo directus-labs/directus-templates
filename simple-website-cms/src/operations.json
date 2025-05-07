@@ -1,25 +1,5 @@
 [
   {
-    "id": "0255b0b8-3817-402f-a577-0d63328bada7",
-    "name": "Get Collection",
-    "key": "get_collection",
-    "type": "item-read",
-    "position_x": 19,
-    "position_y": 1,
-    "options": {
-      "collection": "directus_collections",
-      "key": [
-        "{{$trigger.body.collection}}"
-      ],
-      "permissions": "$full"
-    },
-    "resolve": "c0f67e21-7332-4803-a1ae-f9a295b7e48e",
-    "reject": null,
-    "flow": "52fa6db4-a8ec-4bfc-9b36-d52f5a189620",
-    "date_created": "2025-02-20T22:10:11.714Z",
-    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
-  },
-  {
     "id": "0beeeb1a-2338-4ab4-95f5-0757bf3e43be",
     "name": "Log Error",
     "key": "log_error",
@@ -52,6 +32,69 @@
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
+    "id": "1bb8a2e2-c98a-4a52-9224-78b4100ec087",
+    "name": "Duplication Fields",
+    "key": "duplication_fields",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "permissions": "$trigger",
+      "emitEvents": false,
+      "query": {
+        "fields": [
+          "item_duplication_fields"
+        ]
+      },
+      "collection": "directus_collections",
+      "key": [
+        "{{$trigger.body.collection}}"
+      ]
+    },
+    "resolve": "c02bfa07-a395-48df-a0c9-e5acace6da40",
+    "reject": null,
+    "flow": "a23110e1-700b-41b8-9f9e-ca0998b84a76",
+    "date_created": "2025-05-04T14:20:32.332Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "282f9a77-5519-460e-bb54-4dc6e30b059a",
+    "name": "Did Slug Change",
+    "key": "slug_changed",
+    "type": "condition",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "filter": {
+        "_or": [
+          {
+            "$trigger": {
+              "payload": {
+                "slug": {
+                  "_nnull": true
+                }
+              }
+            }
+          },
+          {
+            "$trigger": {
+              "payload": {
+                "permalink": {
+                  "_nnull": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "resolve": "f491233d-f942-4c8a-bc9d-9074fce45844",
+    "reject": "78f34568-e64e-457b-b680-59d9a40a1a22",
+    "flow": "c62ceaa5-bd09-4158-8329-98792debc5d5",
+    "date_created": "2025-05-04T17:21:59.268Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
     "id": "2adf33da-7fd7-42f7-a6fe-48409463d51b",
     "name": "Update",
     "key": "update",
@@ -70,6 +113,51 @@
     "reject": null,
     "flow": "d4bbac48-a444-49e0-aedb-9af5273b88df",
     "date_created": "2024-09-13T04:12:38.606Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "2d441500-54d0-4519-a813-b16e0bbf1c08",
+    "name": "Is Published",
+    "key": "is_published",
+    "type": "condition",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "filter": {
+        "_and": [
+          {
+            "item": {
+              "status": {
+                "_eq": "published"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "resolve": "d7f64e04-ab43-4d77-b8e8-379b41af2d3a",
+    "reject": "9039e7fa-8dcb-4a2f-935c-b0d8dec7bd61",
+    "flow": "c62ceaa5-bd09-4158-8329-98792debc5d5",
+    "date_created": "2025-05-02T20:49:48.108Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "396d13ef-af98-49c1-8237-2070549a8cd0",
+    "name": "Create Page",
+    "key": "create_page",
+    "type": "item-create",
+    "position_x": 73,
+    "position_y": 1,
+    "options": {
+      "permissions": "$trigger",
+      "emitEvents": false,
+      "collection": "{{$trigger.body.collection}}",
+      "payload": "{{payload}}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "a23110e1-700b-41b8-9f9e-ca0998b84a76",
+    "date_created": "2025-05-04T14:20:32.287Z",
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
@@ -193,6 +281,22 @@
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
+    "id": "78f34568-e64e-457b-b680-59d9a40a1a22",
+    "name": "No Change",
+    "key": "no_change",
+    "type": "log",
+    "position_x": 37,
+    "position_y": 18,
+    "options": {
+      "message": "No redirect was created. The item `slug` or `permalink` did not change."
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "c62ceaa5-bd09-4158-8329-98792debc5d5",
+    "date_created": "2025-05-02T20:50:32.806Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
     "id": "823ee957-6d5a-412c-886d-74d18de73864",
     "name": "Get Editor",
     "key": "get_editor",
@@ -264,6 +368,22 @@
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
+    "id": "9039e7fa-8dcb-4a2f-935c-b0d8dec7bd61",
+    "name": "Not Published",
+    "key": "not_published",
+    "type": "log",
+    "position_x": 73,
+    "position_y": 18,
+    "options": {
+      "message": "No redirect was created. The item `status` was not `published`."
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "c62ceaa5-bd09-4158-8329-98792debc5d5",
+    "date_created": "2025-05-04T17:21:59.280Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
     "id": "a16e81d1-4177-443e-a292-786a66faee8a",
     "name": "Globals",
     "key": "globals",
@@ -277,6 +397,22 @@
     "reject": null,
     "flow": "3172d021-0b0f-4d4d-bcca-c5c46eb8fadf",
     "date_created": "2025-04-02T19:28:58.499Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "aecbd95c-e882-4ceb-acef-b806eaa25770",
+    "name": "Format Payload",
+    "key": "payload",
+    "type": "exec",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "code": "/**\n* Page Duplication Flow Function\n* \n* This function handles the duplication of a Directus page, including all its content blocks.\n* It allows specifying a new title and permalink, or automatically creates them with \"-Copy\" suffix.\n* The duplicated page is always set to draft status for review before publishing.\n* \n* @param {Object} data - Data object from Directus Flow\n* @param {Object} data.$trigger.body - Optional data passed to the flow (new title/permalink)\n* @param {Object} data.item - The original page being duplicated with all its properties\n* @returns {Object} Modified page data for creating the duplicate\n*/\nmodule.exports = function(data) {\n   // Get the data submitted with the flow trigger (if any)\n   const triggerData = data.$trigger.body;\n   \n   // Get the full data of the existing page to duplicate\n   const existingData = data.item;\n   \n   // Set the title for the duplicate:\n   // - Use the provided title if it exists in the trigger data\n   // - Otherwise, append \"- Copy\" to the original page title\n   existingData.title = triggerData.title ?? existingData.title + ' - Copy';\n   \n   // Set the permalink for the duplicate:\n   // - Use the provided permalink if it exists in the trigger data\n   // - Otherwise, append \"-copy\" to the original permalink\n   existingData.permalink = triggerData.permalink ?? existingData.permalink + '-copy';\n   \n   // Always set the duplicate page to draft status\n   // This prevents accidental publishing of duplicate content\n   existingData.status = 'draft';\n   \n   // Return the modified data to create the duplicate page\n   // Note: Directus will handle copying all related blocks/components\n   return existingData;\n}"
+    },
+    "resolve": "396d13ef-af98-49c1-8237-2070549a8cd0",
+    "reject": null,
+    "flow": "a23110e1-700b-41b8-9f9e-ca0998b84a76",
+    "date_created": "2025-05-04T14:20:32.310Z",
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
@@ -321,26 +457,25 @@
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
-    "id": "c0f67e21-7332-4803-a1ae-f9a295b7e48e",
-    "name": "Get Page Block",
-    "key": "get_page_block",
+    "id": "c02bfa07-a395-48df-a0c9-e5acace6da40",
+    "name": "Item",
+    "key": "item",
     "type": "item-read",
     "position_x": 37,
     "position_y": 1,
     "options": {
-      "collection": "{{$trigger.body.collection}}",
-      "key": [
-        "{{$trigger.body.keys[0]}}"
-      ],
-      "permissions": "$full",
+      "permissions": "$trigger",
+      "emitEvents": false,
       "query": {
-        "fields": "{{get_collection.item_duplication_fields}}"
-      }
+        "fields": "{{duplication_fields.item_duplication_fields}}"
+      },
+      "key": "{{$trigger.body.keys}}",
+      "collection": "{{$trigger.body.collection}}"
     },
-    "resolve": "faffc005-c291-4be0-b0c8-38413b0a8446",
+    "resolve": "aecbd95c-e882-4ceb-acef-b806eaa25770",
     "reject": null,
-    "flow": "52fa6db4-a8ec-4bfc-9b36-d52f5a189620",
-    "date_created": "2025-02-20T22:10:11.730Z",
+    "flow": "a23110e1-700b-41b8-9f9e-ca0998b84a76",
+    "date_created": "2025-05-04T14:20:32.324Z",
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
@@ -380,6 +515,22 @@
     "reject": null,
     "flow": "d4bbac48-a444-49e0-aedb-9af5273b88df",
     "date_created": "2024-09-13T04:12:38.623Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
+    "id": "d7f64e04-ab43-4d77-b8e8-379b41af2d3a",
+    "name": "Format Payload",
+    "key": "format_payload",
+    "type": "exec",
+    "position_x": 73,
+    "position_y": 1,
+    "options": {
+      "code": "/**\n * Automatic Redirect Generator for Content URL Changes\n * \n * This function generates redirect objects when published content URLs change.\n * It works with both posts and pages collections to maintain SEO value\n * and prevent broken links when content is moved or renamed.\n */\nconst map = {\n  // Configuration for blog posts\n  posts: {\n    slugField: \"slug\",        // Field that contains the URL identifier for posts\n    routePrefix: \"/blog/\",    // Prefix added to all post URLs (e.g., /blog/my-post)\n  },\n  // Configuration for pages\n  pages: {\n    slugField: \"permalink\",   // Field that contains the URL identifier for pages\n    routePrefix: \"\",          // No prefix for pages (e.g., /about-us)\n  },\n};\n\n/**\n * Flow function executed when content URL changes\n * @param {Object} data - Data object from Directus Flow\n * @param {Object} data.$trigger - Information about what triggered the flow\n * @param {string} data.$trigger.collection - Collection name (posts/pages)\n * @param {Object} data.$trigger.payload - New data being saved\n * @param {Object} data.item - Previous version of the item before changes\n * @returns {Object} Redirect configuration object\n */\nmodule.exports = function (data) {\n  // Get the collection configuration based on whether this is a page or post\n  const collection = map[data.$trigger.collection];\n\n  const oldSlug = data.item[collection.slugField];\n  const newSlug = data.$trigger.payload[collection.slugField];\n  \n  // Build the old URL by combining the route prefix with the previous slug/permalink\n  const oldUrl = `${collection.routePrefix}${oldSlug}`;\n  \n  // Build the new URL by combining the route prefix with the new slug/permalink\n  const newUrl = `${collection.routePrefix}${newSlug}`;\n    \n  // Add a note\n  const note = `Created by Redirect automation on ${new Date().toLocaleDateString(\"en-US\")} at ${new Date().toLocaleTimeString(\"en-US\")} when a ${data.$trigger.collection} ${collection.slugField} was updated from \"${oldSlug}\" to \"${newSlug}\"`\n  \n  // Return a redirect object that will be saved to the redirects collection\n  return {\n    response_code: 301,       // Permanent redirect (best for SEO)\n    url_from: oldUrl,         // Where users were going before\n    url_to: newUrl,           // Where they should be sent now\n    note,\n  };\n};"
+    },
+    "resolve": "f6b8abc3-20bd-4d05-9bec-b7c759559e13",
+    "reject": null,
+    "flow": "c62ceaa5-bd09-4158-8329-98792debc5d5",
+    "date_created": "2025-05-02T20:47:12.265Z",
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
@@ -481,6 +632,25 @@
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
+    "id": "f491233d-f942-4c8a-bc9d-9074fce45844",
+    "name": "Read Item",
+    "key": "item",
+    "type": "item-read",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "permissions": "$trigger",
+      "emitEvents": false,
+      "collection": "{{$trigger.collection}}",
+      "key": "{{$trigger.keys}}"
+    },
+    "resolve": "2d441500-54d0-4519-a813-b16e0bbf1c08",
+    "reject": null,
+    "flow": "c62ceaa5-bd09-4158-8329-98792debc5d5",
+    "date_created": "2025-05-02T20:33:51.968Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+  },
+  {
     "id": "f6ae03f7-014d-43d1-8d69-cf122da302c0",
     "name": "Send Email",
     "key": "send_email",
@@ -504,21 +674,22 @@
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {
-    "id": "faffc005-c291-4be0-b0c8-38413b0a8446",
-    "name": "Create Page Block",
-    "key": "create_page_block",
+    "id": "f6b8abc3-20bd-4d05-9bec-b7c759559e13",
+    "name": "Create Redirect",
+    "key": "create_redirect",
     "type": "item-create",
-    "position_x": 55,
+    "position_x": 91,
     "position_y": 1,
     "options": {
-      "collection": "{{$trigger.body.collection}}",
-      "permissions": "$full",
-      "payload": "{{get_page_block}}"
+      "permissions": "$trigger",
+      "emitEvents": false,
+      "collection": "redirects",
+      "payload": "{{format_payload}}"
     },
     "resolve": null,
     "reject": null,
-    "flow": "52fa6db4-a8ec-4bfc-9b36-d52f5a189620",
-    "date_created": "2025-02-20T22:42:05.810Z",
+    "flow": "c62ceaa5-bd09-4158-8329-98792debc5d5",
+    "date_created": "2025-05-02T20:37:57.954Z",
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
   },
   {

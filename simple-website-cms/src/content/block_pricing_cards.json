@@ -13,7 +13,11 @@
     "button": "dda7d91c-b449-4ab3-9d9d-84d4e8c09caf",
     "pricing": "48cf2543-15e0-454f-9b31-cbf3c2406712",
     "is_highlighted": false,
-    "sort": null
+    "sort": null,
+    "date_created": "2025-05-07T01:25:10.254Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:10.345Z",
+    "user_updated": null
   },
   {
     "id": "83972d2a-742e-4a6c-8698-563d01dde54d",
@@ -28,6 +32,10 @@
     "button": "efb97ae9-d95e-4f9d-bf00-9df9966c65ec",
     "pricing": "48cf2543-15e0-454f-9b31-cbf3c2406712",
     "is_highlighted": true,
-    "sort": null
+    "sort": null,
+    "date_created": "2025-05-07T01:25:10.254Z",
+    "user_created": null,
+    "date_updated": "2025-05-07T01:25:10.345Z",
+    "user_updated": null
   }
 ]

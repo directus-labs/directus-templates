@@ -31,5 +31,9 @@
   "openai_api_key": null,
   "directus_url": "http://0.0.0.0:8055",
   "logo_dark_mode": "ae390ba1-fcff-4b99-a445-5f19257095d1",
-  "accent_color": "#6644FF"
+  "accent_color": "#6644FF",
+  "date_created": "2025-05-07T01:15:40.335Z",
+  "user_created": null,
+  "date_updated": null,
+  "user_updated": null
 }

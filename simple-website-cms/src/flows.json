@@ -62,28 +62,6 @@
     "operations": null
   },
   {
-    "id": "52fa6db4-a8ec-4bfc-9b36-d52f5a189620",
-    "name": "Utils -> Duplicate Block",
-    "icon": "file_copy",
-    "color": null,
-    "description": "Duplicates a specific page block",
-    "status": "active",
-    "trigger": "manual",
-    "accountability": "all",
-    "options": {
-      "collections": [
-        "page_blocks"
-      ],
-      "requireSelection": false,
-      "location": "item",
-      "requireConfirmation": true
-    },
-    "operation": "0255b0b8-3817-402f-a577-0d63328bada7",
-    "date_created": "2025-02-20T22:00:37.422Z",
-    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
-    "operations": null
-  },
-  {
     "id": "5429ccb0-7e97-4ef5-9d65-2bbcf964f9a6",
     "name": "Utils -> Render Template",
     "icon": "picture_in_picture",
@@ -205,6 +183,90 @@
     },
     "operation": "6efe1572-6cdd-4c80-a063-eb71b7f1e519",
     "date_created": "2024-09-13T04:57:48.054Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "operations": null
+  },
+  {
+    "id": "a23110e1-700b-41b8-9f9e-ca0998b84a76",
+    "name": "Utils -> Duplicate Page",
+    "icon": "copy_all",
+    "color": null,
+    "description": "Duplicate an entire page, creating a new copy of all the blocks within it.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "pages"
+      ],
+      "requireConfirmation": true,
+      "confirmationDescription": "Duplicate this Page",
+      "fields": [
+        {
+          "field": "title",
+          "type": "string",
+          "name": "New Page Title",
+          "meta": {
+            "interface": "input",
+            "note": "What would you like the title of the new page to be? If left blank, will just use the existing title and add \"Copy\" to the end.",
+            "width": "full"
+          }
+        },
+        {
+          "field": "permalink",
+          "type": "string",
+          "name": "New Permalink",
+          "meta": {
+            "interface": "input",
+            "note": "What would you like the permalink of the new page to be? If left blank, will just use the existing permalink and add \"-copy to the end.",
+            "width": "full",
+            "options": {
+              "trim": true
+            }
+          }
+        },
+        {
+          "field": "notice",
+          "type": "alias",
+          "name": "Notice",
+          "meta": {
+            "interface": "presentation-notice",
+            "options": {
+              "text": "Make sure all changes to this page are saved first because it only duplicates saved values. NOTE: This action will duplicate all blocks on this page.",
+              "color": "warning",
+              "icon": "warning"
+            }
+          }
+        }
+      ]
+    },
+    "operation": "1bb8a2e2-c98a-4a52-9224-78b4100ec087",
+    "date_created": "2025-05-04T14:14:57.454Z",
+    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
+    "operations": null
+  },
+  {
+    "id": "c62ceaa5-bd09-4158-8329-98792debc5d5",
+    "name": "Redirects",
+    "icon": "turn_sharp_right",
+    "color": null,
+    "description": "Automatically creates redirects for changed permalinks or slugs from pages or posts.",
+    "status": "active",
+    "trigger": "event",
+    "accountability": "all",
+    "options": {
+      "type": "filter",
+      "scope": [
+        "items.update"
+      ],
+      "collections": [
+        "pages",
+        "posts"
+      ],
+      "return": null
+    },
+    "operation": "282f9a77-5519-460e-bb54-4dc6e30b059a",
+    "date_created": "2025-05-02T20:31:30.603Z",
     "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0",
     "operations": null
   },

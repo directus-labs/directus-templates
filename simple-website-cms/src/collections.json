@@ -1,9 +1,39 @@
 [
   {
+    "collection": "ai_prompts",
+    "meta": {
+      "collection": "ai_prompts",
+      "icon": "magic_button",
+      "note": "Store and manage all your prompts for LLMs",
+      "display_template": "{{name}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 8,
+      "group": "website",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "ai_prompts",
+      "comment": null
+    }
+  },
+  {
     "collection": "block_button",
     "meta": {
       "collection": "block_button",
-      "icon": null,
+      "icon": "smart_button",
       "note": null,
       "display_template": "{{label}} - {{type}}",
       "hidden": true,
@@ -67,7 +97,7 @@
       "unarchive_value": "draft",
       "sort_field": null,
       "accountability": "all",
-      "color": "#18222F",
+      "color": null,
       "item_duplication_fields": [
         "sort",
         "buttons.sort",
@@ -152,7 +182,7 @@
       "unarchive_value": null,
       "sort_field": null,
       "accountability": "all",
-      "color": "#1A212C",
+      "color": null,
       "item_duplication_fields": [
         "tagline",
         "headline",
@@ -176,12 +206,17 @@
     "collection": "block_gallery_items",
     "meta": {
       "collection": "block_gallery_items",
-      "icon": null,
+      "icon": "gallery_thumbnail",
       "note": null,
       "display_template": null,
       "hidden": true,
       "singleton": false,
-      "translations": null,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Gallery Items"
+        }
+      ],
       "archive_field": null,
       "archive_app_filter": true,
       "archive_value": null,
@@ -225,7 +260,7 @@
       "unarchive_value": null,
       "sort_field": null,
       "accountability": "all",
-      "color": "#1A212C",
+      "color": null,
       "item_duplication_fields": [
         "tagline",
         "description",
@@ -349,12 +384,17 @@
     "collection": "block_pricing_cards",
     "meta": {
       "collection": "block_pricing_cards",
-      "icon": null,
+      "icon": "price_change",
       "note": null,
       "display_template": null,
       "hidden": true,
       "singleton": false,
-      "translations": null,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Pricing Cards"
+        }
+      ],
       "archive_field": null,
       "archive_app_filter": true,
       "archive_value": null,
@@ -398,7 +438,7 @@
       "unarchive_value": null,
       "sort_field": null,
       "accountability": "all",
-      "color": "#1A212C",
+      "color": null,
       "item_duplication_fields": [
         "tagline",
         "headline",
@@ -433,7 +473,7 @@
       "unarchive_value": null,
       "sort_field": null,
       "accountability": "all",
-      "color": "#1A212C",
+      "color": null,
       "item_duplication_fields": null,
       "sort": 2,
       "group": null,
@@ -447,7 +487,7 @@
     "collection": "form_fields",
     "meta": {
       "collection": "form_fields",
-      "icon": null,
+      "icon": "input",
       "note": "Individual fields for each form",
       "display_template": "{{name}} • {{type}}",
       "hidden": true,
@@ -663,7 +703,7 @@
       "unarchive_value": null,
       "sort_field": null,
       "accountability": "all",
-      "color": "#18222F",
+      "color": null,
       "item_duplication_fields": [
         "children",
         "has_children",
@@ -706,7 +746,7 @@
       "unarchive_value": null,
       "sort_field": "sort",
       "accountability": "all",
-      "color": "#18222F",
+      "color": null,
       "item_duplication_fields": [
         "page",
         "sort",
@@ -890,6 +930,36 @@
     "schema": {
       "schema": "public",
       "name": "posts",
+      "comment": null
+    }
+  },
+  {
+    "collection": "redirects",
+    "meta": {
+      "collection": "redirects",
+      "icon": "turn_sharp_right",
+      "note": "Manage URL redirects for your website",
+      "display_template": "{{url_from}} • {{response_code}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 7,
+      "group": "website",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "redirects",
       "comment": null
     }
   },
