@@ -36,8 +36,8 @@
       "dateField": "timestamp",
       "valueField": "id"
     },
-    "date_created": "2024-09-12T20:57:38.458Z",
-    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+    "date_created": "2026-06-10T12:16:46.488Z",
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "19b3d901-aa7c-4a04-bc9a-800e43510e69",
@@ -59,8 +59,8 @@
       "linkToItem": true,
       "displayTemplate": "{{timestamp}} • {{values}} • {{form}}"
     },
-    "date_created": "2024-09-12T21:00:02.732Z",
-    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+    "date_created": "2026-06-10T12:16:46.586Z",
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "3861ceb1-11ff-4e9d-a985-60d862d90aa3",
@@ -84,8 +84,8 @@
         "use24": false
       }
     },
-    "date_created": "2024-09-12T20:56:09.536Z",
-    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+    "date_created": "2026-06-10T12:16:46.686Z",
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "53575d2f-e3a0-4532-a176-d047cbbc11a7",
@@ -116,8 +116,8 @@
         ]
       }
     },
-    "date_created": "2024-09-12T20:56:09.528Z",
-    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+    "date_created": "2026-06-10T12:16:46.785Z",
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "8cb3b63c-d8e3-4078-9160-096e32b9fcb0",
@@ -138,8 +138,8 @@
       "function": "count",
       "sortField": null
     },
-    "date_created": "2024-09-12T21:00:59.426Z",
-    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+    "date_created": "2026-06-10T12:16:46.885Z",
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "b770ea7e-1b49-441f-ba6f-2d4b90e08070",
@@ -157,8 +157,8 @@
     "options": {
       "text": "Form Dashboard"
     },
-    "date_created": "2024-09-12T21:00:39.624Z",
-    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+    "date_created": "2026-06-10T12:16:46.982Z",
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "dc01026c-1728-4e71-ab45-7cea9fc4751c",
@@ -182,7 +182,7 @@
         "use24": false
       }
     },
-    "date_created": "2024-09-12T20:56:09.540Z",
-    "user_created": "d56956bf-6ed0-465e-bb4a-ec9bde65c5f0"
+    "date_created": "2026-06-10T12:16:47.087Z",
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   }
 ]
