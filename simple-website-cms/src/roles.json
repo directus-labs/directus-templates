@@ -1,5 +1,15 @@
 [
   {
+    "id": "2e667db6-0071-4fcf-bade-1eb62d8acabd",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_description",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
     "id": "3a4464fb-2189-4710-a164-2503eed88ae7",
     "name": "Writer",
     "icon": "docs_add_on",
@@ -24,16 +34,6 @@
     "name": "Content Admin",
     "icon": "admin_panel_settings",
     "description": "Role with full rights to edit all content. Useful for simple sites or those without publishing approval workflows.",
-    "parent": null,
-    "children": null,
-    "policies": null,
-    "users": null
-  },
-  {
-    "id": "ef049c8b-546b-4bbc-9cd7-b05d77e58b66",
-    "name": "Administrator",
-    "icon": "verified",
-    "description": "$t:admin_description",
     "parent": null,
     "children": null,
     "policies": null,

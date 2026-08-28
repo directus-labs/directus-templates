@@ -13,9 +13,9 @@
     "sort": 1,
     "required": true,
     "date_created": "2025-05-07T01:02:23.666Z",
-    "user_created": null,
-    "date_updated": null,
-    "user_updated": null
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f",
+    "date_updated": "2026-06-10T12:16:22.530Z",
+    "user_updated": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "56c64efd-520f-4578-acca-e0565e247681",
@@ -31,9 +31,9 @@
     "sort": 5,
     "required": false,
     "date_created": "2025-05-07T01:02:23.666Z",
-    "user_created": null,
-    "date_updated": null,
-    "user_updated": null
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f",
+    "date_updated": "2026-06-10T12:16:22.533Z",
+    "user_updated": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "a3d87bc0-f143-44ca-bea0-9eaf56b67783",
@@ -49,9 +49,9 @@
     "sort": 3,
     "required": true,
     "date_created": "2025-05-07T01:02:23.666Z",
-    "user_created": null,
-    "date_updated": null,
-    "user_updated": null
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f",
+    "date_updated": "2026-06-10T12:16:22.535Z",
+    "user_updated": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "a5222af8-f9a2-4d1a-9713-7ce0e2d5edc5",
@@ -76,9 +76,9 @@
     "sort": 4,
     "required": false,
     "date_created": "2025-05-07T01:02:23.666Z",
-    "user_created": null,
-    "date_updated": null,
-    "user_updated": null
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f",
+    "date_updated": "2026-06-10T12:16:22.538Z",
+    "user_updated": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "bbc7b1c6-304e-4ee1-9afa-c5cffda6af27",
@@ -94,9 +94,9 @@
     "sort": 2,
     "required": true,
     "date_created": "2025-05-07T01:02:23.666Z",
-    "user_created": null,
-    "date_updated": null,
-    "user_updated": null
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f",
+    "date_updated": "2026-06-10T12:16:22.540Z",
+    "user_updated": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "d37bc00f-bfb5-4496-85c3-70190b21b707",
@@ -112,9 +112,9 @@
     "sort": 2,
     "required": true,
     "date_created": "2025-05-07T01:02:23.666Z",
-    "user_created": null,
-    "date_updated": null,
-    "user_updated": null
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f",
+    "date_updated": "2026-06-10T12:16:22.541Z",
+    "user_updated": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   },
   {
     "id": "eef0eb77-ecab-4fba-9903-c46d6ad6d85b",
@@ -130,8 +130,8 @@
     "sort": 1,
     "required": true,
     "date_created": "2025-05-07T01:02:23.666Z",
-    "user_created": null,
-    "date_updated": null,
-    "user_updated": null
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f",
+    "date_updated": "2026-06-10T12:16:22.543Z",
+    "user_updated": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f"
   }
 ]

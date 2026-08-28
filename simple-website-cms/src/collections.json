@@ -21,7 +21,9 @@
       "group": "website",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -66,7 +68,9 @@
       "group": "block_button_group",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -112,7 +116,9 @@
       "group": "blocks",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -147,7 +153,9 @@
       "group": "blocks",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -190,7 +198,9 @@
       "group": "blocks",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -225,7 +235,9 @@
       "group": "block_gallery",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -276,7 +288,9 @@
       "group": "blocks",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -311,7 +325,9 @@
       "group": "blocks",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -363,7 +379,9 @@
       "group": "blocks",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -398,7 +416,9 @@
       "group": "block_pricing",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -440,7 +460,9 @@
       "group": "blocks",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -470,7 +492,9 @@
       "group": null,
       "collapse": "closed",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": null
   },
@@ -496,7 +520,9 @@
       "group": "forms",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -535,7 +561,9 @@
       "group": "website",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -565,7 +593,9 @@
       "group": "website",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -600,7 +630,9 @@
       "group": "form_submissions",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -630,7 +662,9 @@
       "group": "website",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -670,7 +704,9 @@
       "group": "website",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -713,7 +749,9 @@
       "group": "navigation",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -790,7 +828,9 @@
       "group": "pages",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -946,7 +986,9 @@
       "group": "website",
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": {
       "schema": "public",
@@ -976,7 +1018,9 @@
       "group": null,
       "collapse": "open",
       "preview_url": null,
-      "versioning": false
+      "versioning": false,
+      "status": "active",
+      "autosave_revision_interval": null
     },
     "schema": null
   }

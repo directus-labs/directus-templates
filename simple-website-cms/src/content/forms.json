@@ -10,9 +10,9 @@
     "is_active": true,
     "emails": null,
     "date_created": "2025-05-07T01:00:24.531Z",
-    "user_created": null,
-    "date_updated": null,
-    "user_updated": null,
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f",
+    "date_updated": "2026-06-10T12:16:22.626Z",
+    "user_updated": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f",
     "fields": [
       "eef0eb77-ecab-4fba-9903-c46d6ad6d85b",
       "bbc7b1c6-304e-4ee1-9afa-c5cffda6af27",
@@ -41,9 +41,9 @@
       }
     ],
     "date_created": "2025-05-07T01:00:24.531Z",
-    "user_created": null,
-    "date_updated": null,
-    "user_updated": null,
+    "user_created": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f",
+    "date_updated": "2026-06-10T12:16:22.630Z",
+    "user_updated": "2ce5827c-4d7e-44ce-a4fe-815d9a94771f",
     "fields": [
       "0f3deba1-9d6b-44a0-aa87-a9b38e834beb",
       "d37bc00f-bfb5-4496-85c3-70190b21b707"

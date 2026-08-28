@@ -225,6 +225,58 @@
   "public_registration_verify_email": true,
   "public_registration_role": null,
   "public_registration_email_filter": null,
+  "visual_editor_urls": [
+    {
+      "url": "http://localhost:3000?visual-editing=true"
+    },
+    {
+      "url": "http://localhost:3000/blog?visual-editing=true"
+    }
+  ],
+  "project_id": "019eb174-57a5-7729-a387-ed986d8bc9e5",
+  "mcp_enabled": false,
+  "mcp_allow_deletes": false,
+  "mcp_prompts_collection": null,
+  "mcp_system_prompt_enabled": true,
+  "mcp_system_prompt": null,
+  "project_owner": "alex.v@directus.io",
+  "project_usage": null,
+  "org_name": null,
+  "product_updates": false,
+  "project_status": null,
+  "ai_openai_api_key": null,
+  "ai_anthropic_api_key": null,
+  "ai_system_prompt": null,
+  "ai_google_api_key": null,
+  "ai_openai_compatible_api_key": null,
+  "ai_openai_compatible_base_url": null,
+  "ai_openai_compatible_name": null,
+  "ai_openai_compatible_models": null,
+  "ai_openai_compatible_headers": null,
+  "ai_openai_allowed_models": [
+    "gpt-5.4-nano",
+    "gpt-5.4-mini",
+    "gpt-5.4"
+  ],
+  "ai_anthropic_allowed_models": [
+    "claude-haiku-4-5",
+    "claude-sonnet-4-6"
+  ],
+  "ai_google_allowed_models": [
+    "gemini-3-pro-preview",
+    "gemini-3-flash-preview",
+    "gemini-2.5-pro",
+    "gemini-2.5-flash"
+  ],
+  "collaborative_editing_enabled": false,
+  "ai_translation_default_model": null,
+  "ai_translation_glossary": null,
+  "ai_translation_style_guide": null,
+  "license_key": "**********",
+  "license_token": "**********",
+  "mcp_oauth_enabled": false,
+  "mcp_oauth_dcr_enabled": false,
+  "mcp_oauth_cimd_enabled": false,
   "command_palette_settings": {
     "searchMode": "as_you_type",
     "collections": [
@@ -264,13 +316,5 @@
     ],
     "triggerRate": 250,
     "commandPaletteEnabled": true
-  },
-  "visual_editor_urls": [
-    {
-      "url": "http://localhost:3000?visual-editing=true"
-    },
-    {
-      "url": "http://localhost:3000/blog?visual-editing=true"
-    }
-  ]
+  }
 }

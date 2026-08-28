@@ -1,0 +1,18 @@
+{
+  "allowBrokenRelations": false,
+  "components": {
+    "schema": true,
+    "content": true,
+    "files": true,
+    "flows": true,
+    "dashboards": true,
+    "permissions": true,
+    "settings": true,
+    "extensions": true,
+    "users": true
+  },
+  "partial": false,
+  "relationStrategy": "deep",
+  "version": 2,
+  "warnings": []
+}
