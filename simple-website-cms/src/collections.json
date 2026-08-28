@@ -148,11 +148,7 @@
       "sort_field": null,
       "accountability": "all",
       "color": null,
-      "item_duplication_fields": [
-        "tagline",
-        "headline",
-        "form"
-      ],
+      "item_duplication_fields": ["tagline", "headline", "form"],
       "sort": 3,
       "group": "blocks",
       "collapse": "open",
@@ -324,12 +320,7 @@
       "sort_field": null,
       "accountability": "all",
       "color": null,
-      "item_duplication_fields": [
-        "tagline",
-        "headline",
-        "collection",
-        "limit"
-      ],
+      "item_duplication_fields": ["tagline", "headline", "collection", "limit"],
       "sort": 4,
       "group": "blocks",
       "collapse": "open",
@@ -925,10 +916,8 @@
       "sort": 1,
       "group": "website",
       "collapse": "open",
-      "preview_url": "http://localhost:3000{{permalink}}?preview=true&version={{$version}}",
-      "versioning": true,
-      "status": "active",
-      "autosave_revision_interval": null
+      "preview_url": "http://localhost:3000{{permalink}}?preview=true&version={{$version}}&visual-editing=true",
+      "versioning": true
     },
     "schema": {
       "schema": "public",
@@ -966,10 +955,8 @@
       "sort": 2,
       "group": "website",
       "collapse": "open",
-      "preview_url": "http://localhost:3000/blog/{{slug}}?preview=true&version={{$version}}",
-      "versioning": true,
-      "status": "active",
-      "autosave_revision_interval": null
+      "preview_url": "http://localhost:3000/blog/{{slug}}?preview=true&version={{$version}}&visual-editing=true",
+      "versioning": true
     },
     "schema": {
       "schema": "public",
