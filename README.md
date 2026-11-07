@@ -1,3 +1,16 @@
+> [!IMPORTANT]
+> **This repository is archived.** These templates have moved to [directus-labs/starters](https://github.com/directus-labs/starters), updated for Directus 12 with core and licensed versions.
+>
+> | Here | Now |
+> |---|---|
+> | `simple-website-cms` | [`cms`](https://github.com/directus-labs/starters/tree/main/cms) (or [`cms-i18n`](https://github.com/directus-labs/starters/tree/main/cms-i18n) for multilingual) |
+> | `help-center` | [`help-center`](https://github.com/directus-labs/starters/tree/main/help-center) |
+> | `simple-crm` | [`simple-crm`](https://github.com/directus-labs/starters/tree/main/simple-crm) |
+> | `simple-ecommerce` | [`simple-ecommerce`](https://github.com/directus-labs/starters/tree/main/simple-ecommerce) |
+> | `agencyos` | [directus-labs/agency-os](https://github.com/directus-labs/agency-os) |
+>
+> Start a new project with `npx directus-template-cli@latest init`. The templates here target older Directus versions and won't be updated.
+
 <a href="https://directus.io" target="_blank">
 
   <h1 align="center">Directus Templates</h1>
